@@ -19,13 +19,18 @@
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#in-progress">
-        In progress
+      <a class="govuk-tabs__tab" href="#in-assessment">
+        In assessment
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#completed">
-        Completed
+      <a class="govuk-tabs__tab" href="#awaiting-approval">
+        Awaiting approval
+      </a>
+    </li>
+    <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#approved">
+        Approved
       </a>
     </li>
   </ul>
@@ -71,8 +76,8 @@
     </table>
 
   </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-progress">
-    <h2 class="govuk-heading-l">In progress</h2>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="in-assessment">
+    <h2 class="govuk-heading-l">In assessment</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -93,7 +98,7 @@
             <td class="govuk-table__cell">Closed - February 26 to March 12</td>
             <td class="govuk-table__cell">3</td>
             <td class="govuk-table__cell">April 10</td>
-            <td class="govuk-table__cell">8</td>
+            <td class="govuk-table__cell">20</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1883</td>
@@ -102,7 +107,7 @@
             <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell">May 10</td>
-            <td class="govuk-table__cell">38</td>
+            <td class="govuk-table__cell">27</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1873</td>
@@ -111,14 +116,14 @@
             <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell">-</td>
             <td class="govuk-table__cell">May 2</td>
-            <td class="govuk-table__cell">30</td>
+            <td class="govuk-table__cell">33</td>
         </tr>
       </tbody>
     </table>
 
   </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="completed">
-    <h2 class="govuk-heading-l">Completed</h2>
+  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="awaiting-approval">
+    <h2 class="govuk-heading-l">Awaiting manager's approval</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -128,7 +133,7 @@
             <th scope="col" class="govuk-table__header">Consultation dates</th>
             <th scope="col" class="govuk-table__header">Responses</th>
             <th scope="col" class="govuk-table__header">Decision due date</th>
-            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Days left</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
@@ -139,7 +144,7 @@
             <td class="govuk-table__cell">Closed - January 20 to February 08</td>
             <td class="govuk-table__cell">3</td>
             <td class="govuk-table__cell">April 10</td>
-            <td class="govuk-table__cell">With planning manager</td>
+            <td class="govuk-table__cell">4</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1832</td>
@@ -147,8 +152,8 @@
             <td class="govuk-table__cell">Description 3</td>
             <td class="govuk-table__cell">Closed - January 22 to Feb 10</td>
             <td class="govuk-table__cell">3</td>
-            <td class="govuk-table__cell">April 10</td>
-            <td class="govuk-table__cell">With planning manager</td>
+            <td class="govuk-table__cell">April 14</td>
+            <td class="govuk-table__cell">7</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1831</td>
@@ -156,13 +161,61 @@
             <td class="govuk-table__cell">Description 4</td>
             <td class="govuk-table__cell">Closed - February 2 to March 1</td>
             <td class="govuk-table__cell">3</td>
+            <td class="govuk-table__cell">April 14</td>
+            <td class="govuk-table__cell">7</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+
+    
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="approved">
+    <h2 class="govuk-heading-l">Approved</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Application</th>
+          <th scope="col" class="govuk-table__header">Type</th>
+          <th scope="col" class="govuk-table__header">Description</th>
+          <th scope="col" class="govuk-table__header">Consultation date</th>
+          <th scope="col" class="govuk-table__header">Responses</th>
+          <th scope="col" class="govuk-table__header">Decision due by</th>
+            <th scope="col" class="govuk-table__header">Days left</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1852</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">Ground floor rear elevation</td>
+            <td class="govuk-table__cell">Closed - February 26 to March 12</td>
+            <td class="govuk-table__cell">3</td>
             <td class="govuk-table__cell">April 10</td>
-            <td class="govuk-table__cell">With planning manager</td>
+            <td class="govuk-table__cell">0</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1883</td>
+            <td class="govuk-table__cell">Certification of lawfulness</td>
+            <td class="govuk-table__cell">Single-story extension</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">May 10</td>
+            <td class="govuk-table__cell">2</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1873</td>
+            <td class="govuk-table__cell">Certification of lawfulness</td>
+            <td class="govuk-table__cell">Terrace extension in rear</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">May 11</td>
+            <td class="govuk-table__cell">3</td>
         </tr>
       </tbody>
     </table>
 
-  </div>
+  </div>    
+    
     </div>
   </div>
 
