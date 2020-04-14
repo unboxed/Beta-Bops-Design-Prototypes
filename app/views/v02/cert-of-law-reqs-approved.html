@@ -1,11 +1,3 @@
-{%- from "moj/components/banner/macro.njk" import mojBanner -%}
-
-{{ mojBanner({
-type: 'information',
-text: 'Select text to add comment.',
-iconFallbackText: 'information'
-}) }} 
-
 {% extends "layout.html" %}
 
 {% block content %}
@@ -18,8 +10,7 @@ iconFallbackText: 'information'
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page"><a href="cert-of-law-hp.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
               </ol>
         </div>
         <h1 class="govuk-heading-l">
@@ -41,6 +32,7 @@ iconFallbackText: 'information'
         </div>
      </div>
     </div>
+
 
 <! –– Property detail blocks ––>
 <div class="govuk-grid-row">
@@ -115,108 +107,42 @@ iconFallbackText: 'information'
         
 <! –– Left panel with tasks and map ––>
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">
-            Permitted development requirements
-        </h2>
-          <div class="moj-banner">
-            <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
-                <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
-C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
-        <div class="moj-banner__message">
-            <span class="moj-banner__assistive">information</span>
-            <p class="govuk-body">
-                <strong>
-                    Certificate recommended
-                </strong>
-                <br>
-                    Based on the information provided by the applicant, the proposal meets Permitted Development. 
-            </p>
-        </div>
-        </div>
-        <p class="govuk-body">
-            <strong>
-                Are the following statements true?
-            </strong>
-        </p>
+      <ol class="app-task-list">
 
-<!--    Policy question -->
-    <div>
-            <p class="govuk-body">
-                The project will <strong>not</strong> include the alteration or addition of a chimney, vent or vent pipe.
-            </p>
-            <div class="govuk-radios govuk-radios--inline">
-          <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-1" name="policy-question-1" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="policy-question-1">
-              Yes
-            </label>
-          </div>
-            </div>
-        <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-1-no" name="policy-question-1" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="policy-question-1-no">
-              No
-            </label>
-          </div>
-            </div>
-        </div>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Assess the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">
+                Check permitted development requirements
+              </a>
+            
+            <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
                 
-
-        <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Policy and guidance
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        A roof extension that involves the removal, alteration or addition of a chimney, flue or vent pipe will require planning permission. See <a href="">GPDO 2015 S.2 P.1 B.1(e)(ii)</a> for more information.
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">            
+                Make recommendation
+            </span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">
+                Make recommendation
+                </a>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    <img src="/public/images/map.png" style="max-width: 600px;" alt="map">
       </div>
-    </details>
-        </div>
-    
-<!--    Policy question -->
-    <div>
-            <p class="govuk-body">
-                The project will <strong>not</strong> include the alteration or addition of an outdoor balcony or verandha.
-            </p>
-        <div class="govuk-radios govuk-radios--inline">
-          <div class="govuk-radios govuk-radios--small">
-              <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-2" name="policy-question-2" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="policy-question-2">
-              Yes
-            </label>
-          </div>
-            </div>
-        <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-2-no" name="policy-question-2" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="policy-question-2">
-              No
-            </label>
-          </div>
-         </div>
-        </div>
-
-    <details class="govuk-details" data-module="govuk-details">
-      <summary class="govuk-details__summary">
-        <span class="govuk-details__summary-text">
-          Policy and guidance
-        </span>
-      </summary>
-      <div class="govuk-details__text">
-        Extensions that include a verandah, balcony or raised platform will require planning permission. This does not include 'Juliet' balconies. See <a href="">GPDO 2015 S.2 P.1 B.1(e)(i)</a> for more information.
-      </div>
-    </details>
-        </div>
-    
-    <a class="govuk-button" data-module="govuk-button" href="permitted-dev-reqs-all-true.html">
-        Save and continue
-    </a>  
-        
-        </div>
         
 <! –– Right panel with additional information in accordion ––>
         
