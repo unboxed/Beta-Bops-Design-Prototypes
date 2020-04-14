@@ -18,8 +18,8 @@ iconFallbackText: 'information'
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page"><a href="cert-of-law-reqs-approved">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendation</li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-recommended.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Review recommendation</li>
               </ol>
         </div>
         <h1 class="govuk-heading-l">
@@ -35,8 +35,8 @@ iconFallbackText: 'information'
               </ol>
             </div>
         <div style="float: right; margin: 20px 0 0 102px;">
-            <strong class="govuk-tag govuk-tag--green">
-                35 days remaining
+            <strong class="govuk-tag govuk-tag--red">
+                7 days remaining
             </strong>
         </div>
      </div>
@@ -113,109 +113,65 @@ iconFallbackText: 'information'
 
     <div class="govuk-grid-row">
         
-<! –– Left panel with tasks and map ––>
+<! –– Left panel with letter ––>
       <div class="govuk-grid-column-two-thirds">
         <h2 class="govuk-heading-m">
-            Recommendation
+            Recommendation letter by John Smith
         </h2>
+        <p class="govuk-accordion__open-all" style="float: right; margin: 0 0 10px 0;">
+            <a href="">
+                Edit letter
+            </a>
+        </p>
+<! –– Letter ––>
 
-<!--    Certificate question -->
+       <div style="background-color: #f3f2f1; border: solid 1px; padding: 20px; clear: both; margin-top: 10px;">   
+        <p class="govuk-body">
+                Dear Hannah Dogurga,
+        </p>
+        <p class="govuk-body">
+                The Coventry council has <strong>approved</strong> your certificate of lawfulness for 43 Busbey Lane for the roof extension (rear) and dormer as it meets the following requirements. 
+        </p>
           
-        <div class="govuk-form-group">
-            <p class="govuk-body">
-                <strong>
-                   What is your recommendation for this proposal?
-                </strong>
-            </p>
- 
-    <div class="govuk-radios govuk-radios--small govuk-radios--conditional" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-          Grant certificate of lawfulness
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-        <div class="govuk-form-group">
-          <div class="govuk-checkboxes">
-            <p class="govuk-body">
-                Granted only in accordance with the following approved plans:
-            </p>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          19/AP/1880 Proposed section
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          19/AP/1880 Proposed floorplan
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          19/AP/1880 Proposed roofplan
-        </label>
-      </div>
-    </div>
-        </div>
-      </div>
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-          Refuse certificate of lawfulness
-        </label>
-      </div>
-      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-        <div class="govuk-form-group">
-            <div class="govuk-checkboxes">
-            <p class="govuk-body">
-                A certificate of lawfulness cannot be granted because:
-            </p>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-        <label class="govuk-label govuk-checkboxes__label" for="waste">
-          The total cubic volume of all roof extensions will be more than 40m<sup>3</sup>
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-          The project will include an alteration or addition of a chimney, flue or vent pipe
-        </label>
-      </div>
-      <div class="govuk-checkboxes__item">
-        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
-        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
-          Other
-        </label>
-      </div>
-    </div>
-        </div>
-
-    </div>    
-      </div>
-</div>
-          
-<br><br>
-<!--    Certificate question -->
- <div class="govuk-form-group">
-  <label class="govuk-label" for="more-detail">
-    <strong>
-    Do you want to provide more detail for the applicant? 
-    </strong>
-  </label>
-     <br>
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-</div>
-
-    
-    <a class="govuk-button" data-module="govuk-button" href="make-recommendation-yes.html">
-        Save and continue
-    </a>  
         
+        <ul class="govuk-list govuk-list--bullet">
+            <li>
+                The project will <strong>not</strong> include the alteration or addition of a chimney, vent or vent pipe
+            </li>  
+            <li>
+                The project will <strong>not</strong> include the alteration or addition of an outdoor balcony or verandha.
+            </li>  
+        </ul>
+        
+        <p class="govuk-body">
+            However, this is on the expectation that you comply with council rules to:
+        </p>
+            <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <strong>
+                    Ensure that the windows comply with the neighbourhood rules
+                </strong> 
+            </li>
+            </ul>
+        <p class="govuk-body">
+            Given this, application we have now granted you this <a href="">certificate of lawfulness</a>. 
+        </p>
+        <p>Best, <br>John Smith</p>
+           
+        </div>
+          <br>
+        <p class="govuk-body">
+            <strong>
+                Do you agree with John Smith's recommendation? 
+            </strong>
+        </p>
+        <a class="govuk-button govuk-!-margin-right-4" data-module="govuk-button" href="cert-of-law-reqs-recommended-agree.html">
+          Agree
+        </a>
+
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Disagree
+        </button>
         </div>
         
 <! –– Right panel with additional information in accordion ––>
