@@ -24,16 +24,27 @@ iconFallbackText: 'information'
                 
               </ol>
         </div>
-        <h1 class="govuk-heading-l">
+
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
     
       
         <! –– Application detail blocks ––>
 
-        <h2 class="govuk-heading-m">
-            Application information
-        </h2>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
+            
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Application information
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
                   <table class="govuk-table">
           <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
@@ -61,22 +72,61 @@ iconFallbackText: 'information'
             </ul>
               </td>
           </tr>
-    </tbody>
+        </tbody>
           </table>
+                </div>
+            </div>
+    <!--  Documents        -->
           
-
-
-<! –– Content ––>
-
-
-<! –– Left panel with tasks and map ––>
-
+    <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Proposal documents
+                </span>
+              </h3>
+            </div>
           
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <div style="float: none; clear: both">
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'>Existing floorplan</p>
+                        <img src="/public/images/existing-floorplan.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'>Proposed floorplan</p>
+                        <img src="/public/images/proposed-floorplan.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                </div>
+                <div style="float: none; clear: both">
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'><br>Existing section</p>
+                        <img src="/public/images/existing-section.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'><br>Proposed section</p>
+                        <img src="/public/images/existing-section.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                </div>
+            
+            </div>
+    </div>        
     <! -- Map -->
-          
-    <h2 class="govuk-heading-m">
-            Site details 
-    </h2>
+            
+            <div class="govuk-accordion__section " style="float: none; clear: both;">
+                <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Site details
+                </span>
+              </h3>
+            </div>
+            
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
         <div style="float:left; margin-bottom: 10px;">
           <div class="govuk-checkboxes__item govuk-checkboxes--small" >
             <input class="govuk-checkboxes__input " id="map" name="map" type="checkbox" value="carcasses">
@@ -107,11 +157,13 @@ iconFallbackText: 'information'
             Street view on Google Map
         </a>
     </p>
-<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+            </div>
+                
+                </div>
+           
+        </div>
 
-    
-        
-<! –– Left panel with tasks and map ––>
+   <! –– Left panel with tasks and map ––>
         <h2 class="govuk-heading-m">
             Permitted development requirements
         </h2>
@@ -213,8 +265,8 @@ C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.
         Save and continue
     </a>  
         
-        </div>
         
+        </div>
 <! –– Right panel with additional information in accordion ––>
         
       <div class="govuk-grid-column-one-third">
@@ -226,7 +278,7 @@ C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.
                 </li>
               </ol>
             </div>
-        <div style="float: right; margin: 20px 0 0 102px; ">
+        <div style="float: right; margin: 20px 0 30px 100px; ">
             <p class="govuk-body">
             <strong class="govuk-tag govuk-tag--green">
                Due: May 29<br>35 days remaining
@@ -236,7 +288,7 @@ C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.
         
        
     
-          <h2 class="app-task-list__section">
+          <h2 class="app-task-list__section" style="float: none; clear: both;">
             <span class="app-task-list__section-number">Supporting information</span>
           </h2>
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
@@ -305,28 +357,6 @@ C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.
                 Air quality management area
             </li>
           </ul>
-            </div>
-          </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                  Documents
-                </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                <p class='govuk-body'>Existing floorplan</p>
-                <img src="/public/images/existing-floorplan.png" style="width: 200px">
-                <p class='govuk-body'><br>Proposed floorplan</p>
-                <img src="/public/images/proposed-floorplan.png" style="width: 200px">
-                <p class='govuk-body'><br>Existing section</p>
-                <img src="/public/images/existing-section.png" style="width: 200px">
-                <p class='govuk-body'><br>Proposed section</p>
-                <img src="/public/images/existing-section.png" style="width: 200px">
-                <p class='govuk-body'><br>Existing roofplan</p>
-                <img src="/public/images/existing-roofplan.png" style="width: 200px">
-
             </div>
           </div>
           <div class="govuk-accordion__section ">
