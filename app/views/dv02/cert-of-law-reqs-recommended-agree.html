@@ -1,11 +1,3 @@
-{%- from "moj/components/banner/macro.njk" import mojBanner -%}
-
-{{ mojBanner({
-type: 'information',
-text: 'Select text to add comment.',
-iconFallbackText: 'information'
-}) }} 
-
 {% extends "layout.html" %}
 
 {% block content %}
@@ -18,8 +10,7 @@ iconFallbackText: 'information'
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page"><a href="cert-of-law-reqs-recommended.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Approve recommendation</li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
               </ol>
         </div>
         <h1 class="govuk-heading-l">
@@ -41,6 +32,7 @@ iconFallbackText: 'information'
         </div>
      </div>
     </div>
+
 
 <! –– Property detail blocks ––>
 <div class="govuk-grid-row">
@@ -79,9 +71,15 @@ iconFallbackText: 'information'
             <td class="govuk-table__cell"><b>Type: </b></td>
             <td class="govuk-table__cell">Certificate of Lawfulness</td>
           </tr>
+
           <tr class="govuk-table__row">
             <td class="govuk-table__cell"><strong>Application status: </strong></td>
-            <td class="govuk-table__cell">Waiting for review</td>
+            <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>Awaiting approval</li>
+                    <li>Certificate approved by John Smith</li>
+                </ul>
+            </td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell"><strong>Validation complete: </strong></td>
@@ -115,48 +113,70 @@ iconFallbackText: 'information'
         
 <! –– Left panel with tasks and map ––>
       <div class="govuk-grid-column-two-thirds">
-        <h2 class="govuk-heading-m">
-            Recommendation
-        </h2>
+      <ol class="app-task-list">
 
-<!--    Certificate question -->
-          
-        <div class="govuk-form-group">
-            <p class="govuk-body">
-                <strong>
-                   The planning officer has recommended that a certificate of lawfullness for permitted development is granted. <br><br>Do you agree with this recommendation?
-                </strong>
-            </p>
-            <p class="govuk-body">
-                  By approving this recommendation, the applicant will receive the letter with their certificate of lawfulness. 
-            </p>
- 
-    <div class="govuk-radios govuk-radios--small govuk-radios--conditional" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-          Yes
-        </label>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Assess the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">
+                Check permitted development requirements
+              </a>
+            
+            <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
+                
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">            
+                Make recommendation
+            </span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">
+                Make recommendation
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                Completed
+              </strong>
+            </li>
+          </ul>
+        </li>
+           <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">            
+                Approval
+            </span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="review-recommendation.html" aria-describedby="external-review-completed">
+                Review recommendation
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed " id="eligibility-completed">
+                Completed
+              </strong>
+            </li>
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="approve-recommendation.html" aria-describedby="external-review-completed">
+                Approve recommendation
+                </a>
+                <strong class="govuk-tag app-task-list__task-completed govuk-tag--grey" id="eligibility-completed">
+                Awaiting approval
+              </strong>
+            </li>
+          </ul>
+        </li>
+      </ol>
+    <img src="/public/images/map.png" style="max-width: 600px;" alt="map">
       </div>
-      
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-          No
-        </label>
-      </div>
-       
-      </div>
-</div>
-          
-<br><br>
-
-    
-    <a class="govuk-button" data-module="govuk-button" href="cert-of-law-reqs-recommended-agree-approved.html">
-        Save and continue
-    </a>  
-        
-        </div>
         
 <! –– Right panel with additional information in accordion ––>
         

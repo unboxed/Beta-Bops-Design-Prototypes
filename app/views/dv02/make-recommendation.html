@@ -1,10 +1,4 @@
-{%- from "moj/components/banner/macro.njk" import mojBanner -%}
 
-{{ mojBanner({
-type: 'information',
-text: 'Select text to add comment.',
-iconFallbackText: 'information'
-}) }} 
 
 {% extends "layout.html" %}
 
@@ -19,12 +13,12 @@ iconFallbackText: 'information'
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
-                
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-approved.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendation</li>
               </ol>
         </div>
-
+        
+        
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
@@ -162,45 +156,33 @@ iconFallbackText: 'information'
                 </div>
            
         </div>
-
-   <! –– Left panel with tasks and map ––>
-        <h2 class="govuk-heading-m">
-            Permitted development requirements
-        </h2>
-          
+        
+        
+        
+        
+        
         
 
-<!--    Policy question -->
-    <div>
-            <p class="govuk-body">
-Does it meet policy requirements?            </p>
-            <div class="govuk-radios govuk-radios--inline">
-          <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-1" name="policy-question-1" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="policy-question-1">
-              Yes
-            </label>
-          </div>
-            </div>
-        <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-1-no" name="policy-question-1" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="policy-question-1-no">
-              No
-            </label>
-          </div>
-            </div>
-        </div>
-                
 
-   
-    <a class="govuk-button" data-module="govuk-button" href="cert-of-law-reqs-approved.html">
-        Save 
+
+<! –– Content ––>
+
+
+        <h2 class="govuk-heading-m">
+            Make Recommendation
+        </h2>
+
+<!--    Certificate question -->
+          
+        
+    
+    <a class="govuk-button" data-module="govuk-button" href="cert-of-law-reqs-recommended.html">
+        Complete assessment
     </a>  
         
         </div>
-        </div>
+         
+        
 <! –– Right panel with additional information in accordion ––>
         
       <div class="govuk-grid-column-one-third">
@@ -320,6 +302,5 @@ Does it meet policy requirements?            </p>
           </div>
         </div>
       </div>
-    </div>
 {% endblock %}
 

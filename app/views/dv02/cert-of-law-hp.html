@@ -1,15 +1,6 @@
-{%- from "moj/components/banner/macro.njk" import mojBanner -%}
-
-{{ mojBanner({
-type: 'information',
-text: 'Select text to add comment.',
-iconFallbackText: 'information'
-}) }} 
-
 {% extends "layout.html" %}
 
 {% block content %}
-
 
 <! –– Header ––>
     <div class="govuk-grid-row">
@@ -19,12 +10,9 @@ iconFallbackText: 'information'
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
-                
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
               </ol>
         </div>
-
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
@@ -53,7 +41,7 @@ iconFallbackText: 'information'
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell"><strong>Application status: </strong></td>
-            <td class="govuk-table__cell">In assessment</td>
+            <td class="govuk-table__cell">Waiting for assessment</td>
           </tr>
           <tr class="govuk-table__row">
             <td class="govuk-table__cell"><strong>Validation complete: </strong></td>
@@ -151,7 +139,7 @@ iconFallbackText: 'information'
             </label>
           </div>
         </div>
-    <img src="/public/images/Map-Update.png" style="max-width: 600px;" alt="map">
+    <img src="/public/images/Map-Upddate.png" style="width: 600px;" alt="map">
     <p class="govuk-body">
         <a href="#" class="govuk-link">
             Street view on Google Map
@@ -163,44 +151,55 @@ iconFallbackText: 'information'
            
         </div>
 
-   <! –– Left panel with tasks and map ––>
-        <h2 class="govuk-heading-m">
-            Permitted development requirements
-        </h2>
-          
-        
+    <! -- Task List -->    
+      <ol class="app-task-list">
 
-<!--    Policy question -->
-    <div>
-            <p class="govuk-body">
-Does it meet policy requirements?            </p>
-            <div class="govuk-radios govuk-radios--inline">
-          <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-1" name="policy-question-1" type="radio" value="yes">
-            <label class="govuk-label govuk-radios__label" for="policy-question-1">
-              Yes
-            </label>
-          </div>
-            </div>
-        <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="policy-question-1-no" name="policy-question-1" type="radio" value="no">
-            <label class="govuk-label govuk-radios__label" for="policy-question-1-no">
-              No
-            </label>
-          </div>
-            </div>
-        </div>
-                
-
-   
-    <a class="govuk-button" data-module="govuk-button" href="cert-of-law-reqs-approved.html">
-        Save 
-    </a>  
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Assess the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">
+                    Evaluate permitted development policy requirements
+                </a>
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
+<!--                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">-->
+                Confirm recommendation
+<!--                </a>-->   
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Determine the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+<!--              <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">-->
+                Review determination notice
+<!--              </a>-->
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+        </li>
+            </ul>
+      </ol>
+      </div>
         
-        </div>
-        </div>
 <! –– Right panel with additional information in accordion ––>
         
       <div class="govuk-grid-column-one-third">
@@ -322,4 +321,3 @@ Does it meet policy requirements?            </p>
       </div>
     </div>
 {% endblock %}
-
