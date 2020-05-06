@@ -223,6 +223,57 @@ iconFallbackText: 'information'
                 Please respond to the following questions
             </strong>
         </p>
+        
+<!--    Policy question -->
+    <div class="govuk-form-group">
+        <p class="govuk-body">
+                Will the project's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>?
+        </p>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+            <div class="govuk-form-group"> 
+            <p class="govuk-body">
+                What have you calculated the cubic volume to be based on the applicant's plans?
+            </p> 
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"> <p class="govuk-body" style="display: inline;">m<sup>3</sup></p>
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+            <div class="govuk-form-group">
+                <p class="govuk-body">
+                What have you calculated the cubic volume to be based on the applicant's plans?
+                </p> 
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel"><p class="govuk-body" style="display: inline;"> m<sup>3</sup></p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="float: none; clear: both;">
+         <details class="govuk-details" data-module="govuk-details">
+        
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Policy and guidance
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            A roof extension that involves the removal, alteration or addition of a chimney, flue or vent pipe will require planning permission. See <a href="">GPDO 2015 S.2 P.1 B.1(e)(ii)</a> for more information.
+          </div>
+        </details>
+            </div>
 
 <!--    Policy question -->
     <div>
