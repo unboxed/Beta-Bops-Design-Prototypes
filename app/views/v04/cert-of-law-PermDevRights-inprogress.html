@@ -1,9 +1,6 @@
-
-
 {% extends "layout.html" %}
 
 {% block content %}
-
 
 <! –– Header ––>
     <div class="govuk-grid-row">
@@ -13,19 +10,16 @@
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-approved.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendation</li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
               </ol>
         </div>
-        
-        
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
         <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
     
       
-       <! –– Application detail blocks ––>
+        <! –– Application detail blocks ––>
 
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
 
@@ -158,7 +152,6 @@
 
                 </div>
 
-
         <!--  Documents        -->
 
         <div class="govuk-accordion__section " style="margin-bottom: 20px;">
@@ -201,114 +194,72 @@
                         <div style="float: left; margin-left: 20px;">
                             <p class='govuk-body'><br>Proposed section</p>
                             <img src="/public/images/existing-section.png" style="width: 200px">
-                            <p class='govuk-body'><a href="">Download</a></p>
+                            <p class='govuk-body'><a href="">Download</a></p> 
                         </div>
+                        <div style="clear: both; float: none;">&nbsp;</div>
                     </div>
-
+            </div>
                 </div>
         </div>
 
-        
-        </div>
-        
-        
-        
+    <! -- Task List -->    
+      <ol class="app-task-list">
 
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Assess the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="permitted-dev-rights.html" aria-describedby="external-review-completed">
+                Confirm permitted development rights
+              </a>
 
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
 
-<! –– Content ––>
-
-
-        <h2 class="govuk-heading-m">
-            Confirm Recommendation
-        </h2>
-        <p>Based on your answers given with the Permitted Development Policy Requirements, Permited Development should be refused. <strong>Please review the letter below.</strong></p>
-   
-<! –– Letter ––>
-
-       <div style="background-color: #f3f2f1; border: solid 1px; padding: 30px; clear: both; margin-top: 10px;">  
-        <span class="govuk-caption-xl">[Council Name]</span>
-           <h2 class="govuk-heading-m">Town and country planning act 1990 (as amended)</h2>
-           <p>Refusal of certificate of lawfulness of proposed use or development</p>
-           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-           
-        <p class="govuk-body">
-                Applicant: Hannah Dogurga<br>
-                Date of Issue of this decision: TBD<br>
-        </p>
-        <p class="govuk-body">
-                IT IS HEREBY CERTIFIED that the use or operations described below are <strong>not lawful</strong> for the purposes of S.192 of the Town and Country Planning Act 1990 on the date that the application for this Certificate was received.
-        </p>
-           <p>Proposed use or development:</p>
-           <p>Certificate of lawful development (proposed) for the construction of a roof extension (rear) and dormer</p>
-           <p>At: <strong>43 Busbey Lane, London, SE16 5GG</strong></p>
-           <p>
-               Application received on 16/07/2019 08:20:11
-           <br>
-               Application validated on 21/07/2019 
-           </p>
-           <p>LBS Registered Number: 19/AP/1880</p>
-
-<p>Reason why use or operations would <strong>not</strong> have been LAWFUL:</p>
-            <p>The proposed development is not considered to be lawful because it fails to meet the following: </p>
-        <ul class="govuk-list govuk-list--bullet">
-
-            <li>
-                criteria of Class B of Part 1 of The Town and Country Planning (General Permitted Development) Order 2015 in terms of paragraph  (d) which states <strong>development's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>. </strong>Based on the plans submitted, <strong>50m<sup>3</sup> will be extended.</strong>
             </li>
-        </ul>
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">
+                    Evaluate permitted development policy requirements
+                </a>
 
-        
-           <p>Signed: Firstname Lastname <br>
-           Director of Planning</p>
+                <strong class="govuk-tag govuk-tag--grey app-task-list__task-completed" id="eligibility-completed">
+                    In progress
+                  </strong>
 
-           <p>
-               Your attention is drawn to the notes accompanying this document
-           </p>
-           <p>
-               Any enquiries regarding this document should quote the LBS Registered Number and be sent to the Director of Planning, Southwark Council, Chief executive's department, Planning division, Development management, PO Box 64529, London SE1 5LX, or by email to planning.applications@southwark.gov.uk</p>
-           
-        </div>
-          <br>
-<!-- Question to confirm them       -->
-        
-        <div class="govuk-form-group">
-            <p class="govuk-body">
-                <strong>
-                    Do you agree with this decision notice?
-                </strong>
-            </p>
-            <p class="govuk-body">
-                  By agreeing with this decision notice, your manager will then be given this application to determine. You will not be able to edit the options chosen.  
-            </p>
- 
-    <div class="govuk-radios govuk-radios--small govuk-radios--conditional" data-module="govuk-radios">
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-          Yes
-        </label>
+            </li>
+            <li class="app-task-list__item">
+<!--                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">-->
+                Confirm decision notice
+<!--                </a>-->   
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Determine the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+<!--              <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">-->
+                Review decision notice
+<!--              </a>-->
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+        </li>
+            </ul>
+      </ol>
       </div>
-      
-      <div class="govuk-radios__item">
-        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-          No 
-        </label>
-      </div>
-       
-      </div>
-</div>
-
-    
-    <a class="govuk-button" data-module="govuk-button" href="http://localhost:3000/v04/application-list#awaiting-determination">
-        Save and continue
-    </a>  
-        
-        
-      </div>
-         
         
 <! –– Right panel with additional information in accordion ––>
         
@@ -410,4 +361,3 @@
       </div>
     </div>
 {% endblock %}
-
