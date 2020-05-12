@@ -1,0 +1,80 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list-manager.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-approved.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item">
+                    <a href="review-recommendation.html">
+                        Review determination notice
+                    </a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Confirmation</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 19/AP/1880
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
+
+
+        
+<! –– Left panel with tasks and map ––>
+        <h2 class="govuk-heading-m">
+            Your determination
+        </h2>
+          
+        <p class="govuk-body">
+            You determine that this the recommendation can be approved. <br>By confirming this determination, <strong>the applicant will receive the decision notice and it will be published publicly.</strong>
+
+        </p>
+    
+          
+        <p class="govuk-body">
+    
+        <a class="govuk-button govuk-!-margin-right-3" data-module="govuk-button" href="cert-of-law-reqs-recommended-agree.html">
+  Confirm
+</a>
+
+    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="review-recommendation.html">
+      Back
+    </a>
+        </div>
+    
+        
+<! –– Right panel with additional information in accordion ––>
+
+      <div class="govuk-grid-column-one-third">
+
+          <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="">Log out</a>
+                </li>
+              </ol>
+            </div>
+        <div style="float: right; margin: 20px 0 30px 100px; ">
+            <p class="govuk-body">
+            <strong class="govuk-tag govuk-tag--red">
+               Due: May 29<br>7 days remaining
+            </strong>
+            </p>
+        </div>
+      </div>
+    </div>
+{% endblock %}
