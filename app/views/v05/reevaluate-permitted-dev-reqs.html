@@ -1,32 +1,37 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
 
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
 
 {% extends "layout.html" %}
 
 {% block content %}
 
+
 <! –– Header ––>
     <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">        
-         
-    <form action="/approve-recomendation-answer" method="post" class="form">
-        
-<div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
-                  <a class="govuk-breadcrumbs__link" href="application-list-manager.html">Home</a>
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-recommended.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Review decision notice </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
+                
               </ol>
         </div>
+
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
         <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
-
-
-
-<! –– Application detail blocks ––>
+    
+      
+ <! –– Application detail blocks ––>
 
         <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
 
@@ -159,7 +164,6 @@
 
                 </div>
 
-
         <!--  Documents        -->
 
         <div class="govuk-accordion__section " style="margin-bottom: 20px;">
@@ -172,7 +176,6 @@
                 </div>
 
                 <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                    <div style="clear:both; float: none;">
                 <p class="govuk-body">
                     <a href="#" class="govuk-link">
                         Download all documents
@@ -206,103 +209,162 @@
                             <p class='govuk-body'><a href="">Download</a></p>
                         </div>
                     </div>
-                    </div>
-
+            </div>
                 </div>
         </div>
-        </div>
         
-<! –– Left panel with letter ––>
-        <h2 class="govuk-heading-m">
-            Decision notice by Sandra Lewis
+   <! –– Left panel with tasks and map ––>
+        <h2 class="govuk-heading-m" style="clear:both; float: none;">
+            Permitted development requirements
         </h2>
-        <p>
-            Sandra Lewis has assessed this proposal and recommended that it should be <strong>refused</strong>. The following decision notice has been automated based on their responses. 
-        </p>
-<! –– Letter ––>
-
-       <div style="background-color: #f3f2f1; border: solid 1px; padding: 30px; clear: both; margin-top: 10px;">  
-        <span class="govuk-caption-xl">[Council Name]</span>
-           <h2 class="govuk-heading-m">Town and country planning act 1990 (as amended)</h2>
-           <p>Refusal of certificate of lawfulness of proposed use or development</p>
-           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-           
-        <p class="govuk-body">
-                Applicant: Hannah Dogurga<br>
-                Date of Issue of this decision: TBD<br>
-        </p>
-        <p class="govuk-body">
-                IT IS HEREBY CERTIFIED that the use or operations described below are <strong>not lawful</strong> for the purposes of S.192 of the Town and Country Planning Act 1990 on the date that the application for this Certificate was received.
-        </p>
-           <p>Proposed use or development:</p>
-           <p>Certificate of lawful development (proposed) for the construction of a roof extension (rear) and dormer</p>
-           <p>At: <strong>43 Busbey Lane, London, SE16 5GG</strong></p>
-           <p>
-               Application received on 16/07/2019 08:20:11
-           <br>
-               Application validated on 21/07/2019 
-           </p>
-           <p>LBS Registered Number: 19/AP/1880</p>
-
-<p>Reason why use or operations would <strong>not</strong> have been LAWFUL:</p>
-            <p>The proposed development is not considered to be lawful because it fails to meet the following: </p>
-        <ul class="govuk-list govuk-list--bullet">
-
-            <li>
-                criteria of Class B of Part 1 of The Town and Country Planning (General Permitted Development) Order 2015 in terms of paragraph  (d) which states <strong>development's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>. </strong>Based on the plans submitted, <strong>50m<sup>3</sup> will be extended.</strong>
-            </li>
-        </ul>
-
         
-           <p>Signed: Firstname Lastname <br>
-           Director of Planning</p>
-
-           <p>
-               Your attention is drawn to the notes accompanying this document
-           </p>
-           <p>
-               Any enquiries regarding this document should quote the LBS Registered Number and be sent to the Director of Planning, Southwark Council, Chief executive's department, Planning division, Development management, PO Box 64529, London SE1 5LX, or by email to planning.applications@southwark.gov.uk</p>
-           
-        </div>
-          <br>     
-
-<!--        Question-->
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-          <p class="govuk-body">
+        <p class="govuk-body">
             <strong>
-                Do you agree with Sandra Lewis' recommendation? 
+                Please respond to the following questions
             </strong>
         </p>
-          <div class="govuk-radios govuk-radios--inline govuk-radios--small">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="over-18-yes" name="over-18" type="radio" value="true">
-              <label class="govuk-label govuk-radios__label" for="over-18-yes">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="over-18-no" name="over-18" type="radio" value="false">
-              <label class="govuk-label govuk-radios__label" for="over-18-no">
-                No
-              </label>
+        
+<!--    Policy question -->
+    <div class="govuk-form-group">
+        <p class="govuk-body">
+                Will the development's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>?
+        </p>
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+            <div class="govuk-form-group"> 
+            <p class="govuk-body">
+                What have you calculated the cubic volume to be based on the applicant's plans?
+            </p> 
+                <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"> <p class="govuk-body" style="display: inline;">m<sup>3</sup></p>
             </div>
           </div>
-          </fieldset>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+            <div class="govuk-form-group">
+                <p class="govuk-body">
+                What have you calculated the cubic volume to be based on the applicant's plans?
+                </p> 
+              <input class="govuk-input govuk-!-width-one-third" id="contact-by-phone" name="contact-by-phone" type="tel"><p class="govuk-body" style="display: inline;"> m<sup>3</sup></p>
+            </div>
+          </div>
+          </div>
+        </div>
+        <div style="float: none; clear: both;">
+         <details class="govuk-details" data-module="govuk-details">
+        
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Policy and guidance
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            A roof extension that involves the removal, alteration or addition of a chimney, flue or vent pipe will require planning permission. See <a href="">GPDO 2015 S.2 P.1 B.1(d)(i)</a> for more information.
+          </div>
+        </details>
+            </div>
+
+<!--    Policy question -->
+    <div>
+            <p class="govuk-body">
+                Will the development include the alteration or addition of a chimney, vent or vent pipe?
+            </p>
+            <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="policy-question-1" name="policy-question-1" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="policy-question-1">
+              Yes
+            </label>
+          </div>
+            </div>
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="policy-question-1-no" name="policy-question-1" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="policy-question-1-no">
+              No
+            </label>
+          </div>
+            </div>
+        </div>
+                
+
+        <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Policy and guidance
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        A roof extension that involves the removal, alteration or addition of a chimney, flue or vent pipe will require planning permission. See <a href="">GPDO 2015 S.2 P.1 B.1(e)(ii)</a> for more information.
+      </div>
+    </details>
+        </div>
+    
+<!--    Policy question -->
+    <div>
+            <p class="govuk-body">
+                Will the development include the alteration or addition of an outdoor balcony or verandha?
+            </p>
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="policy-question-2" name="policy-question-2" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="policy-question-2">
+              Yes
+            </label>
+          </div>
+            </div>
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="policy-question-2-no" name="policy-question-2" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="policy-question-2">
+              No
+            </label>
+          </div>
+         </div>
         </div>
 
-        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+    <details class="govuk-details" data-module="govuk-details">
+      <summary class="govuk-details__summary">
+        <span class="govuk-details__summary-text">
+          Policy and guidance
+        </span>
+      </summary>
+      <div class="govuk-details__text">
+        Extensions that include a verandah, balcony or raised platform will require planning permission. This does not include 'Juliet' balconies. See <a href="">GPDO 2015 S.2 P.1 B.1(e)(i)</a> for more information.
+      </div>
+    </details>
+        </div>
+    
+    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="permitted-dev-reqs-50m3.html">
+        Save and continue
+    </a>  
 
-      </form>
-
-    </div>
+    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-PermDevRights-inprogress.html">
+      Save as draft
+    </a>
         
-        <! –– Right panel with additional information in accordion ––>
-
+        </div>
+        
+        </div>
+        
+        
+<! –– Right panel with additional information in accordion ––>
+        
       <div class="govuk-grid-column-one-third">
-
+          
           <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
@@ -310,15 +372,16 @@
                 </li>
               </ol>
             </div>
-        <div style="float: right; margin: 20px 0 30px 100px; ">
+        <div style="float: right; margin: 20px 0 30px 100px;">
             <p class="govuk-body">
-            <strong class="govuk-tag govuk-tag--red">
-               Due: May 29<br>7 days remaining
+            <strong class="govuk-tag govuk-tag--green">
+               Due: May 29<br>35 days remaining
             </strong>
             </p>
         </div>
-
-
+        
+       
+    
           <h2 class="app-task-list__section" style="float: none; clear: both;">
             <span class="app-task-list__section-number">Supporting information</span>
           </h2>
@@ -398,3 +461,4 @@
       </div>
     </div>
 {% endblock %}
+

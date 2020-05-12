@@ -1,4 +1,10 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
 
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
 
 {% extends "layout.html" %}
 
@@ -6,25 +12,24 @@
 
 <! –– Header ––>
     <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">        
-         
-    <form action="/approve-recomendation-answer" method="post" class="form">
-        
-<div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list-manager.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-recommended.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Review decision notice </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-approved.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item">
+<!--                    <a href="approve-recommendation-no.html">-->
+                        Provide manager comments
+<!--                    </a>-->
+                </li>
               </ol>
         </div>
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
         <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
-
-
 
 <! –– Application detail blocks ––>
 
@@ -212,94 +217,63 @@
         </div>
         </div>
         
-<! –– Left panel with letter ––>
-        <h2 class="govuk-heading-m">
-            Decision notice by Sandra Lewis
-        </h2>
-        <p>
-            Sandra Lewis has assessed this proposal and recommended that it should be <strong>refused</strong>. The following decision notice has been automated based on their responses. 
-        </p>
-<! –– Letter ––>
-
-       <div style="background-color: #f3f2f1; border: solid 1px; padding: 30px; clear: both; margin-top: 10px;">  
-        <span class="govuk-caption-xl">[Council Name]</span>
-           <h2 class="govuk-heading-m">Town and country planning act 1990 (as amended)</h2>
-           <p>Refusal of certificate of lawfulness of proposed use or development</p>
-           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-           
-        <p class="govuk-body">
-                Applicant: Hannah Dogurga<br>
-                Date of Issue of this decision: TBD<br>
-        </p>
-        <p class="govuk-body">
-                IT IS HEREBY CERTIFIED that the use or operations described below are <strong>not lawful</strong> for the purposes of S.192 of the Town and Country Planning Act 1990 on the date that the application for this Certificate was received.
-        </p>
-           <p>Proposed use or development:</p>
-           <p>Certificate of lawful development (proposed) for the construction of a roof extension (rear) and dormer</p>
-           <p>At: <strong>43 Busbey Lane, London, SE16 5GG</strong></p>
-           <p>
-               Application received on 16/07/2019 08:20:11
-           <br>
-               Application validated on 21/07/2019 
-           </p>
-           <p>LBS Registered Number: 19/AP/1880</p>
-
-<p>Reason why use or operations would <strong>not</strong> have been LAWFUL:</p>
-            <p>The proposed development is not considered to be lawful because it fails to meet the following: </p>
-        <ul class="govuk-list govuk-list--bullet">
-
-            <li>
-                criteria of Class B of Part 1 of The Town and Country Planning (General Permitted Development) Order 2015 in terms of paragraph  (d) which states <strong>development's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>. </strong>Based on the plans submitted, <strong>50m<sup>3</sup> will be extended.</strong>
-            </li>
-        </ul>
 
         
-           <p>Signed: Firstname Lastname <br>
-           Director of Planning</p>
+        <h2 class="govuk-heading-m">
+            Please identify which policies need to be re-evaluated 
+        </h2>
+        
+        <p class="govuk-body">
+                The following proposal was assessed under Class B:
+        </p>
+        
+        <ul class="govuk-list govuk-list--bullet">
+            <li>Will the development's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>? <br>
+            <strong>Yes - 50m<sup>3</sup></strong>
+                <br><br>
+            Manager's comment:
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="background-color: #f3f2f1; margin: 10px 0 50px 0;">Lorem ipsum</textarea>
+            </li>
 
-           <p>
-               Your attention is drawn to the notes accompanying this document
-           </p>
-           <p>
-               Any enquiries regarding this document should quote the LBS Registered Number and be sent to the Director of Planning, Southwark Council, Chief executive's department, Planning division, Development management, PO Box 64529, London SE1 5LX, or by email to planning.applications@southwark.gov.uk</p>
-           
-        </div>
-          <br>     
 
-<!--        Question-->
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-          <p class="govuk-body">
-            <strong>
-                Do you agree with Sandra Lewis' recommendation? 
+          <li>Will the development include the alteration or addition of an outdoor balcony or verandha?
+                <br>
+                <strong>No</strong> 
+   
+            <br><br>
+            Manager's comment:
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="background-color: #f3f2f1; margin: 10px 0 50px 0;">Lorem ipsum</textarea>
+            </li>
+      </ul>
+   
+        
+    
+       <p class="govuk-body">
+           <strong>
+            Do you have any other comments for the Planning Officer to consider?
             </strong>
         </p>
-          <div class="govuk-radios govuk-radios--inline govuk-radios--small">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="over-18-yes" name="over-18" type="radio" value="true">
-              <label class="govuk-label govuk-radios__label" for="over-18-yes">
-                Yes
-              </label>
-            </div>
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="over-18-no" name="over-18" type="radio" value="false">
-              <label class="govuk-label govuk-radios__label" for="over-18-no">
-                No
-              </label>
-            </div>
-          </div>
-          </fieldset>
-        </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" style="background-color: #f3f2f1; margin: 10px 0 50px 0;">Lorem ipsum</textarea>
+        <p class="govuk-body">
+    
+        <a class="govuk-button govuk-!-margin-right-3" data-module="govuk-button" href="cert-of-law-reqs-recommended-disagree.html">
+  Submit
+</a>
 
-        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
-
-      </form>
-
-    </div>
+    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="approve-recommendation-no.html">
+      Back
+    </a>
         
-        <! –– Right panel with additional information in accordion ––>
+        
+        
+
+        
+        </div>
+    
+        
+        
+        
+<! –– Right panel with additional information in accordion ––>
 
       <div class="govuk-grid-column-one-third">
 
