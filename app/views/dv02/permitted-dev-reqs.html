@@ -167,13 +167,23 @@ iconFallbackText: 'information'
         <h2 class="govuk-heading-m">
             Permitted development requirements
         </h2>
+        <p class="govuk-body">
+        The applicant has submitted the following answers. Please review each answer and determine whether what they say and the plans align with the policy questions.
+        </p>
           
 <!--    Policy question -->
     <div class="govuk-form-group">
+       <p class="govuk-body">
+           <strong>1. [Q. ex: Will there by any new side-facing windows or rooflights]? </strong>
+        </p>   
+        
+        <div class="govuk-inset-text">
+            <p>[Answer submitted by applicant]</p>
+        </div>
         <p class="govuk-body">
-                Will the development include the [insert policy information in human language]?
+                Do you agree with the following answer from the applicant?
         </p>
-        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
         <div class="govuk-radios govuk-radios--small">
           <div class="govuk-radios__item">
             <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
@@ -205,81 +215,28 @@ iconFallbackText: 'information'
           </div>
           </div>
         </div>
-        <div style="float: none; clear: both;">
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Policy and guidance
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                [Insert policy information in less human language...] will require planning permission. See <a href="">GPDO 2015 S._ P._ __(_)(_)</a> for more information.
-              </div>
-            </details>
+        <div style="clear: both; float: none; margin-top: 20px;">
+            <p class="govuk-body" >
+                       See <a href="">GPDO 2015 S._ P._ __(_)(_)</a> for more information.
+            </p>
         </div>
         </div>
 
         
-<!--    Policy question -->
-    <div class="govuk-form-group">
-        <p class="govuk-body">
-                Will the development include the [insert policy information in human language]?
-        </p>
-        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional-3" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-3">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-3">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-3">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
-                If it would be helpful to applicant, please provide the document number or calculated amount that supports your answer. 
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
-            </div>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional-4" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-4">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-4">
-              No
-            </label>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-4">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
-                If it would be helpful to applicant, please provide the document number or calculated amount that supports your answer. 
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
-            </div>
-          </div>
-          </div>
-        </div>
-        <div style="float: none; clear: both;">
-            <details class="govuk-details" data-module="govuk-details">
-              <summary class="govuk-details__summary">
-                <span class="govuk-details__summary-text">
-                  Policy and guidance
-                </span>
-              </summary>
-              <div class="govuk-details__text">
-                [Insert policy information in less human language...] will require planning permission. See <a href="">GPDO 2015 S._ P._ __(_)(_)</a> for more information.
-              </div>
-            </details>
-            </div>    
-        </div>
+
         
         
 <! -- Save button -->           
 
 
     <br>
-    <a class="govuk-button" data-module="govuk-button" href="permitted-dev-reqs-confirm.html">
-        Save 
+    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="permitted-dev-reqs-summary.html">
+        Save and continue
     </a>  
-        
+
+    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-PermDevRights-inprogress.html">
+      Save as draft
+    </a>
         </div>
 
 <! –– Right panel with additional information in accordion ––>
