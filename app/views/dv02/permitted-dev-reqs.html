@@ -173,16 +173,15 @@ iconFallbackText: 'information'
           
 <!--    Policy question -->
     <div class="govuk-form-group">
-       <p class="govuk-body">
-           <strong>1. [Q. ex: Will there by any new side-facing windows or rooflights]? </strong>
-        </p>   
-        
-        <div class="govuk-inset-text">
-            <p>[Answer submitted by applicant]</p>
-        </div>
-        <p class="govuk-body">
-                Do you agree with the following answer from the applicant?
-        </p>
+       <ol class="govuk-body">
+           <li>
+           <strong>[Question, Will there by any new side-facing windows or rooflights]? </strong>
+        <span style="line-height: 1.75;">
+           Applicant's answer: [Answer submitted by applicant]</span>
+           <br>
+               <span style="line-height: 2.5;">
+                   Do you agree with the following answer from the applicant?</span>
+              <br>
         <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
         <div class="govuk-radios govuk-radios--small">
           <div class="govuk-radios__item">
@@ -215,11 +214,15 @@ iconFallbackText: 'information'
           </div>
           </div>
         </div>
+               </li>
+        </ol>
+<!--
         <div style="clear: both; float: none; margin-top: 20px;">
             <p class="govuk-body" >
                        See <a href="">GPDO 2015 S._ P._ __(_)(_)</a> for more information.
             </p>
         </div>
+-->
         </div>
 
         
@@ -230,7 +233,7 @@ iconFallbackText: 'information'
 
 
     <br>
-    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="permitted-dev-reqs-summary.html">
+    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="permitted-dev-reqs-confirm.html">
         Save and continue
     </a>  
 
