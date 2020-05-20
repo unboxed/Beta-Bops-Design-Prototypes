@@ -8,8 +8,6 @@
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">        
          
-    <form action="/approve-recomendation-answer" method="post" class="form">
-        
 <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
@@ -217,7 +215,7 @@
             Decision notice
         </h2>
         <p>
-            [Planning officer name - Sandra Lewis] has assessed this proposal and recommended that it should be <strong>[refused/granted]</strong>. The following decision notice has been automated based on their responses. 
+            The application has been assessed and it's been recommended that it should be <strong>[refused/granted]</strong>. 
         </p>
 <! –– Letter ––>
 
@@ -280,18 +278,18 @@
           <p class="govuk-body">
             <strong>
                 Do you agree with this recommendation? 
-            </strong>
+            </strong><br>By confirming this determination, the applicant will receive the decision notice and it will be published publicly.
         </p>
           <div class="govuk-radios govuk-radios--inline govuk-radios--small">
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="over-18-yes" name="over-18" type="radio" value="true">
-              <label class="govuk-label govuk-radios__label" for="over-18-yes">
+              <input class="govuk-radios__input" type="radio" >
+              <label class="govuk-label govuk-radios__label" >
                 Yes
               </label>
             </div>
             <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="over-18-no" name="over-18" type="radio" value="false">
-              <label class="govuk-label govuk-radios__label" for="over-18-no">
+              <input class="govuk-radios__input"  type="radio" >
+              <label class="govuk-label govuk-radios__label">
                 No
               </label>
             </div>
@@ -299,9 +297,9 @@
           </fieldset>
         </div>
 
-        <button class="govuk-button" data-module="govuk-button">Save and continue</button>
+        <a class="govuk-button" data-module="govuk-button" href="/dv02/application-list-manager#determined">Save and continue</a>
 
-      </form>
+      
 
     </div>
         
