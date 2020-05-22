@@ -222,7 +222,8 @@ iconFallbackText: 'information'
            </li>
         </ol>
         <p class="govuk-body">
-            <br>Based on the evidence given, it was recommended that <strong>permitted development requirements have been met</strong>.
+            <br>Based on the evidence given by applicant, the planning officer recommended that permitted development should be <strong>[granted/refused]</strong>.
+            <br><br>
             The officer has submitted this comment to the applicant:
         </p>
         
@@ -236,6 +237,30 @@ iconFallbackText: 'information'
                
         </div>
 
+<! -- Question -->                
+        
+        
+    <p class="govuk-body">
+        <strong>
+            Do you agree with this recommendation?
+        </strong>
+    </p>
+ 
+    <div class="govuk-radios govuk-radios--small govuk-radios--conditional" data-module="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+          Yes
+        </label>
+      </div>
+      
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+        <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+          No
+        </label>
+      </div>
+    </div>
         
 
         
@@ -243,11 +268,16 @@ iconFallbackText: 'information'
 <! -- Save button -->           
 
 
-    <br>
-   <a class="govuk-button govuk-!-margin-right-4" data-module="govuk-button" href="approve-recommendation.html">
-        Review decision notice
-    </a>  
-        </div>
+  
+    <div style="float: none; clear: both;">
+        <br>
+        <a class="govuk-button govuk-!-margin-right-4" data-module="govuk-button" href="approve-recommendation.html" >
+            Submit
+        </a>  
+    </div>
+
+
+</div>
 
 <! –– Right panel with additional information in accordion ––>
         
