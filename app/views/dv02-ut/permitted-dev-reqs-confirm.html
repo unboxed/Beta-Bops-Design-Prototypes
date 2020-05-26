@@ -1,0 +1,119 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item"><a href="permitted-dev-reqs.html">Permitted development requirements</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Confirmation</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 19/AP/1880
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
+    
+
+    </div>
+    <div class="govuk-grid-column-one-third">
+          <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="">Log out</a>
+                </li>
+              </ol>
+            </div>
+        <div style="float: right; margin: 20px 0 0 102px;">
+            <strong class="govuk-tag govuk-tag--green">
+                35 days remaining
+            </strong>
+        </div>
+     </div>
+    </div>
+
+
+
+    <div class="govuk-grid-row">
+        
+<! –– Left panel with tasks and map ––>
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-m">
+            Your assessment
+        </h2>
+          
+        <p class="govuk-body">
+                You assessed the following:
+        </p>
+        
+        <!--    Policy question -->
+    <div class="govuk-form-group">
+       <ol class="govuk-body">
+           <li>
+           <strong>[Question, Will there by any new side-facing windows or rooflights]? </strong>
+            <span style="line-height: 1.75;">
+               Applicant's answer: [Answer submitted by applicant]
+            </span>
+           <br>
+            <div class="govuk-inset-text" style="margin: 5px 0 0 0;">
+                <strong>
+                    [Yes/No]<br>
+                </strong>
+                [ Comment box comment lorem ipsum it is really five metres]
+            </div>   
+            </li>
+           <br><br>
+           <li>
+           <strong>[Question, Will there by any new side-facing windows or rooflights]? </strong>
+            <span style="line-height: 1.75;">
+               Applicant's answer: [Answer submitted by applicant]
+            </span>
+           <br>
+            <div class="govuk-inset-text" style="margin: 5px 0 0 0;">
+                <strong>
+                    [Yes/No]<br>
+                </strong>
+                [ Comment box comment lorem ipsum it is really five metres]
+            </div>   
+            </li>
+           <br><br>
+           <li>
+           <strong>[Question, Will there by any new side-facing windows or rooflights]? </strong>
+            <span style="line-height: 1.75;">
+               Applicant's answer: [Answer submitted by applicant]
+            </span>
+           <br>
+            <div class="govuk-inset-text" style="margin: 5px 0 0 0;">
+                <strong>
+                    [Yes/No]<br>
+                </strong>
+                [ Comment box comment lorem ipsum it is really five metres]
+            </div>   
+            </li>
+        </ol>
+             <br>
+          <br>
+        <p class="govuk-body">
+            <strong>
+                Please confirm your selection. 
+            </strong>
+        </p>
+        <a class="govuk-button govuk-!-margin-right-3" data-module="govuk-button" href="make-recommendation.html">
+          Confirm
+        </a>
+
+
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="permitted-dev-reqs.html">
+          Back
+        </a>
+
+    </div>
+        
+
+{% endblock %}

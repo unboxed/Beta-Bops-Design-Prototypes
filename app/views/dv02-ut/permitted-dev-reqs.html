@@ -1,0 +1,437 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
+
+{% extends "layout.html" %}
+
+{% block content %}
+
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
+                
+              </ol>
+        </div>
+
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 19/AP/1880
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
+    
+      
+        <! –– Application detail blocks ––>
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
+            
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Application information
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                  <table class="govuk-table">
+          <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Type: </b></td>
+            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness	</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Application status: </strong></td>
+            <td class="govuk-table__cell">In assessment</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Validation complete: </strong></td>
+            <td class="govuk-table__cell">2 April 2020</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Summary of proposal: </strong></td>
+            <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        Roof extension (rear)
+                    </li>
+                    <li>
+                        Dormer
+                    </li>
+            </ul>
+              </td>
+          </tr>
+        </tbody>
+          </table>
+                </div>
+            </div>
+    <!--  Documents        -->
+          
+    <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Proposal documents
+                </span>
+              </h3>
+            </div>
+          
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <div style="float: none; clear: both">
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'>Existing floorplan</p>
+                        <img src="/public/images/existing-floorplan.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'>Proposed floorplan</p>
+                        <img src="/public/images/proposed-floorplan.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                </div>
+                <div style="float: none; clear: both">
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'><br>Existing section</p>
+                        <img src="/public/images/existing-section.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'><br>Proposed section</p>
+                        <img src="/public/images/existing-section.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                </div>
+            
+            </div>
+    </div>        
+    <! -- Map -->
+            
+            <div class="govuk-accordion__section " style="float: none; clear: both;">
+                <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Site details
+                </span>
+              </h3>
+            </div>
+            
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <div style="float:left; margin-bottom: 10px;">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
+            <input class="govuk-checkboxes__input " id="map" name="map" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="map">
+              Conservation areas
+            </label>
+          </div>
+        </div>
+       <div style="float:right; margin-right: 60px;">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
+            <input class="govuk-checkboxes__input" id="map-2" name="map" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="map-2">
+              Listed buildings
+            </label>
+          </div>
+        </div>
+        <div style="float:none; margin: 20px 0 20px 0;">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
+            <input class="govuk-checkboxes__input" id="map-3" name="map" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="map-3">
+              Trees (TPOs)
+            </label>
+          </div>
+        </div>
+    <img src="/public/images/Map-Update.png" style="max-width: 600px;" alt="map">
+    <p class="govuk-body">
+        <a href="#" class="govuk-link">
+            Street view on Google Map
+        </a>
+    </p>
+            </div>
+                
+                </div>
+           
+        </div>
+
+   <! –– Left panel with tasks and map ––>
+        <h2 class="govuk-heading-m">
+            Permitted development requirements
+        </h2>
+        <p class="govuk-body">
+        The applicant has submitted the following application. Please review each answer to determine whether what they say and their plans align with the policy questions.
+        </p>
+          
+<!--    Policy question -->
+    <div class="govuk-form-group">
+       <ol class="govuk-body" style="line-height: 2;">
+           <li>
+              Was your house always a house? <strong>Yes</strong>
+           </li>
+            <li>
+                The house is used as a 
+                <strong>family home</strong>
+           </li>
+                      
+            <li>Is the property on designated land? 
+                <strong>No</strong>
+           </li>
+            
+            <li>The house is a 
+                <strong>terrace</strong>
+           </li>
+            <li>Is any part of the property listed? 
+                <strong>No</strong>
+           </li>
+           <li>Is the property part of the Sunray Estate Conservation Area? 
+                <strong>No</strong>
+           </li>
+           <li>I want to 
+                <strong>modify or extend</strong>
+           </li>
+           <li>How many storeys does the original house have? 
+                <strong>2 or more</strong>
+           </li>
+           <li>I want to build an 
+                <strong>extension</strong>
+           </li>
+            <li>What kind of extension will it be? 
+                <strong>Side extension</strong>
+           </li>
+           <li>
+                Is there a road or path on that side of the house? <strong>No</strong>
+           </li>
+           <li>The extension will have <strong>1 storey
+                </strong>
+           </li>
+           <li>
+                The new addition <strong>will not extend beyond the front wall of the house</strong>
+           </li>
+           <li>
+                The height of the extension will be <strong>4m or less</strong>
+           </li>
+           <li>The new structure 
+                <strong>will not</strong> extend beyond the rear wall of the original house
+           </li>
+            <li>
+                The width of the new addition will be <strong>less than or equal to</strong> 1/2 of the width of the original house
+           </li>
+           <li>The distance to the boundary will be 
+               <strong>less than 2m</strong>
+           </li>
+           <li>The roof of the extension will be 
+                <strong>flat</strong>
+           </li>
+           <li>
+               The highest part of the extension roof <strong>will be lower </strong>than 3m
+           </li>
+           <li>The materials and appearance 
+                <strong>will match </strong>
+                the existing house
+           </li>
+           <li>
+               The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
+           </li>
+           
+            
+            <li>The width of the new addition will be
+                <strong> less than or equal to</strong> 1/2 of the width of the original house
+           </li>
+            
+           <li>The height of the extension will be <strong>4m or less</strong>
+                
+           </li>
+            <li>The new addition will 
+                <strong>not </strong>
+                extend beyond the front wall of the house
+           </li>
+            
+            
+            <li>Are there any protected trees on the property? 
+                <strong>No</strong>
+           </li>
+        </ol>
+        <p class="govuk-body">
+            <br><strong>Have permitted development requirements been met?</strong>
+        </p>
+              
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
+        <div class="govuk-radios govuk-radios--small">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+            <div class="govuk-form-group"> 
+            <p class="govuk-body">
+                Please add any comments that can be inserted into the decision notice. 
+            </p> 
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+            <div class="govuk-form-group"> 
+            <p class="govuk-body">
+                Please add any comments that can be inserted into the decision notice. 
+            </p> 
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+            </div>
+          </div>
+          </div>
+        </div>
+               
+        </div>
+
+        
+
+        
+        
+<! -- Save button -->           
+
+
+    <br>
+    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="make-recommendation.html">
+        Save 
+    </a>  
+
+        </div>
+
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+          <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="">Log out</a>
+                </li>
+              </ol>
+            </div>
+        <div style="float: right; margin: 20px 0 30px 100px; ">
+            <p class="govuk-body">
+            <strong class="govuk-tag govuk-tag--green">
+               Due: May 29<br>35 days remaining
+            </strong>
+            </p>
+        </div>
+        
+       
+    
+          <h2 class="app-task-list__section" style="float: none; clear: both;">
+            <span class="app-task-list__section-number">Supporting information</span>
+          </h2>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+            
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Property details
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <ul class="govuk-list govuk-list--bullet">
+            <li>
+                <strong>Address: </strong> 43 Busbey Lane, London, SE16 5GG
+            </li>
+            <li>
+                <strong>Property type: </strong>Residential
+            </li>
+            <li>
+                <strong>Listed building: </strong> No
+            </li>
+            <li>
+                <strong>Conservation area: </strong> No
+            </li>
+          </ul>
+            </div>
+            </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Property history
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <ul class="govuk-list govuk-list--bullet">
+            <li>
+                Permitted development rights: Active
+            </li>
+            <li>
+                Residential area
+            </li>
+          </ul>
+            </div>
+          </div>
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Constraints
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <ul class="govuk-list govuk-list--bullet">
+            <li>
+                Urban density zone
+            </li>
+            <li>
+                Controlled parking zone
+            </li>
+            <li>
+                Air quality management area
+            </li>
+          </ul>
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Contact information
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <p class='govuk-body'><strong>Agent:</strong><br>Trevor King<br>07824 693239<br><a href="">trevor.king@planningco.co.uk</a></p>
+              <p class='govuk-body'><strong>Applicant:</strong><br>Hannah Dogurga<br>07839 282839<br><a href="">hannah.dogurga@gmail.com</a></p>
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Consultation
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              <p class='govuk-body'>Consultation is not applicable for proposed permitted development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}
+
