@@ -1,0 +1,90 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Documents</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Documents: [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      
+        
+        <h2 class="govuk-heading-m">
+            Confirm documents
+        </h2>
+               <br>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-heading-s">
+                You want to replace the document because:
+              </h2>
+            </legend>
+        </fieldset>
+            <p class="govuk-body">
+                  Missing scale bar
+            </p>
+            
+              
+                       <br>
+               <br>
+       
+        <img src="/public/images/existing-floorplan.png" style="width: 300px; margin-bottom: 15px;"><br>
+    <div class="govuk-form-group">
+
+<fieldset class="govuk-fieldset">
+
+ <h2 class="govuk-heading-s">
+  Is this file correct?
+
+    </h2>
+<div class="govuk-radios govuk-radios--small">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="correct" name="correct" type="radio" value="yes">
+    <label class="govuk-label govuk-radios__label" for="correct">
+      Yes, add this file
+    </label>
+
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="correct-2" name="correct" type="radio" value="no">
+    <label class="govuk-label govuk-radios__label" for="correct-2">
+      No, I want to choose a different file
+    </label>
+
+  </div>
+
+</div>
+</fieldset>
+
+</div>
+        
+ <a class="govuk-button" data-module="govuk-button" href="document-management-archived.html">
+        Continue
+    </a>  
+        
+        
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}

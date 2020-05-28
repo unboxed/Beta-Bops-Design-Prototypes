@@ -1,0 +1,100 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Documents</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Documents: [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      <div class="moj-banner moj-banner--success">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+<div class="moj-banner__message">
+<span class="moj-banner__assistive">Success</span>[file name] has been replaced</div>
+
+</div>
+        
+        <h2 class="govuk-heading-m">
+            Proposal documents
+        </h2>
+               
+        
+
+                    <div style="float: none; clear: both">
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong>Existing floorplan</Strong><br>[DD MM YYYY -updated]<br><a href="document-management-1.html" >Replace document</a></p>
+                            <img src="/public/images/existing-floorplan.png" style="width: 300px">
+                            
+                        </div>
+                        <div style="float: left; margin-left: 15px;">
+                            <p class='govuk-body'><Strong>Proposed floorplan</Strong><br>[DD MM YYYY]<br><a href="document-management-1.html" >Replace document</a></p>
+                            <img src="/public/images/proposed-floorplan.png" style="width: 300px">
+                            
+                        </div>
+                    </div>
+                    <div style="float: none; clear: both">
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><br><br><strong>Existing section</strong><br>[DD MM YYYY]<br><a href="document-management-1.html">Replace document</a></p>
+                            <img src="/public/images/existing-section.png" style="width: 300px">
+                        </div>
+                        <div style="float: left; margin-left: 15px;">
+                            <p class='govuk-body'><br><br><strong>Proposed section</strong><br>[DD MM YYYY]<br><a href="document-management-1.html" >Replace document</a></p>
+                            <img src="/public/images/proposed-section.png" style="width: 300px">
+                        </div>
+                        <div style="clear: both; float: none;">&nbsp;</div>
+                    </div>
+        <br>
+        <table class="govuk-table">
+          <caption class="govuk-table__caption">Archived proposal documents</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Document name</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Version </th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Date added</th>
+            <th scope="col" class="govuk-table__header govuk-table__header--numeric">Officer's comment</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Existing roof plan</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="">V1</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">March 2</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">No scale bar</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Existing floor plan</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="">V1</a></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">March 2</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Materials missing</td>
+            </tr>
+          </tbody>
+        </table>
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          <div style="margin-top: 60px;">&nbsp;</div>
+          <a class="govuk-button" data-module="govuk-button" href="">
+        Upload new documents
+    </a>  
+    </div>
+</div>
+{% endblock %}

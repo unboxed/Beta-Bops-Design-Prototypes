@@ -1,0 +1,81 @@
+{% extends "layout.html" %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Documents</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Documents: [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      
+        
+        <h2 class="govuk-heading-m">
+            [Document name]
+        </h2>
+               <br>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-heading-s">
+                Why do you want to replace [selected document name]?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Missing scale bar
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Materials missing
+                </label>
+              </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+                       <br>
+               <br>
+
+        <div class="govuk-form-group"><h2 class="govuk-heading-s">
+                Upload a file
+              </h2>
+    
+          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        </div>     
+        
+        
+ <a class="govuk-button" data-module="govuk-button" href="document-management-2.html">
+        Continue
+    </a>  
+        
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}
