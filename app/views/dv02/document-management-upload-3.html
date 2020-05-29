@@ -19,7 +19,15 @@
         </h1>
         <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
     
-      
+      <div class="moj-banner moj-banner--success">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+
+<div class="moj-banner__message">
+<span class="moj-banner__assistive">Success</span>[file name] has been uploaded</div>
+
+</div>
         
         <h2 class="govuk-heading-m">
             Proposal documents
@@ -29,7 +37,7 @@
 
                     <div style="float: none; clear: both">
                         <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong>Existing floorplan</Strong><br>[DD MM YYYY]<br><a href="document-management-1.html" >Replace document</a></p>
+                            <p class='govuk-body'><Strong>Existing floorplan</Strong><br>[DD MM YYYY -updated]<br><a href="document-management-1.html" >Replace document</a></p>
                             <img src="/public/images/existing-floorplan.png" style="width: 300px">
                             
                         </div>
@@ -63,10 +71,16 @@
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
-              <th scope="row" class="govuk-table__cell" style="font-weight: 100">No documents archived</th>
-              <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-              <td class="govuk-table__cell govuk-table__cell--numeric"></td>
-                <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href=""></a></td>
+              <th scope="row" class="govuk-table__header">Existing roof plan</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="">V1</a></td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">March 2</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Missing scale bar/north arrow</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <th scope="row" class="govuk-table__header">Existing floor plan</th>
+                <td class="govuk-table__cell govuk-table__cell--numeric"><a class="govuk-link" href="">V1</a></td>
+              <td class="govuk-table__cell govuk-table__cell--numeric">March 2</td>
+                <td class="govuk-table__cell govuk-table__cell--numeric">Revise design</td>
             </tr>
           </tbody>
         </table>
@@ -78,9 +92,9 @@
         
       <div class="govuk-grid-column-one-third">
           <div style="margin-top: 60px;">&nbsp;</div>
-            <a class="govuk-button" data-module="govuk-button" href="document-management-upload-1.html">
-                Upload new documents
-            </a>  
+          <a class="govuk-button" data-module="govuk-button" href="">
+        Upload new documents
+    </a>  
     </div>
 </div>
 {% endblock %}
