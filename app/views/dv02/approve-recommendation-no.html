@@ -1,3 +1,11 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
+
 {% extends "layout.html" %}
 
 {% block content %}
@@ -8,17 +16,20 @@
         <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
-                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                  <a class="govuk-breadcrumbs__link" href="application-list-manager.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-approved.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item">
+<!--                    <a href="approve-recommendation-no.html">-->
+                        Provide manager comments
+<!--                    </a>-->
+                </li>
               </ol>
         </div>
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 19/AP/1880
         </h1>
         <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
-
-
 
 <! –– Application detail blocks ––>
 
@@ -205,42 +216,96 @@
                 </div>
         </div>
         </div>
+        
 
-
-    <! -- Task List -->
-      <ol class="app-task-list" style="clear:both; float: none;">
-
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">Assess the proposal</span>
-          </h2>
-          <ul class="app-task-list__items">
-
-            <li class="app-task-list__item">
-               <a class="app-task-list__task-name" href="permitted-dev-reqs-summary-officerview.html" aria-describedby="external-review-completed">
-                    Evaluate permitted development policy requirements
-                </a>
-
-                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
-                    Completed
-                  </strong>
-
-            </li>
-            <li class="app-task-list__item">
-                <a class="app-task-list__task-name" href="make-recommendation-summary" aria-describedby="external-review-completed">
-                Confirm decision notice
-                       </a>
-
-                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
-                    Completed
-                  </strong>
-
-            </li>
-          </ul>
-          </li>
-        </ol>
+        
+        <h2 class="govuk-heading-m">
+            Please identify which policies need to be re-evaluated 
+        </h2>
+        
+        <p class="govuk-body">
+                The following proposal was assessed under Class B:
+        </p>
+        
+        <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
+      <div class="govuk-checkboxes__item" style="margin-bottom: 20px;">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
+          Will the development's roof space exceed the cubic content of the original roof space by more than 40m<sup>3</sup>? <br>
+            <strong>Yes - 50m<sup>3</sup></strong>
+        </label>
       </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-email">
+            Comment:
+          </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
 
+      </div>
+      <div class="govuk-checkboxes__item" style="margin-bottom: 20px;">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-2" name="citizen" type="checkbox" value="phone" data-aria-controls="conditional-citizenship-conditional-2">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-2">
+          Will the development include the alteration or addition of a chimney, vent or vent pipe?<br>
+            <strong>No</strong>
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-2">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-phone">
+            Comment:
+          </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+        </div>
+
+      </div>
+      <div class="govuk-checkboxes__item" style="margin-bottom: 20px;">
+        <input class="govuk-checkboxes__input" id="citizenship-conditional-3" name="citizen" type="checkbox" value="text message" data-aria-controls="conditional-citizenship-conditional-3">
+        <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional-3">
+          Will the development include the alteration or addition of an outdoor balcony or verandha?
+                <br>
+                <strong>No</strong> 
+        </label>
+      </div>
+      <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional-3">
+        <div class="govuk-form-group">
+          <label class="govuk-label" for="contact-by-text">
+            Comment:
+          </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        </div>
+
+      </div>
+    </div>
+        
+    
+       <p class="govuk-body">
+           <strong>
+            Do you have any other comments for the Planning Officer to consider?
+            </strong>
+        </p>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>   
+        <p class="govuk-body">
+    
+        <a class="govuk-button govuk-!-margin-right-3" data-module="govuk-button" href="approve-recommendation-no-confirmation.html">
+  Submit
+</a>
+
+    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="review-recommendation.html">
+      Back
+    </a>
+        
+        
+        
+
+        
+        </div>
+    
+        
+        
+        
 <! –– Right panel with additional information in accordion ––>
 
       <div class="govuk-grid-column-one-third">
