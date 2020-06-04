@@ -26,13 +26,69 @@
             Upload new document
         </h2>
         
+         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+        
+        
         <div class="govuk-form-group">
   <fieldset class="govuk-fieldset" aria-describedby="how-contacted-conditional-hint">
     <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-      <h2 class="govuk-fieldset__heading">
-          What type of document are you uploading?
+      <br><h2 class="govuk-fieldset__heading">
+          Please select relevant tags for the plan you are uploading
       </h2>
     </legend>
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation">
+          FRONT ELEVATION - PROPOSED
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+          FRONT ELEVATION - EXISTING
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          SIDE ELEVATION - PROPOSED
+        </label>
+      </div>
+        <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+          SIDE ELEVATION - EXISTING
+        </label>
+      </div>
+      <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          FLOOR PLAN - PROPOSED 
+        </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          FLOOR PLAN - EXISTING
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          SECTION - PROPOSED
+            </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+        <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT">
+        <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+          SECTION - EXISTING
+            </label>
+        </div>
+    </div>
+  </fieldset>
+</div>
+<!--
     <div class="govuk-radios govuk-radios--conditional govuk-radios govuk-radios--small" data-module="govuk-radios">
       <div class="govuk-radios__item">
         <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
@@ -196,15 +252,10 @@
               </div>
             </div>
           </fieldset>
+-->
         <br>
         <br>
 
-        <div class="govuk-form-group"><h2 class="govuk-heading-s">
-                Upload a file
-              </h2>
-    
-          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-        </div>     
         
         
         

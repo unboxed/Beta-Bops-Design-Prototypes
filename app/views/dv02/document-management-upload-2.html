@@ -23,38 +23,57 @@
       
         
         <h2 class="govuk-heading-m">
-            Confirm documents
+            Confirm document
         </h2>
                <br>
           <fieldset class="govuk-fieldset">
             <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
               <h2 class="govuk-heading-s">
-                Your document name:
+                You have entered the following information:
               </h2>
             </legend>
         </fieldset>
-            <p class="govuk-body">
-                  [Proposed/existing]-[side/elevation/floorplan/]-[rear/side].PDF
-            </p>
+           
             
               
                        <br>
                <br>
        
         <img src="/public/images/existing-floorplan.png" style="width: 300px; margin-bottom: 15px;"><br>
+         <p class="govuk-body" style="line-height: 1.8;">
+                <strong>
+                     [Name-of-doc.PDF]
+                </strong> 
+           <br><strong class="govuk-tag govuk-tag--blue">
+                        Front elevation - Proposed
+                    </strong>
+                    <br>
+                    <strong class="govuk-tag govuk-tag--blue">
+                        Front elevation - Existing
+                   </strong>
+                    <br>
+                <strong class="govuk-tag govuk-tag--blue">
+                       Side elevation - Proposed
+               </strong>
+                 <br>
+                     <strong class="govuk-tag govuk-tag--blue">
+                            Side elevation - Existing
+                     </strong>
+        </p>
+        
     <div class="govuk-form-group">
 
 <fieldset class="govuk-fieldset">
 
  <h2 class="govuk-heading-s">
-  Is this file correct?
+  Is this file and its tags correct?
 
     </h2>
 <div class="govuk-radios govuk-radios--small">
   <div class="govuk-radios__item">
     <input class="govuk-radios__input" id="correct" name="correct" type="radio" value="yes">
     <label class="govuk-label govuk-radios__label" for="correct">
-      Yes, add this file
+      Yes, upload this file
     </label>
 
   </div>
@@ -62,7 +81,7 @@
   <div class="govuk-radios__item">
     <input class="govuk-radios__input" id="correct-2" name="correct" type="radio" value="no">
     <label class="govuk-label govuk-radios__label" for="correct-2">
-      No, I want to choose a different file
+      No, I need to go back
     </label>
 
   </div>
