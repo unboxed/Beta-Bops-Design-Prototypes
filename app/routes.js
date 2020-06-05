@@ -13,7 +13,7 @@ router.post('/approve-recomendation-answer', function (req, res) {
   if (over18 === 'false') {
     res.redirect('dv02/approve-recommendation-no')
   } else {
-    res.redirect('dv02/approve-recommendation-yes')
+    res.redirect('dv02/approve-recommendation')
   }
 })
 
