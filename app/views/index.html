@@ -1,11 +1,17 @@
 {% extends "layout_unbranded.html" %}
 
 {% block pageTitle %}
-  Example without branding
+BoPS
+{% endblock %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/stylesheets/southwark-branding.scss"  rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block content %}
 
+<p class="southwark">Hi</p>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
   <h1 class="govuk-heading-xl">
