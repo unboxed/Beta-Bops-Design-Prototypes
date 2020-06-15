@@ -1,0 +1,14 @@
+{% extends "layout_unbranded.html" %} 
+
+
+
+{% block head %}
+  <link href="/public/sass/unbranded.css" rel="stylesheet" type="text/css" />
+
+  {% for stylesheetUrl in extensionConfig.stylesheets %}
+    <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+  {% endfor %}
+{% endblock %}
+
+{% block header %}{% endblock %}
+{% block footer %}{% endblock %}

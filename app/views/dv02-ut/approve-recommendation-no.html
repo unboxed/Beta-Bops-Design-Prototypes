@@ -8,6 +8,11 @@ iconFallbackText: 'information'
 
 {% extends "layout.html" %}
 
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
 {% block content %}
 
 <! –– Header ––>
@@ -115,11 +120,10 @@ iconFallbackText: 'information'
         </p>
         
         <div class="govuk-checkboxes govuk-checkboxes--small" data-module="govuk-checkboxes">
-            <h2 class="govuk-heading-s">Document revisions</h2>
       <div class="govuk-checkboxes__item">
         <input class="govuk-checkboxes__input" id="citizenship-conditional" name="citizen" type="checkbox" value="email" data-aria-controls="conditional-citizenship-conditional">
         <label class="govuk-label govuk-checkboxes__label" for="citizenship-conditional">
-          10390-Existing-ground-floorplan.PDF
+          Document revisions
         </label>
       </div>
       <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-citizenship-conditional">

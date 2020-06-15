@@ -64,6 +64,7 @@
 
 {% set mainClasses = mainClasses | default("govuk-main-wrapper--auto-spacing") %}
 
+
 {% block footer %}
   {{ govukFooter({
     meta: {
@@ -83,6 +84,7 @@
       ]
     }
   }) }}
+
 {% endblock %}
 
 {% block bodyEnd %}

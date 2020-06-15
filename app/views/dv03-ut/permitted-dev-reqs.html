@@ -1,4 +1,10 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
 
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
 
 {% extends "layout.html" %}
 
@@ -13,17 +19,22 @@
 <! –– Header ––>
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
+        
+        
+    <form action="/refuse-or-approve" method="post" class="form">
+
+        
         <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-reqs-approved.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Make recommendation</li>
+                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
+                
               </ol>
         </div>
-        
-        
+
         <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
             Fast track application: 20/AP/0607
         </h1>
@@ -57,8 +68,8 @@
                   <td class="govuk-table__cell">Rye Lane</td>
             </tr>
             <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><b>Building type: </b></td>
-                  <td class="govuk-table__cell">Residential, home</td>
+                  <td class="govuk-table__cell"><b>Property type: </b></td>
+                  <td class="govuk-table__cell">Terrace</td>
             </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell"><b>Application type: </b></td>
@@ -174,95 +185,253 @@
                 </div>
 -->
         </div>
-        
-        
-        
-        
-        
 
-
-
-<! –– Content ––>
-
-
+   <! –– Left panel with tasks and map ––>
         <h2 class="govuk-heading-m">
-            Submit recommendation
+            Permitted development requirements
         </h2>
-        <p>Based on your answers given with the Permitted Development Policy Requirements, Permited Development should be refused. Your comments have been added to the decision notice. </p>
-   
-<! –– Letter ––>
-
-       <div style="background-color: #f3f2f1; border: solid 1px; padding: 30px; clear: both; margin-top: 10px;">  
-        <span class="govuk-caption-xl">Southwark Council</span>
-           <h2 class="govuk-heading-m">Town and country planning act 1990 (as amended)</h2>
-           <p class="govuk-body"><strong>Decision notice</strong></p>
-           <p class="govuk-body">
-               Certificate of lawfulness of proposed use or development: 
-               <strong>refusal</strong>
-           </p>
-           <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-           
         <p class="govuk-body">
-                <strong>Applicant:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;David Frymann<br>
-                <strong>Date of Issue of this decision:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TBD<br>
-                <strong>Application received:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp;02 March 2020 <br>
-                <strong>Address:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;150 Bellenden Road London &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;SE15 4QY<br>
-                <strong>LBS Registered Number:</strong>  &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;20/AP/0607<br>
+        Based on the application, these were the answers that led to the application for permitted development. Please review each answer to determine whether what they say and their plans align with the policy.
         </p>
-        <p class="govuk-body">
-            Proposed use or development:<br>
-            Certificate of lawful development (proposed) for the construction of a single storey side extension.</p>
-        <p class="govuk-body">
-                IT IS HEREBY CERTIFIED that the use or operations described below are <strong>not lawful</strong> for the purposes of S.192 of the Town and Country Planning Act 1990 on the date that the application for this Certificate was received.
-        </p>
-           <p class="govuk-body">The proposal does not comply with:</p>
-        <ul class="govuk-list govuk-list--bullet">
-
+          
+<!--    Policy question -->
+    <div class="govuk-form-group">
+       <ol class="govuk-body" style="line-height: 2;">
+           <li>
+                Was your house always a house? <strong>Yes</strong>
+                <br>GPDO 2015 S.2 P.1 A.1 (a)
+            </li>
             <li>
-                [ GDPO selected from previous screen]
-            </li>  
-        </ul>
+                The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
+                <br>GPDO 2015 S.2 P.1 A.1
+            </li>
+            <li>The materials and appearance 
+                <strong>will match </strong>
+                the existing house
+                <br>GPDO 2015 S.2 P.1 A.3 (a)
+           </li>
+            <li>
+               The highest part of the extension roof <strong>will be lower </strong>than 3m
+                <br>GPDO 2015 S.2 P.1 A.1 (i)
+           </li>
+            <li>The width of the new addition will be
+                <strong> less than or equal to</strong> 1/2 of the width of the original house
+                <br>GPDO 2015 S.2 P.1 A.1 (j)(iii)
+           </li>
+            <li>
+                The height of the extension will be <strong>4m or less</strong>
+                <br>GPDO 2015 S.2 P.1 A.1 (f)(ii)
+           </li>
+            <li>
+                The new addition <strong>will not extend beyond the front wall of the house</strong>
+                <br>GPDO 2015 S.2 P.1 A.1 (e)(i)
+           </li>
+            <li>
+                Is there a road or path on that side of the house? <strong>No</strong>
+                <br>GPDO 2015 S.2 P.1 A.1 (e)(ii)
+           </li>
+        </ol>
         
-           <p>Signed: Simon Bevan <br>
-           Director of Planning</p>
-
-           <p>
-               Your attention is drawn to the notes accompanying this document
-           </p>
-           <p class="govuk-body">
-               Any enquiries regarding this document should quote the LBS Registered Number and be sent to the Director of Planning, Southwark Council, Chief executive's department, Planning division, Development management, PO Box 64529, London SE1 5LX, or by email to planning.applications@southwark.gov.uk
-           </p>
-            <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
-
-        <p class="govuk-body">INFORMATIVE NOTES TO APPLICANT RELATING TO THE PROPOSED DEVELOPMENT
-           </p>
-          <p class="govuk-body"><strong> [1] APPEAL TO THE SECRETARY OF STATE. </strong>If the applicant is aggrieved by this decision of the council to refuse an application for a Certificate of Lawfulness of Existing Use or Development or to refuse it in part the applicant may appeal to the Secretary of State in accordance with Section 195 of the Town and Country Planning Act 1990 within six months of the receipt of this notice. The Secretary of State can allow a longer period for giving notice of an appeal but will not normally use this power unless there are special circumstances which excuse the delay in giving notice of appeal. If you do decide to appeal you can do so using The Planning Inspectorate’s online appeals service. You can find the service through the appeals area of the Planning Portal at www.planningportal.gov.uk/pcs. You can also appeal by completing the appropriate form which you can get from The Planning Inspectorate, Customer Support Unit, Temple Quay House, 2 The Square, Temple Quay, Bristol BS1 6PN [tel. 0117-3726372]. The form can also be downloaded from the Inspectorate's website at www.planning-inspectorate.gov.uk. The Planning Inspectorate will publish details of your appeal on the internet on the appeals area of the Planning Portal. This may include a copy of the original planning application from and relevant supporting documents supplied to the council by you or your agent, together with the completed appeal form and information you submit to The Planning Inspectorate. Please ensure that you only provide information, including personal information belonging to you, that you are happy will be made available to others in this way. If you supply information belonging to someone else please ensure you have their permission to do so. More detailed information about data protection and privacy matters is available on the Planning Portal. 
-           </p>
+        
+        <details class="govuk-details" data-module="govuk-details">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Show all responses:
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+       <ol class="govuk-body" style="line-height: 2;">
+           <li>I want to 
+                <strong>modify or extend</strong>
+           </li>
+           <li>How many storeys does the original house have? 
+                <strong>2 or more</strong>
+           </li>
+           <li>I want to build an 
+                <strong>extension</strong>
+           </li>
+            <li>What kind of extension will it be? 
+                <strong>Side extension</strong>
+           </li>
+           <li>
+                Is there a road or path on that side of the house? <strong>No</strong>
+           </li>
+           <li>The extension will have <strong>1 storey
+                </strong>
+           </li>
+           <li>
+                The new addition <strong>will not extend beyond the front wall of the house</strong>
+           </li>
+           <li>
+                The height of the extension will be <strong>4m or less</strong>
+           </li>
+           <li>The new structure 
+                <strong>will not</strong> extend beyond the rear wall of the original house
+           </li>
+            <li>
+                The width of the new addition will be <strong>less than or equal to</strong> 1/2 of the width of the original house
+           </li>
+           <li>The distance to the boundary will be 
+               <strong>less than 2m</strong>
+           </li>
+           <li>The roof of the extension will be 
+                <strong>flat</strong>
+           </li>
+           <li>
+               The highest part of the extension roof <strong>will be lower </strong>than 3m
+           </li>
+           <li>The materials and appearance 
+                <strong>will match </strong>
+                the existing house
+           </li>
+           <li>
+               The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
+           </li>
+           
+            
+            <li>The width of the new addition will be
+                <strong> less than or equal to</strong> 1/2 of the width of the original house
+           </li>
+         
+           
+           <li>Was your house always a house?
+                <strong> Yes</strong>
+           </li>
+           
+             <li>The house was used as 
+                <strong> a family home</strong>
+           </li>
+        </ol>
         </div>
-          <br>
+        </details>
         
-<!-- Question       -->
+<!--        Question-->
+        
+         <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+        <p class="govuk-body">
+            <br><strong>Have permitted development requirements been met?</strong>
+        </p>
+              
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
+        <div class="govuk-radios govuk-radios--small">
+            
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
+            <div class="govuk-form-group"> 
+            <p class="govuk-body">
+                By saying yes, you are saying that GDPO Class A requirements are being complied with. <br><br>Please add any comments that you would like to share with your manager.
+            </p> 
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+            </div>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+            <div class="govuk-form-group"> 
             <p class="govuk-body">
                 <br>
-                <strong>
-                    If you agree with the decision notice, please submit it to your manager. 
-                </strong>
-                  Once submitted, you will not be able to change your recommendation, or decision. 
-            </p>
- 
+                Which policies are not being met?
+                
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      GPDO 2015 S.2 P.1 A.1
+                    </label>
+                  </div>
+
+                    <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                        GPDO 2015 S.2 P.1 A.1 (a)
+                    </label>
+                  </div> 
+
+                    <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.1
+                    </label>
+                  </div>  
+
+                     <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.3 (a)
+                     </label>
+                  </div>   
+
+                         <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.1 (i)
+                    </label>
+                  </div>
+
+                     <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.1 (j)(iii)
+                        </label>
+                  </div>
+
+                         <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.1 (f)(ii)
+                        </label>
+                  </div>
+
+                         <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.1 (e)(i)
+                        </label>
+                  </div> 
+                         <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                            GPDO 2015 S.2 P.1 A.1 (e)(ii)
+                    </label>
+                  </div>
+                </div>
+                
+                
+            <p class="govuk-body" style="clear:both; float:none;"><br>
+                Please add any comments for your manager to see. This will <strong>not</strong> appear on the decision notice. 
+            </p> 
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+            </div>
+          </div>
+          </div>
+        </div>
+             </fieldset>
+        </div>
+        </div> 
+        
+
+        
+        
+<! -- Save button -->           
 
 
-    
-    <a class="govuk-button" data-module="govuk-button" href="application-list#awaiting-determination">
-        Submit to manager
-    </a>  
-        
-        
-      </div>
-       
-         
-        
+    <br>
+    <button class="govuk-button" data-module="govuk-button">
+        Save 
+    </button>  
+        </form>
+        </div>
+
 <! –– Right panel with additional information in accordion ––>
         
       <div class="govuk-grid-column-one-third">
@@ -326,6 +495,7 @@
           </ul>
             </div>
           </div>   
+            
             
             <div class="govuk-accordion__section ">
                 <div class="govuk-accordion__section-header">
@@ -440,7 +610,6 @@
             </div>
             </div>
             
-            
             <div class="govuk-accordion__section ">
             <div class="govuk-accordion__section-header">
               <h3 class="govuk-accordion__section-heading">
@@ -497,4 +666,3 @@
       </div>
     </div>
 {% endblock %}
-

@@ -1,3 +1,12 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
+
+
 {% extends "layout.html" %}
 
 {% block head %}
@@ -16,11 +25,10 @@
                 <li class="govuk-breadcrumbs__list-item" aria-current="page"></li>
               </ol>
         </div>
-        <p class="govuk-body">Amala Khan, Planning Manager</p>
         <h1 class="govuk-heading-l">
             Fast track applications
         </h1>
-
+        <p class="govuk-body">Sandra Lewis, Planning Officer</p>
     </div>
     <div class="govuk-grid-column-one-third">
           <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
@@ -34,6 +42,22 @@
     </div>
 
 
+<!--Alert-->
+
+<div class="moj-banner">
+
+<svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+<path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+
+<div class="moj-banner__message">
+
+<h2 class="govuk-heading-m">You have 1 application that corrections have been requested for by your manager. It has 1 day left before the target date.</h2>
+</div>
+
+</div> 
+
+
 <! –– Content ––>
 
   <div class="govuk-grid-row">
@@ -45,14 +69,19 @@
   </h2>
   <ul class="govuk-tabs__list">
     <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#awaiting-determination">
-        Awaiting determination
+      <a class="govuk-tabs__tab" href="#in-assessment">
+        In assessment
+      </a>
+    </li>
+      <li class="govuk-tabs__list-item">
+      <a class="govuk-tabs__tab" href="#amendment">
+        Corrections requested
       </a>
     </li>
     <li class="govuk-tabs__list-item">
-    <a class="govuk-tabs__tab" href="#amendment">
-        Corrections requested
-    </a>
+      <a class="govuk-tabs__tab" href="#awaiting-determination">
+        Awaiting determination
+      </a>
     </li>
     <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#determined">
@@ -60,7 +89,149 @@
       </a>
     </li>
   </ul>
-  
+  <div class="govuk-tabs__panel" id="in-assessment">
+    <h2 class="govuk-heading-l">In assessment</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Application number</th>
+            <th scope="col" class="govuk-table__header">Site address</th>
+            <th scope="col" class="govuk-table__header">Application type</th>
+            <th scope="col" class="govuk-table__header">Target date</th>
+            <th scope="col" class="govuk-table__header">Working days left</th>
+            <th scope="col" class="govuk-table__header">Consultation end date</th>
+            <th scope="col" class="govuk-table__header">Consultation responses</th>
+            <th scope="col" class="govuk-table__header">Planning officer</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a href="cert-of-law-hp.html">
+                    19/AP/1880
+                </a>
+            </td>
+            <td class="govuk-table__cell">43 Busbey Lane, SE16 5GG</td>
+            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
+            <td class="govuk-table__cell">April 28</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  10
+                </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--purple">
+                  not started
+                </strong>
+            </td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1881</td>
+            <td class="govuk-table__cell">Seal House, Weston Street, SE1 4DU</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">April 29</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                20
+                </strong>
+            </td>
+            <td class="govuk-table__cell">May 15</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">Paul Knowles</td>
+        </tr>
+        <tr class="govuk-table_row">
+            <td class="govuk-table__cell">19/AP/1852</td>
+            <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">April 10</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                20
+                </strong>
+            </td>
+            <td class="govuk-table__cell">Closed - February 26 to March 12</td>
+            <td class="govuk-table__cell">3/5</td>
+            <td class="govuk-table__cell">Andrew Kardashian</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1883</td>
+            <td class="govuk-table__cell">29 Barley Rd, SE13 RAW</td>
+            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
+            <td class="govuk-table__cell">May 10</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                27
+                </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">Paul Knowles</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1873</td>
+            <td class="govuk-table__cell">91 Callway Road, SE1 4XJ</td>
+            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
+            <td class="govuk-table__cell">May 2</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                33
+                </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--purple">
+                  not started
+                </strong>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+    
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="amendment">
+    <h2 class="govuk-heading-l">Corrections requested</h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Application number</th>
+            <th scope="col" class="govuk-table__header">Site address</th>
+            <th scope="col" class="govuk-table__header">Application type</th>
+            <th scope="col" class="govuk-table__header">Fast track date</th>
+            <th scope="col" class="govuk-table__header">Working days left</th>
+            <th scope="col" class="govuk-table__header">Consultation end date</th>
+            <th scope="col" class="govuk-table__header">Responses</th>
+            <th scope="col" class="govuk-table__header">Planning officer</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a href="cert-of-law-hp-amendment.html">
+                    19/AP/1880
+                </a>
+            </td>
+            <td class="govuk-table__cell">43 Busbey Lane, SE16 5GG</td>
+            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
+            <td class="govuk-table__cell">April 14</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                1
+                </strong>
+            </td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">Sandra Lewis</td>
+        </tr>
+      </tbody>
+    </table>
+    </div>
+    
+    
+    
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="awaiting-determination">
     <h2 class="govuk-heading-l">Awaiting manager's determination</h2>
     <table class="govuk-table">
@@ -93,7 +264,7 @@
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">
-                <a href="cert-of-law-hp-manager.html">
+                <a href="cert-of-law-reqs-recommended.html">
                     19/AP/1880
                 </a>
             </td>
@@ -126,46 +297,6 @@
       </tbody>
     </table>
     </div>
-    
-    
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="amendment">
-    <h2 class="govuk-heading-l">Corrections requested</h2>
-    <table class="govuk-table">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-            <th scope="col" class="govuk-table__header">Application number</th>
-            <th scope="col" class="govuk-table__header">Site address</th>
-            <th scope="col" class="govuk-table__header">Application type</th>
-            <th scope="col" class="govuk-table__header">Fast track date</th>
-            <th scope="col" class="govuk-table__header">Working days left</th>
-            <th scope="col" class="govuk-table__header">Consultation end date</th>
-            <th scope="col" class="govuk-table__header">Responses</th>
-            <th scope="col" class="govuk-table__header">Planning officer</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-                <a href="cert-of-law-hp-amendment.html">
-                    19/AP/1880
-                </a>
-            </td>
-            <td class="govuk-table__cell">43 Busbey Lane, SE16 5GG</td>
-            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">April 14</td>
-            <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--red">
-                7
-                </strong>
-            </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">Sandra Lewis</td>
-        </tr>
-      </tbody>
-    </table>
-    </div>
-    
 
 
 <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="determined">
@@ -232,6 +363,6 @@
   </div>
 
     </div>
-
+  </div>
 
 {% endblock %}

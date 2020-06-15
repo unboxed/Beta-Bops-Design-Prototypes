@@ -7,7 +7,13 @@ iconFallbackText: 'information'
 }) }} 
 
 
-{% extends "layout.html" %}
+{% extends "southwark.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
 
 {% block content %}
 

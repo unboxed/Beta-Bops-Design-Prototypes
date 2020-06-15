@@ -1,17 +1,17 @@
-{% extends "layout_unbranded.html" %}
-
-{% block pageTitle %}
-BoPS
-{% endblock %}
+{% extends "layout_unbranded.html" %} 
 
 {% block head %}
   {{ super() }}
-  <link href="/public/stylesheets/southwark-branding.scss"  rel="stylesheet" type="text/css">
+  <link href="/public/sass/southwark-branding.css"  rel="stylesheet" type="text/css">
 {% endblock %}
+
+
+
+
 
 {% block content %}
 
-<p class="southwark">Hi</p>
+<p class="big">H i </p>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
   <h1 class="govuk-heading-xl">
@@ -74,12 +74,23 @@ BoPS
   </thead>
   <tbody class="govuk-table__body">
       <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">MVP test
+        <th scope="row" class="govuk-table__header">DV03 - MVP test
             <br> 
-            <a href="/dv02-ut/application-list">Planning officer Part 1 </a>
+            <a href="/dv03-ut/application-list">Planning officer Part 1 </a>
             <br>
             <br>
-            <a href="/dv02-ut/application-list-amendment">Planning officer Part 2 </a>
+            <a href="/dv03-ut/application-list-amendment">Planning officer Part 2 </a>
+            <br>
+            <br>
+            <a href="/dv03-ut/application-list-manager">Planning manager </a></th>
+      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 3</td>
+      <td class="govuk-table__cell govuk-table__cell">Final details and journeys</td>
+      <td class="govuk-table__cell govuk-table__cell">-</td>
+    </tr>
+      <tr class="govuk-table__row">
+        <th scope="row" class="govuk-table__header">DV02 - MVP test
+            <br> 
+            <a href="/dv02-ut/application-list">Planning officer </a>
             <br>
             <br>
             <a href="/dv02-ut/application-list-manager">Planning manager </a></th>
