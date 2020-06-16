@@ -1,4 +1,6 @@
 {% extends "layout.html" %}
+{%- set assetPath = '/govuk/assets' -%}
+
 
 {% block headIcons %}
   <link rel="shortcut icon" href="{{ asset_path }}images/unbranded.ico?0.18.3" type="image/x-icon" />
@@ -6,12 +8,17 @@
 
 {% block head %}
   <!--[if lte IE 8]><link href="/public/stylesheets/unbranded-ie8.css" rel="stylesheet" type="text/css" /><![endif]-->
-  <!--[if gt IE 8]><!--><link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css" /><!--<![endif]-->
+  <!--[if gt IE 8]><!--><link href="/public/stylesheets/unbranded.css" media="all" rel="stylesheet" type="text/css" />
+<!--<![endif]-->
 
 
 {% endblock %}
 
 {% block header %}
-    <h1 class="govuk-heading-l">Back office planning system</h1>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">Back office planning system 1</h1>
+    </div>
+</div>
 {% endblock %}
 {% block footer %}{% endblock %}
