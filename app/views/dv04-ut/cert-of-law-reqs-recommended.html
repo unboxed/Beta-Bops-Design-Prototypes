@@ -1,0 +1,396 @@
+{% extends "layout.html" %}
+
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 20/AP/0607
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+            150 Bellenden Road London SE15 4QY
+        </h2>
+    
+      
+        <! –– Application detail blocks ––>
+
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
+
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Application information
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                  <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Address: </b></td>
+                <td class="govuk-table__cell">150 Bellenden Road London SE15 4QY</td>
+            </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><b>Ward: </b></td>
+                  <td class="govuk-table__cell">Rye Lane</td>
+            </tr>
+            <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><b>Building type: </b></td>
+                  <td class="govuk-table__cell">Residential, home</td>
+            </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Application type: </b></td>
+            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness	</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Summary: </strong></td>
+            <td class="govuk-table__cell">
+                <p class="govuk-body">
+                    Certificate of lawfulnesss (proposed) for the construction of a single storey side extension.   
+                </p>
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><b>Case officer: </b></td>
+              <td class="govuk-table__cell">Not started</td>
+            </tr>
+
+
+        </tbody>
+          </table>
+                </div>
+            </div>
+
+    <!-- Map -->
+
+<!--
+            <div class="govuk-accordion__section " style="float: none; clear: both;">
+                <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Site map 
+                </span>
+              </h3>
+            </div>
+
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">            
+    <img src="/public/images/Map-Update.png" style="max-width: 600px; margin-bottom: 10px;" alt="map">
+    <p class="govuk-body">
+        <a href="https://www.google.com/maps/place/150+Bellenden+Road+London+SE15+4QY/@51.4678598,-0.0724451,3a,75y,295.87h,90t/data=!3m4!1e1!3m2!1sB2xA10Iu6sJrQQ3uY0W18g!2e0!4m2!3m1!1s0x4876039f33bb3b4b:0x924901cdeaa892ff?sa=X&ved=2ahUKEwinz7zHgdLpAhVlmVwKHUzNCFoQxB0wAHoECAsQAg" class="govuk-link" target="_blank">
+            Street view on Google Map
+        </a>
+    </p>
+            </div>
+
+                </div>
+-->
+
+        <!--  Documents        -->
+
+        <!-- Map -->
+
+
+
+
+            <div class="govuk-accordion__section " style="float: none; clear: both;">
+                <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Site location 
+                </span>
+              </h3>
+            </div>
+
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">            
+    <img src="/public/images/THE_LOCATION_PLAN.png" style="max-width: 600px; margin-bottom: 10px;" alt="map">
+            </div>
+
+                </div>
+
+        </div>
+
+    <! -- Task List -->
+      <ol class="app-task-list" style="clear:both; float: none;">
+
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Assess the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+
+            <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="permitted-dev-reqs-summary.html" aria-describedby="external-review-completed">
+                    Evaluate permitted development policy requirements
+                </a>
+
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+
+            </li>
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="make-recommendation-summary" aria-describedby="external-review-completed">
+                Confirm decision notice
+                       </a>
+
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+
+            </li>
+          </ul>
+          </li>
+        </ol>
+      </div>
+
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+          <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="">Log out</a>
+                </li>
+              </ol>
+            </div>
+        <div style="float: right; margin: 20px 0 30px 100px; ">
+            <p class="govuk-body">
+            <strong class="govuk-tag govuk-tag--green">
+               Due: June 12<br>14 days remaining
+            </strong>
+            </p>
+        </div>
+        
+       
+    
+          <h2 class="app-task-list__section" style="float: none; clear: both;">
+            <span class="app-task-list__section-number">&nbsp;</span>
+          </h2>
+        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
+
+           
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Planning history 
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <ul class="govuk-list govuk-list--bullet">
+            <li>
+                Permitted development rights: Active
+            </li>
+            <li>
+                No relevant planning history
+            </li>
+          </ul>
+            </div>
+          </div>
+            
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Constraints
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+              <ul class="govuk-list govuk-list--bullet">
+            <li>
+                Conservation area
+            </li>
+          </ul>
+            </div>
+          </div>   
+            
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h3 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                      Proposal documents
+                    </span>
+                  </h3>
+                </div>
+
+                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+
+                    <p class="govuk-body"><a href="document-management-upload.html">Manage documents</a></p>
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong>10390-Existing-ground-floorplan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View in new window</a></p>
+                           <p class="govuk-body" style="line-height: 1.6;">
+                               <strong class="govuk-tag govuk-tag--blue">
+                                   Floor plan - Existing
+                               </strong>
+                            </p>
+                            <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png" style="width: 300px">
+                            
+                        </div>
+                        
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong><br><br>10391-Proposed-ground-floorplan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_GROUND_FLOOR_PLAN-848008.pdf" target="_blank">View in new window</a></p>
+                            
+                            <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                   Floor plan - Proposed
+                                </strong>
+                            </p>
+                            
+                            <img src="/public/images/PROPOSED_GROUND_FLOOR_PLAN-848008.png" style="width: 300px">
+                        </div>
+                    
+                    <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong><br><br>10392-Existing-rear-elevation.PDF </Strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View in new window</a></p>
+                        
+                        <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Rear elevation - Existing
+                                </strong>
+                            </p>
+                        
+                        <img src="/public/images/EXISTING_REAR_ELEVATION-848011.png" style="width: 300px">
+                            
+                        </div>
+                        
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong><br><br>10393-Proposed-rear-elevation.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank">View in new window</a></p>
+                
+                            <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Rear elevation - Proposed
+                                </strong>
+                            </p>
+                            
+                            <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 300px">
+                        
+                    </div>
+                    <div style="float: none; clear: both">
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong><br><br>10394-Existing-roof-plan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_ROOF_PLAN-848009.pdf" target="_blank">View in new window</a></p>
+                            
+                            <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Roof plan - Existing
+                                </strong>
+                            </p>
+                            
+                            <img src="/public/images/EXISTING_ROOF_PLAN-848009.png" style="width: 200px">
+                            
+                        </div>
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><Strong><br><br>10395-Proposed-roof-plan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_ROOF_PLAN-848010.pdf" target="_blank">View in new window</a></p>
+                            
+                            <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Roof plan - Proposed
+                                </strong>
+                            </p>
+                            
+                            <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 200px">
+                            
+                        </div>
+                    
+                        <div style="float: left; margin-left: 0px;">
+                            <p class='govuk-body'><br><br><strong>10396-Existing-side-elevation.PDF</strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_SIDE_ELEVATION-848014.pdf" target="_blank">View in new window</a></p>
+                            
+                            <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Side elevation - Existing
+                                </strong>
+                            </p>
+                            
+                            <img src="/public/images/EXISTING_SIDE_ELEVATION-848014.png" style="width: 200px">
+                        </div>
+                        <div style="float: left;">
+                            <p class='govuk-body'><br><br><strong>10397-Proposed-side-elevation.PDF</strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_SIDE_ELEVATION-848013.pdf" target="_blank">View in new window</a></p>
+                            
+                            <p class="govuk-body" style="line-height: 1.6;">
+                                <strong class="govuk-tag govuk-tag--blue">
+                                  Side elevation - Proposed
+                                </strong>
+                            </p>
+                            
+                            <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png" style="width: 200px">
+                        </div>
+                        <div style="clear: both; float: none;">&nbsp;</div>
+                    </div>
+            </div>
+            </div>
+            
+            
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Key application dates
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+            <p>
+                <strong>Application status:</strong> Waiting for  assessment
+            </p>
+            <p>
+                <strong>Application received:</strong> 2 March 2020
+            </p>
+            <p>
+                <strong>Validation complete:</strong> 4 March 2020
+            </p>
+            <p>
+                <strong>Fast track date date:</strong> 12 June 2020
+            </p>
+            <p>
+                <strong>Statuatory date:</strong> 26 June 2020
+            </p>
+   
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Contact information
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
+            <p class='govuk-body'><strong>Agent:</strong><br>Not applicable</p>
+              <p class='govuk-body'><strong>Applicant:</strong><br>David Fryman <br>020 7525 5000<br><a href="">david.fryman@email.com</a></p>
+            </div>
+          </div>
+          <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h2 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
+                  Consultation
+                </span>
+              </h2>
+            </div>
+            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+              <p class='govuk-body'>Consultation is not applicable for proposed permitted development.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+{% endblock %}

@@ -50,7 +50,10 @@ iconFallbackText: 'information'
 <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" /></svg>
 
 <div class="moj-banner__message">
-<span class="moj-banner__assistive">Warning</span>You have 1 application that corrections have been requested for by your manager. It has <strong>1 day left </strong>before the target date.</div>
+<span class="moj-banner__assistive">Warning</span>Your manager has requested corrections on <strong>3 applications.</strong>
+    
+
+    </div>
 
 </div> 
 
@@ -61,6 +64,8 @@ iconFallbackText: 'information'
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
 
+        
+<!--Tabs        -->
 <div class="govuk-tabs" data-module="govuk-tabs">
   <h2 class="govuk-tabs__title">
     Contents
@@ -71,9 +76,14 @@ iconFallbackText: 'information'
         In assessment
       </a>
     </li>
-      <li class="govuk-tabs__list-item">
+    <li class="govuk-tabs__list-item">
       <a class="govuk-tabs__tab" href="#amendment">
-        Corrections requested
+        Corrections requested (3) 
+<!--
+                  <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+        <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" /></svg>
+-->
+
       </a>
     </li>
     <li class="govuk-tabs__list-item">
@@ -97,88 +107,101 @@ iconFallbackText: 'information'
             <th scope="col" class="govuk-table__header">Application type</th>
             <th scope="col" class="govuk-table__header">Target date</th>
             <th scope="col" class="govuk-table__header">Days left</th>
-            <th scope="col" class="govuk-table__header">Consultation end date</th>
-            <th scope="col" class="govuk-table__header">Consultation responses</th>
+            <th scope="col" class="govuk-table__header">Consultation status</th>
+<!--            <th scope="col" class="govuk-table__header">Date received</th>-->
             <th scope="col" class="govuk-table__header">Planning officer</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
-            <td class="govuk-table__cell">
-                <a href="cert-of-law-hp.html">
-                    19/AP/1880
-                </a>
-            </td>
-            <td class="govuk-table__cell">43 Busbey Lane, SE16 5GG</td>
-            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">April 28</td>
-            <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--yellow">
-                  10
-                </strong>
-            </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--purple">
-                  not started
-                </strong>
-            </td>
-        </tr>
-        <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1881</td>
             <td class="govuk-table__cell">Seal House, Weston Street, SE1 4DU</td>
             <td class="govuk-table__cell">Full householder</td>
-            <td class="govuk-table__cell">April 29</td>
+            <td class="govuk-table__cell">June 29</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                 20
                 </strong>
             </td>
-            <td class="govuk-table__cell">May 15</td>
-            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">Complete</td>
+<!--            <td class="govuk-table__cell">March 21</td>-->
             <td class="govuk-table__cell">Paul Knowles</td>
         </tr>
         <tr class="govuk-table_row">
             <td class="govuk-table__cell">19/AP/1852</td>
             <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
             <td class="govuk-table__cell">Full householder</td>
-            <td class="govuk-table__cell">April 10</td>
+            <td class="govuk-table__cell">June 30</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                 20
                 </strong>
             </td>
-            <td class="govuk-table__cell">Closed - February 26 to March 12</td>
-            <td class="govuk-table__cell">3/5</td>
+            <td class="govuk-table__cell">Complete</td>
+<!--            <td class="govuk-table__cell">March 22</td>-->
             <td class="govuk-table__cell">Andrew Kardashian</td>
+        </tr>
+          <tr class="govuk-table_row">
+            <td class="govuk-table__cell">19/AP/1844</td>
+            <td class="govuk-table__cell">Thurnham House, SE1 4XJ</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">June 30</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                20
+                </strong>
+            </td>
+            <td class="govuk-table__cell">In progress</td>
+<!--            <td class="govuk-table__cell">March 21 </td>-->
+            <td class="govuk-table__cell">Sandra Lewis</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1883</td>
             <td class="govuk-table__cell">29 Barley Rd, SE13 RAW</td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">May 10</td>
+            <td class="govuk-table__cell">June 30</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                 27
                 </strong>
             </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">Paul Knowles</td>
+            <td class="govuk-table__cell">N/A</td>
+<!--            <td class="govuk-table__cell">March 21</td>-->
+            <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--purple">
+                  not started
+                </strong>
+            </td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1873</td>
             <td class="govuk-table__cell">91 Callway Road, SE1 4XJ</td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">May 2</td>
+            <td class="govuk-table__cell">July 2</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
                 33
                 </strong>
             </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">N/A</td>
+<!--            <td class="govuk-table__cell">March 25</td>-->
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--purple">
+                  not started
+                </strong>
+            </td>
+        </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1873</td>
+            <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">July 4</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                35
+                </strong>
+            </td>
+            <td class="govuk-table__cell">Not started</td>
+<!--            <td class="govuk-table__cell">March 25</td>-->
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--purple">
                   not started
@@ -190,7 +213,8 @@ iconFallbackText: 'information'
 
   </div>
     
-    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="amendment">
+    
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="amendment">
     <h2 class="govuk-heading-l">Corrections requested</h2>
     <table class="govuk-table">
       <thead class="govuk-table__head">
@@ -198,37 +222,65 @@ iconFallbackText: 'information'
             <th scope="col" class="govuk-table__header">Application number</th>
             <th scope="col" class="govuk-table__header">Site address</th>
             <th scope="col" class="govuk-table__header">Application type</th>
-            <th scope="col" class="govuk-table__header">Fast track date</th>
+            <th scope="col" class="govuk-table__header">Target date</th>
             <th scope="col" class="govuk-table__header">Days left</th>
-            <th scope="col" class="govuk-table__header">Consultation end date</th>
-            <th scope="col" class="govuk-table__header">Responses</th>
+            <th scope="col" class="govuk-table__header">Consultation status</th>
+            <th scope="col" class="govuk-table__header">Corrections requested date</th>
             <th scope="col" class="govuk-table__header">Planning officer</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1833</td>
+            <td class="govuk-table__cell">91 Coval Lane, SE1 9DN</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">June 11</td>
             <td class="govuk-table__cell">
-                <a href="cert-of-law-hp-amendment.html">
+                <strong class="govuk-tag govuk-tag--red">
+                4
+                </strong>
+            </td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell">June 3</td>
+            <td class="govuk-table__cell">Paul Knowles</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <a href="cert-of-law-reqs-recommended.html">
                     19/AP/1880
                 </a>
             </td>
-            <td class="govuk-table__cell">43 Busbey Lane, SE16 5GG</td>
+            <td class="govuk-table__cell">150 Bellenden Road, SE15 4QY</td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">April 14</td>
+            <td class="govuk-table__cell">June 12</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
-                1
+                6
                 </strong>
             </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">N/A</td>
+            <td class="govuk-table__cell">June 5</td>
             <td class="govuk-table__cell">Sandra Lewis</td>
+        </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1831</td>
+            <td class="govuk-table__cell">81 Victoria Rd, SE15 8QQ</td>
+            <td class="govuk-table__cell">Full householder</td>
+            <td class="govuk-table__cell">June 14</td>
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                8
+                </strong>
+            </td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell">June 7</td>
+            <td class="govuk-table__cell">Paul Knowles</td>
         </tr>
       </tbody>
     </table>
     </div>
     
-    
+
     
   <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="awaiting-determination">
     <h2 class="govuk-heading-l">Awaiting manager's determination</h2>
@@ -238,10 +290,10 @@ iconFallbackText: 'information'
             <th scope="col" class="govuk-table__header">Application number</th>
             <th scope="col" class="govuk-table__header">Site address</th>
             <th scope="col" class="govuk-table__header">Application type</th>
-            <th scope="col" class="govuk-table__header">Fast track date</th>
+            <th scope="col" class="govuk-table__header">Target date</th>
             <th scope="col" class="govuk-table__header">Days left</th>
-            <th scope="col" class="govuk-table__header">Consultation end date</th>
-            <th scope="col" class="govuk-table__header">Responses</th>
+            <th scope="col" class="govuk-table__header">Consultation status</th>
+            <th scope="col" class="govuk-table__header">Submission date</th>
             <th scope="col" class="govuk-table__header">Planning officer</th>
         </tr>
       </thead>
@@ -250,14 +302,14 @@ iconFallbackText: 'information'
             <td class="govuk-table__cell">19/AP/1833</td>
             <td class="govuk-table__cell">77 Bushey Hill Rd, SE5 8QQ</td>
             <td class="govuk-table__cell">Full householder</td>
-            <td class="govuk-table__cell">April 10</td>
+            <td class="govuk-table__cell">June 10</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
                 4
                 </strong>
             </td>
-            <td class="govuk-table__cell">Closed - January 20 to February 08</td>
-            <td class="govuk-table__cell">3/3</td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell">June 1</td>
             <td class="govuk-table__cell">Paul Knowles</td>
         </tr>
         <tr class="govuk-table__row">
@@ -266,30 +318,30 @@ iconFallbackText: 'information'
                     19/AP/1880
                 </a>
             </td>
-            <td class="govuk-table__cell">43 Busbey Lane, SE16 5GG</td>
+            <td class="govuk-table__cell">150 Bellenden Road, SE15 4QY</td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">April 14</td>
+            <td class="govuk-table__cell">June 12</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
-                7
+                6
                 </strong>
             </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">N/A</td>
+            <td class="govuk-table__cell">June 2</td>
             <td class="govuk-table__cell">Sandra Lewis</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1831</td>
             <td class="govuk-table__cell">81 Victoria Rd, SE15 8QQ</td>
             <td class="govuk-table__cell">Full householder</td>
-            <td class="govuk-table__cell">April 14</td>
+            <td class="govuk-table__cell">June 14</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
-                7
+                8
                 </strong>
             </td>
-            <td class="govuk-table__cell">Closed - February 2 to March 1</td>
-            <td class="govuk-table__cell">6/6</td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell">June 10</td>
             <td class="govuk-table__cell">Paul Knowles</td>
         </tr>
       </tbody>
@@ -305,10 +357,10 @@ iconFallbackText: 'information'
             <th scope="col" class="govuk-table__header">Application number</th>
             <th scope="col" class="govuk-table__header">Site address</th>
             <th scope="col" class="govuk-table__header">Application type</th>
-            <th scope="col" class="govuk-table__header">Fast track date</th>
-            <th scope="col" class="govuk-table__header">Days left</th>
-            <th scope="col" class="govuk-table__header">Consultation end date</th>
-            <th scope="col" class="govuk-table__header">Responses</th>
+            <th scope="col" class="govuk-table__header">Target date</th>
+            <th scope="col" class="govuk-table__header">Days left before determination</th>
+            <th scope="col" class="govuk-table__header">Consultation status</th>
+            <th scope="col" class="govuk-table__header">Determination date</th>
             <th scope="col" class="govuk-table__header">Planning officer</th>
         </tr>
       </thead>
@@ -317,27 +369,27 @@ iconFallbackText: 'information'
             <td class="govuk-table__cell">19/AP/1852</td>
             <td class="govuk-table__cell">28 Something Road, London SE2 4XK</td>
             <td class="govuk-table__cell">Full householder</td>
-            <td class="govuk-table__cell">April 10</td>
+            <td class="govuk-table__cell">June 7</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
                 0
                 </strong>
             </td>
-            <td class="govuk-table__cell">Closed - February 26 to March 12</td>
-            <td class="govuk-table__cell">3/3</td>
+            <td class="govuk-table__cell">Complete</td>
+            <td class="govuk-table__cell">June 7</td>
             <td class="govuk-table__cell">Sandra Lewis</td>
         </tr>
         <tr class="govuk-table__row">
             <td class="govuk-table__cell">19/AP/1883</td>
             <td class="govuk-table__cell">92 Other Road, SE4 5MJ</td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">May 10</td>
+            <td class="govuk-table__cell">June 8</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
                 2
                 </strong></td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">N/A</td>
+            <td class="govuk-table__cell">June 6</td>
             <td class="govuk-table__cell">Virginia Walters</td>
 
         </tr>
@@ -345,14 +397,14 @@ iconFallbackText: 'information'
             <td class="govuk-table__cell">19/AP/1873</td>
             <td class="govuk-table__cell">82 Trick Road, SE5 6JK</td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness</td>
-            <td class="govuk-table__cell">May 11</td>
+            <td class="govuk-table__cell">June 11</td>
             <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--red">
                 3
                 </strong>
             </td>
-            <td class="govuk-table__cell">-</td>
-            <td class="govuk-table__cell">-</td>
+            <td class="govuk-table__cell">N/A</td>
+            <td class="govuk-table__cell">June 7</td>
             <td class="govuk-table__cell">Virginia Walters</td>
         </tr>
       </tbody>
@@ -361,6 +413,9 @@ iconFallbackText: 'information'
   </div>
 
     </div>
+        
+ 
+        
   </div>
 
 {% endblock %}
