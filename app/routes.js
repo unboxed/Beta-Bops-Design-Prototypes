@@ -11,9 +11,9 @@ router.post('/approve-recomendation-answer', function (req, res) {
   let over18 = req.session.data['over-18']
 
   if (over18 === 'false') {
-    res.redirect('dv03-ut/approve-recommendation-no')
+    res.redirect('dv04-ut/approve-recommendation-no')
   } else {
-    res.redirect('dv03-ut/approve-recommendation')
+    res.redirect('dv04-ut/approve-recommendation')
   }
 })
 
@@ -30,9 +30,9 @@ router.post('/refuse-or-approve', function (req, res) {
   let over19 = req.session.data['how-contacted']
 
   if (over19 === 'phone') {
-    res.redirect('dv03-ut/make-recommendation')
+    res.redirect('dv04-ut/make-recommendation')
   } else {
-    res.redirect('dv03-ut/make-recommendation-grant')
+    res.redirect('dv04-ut/make-recommendation-grant')
   }
 })
 
