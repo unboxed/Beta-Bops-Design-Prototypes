@@ -15,6 +15,8 @@ iconFallbackText: 'information'
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         
+            <form action="/approve-recomendation-answer" method="post" class="form">
+
         
         
         
@@ -23,7 +25,7 @@ iconFallbackText: 'information'
                 <li class="govuk-breadcrumbs__list-item">
                   <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
                 </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp-amendment.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item"><a href="">Application</a></li>
                 <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
                 
               </ol>
@@ -167,14 +169,12 @@ iconFallbackText: 'information'
            
         </div>
 
-        
-    <! –– manager comment ––>
-        
+   <! –– Left panel with tasks and map ––>
         <h2 class="govuk-heading-m">
             Corrections have been requested
         </h2>
         <p class="govuk-body">
-            Your manager sent the following comment about your recommendation below. Please take action based on their comment. </p>
+            You have sent the following comment to the Planning Officer on why you do not agree with the recommendation. </p>
           
         <div style="border: 1px solid; padding: 10px;">
             <p class="govuk-body">
@@ -185,13 +185,12 @@ iconFallbackText: 'information'
               <br>
                 <br>
 <!--Officer info-->
-        
-        
+                
         <h2 class="govuk-heading-m">
             Permitted development requirements
         </h2>
         <p class="govuk-body">
-        The applicant has submitted the following application. Please review each answer to determine whether what they say and their plans align with the policy questions.
+        The applicant has submitted the following application. 
         </p>
           
 <!--    Policy question -->
@@ -245,57 +244,30 @@ iconFallbackText: 'information'
            </li>
         </ol>
         <p class="govuk-body">
-            <br><strong>Have permitted development requirements been met?</strong>
+            <br>Based on the evidence given by applicant, the planning officer recommended that permitted development should be <strong>[granted/refused]</strong>.
+            <br><br>
+            The officer has submitted this comment to the applicant:
         </p>
+        
+        <div style="border: 1px solid; padding: 10px;">
+            <p class="govuk-body">
+                Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum 
+            </p>
+             
+             </div>
               
-        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
-        <div class="govuk-radios govuk-radios--small">
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
-                Please add any comments that can be inserted into the decision notice. 
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
-            </div>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" checked="checked">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-              No
-            </label>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
-                Please add any comments that can be inserted into the decision notice. 
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint">[Comment from application here]</textarea> 
-            </div>
-          </div>
-          </div>
-        </div>
                
         </div>
 
-        
 
         
-        
-<! -- Save button -->           
-
-
-    <br>
-    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="make-recommendation.html">
-        Save 
-    </a>  
-
+        <a class="govuk-button" data-module="govuk-button" href="cert-of-law-reqs-approved-correction.html">Back</a>
+        </form>
         </div>
+        
+
+
+
 
 <! –– Right panel with additional information in accordion ––>
         
