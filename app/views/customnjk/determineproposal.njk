@@ -1,0 +1,33 @@
+{% macro determineproposal(params) %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+<h2 class="app-task-list__section">
+  <span class="app-task-list__section-number">Determine the proposal</span>
+</h2>
+<ul class="app-task-list__items">
+  <li class="app-task-list__item">
+    <a
+      class="app-task-list__task-name"
+      href="permitted-dev-reqs-summary.html"
+      aria-describedby="external-review-completed"
+    >
+      Review permitted development policy requirements
+    </a>
+  </li>
+  <li class="app-task-list__item">
+    <a
+      class="app-task-list__task-name"
+      href="review-recommendation"
+      aria-describedby="external-review-completed"
+    >
+      Publish and send decision notice
+    </a>
+  </li>
+</ul>
+</div>
+</div>
+
+{% endblock %}
+
+{% endmacro %}

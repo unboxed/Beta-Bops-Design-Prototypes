@@ -1,0 +1,123 @@
+{% macro fasttrackapp(params) %}
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a
+            class="govuk-breadcrumbs__link"
+            href="application-list-manager.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      Fast track application: 20/AP/0607
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+      150 Bellenden Road London SE15 4QY
+    </h2>
+
+    <! –– Application detail blocks ––>
+
+    <div
+      class="govuk-accordion"
+      data-module="govuk-accordion"
+      id="accordion-default"
+    >
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Application information
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <table class="govuk-table">
+            <tbody class="govuk-table__body">
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Address: </b></td>
+                <td class="govuk-table__cell">
+                  150 Bellenden Road London SE15 4QY
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Ward: </b></td>
+                <td class="govuk-table__cell">Rye Lane</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Building type: </b></td>
+                <td class="govuk-table__cell">Residential, home</td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Application type: </b></td>
+                <td class="govuk-table__cell">
+                  Proposed permitted development: Certification of lawfulness
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><strong>Summary: </strong></td>
+                <td class="govuk-table__cell">
+                  <p class="govuk-body">
+                    Certificate of lawfulnesss (proposed) for the construction
+                    of a single storey side extension.
+                  </p>
+                </td>
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Case officer: </b></td>
+                <td class="govuk-table__cell">Sandra Lewis</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <!-- Map -->
+
+      <div class="govuk-accordion__section" style="float: none; clear: both;">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-2"
+            >
+              Site location
+            </span>
+          </h3>
+        </div>
+
+        <div
+          id="accordion-default-content-2"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-2"
+        >
+          <img
+            src="/public/images/THE_LOCATION_PLAN.png"
+            style="max-width: 600px; margin-bottom: 10px;"
+            alt="map"
+          />
+        </div>
+        
+      </div>
+
+
+    </div>
+    {% endblock %}
+
+{% endmacro %}

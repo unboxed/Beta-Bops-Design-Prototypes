@@ -1,0 +1,26 @@
+{% extends "layout.html" %} 
+{% from "../customnjk/assessproposal.njk" import assessproposal %}
+{% from "../customnjk/determineproposal.njk" import determineproposal %}
+{% from "../customnjk/applicationinfodv4ut.njk" import applicationinfo %}
+{% from "../customnjk/permittedrequirements.njk" import permittedrequirements %}
+{% from "../customnjk/makerecommendation.njk" import makerecommendation %}
+{% from "../customnjk/rightsidemenu.njk" import rightmenu %}
+{% from "../customnjk/righmakerecommendationmenu.njk" import rightmakemenu %}
+{% from "../customnjk/fasttrackapp20AP.njk" import fasttrackapp %}
+
+
+{% block head %} {{ super() }}
+{% endblock %} 
+{% block content %}
+
+{{ fasttrackapp() }}
+    <!-- {#  {{ assessproposal() }} #}-->
+    <!-- {# {{ permittedrequirements()}} #}-->
+    <!-- {#  {{ makerecommendation() }} #}-->
+    <!-- {# {{ determineproposal() }} #}-->
+  
+  </div>
+ <!-- {# {{ rightmenu()}} #}-->
+ <!-- {# {{ rightmakemenu()}} #}-->
+
+{% endblock %}

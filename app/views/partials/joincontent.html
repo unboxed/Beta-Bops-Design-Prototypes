@@ -1,0 +1,11 @@
+{% extends "layout.html" %} 
+{% from "../customnjk/determineproposal.njk" import determineproposal %}
+{% from "../customnjk/applicationinfodv4ut.njk" import applicationinfo %}
+
+
+{% block content %}
+
+  {{ applicationinfo() }}
+  {{ determineproposal() }}
+  
+{% endblock %}
