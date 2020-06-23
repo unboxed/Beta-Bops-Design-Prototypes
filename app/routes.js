@@ -30,9 +30,9 @@ router.post('/refuse-or-approve', function (req, res) {
   let over19 = req.session.data['how-contacted']
 
   if (over19 === 'phone') {
-    res.redirect('dv04-ut/make-recommendation')
+    res.redirect('v08/make-recommendation')
   } else {
-    res.redirect('dv04-ut/make-recommendation-grant')
+    res.redirect('v08/make-recommendation-grant')
   }
 })
 
