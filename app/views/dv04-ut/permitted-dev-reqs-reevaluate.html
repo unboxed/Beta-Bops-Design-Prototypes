@@ -56,80 +56,147 @@ iconFallbackText: 'information'
 
                   <table class="govuk-table">
           <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-                <td class="govuk-table__cell"><b>Address: </b></td>
-                <td class="govuk-table__cell">150 Bellenden Road London SE15 4QY</td>
-            </tr>
-              <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><b>Ward: </b></td>
-                  <td class="govuk-table__cell">Rye Lane</td>
-            </tr>
-            <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><b>Building type: </b></td>
-                  <td class="govuk-table__cell">Residential, home</td>
-            </tr>
         <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><b>Application type: </b></td>
+            <td class="govuk-table__cell"><b>Type: </b></td>
             <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness	</td>
           </tr>
           <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><strong>Summary: </strong></td>
-            <td class="govuk-table__cell">
-                <p class="govuk-body">
-                    Certificate of lawfulnesss (proposed) for the construction of a single storey side extension.   
-                </p>
-              </td>
+            <td class="govuk-table__cell"><strong>Application status: </strong></td>
+            <td class="govuk-table__cell">In assessment</td>
           </tr>
           <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><b>Case officer: </b></td>
-              <td class="govuk-table__cell">Sandra Lewis </td>
-            </tr>
-
-
+            <td class="govuk-table__cell"><strong>Validation complete: </strong></td>
+            <td class="govuk-table__cell">2 April 2020</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Summary of proposal: </strong></td>
+            <td class="govuk-table__cell">
+                <ul class="govuk-list govuk-list--bullet">
+                    <li>
+                        Roof extension (rear)
+                    </li>
+                    <li>
+                        Dormer
+                    </li>
+            </ul>
+              </td>
+          </tr>
         </tbody>
           </table>
                 </div>
             </div>
-            
-
-        
-           <!-- Map -->
-
-            <div class="govuk-accordion__section ">
-                <div class="govuk-accordion__section-header">
-                  <h3 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                  Site location 
+    <!--  Documents        -->
+          
+    <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Proposal documents
                 </span>
               </h3>
-                    </div>  
-                    
-            
-            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3"> 
-                <div style="margin-left: 0px;">
-                <p class="govuk-body" style="margin-bottom: 20px;">
-                    <a href="document-management" class="govuk-link">
-                        Manage documents
-                    </a>
-                </p>
+            </div>
+          
+            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+                <div style="float: none; clear: both">
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'>Existing floorplan</p>
+                        <img src="/public/images/existing-floorplan.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'>Proposed floorplan</p>
+                        <img src="/public/images/proposed-floorplan.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
                 </div>
-                
-                <p class='govuk-body'><Strong>[Name-of-doc.PDF]</Strong><br>[DD MM YYYY]<br><a href="/public/images/THE_LOCATION_PLAN-848016.pdf" target="_blank">View in new window</a></p>
-                   
-                <img src="/public/images/THE_LOCATION_PLAN.png" style="max-width: 600px; margin-bottom: 10px;" alt="map">
-
-            </div>
-            </div>
-                      
+                <div style="float: none; clear: both">
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'><br>Existing section</p>
+                        <img src="/public/images/existing-section.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                    <div style="float: left; margin-left: 20px;">
+                        <p class='govuk-body'><br>Proposed section</p>
+                        <img src="/public/images/existing-section.png" style="width: 200px">
+                        <p class='govuk-body'><a href="">Download</a></p>
+                    </div>
+                </div>
             
+            </div>
+    </div>        
+    <! -- Map -->
+            
+            <div class="govuk-accordion__section " style="float: none; clear: both;">
+                <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
+                  Site details
+                </span>
+              </h3>
+            </div>
+            
+    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
+        <div style="float:left; margin-bottom: 10px;">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
+            <input class="govuk-checkboxes__input " id="map" name="map" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="map">
+              Conservation areas
+            </label>
+          </div>
+        </div>
+       <div style="float:right; margin-right: 60px;">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
+            <input class="govuk-checkboxes__input" id="map-2" name="map" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="map-2">
+              Listed buildings
+            </label>
+          </div>
+        </div>
+        <div style="float:none; margin: 20px 0 20px 0;">
+          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
+            <input class="govuk-checkboxes__input" id="map-3" name="map" type="checkbox" value="farm">
+            <label class="govuk-label govuk-checkboxes__label" for="map-3">
+              Trees (TPOs)
+            </label>
+          </div>
+        </div>
+    <img src="/public/images/Map-Update.png" style="max-width: 600px;" alt="map">
+    <p class="govuk-body">
+        <a href="#" class="govuk-link">
+            Street view on Google Map
+        </a>
+    </p>
+            </div>
+                
+                </div>
+           
+        </div>
+
+        
+    <! –– manager comment ––>
+        
+        <h2 class="govuk-heading-m">
+            Corrections have been requested
+        </h2>
+        <p class="govuk-body">
+            Your manager sent the following comment about your recommendation below. Please take action based on their comment. </p>
+          
+        <div style="border: 1px solid; padding: 10px;">
+            <p class="govuk-body">
+               [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ]
+            </p>
+             
+             </div>
+              <br>
+                <br>
+<!--Officer info-->
         
         
-   <! –– Left panel with tasks and map ––>
         <h2 class="govuk-heading-m">
             Permitted development requirements
         </h2>
         <p class="govuk-body">
-        Based on the application, these were the answers that led to the application for permitted development. Please review each answer to determine whether what they say and their plans align with the policy.
+        The applicant has submitted the following application. Please review each answer to determine whether what they say and their plans align with the policy questions.
         </p>
           
 <!--    Policy question -->
@@ -257,14 +324,6 @@ iconFallbackText: 'information'
           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
             <div class="govuk-form-group"> 
             <p class="govuk-body">
-                By saying yes, you are saying that GDPO Class A requirements are being complied with. <br><br>Please add any comments that you would like to share with your manager.
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
-            </div>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
                 Please add any comments that can be inserted into the decision notice. 
             </p> 
                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
@@ -279,78 +338,9 @@ iconFallbackText: 'information'
           <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
             <div class="govuk-form-group"> 
             <p class="govuk-body">
-                <br>
-                Which policies are not being met?
-                
-                <div class="govuk-checkboxes govuk-checkboxes--small">
-                  <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc" checked="checked">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation" >
-                      GPDO 2015 S.2 P.1 A.1
-                    </label>
-                  </div>
-
-                    <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                        GPDO 2015 S.2 P.1 A.1 (a)
-                    </label>
-                  </div> 
-
-                    <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.1
-                    </label>
-                  </div>  
-
-                     <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.3 (a)
-                     </label>
-                  </div>   
-
-                         <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.1 (i)
-                    </label>
-                  </div>
-
-                     <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.1 (j)(iii)
-                        </label>
-                  </div>
-
-                         <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.1 (f)(ii)
-                        </label>
-                  </div>
-
-                         <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.1 (e)(i)
-                        </label>
-                  </div> 
-                         <div class="govuk-checkboxes__item">
-                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                            GPDO 2015 S.2 P.1 A.1 (e)(ii)
-                    </label>
-                  </div>
-                </div>
-                
-                
-            <p class="govuk-body" style="clear:both; float:none;"><br>
-                Please add any comments for your manager to see. This will <strong>not</strong> appear on the decision notice. 
+                Please add any comments that can be inserted into the decision notice. 
             </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint">[Comment from application here]</textarea> 
             </div>
           </div>
           </div>
@@ -366,7 +356,7 @@ iconFallbackText: 'information'
 
 
     <br>
-    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="make-recommendation-amendment.html">
+    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="make-recommendation.html">
         Save 
     </a>  
 
