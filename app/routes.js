@@ -11,9 +11,9 @@ router.post('/approve-recomendation-answer', function (req, res) {
   let over18 = req.session.data['over-18']
 
   if (over18 === 'false') {
-    res.redirect('dv04-ut/approve-recommendation-no')
+    res.redirect('v08/approve-recommendation-no')
   } else {
-    res.redirect('dv04-ut/approve-recommendation')
+    res.redirect('v08/approve-recommendation')
   }
 })
 
