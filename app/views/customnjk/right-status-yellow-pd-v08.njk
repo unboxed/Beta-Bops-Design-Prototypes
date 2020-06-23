@@ -1,0 +1,24 @@
+{% macro rightstatus(params) %}
+{% block content %}
+  <div
+      class="govuk-breadcrumbs"
+      style="float: right;"
+      style="margin-bottom: 20px; float: right;"
+    >
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="">Log out</a>
+        </li>
+      </ol>
+    </div>
+    <div style="float: right; margin: 20px 0 30px 100px;">
+      <p class="govuk-body">
+        <strong class="govuk-tag govuk-tag--yellow">
+          Due: June 12<br />11 days remaining
+        </strong>
+      </p>
+    </div>
+
+{% endblock %}
+
+{% endmacro %}

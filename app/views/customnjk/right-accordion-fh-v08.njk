@@ -1,26 +1,7 @@
-{% macro rightmenu(params) %}
+{% macro rightaccordion(params) %}
 {% block content %}
   <! –– Right panel with additional information in accordion ––>
 
-  <div class="govuk-grid-column-one-third">
-    <div
-      class="govuk-breadcrumbs"
-      style="float: right;"
-      style="margin-bottom: 20px; float: right;"
-    >
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="">Log out</a>
-        </li>
-      </ol>
-    </div>
-    <div style="float: right; margin: 20px 0 30px 100px;">
-      <p class="govuk-body">
-        <strong class="govuk-tag govuk-tag--red">
-          Due: June 12<br />7 days remaining
-        </strong>
-      </p>
-    </div>
 
     <h2 class="app-task-list__section" style="float: none; clear: both;">
       <span class="app-task-list__section-number">&nbsp;</span>
@@ -346,7 +327,7 @@
       </div>
     </div>
   </div>
-</div>
+
 {% endblock %}
 
 {% endmacro %}

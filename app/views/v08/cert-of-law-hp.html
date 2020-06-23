@@ -1,126 +1,43 @@
-{% extends "layout.html" %}
-{% from "../customnjk/rightsidemenu.njk" import rightmenu %}
-
-
-{% block head %}
-  {{ super() }}
-  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
-{% endblock %}
-
-{% block content %}
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-pd-v08.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-pd-v08.njk" import
+rightaccordion %} {% from "../customnjk/right-status-green-pd-v08.njk" import
+rightstatus %} {% block head %} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
 
 <! –– Header ––>
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-              <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
-              </ol>
-        </div>
-        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-            Fast track application: 20/AP/0607
-        </h1>
-        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
-            150 Bellenden Road London SE15 4QY
-        </h2>
-    
-      
-        <! –– Application detail blocks ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      Fast track application: 20/AP/0607
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+      150 Bellenden Road London SE15 4QY
+    </h2>
 
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
 
-            `<div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Application information
-                </span>
-              </h3>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+    <! -- Task List -->
 
-                  <table class="govuk-table">
-          <tbody class="govuk-table__body">
-            <tr class="govuk-table__row">
-                <td class="govuk-table__cell"><b>Address: </b></td>
-                <td class="govuk-table__cell">150 Bellenden Road London SE15 4QY</td>
-            </tr>
-              <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><b>Ward: </b></td>
-                  <td class="govuk-table__cell">Rye Lane</td>
-            </tr>
-            <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><b>Property type: </b></td>
-                  <td class="govuk-table__cell">Terrace</td>
-            </tr>
-        <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><b>Application type: </b></td>
-            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness	</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><strong>Summary: </strong></td>
-            <td class="govuk-table__cell">
-                <p class="govuk-body">
-                    Certificate of lawfulnesss (proposed) for the construction of a single storey side extension.   
-                </p>
-              </td>
-          </tr>
-          <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><b>Case officer: </b></td>
-              <td class="govuk-table__cell">Not started</td>
-            </tr>
-
-
-        </tbody>
-          </table>
-                </div>
-            </div>
-
-    <!-- Map -->
-
-            <div class="govuk-accordion__section ">
-                <div class="govuk-accordion__section-header">
-                  <h3 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                  Site location 
-                </span>
-              </h3>
-                    </div>  
-                    
-            
-            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3"> 
-                <div style="margin-left: 0px;">
-                <p class="govuk-body" style="margin-bottom: 20px;">
-                    <a href="document-management" class="govuk-link">
-                        Manage documents
-                    </a>
-                </p>
-                </div>
-                
-                <p class='govuk-body'><Strong>[Name-of-doc.PDF]</Strong><br>[DD MM YYYY]<br><a href="/public/images/THE_LOCATION_PLAN-848016.pdf" target="_blank">View in new window</a></p>
-                   
-                <img src="/public/images/THE_LOCATION_PLAN.png" style="max-width: 600px; margin-bottom: 10px;" alt="map">
-
-            </div>
-            </div>
-                      
-            
-
-
-        <!--  Documents        -->
-
-        
-        </div>
-
-    <! -- Task List -->   
-    
-
-    
-      <ol class="app-task-list">
-<!--
+    <ol class="app-task-list">
+      <!--
         <li>
           <h2 class="app-task-list__section">
             <span class="app-task-list__section-number">Application allocation</span>
@@ -139,12 +56,12 @@
             </ul>
           </li>
 -->
-        <li>
-          <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">Assess the proposal</span>
-          </h2>
-          <ul class="app-task-list__items">
-<!--
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Assess the proposal</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <!--
             <li class="app-task-list__item">
               <a class="app-task-list__task-name" href="permitted-dev-rights.html" aria-describedby="external-review-completed">
                 Confirm permitted development rights
@@ -156,38 +73,42 @@
 
             </li>
 -->
-            <li class="app-task-list__item">
-                <a class="app-task-list__task-name" href="permitted-dev-reqs" aria-describedby="external-review-completed">
-                    Evaluate permitted development policy requirements
-                </a>
-<!--
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="permitted-dev-reqs"
+              aria-describedby="external-review-completed"
+            >
+              Evaluate permitted development policy requirements
+            </a>
+            <!--
                 <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
                     Completed
                   </strong>
 -->
-            </li>
-            <li class="app-task-list__item">
-<!--                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">-->
-                Confirm decision notice
-<!--                </a>-->   
-<!--
+          </li>
+          <li class="app-task-list__item">
+            <!--                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">-->
+            Confirm decision notice
+            <!--                </a>-->
+            <!--
                 <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
                     Completed
                   </strong>
 -->
-            </li>
-          </ul>
-        </li>
-          
-          
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
 
-      </ol>
-      </div>
-        
-<! –– Right panel with additional information in accordion ––>
+  <! –– Right panel with additional information in accordion ––>
 
-{{ rightmenu() }}
+  <div class="govuk-grid-column-one-third">
+    {{ rightstatus() }} {{ rightaccordion() }}
+  </div>
 
-         <!-- {# {{ rightmenu()}} #}-->
+  
+</div>
+  {% endblock %}
 
-{% endblock %}

@@ -1,600 +1,307 @@
-{%- from "moj/components/banner/macro.njk" import mojBanner -%}
-
-{{ mojBanner({
-type: 'information',
-text: 'Select text to add comment.',
-iconFallbackText: 'information'
-}) }} 
-
-{% extends "layout.html" %}
-
-{% block head %}
-  {{ super() }}
-  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
-{% endblock %}
-
-{% block content %}
-
+{%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
+type: 'information', text: 'Select text to add comment.', iconFallbackText:
+'information' }) }} {% extends "layout.html" %} {% from
+"../customnjk/left-accordion-pd-v08.njk" import leftaccordion %} {% from
+"../customnjk/right-accordion-pd-v08.njk" import rightaccordion %} {% from
+"../customnjk/right-status-red-pd-v08.njk" import rightstatus %} {% block head
+%} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
 
 <! –– Header ––>
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-        
-        
-        
-        
-        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-              <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-                </li>
-                <li class="govuk-breadcrumbs__list-item"><a href="cert-of-law-hp-amendment.html">Application</a></li>
-                <li class="govuk-breadcrumbs__list-item" aria-current="page">Permitted development requirements</li>
-                
-              </ol>
-        </div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a href="cert-of-law-hp-amendment.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Permitted development requirements
+        </li>
+      </ol>
+    </div>
 
-        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-            Fast track application: 19/AP/1880
-        </h1>
-        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">43 Busbey Lane, London, SE16 5GG</h2>
-    
-      
-        <! –– Application detail blocks ––>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      Fast track application: 19/AP/1880
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+      43 Busbey Lane, London, SE16 5GG
+    </h2>
 
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
-            
-            <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Application information
-                </span>
-              </h3>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
 
-                  <table class="govuk-table">
-          <tbody class="govuk-table__body">
-        <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><b>Type: </b></td>
-            <td class="govuk-table__cell">Proposed permitted development: Certification of lawfulness	</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><strong>Application status: </strong></td>
-            <td class="govuk-table__cell">In assessment</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><strong>Validation complete: </strong></td>
-            <td class="govuk-table__cell">2 April 2020</td>
-          </tr>
-          <tr class="govuk-table__row">
-            <td class="govuk-table__cell"><strong>Summary of proposal: </strong></td>
-            <td class="govuk-table__cell">
-                <ul class="govuk-list govuk-list--bullet">
-                    <li>
-                        Roof extension (rear)
-                    </li>
-                    <li>
-                        Dormer
-                    </li>
-            </ul>
-              </td>
-          </tr>
-        </tbody>
-          </table>
-                </div>
-            </div>
-    <!--  Documents        -->
-          
-    <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Proposal documents
-                </span>
-              </h3>
-            </div>
-          
-            <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-                <div style="float: none; clear: both">
-                    <div style="float: left; margin-left: 20px;">
-                        <p class='govuk-body'>Existing floorplan</p>
-                        <img src="/public/images/existing-floorplan.png" style="width: 200px">
-                        <p class='govuk-body'><a href="">Download</a></p>
-                    </div>
-                    <div style="float: left; margin-left: 20px;">
-                        <p class='govuk-body'>Proposed floorplan</p>
-                        <img src="/public/images/proposed-floorplan.png" style="width: 200px">
-                        <p class='govuk-body'><a href="">Download</a></p>
-                    </div>
-                </div>
-                <div style="float: none; clear: both">
-                    <div style="float: left; margin-left: 20px;">
-                        <p class='govuk-body'><br>Existing section</p>
-                        <img src="/public/images/existing-section.png" style="width: 200px">
-                        <p class='govuk-body'><a href="">Download</a></p>
-                    </div>
-                    <div style="float: left; margin-left: 20px;">
-                        <p class='govuk-body'><br>Proposed section</p>
-                        <img src="/public/images/existing-section.png" style="width: 200px">
-                        <p class='govuk-body'><a href="">Download</a></p>
-                    </div>
-                </div>
-            
-            </div>
-    </div>        
-    <! -- Map -->
-            
-            <div class="govuk-accordion__section " style="float: none; clear: both;">
-                <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-2">
-                  Site details
-                </span>
-              </h3>
-            </div>
-            
-    <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-        <div style="float:left; margin-bottom: 10px;">
-          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
-            <input class="govuk-checkboxes__input " id="map" name="map" type="checkbox" value="carcasses">
-            <label class="govuk-label govuk-checkboxes__label" for="map">
-              Conservation areas
-            </label>
-          </div>
-        </div>
-       <div style="float:right; margin-right: 60px;">
-          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
-            <input class="govuk-checkboxes__input" id="map-2" name="map" type="checkbox" value="mines">
-            <label class="govuk-label govuk-checkboxes__label" for="map-2">
-              Listed buildings
-            </label>
-          </div>
-        </div>
-        <div style="float:none; margin: 20px 0 20px 0;">
-          <div class="govuk-checkboxes__item govuk-checkboxes--small" >
-            <input class="govuk-checkboxes__input" id="map-3" name="map" type="checkbox" value="farm">
-            <label class="govuk-label govuk-checkboxes__label" for="map-3">
-              Trees (TPOs)
-            </label>
-          </div>
-        </div>
-    <img src="/public/images/Map-Update.png" style="max-width: 600px;" alt="map">
-    <p class="govuk-body">
-        <a href="#" class="govuk-link">
-            Street view on Google Map
-        </a>
-    </p>
-            </div>
-                
-                </div>
-           
-        </div>
-
-        
     <! –– manager comment ––>
-        
-        <h2 class="govuk-heading-m">
-            Corrections have been requested
-        </h2>
-        <p class="govuk-body">
-            Your manager sent the following comment about your recommendation below. Please take action based on their comment. </p>
-          
-        <div style="border: 1px solid; padding: 10px;">
-            <p class="govuk-body">
-               [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ]
-            </p>
-             
-             </div>
-              <br>
-                <br>
-<!--Officer info-->
-        
-        
-        <h2 class="govuk-heading-m">
-            Permitted development requirements
-        </h2>
-        <p class="govuk-body">
-        The applicant has submitted the following application. Please review each answer to determine whether what they say and their plans align with the policy questions.
-        </p>
-          
-<!--    Policy question -->
+
+    <h2 class="govuk-heading-m">
+      Corrections have been requested
+    </h2>
+    <p class="govuk-body">
+      Your manager sent the following comment about your recommendation below.
+      Please take action based on their comment.
+    </p>
+
+    <div style="border: 1px solid; padding: 10px;">
+      <p class="govuk-body">
+        [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem
+        ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem
+        ipsum lorem ipsum ]
+      </p>
+    </div>
+    <br />
+    <br />
+    <!--Officer info-->
+
+    <h2 class="govuk-heading-m">
+      Permitted development requirements
+    </h2>
+    <p class="govuk-body">
+      The applicant has submitted the following application. Please review each
+      answer to determine whether what they say and their plans align with the
+      policy questions.
+    </p>
+
+    <!--    Policy question -->
     <div class="govuk-form-group">
-       <ol class="govuk-body" style="line-height: 2;">
-           <li>
-                Was your house always a house? <strong>Yes</strong>
-                <br>GPDO 2015 S.2 P.1 A.1 (a)
+      <ol class="govuk-body" style="line-height: 2;">
+        <li>
+          Was your house always a house? <strong>Yes</strong> <br />GPDO 2015
+          S.2 P.1 A.1 (a)
+        </li>
+        <li>
+          The total footprint of all additions will be
+          <strong>50% or less </strong>of the available area around the original
+          house <br />GPDO 2015 S.2 P.1 A.1
+        </li>
+        <li>
+          The materials and appearance
+          <strong>will match </strong>
+          the existing house
+          <br />GPDO 2015 S.2 P.1 A.3 (a)
+        </li>
+        <li>
+          The highest part of the extension roof
+          <strong>will be lower </strong>than 3m <br />GPDO 2015 S.2 P.1 A.1 (i)
+        </li>
+        <li>
+          The width of the new addition will be
+          <strong> less than or equal to</strong> 1/2 of the width of the
+          original house <br />GPDO 2015 S.2 P.1 A.1 (j)(iii)
+        </li>
+        <li>
+          The height of the extension will be <strong>4m or less</strong>
+          <br />GPDO 2015 S.2 P.1 A.1 (f)(ii)
+        </li>
+        <li>
+          The new addition
+          <strong>will not extend beyond the front wall of the house</strong>
+          <br />GPDO 2015 S.2 P.1 A.1 (e)(i)
+        </li>
+        <li>
+          Is there a road or path on that side of the house?
+          <strong>No</strong> <br />GPDO 2015 S.2 P.1 A.1 (e)(ii)
+        </li>
+      </ol>
+
+      <details class="govuk-details" data-module="govuk-details">
+        <summary class="govuk-details__summary">
+          <span class="govuk-details__summary-text">
+            Show all responses:
+          </span>
+        </summary>
+        <div class="govuk-details__text">
+          <ol class="govuk-body" style="line-height: 2;">
+            <li>
+              I want to
+              <strong>modify or extend</strong>
             </li>
             <li>
-                The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
-                <br>GPDO 2015 S.2 P.1 A.1
+              How many storeys does the original house have?
+              <strong>2 or more</strong>
             </li>
-            <li>The materials and appearance 
-                <strong>will match </strong>
-                the existing house
-                <br>GPDO 2015 S.2 P.1 A.3 (a)
-           </li>
             <li>
-               The highest part of the extension roof <strong>will be lower </strong>than 3m
-                <br>GPDO 2015 S.2 P.1 A.1 (i)
-           </li>
-            <li>The width of the new addition will be
-                <strong> less than or equal to</strong> 1/2 of the width of the original house
-                <br>GPDO 2015 S.2 P.1 A.1 (j)(iii)
-           </li>
+              I want to build an
+              <strong>extension</strong>
+            </li>
             <li>
-                The height of the extension will be <strong>4m or less</strong>
-                <br>GPDO 2015 S.2 P.1 A.1 (f)(ii)
-           </li>
+              What kind of extension will it be?
+              <strong>Side extension</strong>
+            </li>
             <li>
-                The new addition <strong>will not extend beyond the front wall of the house</strong>
-                <br>GPDO 2015 S.2 P.1 A.1 (e)(i)
-           </li>
+              Is there a road or path on that side of the house?
+              <strong>No</strong>
+            </li>
+            <li>The extension will have <strong>1 storey </strong></li>
             <li>
-                Is there a road or path on that side of the house? <strong>No</strong>
-                <br>GPDO 2015 S.2 P.1 A.1 (e)(ii)
-           </li>
-        </ol>
-        
-        
-        <details class="govuk-details" data-module="govuk-details">
-  <summary class="govuk-details__summary">
-    <span class="govuk-details__summary-text">
-      Show all responses:
-    </span>
-  </summary>
-  <div class="govuk-details__text">
-       <ol class="govuk-body" style="line-height: 2;">
-           <li>I want to 
-                <strong>modify or extend</strong>
-           </li>
-           <li>How many storeys does the original house have? 
-                <strong>2 or more</strong>
-           </li>
-           <li>I want to build an 
-                <strong>extension</strong>
-           </li>
-            <li>What kind of extension will it be? 
-                <strong>Side extension</strong>
-           </li>
-           <li>
-                Is there a road or path on that side of the house? <strong>No</strong>
-           </li>
-           <li>The extension will have <strong>1 storey
-                </strong>
-           </li>
-           <li>
-                The new addition <strong>will not extend beyond the front wall of the house</strong>
-           </li>
-           <li>
-                The height of the extension will be <strong>4m or less</strong>
-           </li>
-           <li>The new structure 
-                <strong>will not</strong> extend beyond the rear wall of the original house
-           </li>
+              The new addition
+              <strong
+                >will not extend beyond the front wall of the house</strong
+              >
+            </li>
             <li>
-                The width of the new addition will be <strong>less than or equal to</strong> 1/2 of the width of the original house
-           </li>
-           <li>The distance to the boundary will be 
-               <strong>less than 2m</strong>
-           </li>
-           <li>The roof of the extension will be 
-                <strong>flat</strong>
-           </li>
-           <li>
-               The highest part of the extension roof <strong>will be lower </strong>than 3m
-           </li>
-           <li>The materials and appearance 
-                <strong>will match </strong>
-                the existing house
-           </li>
-           <li>
-               The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
-           </li>
-           
-            
-            <li>The width of the new addition will be
-                <strong> less than or equal to</strong> 1/2 of the width of the original house
-           </li>
-         
-           
-           <li>Was your house always a house?
-                <strong> Yes</strong>
-           </li>
-           
-             <li>The house was used as 
-                <strong> a family home</strong>
-           </li>
-        </ol>
+              The height of the extension will be <strong>4m or less</strong>
+            </li>
+            <li>
+              The new structure <strong>will not</strong> extend beyond the rear
+              wall of the original house
+            </li>
+            <li>
+              The width of the new addition will be
+              <strong>less than or equal to</strong> 1/2 of the width of the
+              original house
+            </li>
+            <li>
+              The distance to the boundary will be
+              <strong>less than 2m</strong>
+            </li>
+            <li>
+              The roof of the extension will be
+              <strong>flat</strong>
+            </li>
+            <li>
+              The highest part of the extension roof
+              <strong>will be lower </strong>than 3m
+            </li>
+            <li>
+              The materials and appearance
+              <strong>will match </strong>
+              the existing house
+            </li>
+            <li>
+              The total footprint of all additions will be
+              <strong>50% or less </strong>of the available area around the
+              original house
+            </li>
+
+            <li>
+              The width of the new addition will be
+              <strong> less than or equal to</strong> 1/2 of the width of the
+              original house
+            </li>
+
+            <li>
+              Was your house always a house?
+              <strong> Yes</strong>
+            </li>
+
+            <li>
+              The house was used as
+              <strong> a family home</strong>
+            </li>
+          </ol>
         </div>
-        </details>
-        <p class="govuk-body">
-            <br><strong>Have permitted development requirements been met?</strong>
-        </p>
-              
-        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
+      </details>
+      <p class="govuk-body">
+        <br /><strong>Have permitted development requirements been met?</strong>
+      </p>
+
+      <div
+        class="govuk-radios govuk-radios--conditional"
+        data-module="govuk-radios"
+        style="margin-bottom: 20px;"
+      >
         <div class="govuk-radios govuk-radios--small">
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+            <input
+              class="govuk-radios__input"
+              id="how-contacted-conditional"
+              name="how-contacted"
+              type="radio"
+              value="email"
+              data-aria-controls="conditional-how-contacted-conditional"
+            />
+            <label
+              class="govuk-label govuk-radios__label"
+              for="how-contacted-conditional"
+            >
               Yes
             </label>
           </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
-                Please add any comments that can be inserted into the decision notice. 
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="conditional-how-contacted-conditional"
+          >
+            <div class="govuk-form-group">
+              <p class="govuk-body">
+                Please add any comments that can be inserted into the decision
+                notice.
+              </p>
+              <textarea
+                class="govuk-textarea"
+                id="more-detail"
+                name="more-detail"
+                rows="3"
+                aria-describedby="more-detail-hint"
+              ></textarea>
             </div>
           </div>
           <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" checked="checked">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+            <input
+              class="govuk-radios__input"
+              id="how-contacted-conditional-2"
+              name="how-contacted"
+              type="radio"
+              value="phone"
+              data-aria-controls="conditional-how-contacted-conditional-2"
+              checked="checked"
+            />
+            <label
+              class="govuk-label govuk-radios__label"
+              for="how-contacted-conditional-2"
+            >
               No
             </label>
           </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body">
-                Please add any comments that can be inserted into the decision notice. 
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint">[Comment from application here]</textarea> 
-            </div>
-          </div>
-          </div>
-        </div>
-               
-        </div>
-
-        
-
-        
-        
-<! -- Save button -->           
-
-
-    <br>
-    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="make-recommendation.html">
-        Save 
-    </a>  
-
-        </div>
-
-<! –– Right panel with additional information in accordion ––>
-        
-      <div class="govuk-grid-column-one-third">
-          
-          <div class="govuk-breadcrumbs" style="float: right;" style="margin-bottom: 20px; float: right;">
-              <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                  <a class="govuk-breadcrumbs__link" href="">Log out</a>
-                </li>
-              </ol>
-            </div>
-        <div style="float: right; margin: 20px 0 30px 100px; ">
-            <p class="govuk-body">
-            <strong class="govuk-tag govuk-tag--green">
-               Due: May 29<br>35 days remaining
-            </strong>
-            </p>
-        </div>
-        
-       
-    
-          <h2 class="app-task-list__section" style="float: none; clear: both;">
-            <span class="app-task-list__section-number">Supporting information</span>
-          </h2>
-        <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
-            
-            <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Property details
-                </span>
-              </h3>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-              <ul class="govuk-list govuk-list--bullet">
-            <li>
-                <strong>Address: </strong> 43 Busbey Lane, London, SE16 5GG
-            </li>
-            <li>
-                <strong>Property type: </strong>Residential
-            </li>
-            <li>
-                <strong>Listed building: </strong> No
-            </li>
-            <li>
-                <strong>Conservation area: </strong> No
-            </li>
-          </ul>
-            </div>
-            </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Property history
-                </span>
-              </h3>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-              <ul class="govuk-list govuk-list--bullet">
-            <li>
-                Permitted development rights: Active
-            </li>
-            <li>
-                Residential area
-            </li>
-          </ul>
-            </div>
-          </div>
-            <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h3 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                  Constraints
-                </span>
-              </h3>
-            </div>
-            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
-              <ul class="govuk-list govuk-list--bullet">
-            <li>
-                Urban density zone
-            </li>
-            <li>
-                Controlled parking zone
-            </li>
-            <li>
-                Air quality management area
-            </li>
-          </ul>
-            </div>
-          </div>
-            <!--  Documents        -->
-          
-    <div class="govuk-accordion__section ">
-                <div class="govuk-accordion__section-header">
-                  <h3 class="govuk-accordion__section-heading">
-                    <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-                      Proposal documents
-                    </span>
-                  </h3>
-                </div>
-
-                <div id="accordion-default-content-2" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2">
-
-                    <p class="govuk-body"><a href="document-management-upload.html">Manage documents</a></p>
-                        <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong>10390-Existing-ground-floorplan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View in new window</a></p>
-                           <p class="govuk-body" style="line-height: 1.6;">
-                               <strong class="govuk-tag govuk-tag--blue">
-                                   Floor plan - Existing
-                               </strong>
-                            </p>
-                            <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png" style="width: 300px">
-                            
-                        </div>
-                        
-                        <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong><br><br>10391-Proposed-ground-floorplan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_GROUND_FLOOR_PLAN-848008.pdf" target="_blank">View in new window</a></p>
-                            
-                            <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                   Floor plan - Proposed
-                                </strong>
-                            </p>
-                            
-                            <img src="/public/images/PROPOSED_GROUND_FLOOR_PLAN-848008.png" style="width: 300px">
-                        </div>
-                    
-                    <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong><br><br>10392-Existing-rear-elevation.PDF </Strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View in new window</a></p>
-                        
-                        <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                  Rear elevation - Existing
-                                </strong>
-                            </p>
-                        
-                        <img src="/public/images/EXISTING_REAR_ELEVATION-848011.png" style="width: 300px">
-                            
-                        </div>
-                        
-                        <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong><br><br>10393-Proposed-rear-elevation.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank">View in new window</a></p>
-                
-                            <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                  Rear elevation - Proposed
-                                </strong>
-                            </p>
-                            
-                            <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 300px">
-                        
-                    </div>
-                    <div style="float: none; clear: both">
-                        <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong><br><br>10394-Existing-roof-plan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_ROOF_PLAN-848009.pdf" target="_blank">View in new window</a></p>
-                            
-                            <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                  Roof plan - Existing
-                                </strong>
-                            </p>
-                            
-                            <img src="/public/images/EXISTING_ROOF_PLAN-848009.png" style="width: 200px">
-                            
-                        </div>
-                        <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><Strong><br><br>10395-Proposed-roof-plan.PDF</Strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_ROOF_PLAN-848010.pdf" target="_blank">View in new window</a></p>
-                            
-                            <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                  Roof plan - Proposed
-                                </strong>
-                            </p>
-                            
-                            <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 200px">
-                            
-                        </div>
-                    
-                        <div style="float: left; margin-left: 0px;">
-                            <p class='govuk-body'><br><br><strong>10396-Existing-side-elevation.PDF</strong><br>[DD MM YYYY]<br><a href="/public/images/EXISTING_SIDE_ELEVATION-848014.pdf" target="_blank">View in new window</a></p>
-                            
-                            <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                  Side elevation - Existing
-                                </strong>
-                            </p>
-                            
-                            <img src="/public/images/EXISTING_SIDE_ELEVATION-848014.png" style="width: 200px">
-                        </div>
-                        <div style="float: left;">
-                            <p class='govuk-body'><br><br><strong>10397-Proposed-side-elevation.PDF</strong><br>[DD MM YYYY]<br><a href="/public/images/PROPOSED_SIDE_ELEVATION-848013.pdf" target="_blank">View in new window</a></p>
-                            
-                            <p class="govuk-body" style="line-height: 1.6;">
-                                <strong class="govuk-tag govuk-tag--blue">
-                                  Side elevation - Proposed
-                                </strong>
-                            </p>
-                            
-                            <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png" style="width: 200px">
-                        </div>
-                        <div style="clear: both; float: none;">&nbsp;</div>
-                    </div>
-            </div>
-            </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
-                  Contact information
-                </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3">
-            <p class='govuk-body'><strong>Agent:</strong><br>Trevor King<br>07824 693239<br><a href="">trevor.king@planningco.co.uk</a></p>
-              <p class='govuk-body'><strong>Applicant:</strong><br>Hannah Dogurga<br>07839 282839<br><a href="">hannah.dogurga@gmail.com</a></p>
-            </div>
-          </div>
-          <div class="govuk-accordion__section ">
-            <div class="govuk-accordion__section-header">
-              <h2 class="govuk-accordion__section-heading">
-                <span class="govuk-accordion__section-button" id="accordion-default-heading-4">
-                  Consultation
-                </span>
-              </h2>
-            </div>
-            <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
-              <p class='govuk-body'>Consultation is not applicable for proposed permitted development.</p>
+          <div
+            class="govuk-radios__conditional govuk-radios__conditional--hidden"
+            id="conditional-how-contacted-conditional-2"
+          >
+            <div class="govuk-form-group">
+              <p class="govuk-body">
+                Please add any comments that can be inserted into the decision
+                notice.
+              </p>
+              <textarea
+                class="govuk-textarea"
+                id="more-detail"
+                name="more-detail"
+                rows="3"
+                aria-describedby="more-detail-hint"
+              >
+[Comment from application here]</textarea
+              >
             </div>
           </div>
         </div>
       </div>
     </div>
-{% endblock %}
 
+    <! -- Save button -->
+
+    <br />
+    <a
+      class="govuk-button govuk-!-margin-right-1"
+      data-module="govuk-button"
+      href="make-recommendation-amendment.html"
+    >
+      Save
+    </a>
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ rightstatus() }} {{ rightaccordion() }}
+  </div>
+</div>
+{% endblock %}
