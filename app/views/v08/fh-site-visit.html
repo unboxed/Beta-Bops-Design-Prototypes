@@ -6,6 +6,12 @@ text: 'Select text to add comment.',
 iconFallbackText: 'information'
 }) }} 
 
+{%- from "govuk/components/file-upload/macro.njk" import govukFileUpload -%}
+{%- from "govuk/components/button/macro.njk" import govukButton -%}
+{%- from "govuk/components/error-summary/macro.njk" import govukErrorSummary -%}
+{%- from "moj/components/multi-file-upload/macro.njk" import mojMultiFileUpload -%}
+
+
 {% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v08.njk"
 import leftaccordion %} {% from "../customnjk/right-accordion-fh-v08.njk" import
 rightaccordion %} {% from "../customnjk/right-status-yellow-pd-v08.njk" import
@@ -21,7 +27,7 @@ rightstatus %} {% block head %} {{ super() }}
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         
-        
+ 
 
         
         <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
@@ -51,17 +57,43 @@ rightstatus %} {% block head %} {{ super() }}
             Site visit
         </h2>
         <p class="govuk-body">
-          Document site visit
+          Written notes:
         </p>
-          
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+
+        <p class="govuk-body">
+          Upload photos:
+        </p>
+
+        <form action="/components/multi-file-upload/examples/default" method="post" enctype="multipart/form-data">
+
+
+      <div class="moj-multi-file-upload__upload">
+
+      <div class="govuk-form-group">
+
+        <input class="govuk-file-upload moj-multi-file-upload__input" id="documents" name="documents" type="file" multiple="">
+      </div>
+      </div>
+      </form>
+
+      <button type="submit" class="govuk-button govuk-button--secondary moj-multi-file-upload__button" data-module="govuk-button">
+        Upload file
+      </button>
+
+
 
 <! -- Save button -->           
 
 
     <br>
-    <a class="govuk-button" data-module="govuk-button" href="full-householder-hp.html">
-        Save 
-    </a>  
+        <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="full-householder-hp.html">
+      Save and continue
+    </a>
+
+    <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="full-householder-hp.html">
+      Save as draft
+    </a>
        
         </div>
 
