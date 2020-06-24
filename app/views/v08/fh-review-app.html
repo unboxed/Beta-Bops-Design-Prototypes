@@ -1,0 +1,107 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
+
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v08.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-fh-v08.njk" import
+rightaccordion %} {% from "../customnjk/right-status-yellow-pd-v08.njk" import
+rightstatus %} {% block head %} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        
+
+        
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="full-householder-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Review application</li>
+                
+              </ol>
+        </div>
+
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 20/AP/0607
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+            1 Rycott Path, East Dulwich, SE22 0AA
+        </h2>
+    
+      
+        <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+
+   <! –– Left panel with tasks and map ––>
+        <h2 class="govuk-heading-m">
+            Review application
+        </h2>
+        <p class="govuk-body">
+          The applicant provided the following answers.       
+        </p>
+          
+<!--    Policy question -->
+       <ol class="govuk-body" style="line-height: 2;">
+           <li>
+                Was your house always a house? <strong>Yes</strong>
+            </li>
+            <li>
+                The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
+            </li>
+            <li>The materials and appearance 
+                <strong>will match </strong>
+                the existing house
+           </li>
+            <li>
+               The highest part of the extension roof <strong>will be lower </strong>than 3m
+           </li>
+            <li>The width of the new addition will be
+                <strong> less than or equal to</strong> 1/2 of the width of the original house
+           </li>
+            <li>
+                The height of the extension will be <strong>4m or less</strong>
+           </li>
+            <li>
+                The new addition <strong>will not extend beyond the front wall of the house</strong>
+           </li>
+            <li>
+                Is there a road or path on that side of the house? <strong>No</strong>
+           </li>
+        </ol>
+        
+          
+
+        
+        
+<! -- Save button -->           
+
+
+    <br>
+    <a class="govuk-button" data-module="govuk-button" href="full-householder-hp.html">
+        Back 
+    </a>  
+       
+        </div>
+
+<! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ rightstatus() }} {{ rightaccordion() }}
+  </div>
+
+    </div>
+{% endblock %}

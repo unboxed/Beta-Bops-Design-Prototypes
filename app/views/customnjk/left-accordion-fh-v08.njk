@@ -1,0 +1,92 @@
+{% macro leftaccordion(params) %}
+{% block content %}
+  
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
+
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+                  Application information
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1">
+
+                  <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Address: </b></td>
+                <td class="govuk-table__cell">1 Rycott Path, East Dulwich, SE22 0AA</td>
+            </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><b>Ward: </b></td>
+                  <td class="govuk-table__cell">Dulwich Hill </td>
+            </tr>
+            <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><b>Property type: </b></td>
+                  <td class="govuk-table__cell">Terrace</td>
+            </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Application type: </b></td>
+            <td class="govuk-table__cell">Full-householder	</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Proposal: </strong></td>
+            <td class="govuk-table__cell">
+                <p class="govuk-body">
+                    Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.   
+                </p>
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><b>Case officer: </b></td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+
+
+        </tbody>
+          </table>
+                </div>
+            </div>
+
+    <!-- Map -->
+
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h3 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-3">
+                  Site location 
+                </span>
+              </h3>
+                    </div>  
+                    
+            
+            <div id="accordion-default-content-3" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-3"> 
+                <div style="margin-left: 0px;">
+                <p class="govuk-body" style="margin-bottom: 20px;">
+                    <a href="document-management" class="govuk-link">
+                        Manage documents
+                    </a>
+                </p>
+                </div>
+                
+                <p class='govuk-body'><Strong>FH_SITE_LOCATION_PLAN-857983.PDF</Strong><br>	20 Mar 2020<br><a href="/public/images/FH_SITE_LOCATION_PLAN-857983.pdf" target="_blank">View in new window</a></p>
+                   
+                <img src="/public/images/FH_SITE_LOCATION_PLAN-857983.png" style="max-width: 600px; margin-bottom: 10px;" alt="map">
+
+            </div>
+            </div>
+                      
+            
+
+
+        <!--  Documents        -->
+
+        
+        </div>
+
+
+{% endblock %}
+
+{% endmacro %}
