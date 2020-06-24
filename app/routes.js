@@ -2,18 +2,19 @@ const express = require('express')
 const router = express.Router()
 
 
-// Branching
-router.post('/approve-recomendation-answer', function (req, res) {
+// Branching for managers to say they don't agree with the recommendation 
+// Found on permitted-dev-reqs-manager
+router.post('/approve-recommendation-answer', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements
   // However in JavaScript we can't use hyphens in variable names
 
-  let over18 = req.session.data['over-18']
+  let over18 = req.session.data['how-contacted']
 
-  if (over18 === 'false') {
-    res.redirect('v08/approve-recommendation-no')
+  if (over18 === 'phone') {
+    res.redirect('v08/application-list-manager-amendments')
   } else {
-    res.redirect('v08/approve-recommendation')
+    res.redirect('v08/review-recommendation')
   }
 })
 
@@ -21,7 +22,8 @@ module.exports = router
 
 
 
-// Branching
+// Branching for officers to say if they think the recommendation should be approved or not
+// Found on permitted-dev-reqs-manager
 router.post('/refuse-or-approve', function (req, res) {
   // Get the answer from session data
   // The name between the quotes is the same as the 'name' attribute on the input elements

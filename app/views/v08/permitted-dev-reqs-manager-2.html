@@ -3,7 +3,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
 'information' }) }} {% extends "layout.html" %} {% from
 "../customnjk/left-accordion-pd-v08.njk" import leftaccordion %} {% from
 "../customnjk/right-accordion-pd-v08.njk" import rightaccordion %} {% from
-"../customnjk/right-status-yellow-pd-v08.njk" import rightstatus %} {% block
+"../customnjk/right-status-red-pd-v08.njk" import rightstatus %} {% block
 head %} {{ super() }}
 <link
   href="/public/css/southwark-branding.css"
@@ -15,16 +15,16 @@ head %} {{ super() }}
 <! –– Header ––>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/approve-recomendation-answer" method="post" class="form">
+    <form action="/approve-recommendation-answer" method="post" class="form">
       <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="application-list.html"
+            <a class="govuk-breadcrumbs__link" href="application-list-manager-amendments.html"
               >Home</a
             >
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a href="cert-of-law-reqs-recommended.html">Application</a>
+            <a href="cert-of-law-hp-manager-4.html">Application</a>
           </li>
           <li class="govuk-breadcrumbs__list-item" aria-current="page">
             Permitted development requirements
@@ -47,13 +47,26 @@ head %} {{ super() }}
         Permitted development requirements
       </h2>
 
+      <h3 class="govuk-heading-s">Your comment:</h3>
+        <p class="govuk-body">
+            Your sent the following comment about the officer's recommendation. </p>
+          
+        <div style="border: 1px solid; padding: 10px;">
+            <p class="govuk-body">
+               [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ]
+            </p>
+             
+             </div>
+              <br>
+                <br>
+
       <h3 class="govuk-heading-s">Planning officer's recommendation:</h3>
 
       <p class="govuk-body">
-        Based on the evidence given by applicant, the planning officer
+        The planning officer has responded to your comment. <br><br>Based on the evidence given by applicant, the planning officer
         recommended that permitted development should be
         <strong>refused</strong>. <br /><br />
-        The officer submitted this comment to the applicant:
+        The officer submitted this comment to you:
       </p>
 
       <div style="border: 1px solid; padding: 10px;">
@@ -209,14 +222,48 @@ head %} {{ super() }}
         </details>
       </div>
 
-      
-    <a
-      class="govuk-button"
-      data-module="govuk-button"
-      href=""
-      >Back</a
-    >
-  </div>
+
+    <!--        Question-->
+        
+         <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+        <p class="govuk-body">Do you agree with the recommendation?</strong>
+        </p>
+              
+        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
+        <div class="govuk-radios govuk-radios--small">
+            
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+              No
+            </label>
+          </div>
+          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+            <div class="govuk-form-group"> 
+            <p class="govuk-body" style="clear:both; float:none;"><br>
+                Please add any comments for your manager to see. This will <strong>not</strong> appear on the decision notice. 
+            </p> 
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+            </div>
+          </div>
+          </div>
+        </div>
+             </fieldset>
+        </div>
+       
+<! -- Save button -->            
+        <button class="govuk-button" data-module="govuk-button" >Save and continue</button>
+
+         </form>
+        </div>
+ 
 
   <! –– Right panel with additional information in accordion ––>
 
