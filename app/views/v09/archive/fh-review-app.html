@@ -1,0 +1,152 @@
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+
+{{ mojBanner({
+type: 'information',
+text: 'Select text to add comment.',
+iconFallbackText: 'information'
+}) }} 
+
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v08.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-fh-v08.njk" import
+rightaccordion %} {% from "../customnjk/right-status-yellow-pd-v08.njk" import
+rightstatus %} {% block head %} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        
+        
+
+        
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item"><a href="full-householder-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Review application</li>
+                
+              </ol>
+        </div>
+
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 20/AP/0607
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+            1 Rycott Path, East Dulwich, SE22 0AA
+        </h2>
+    
+      
+        <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+
+   <! –– Left panel with tasks and map ––>
+        <h2 class="govuk-heading-m">
+            Review application
+        </h2>
+        <p class="govuk-body">
+          The applicant provided the following answers.       
+        </p>
+          
+<!--    Policy question -->
+       <ol class="govuk-body" style="line-height: 2;">
+           <li>
+                Does the proposed development require any materials to be used? <strong>Yes</strong>
+                <ul>
+                  <li>
+                    Walls: <strong>Red brick</strong>
+                  </li>
+                  <li>
+                    Roof: <strong>Slate tiles</strong>
+                  </li>
+                  <li>
+                    Windows:<br>
+                    Windows Existing: <strong>White uPVC casement windows</strong>
+                    <br>Rooflights existing:<strong> Aluminium</strong><br>
+                    Windows Proposed: <strong> White uPVC casement windows</strong><br>
+                    Rooflights existing: <strong>Aluminium</strong>
+                  </li>
+                  <li>
+                    Doors<br>
+                    Existing: <strong>Timber doors</strong><br>
+                    Proposed: <strong>White uPVC doors</strong>
+                  </li>
+                  <li>
+                  Other type of material (e.g. guttering) downpipes and gutters:
+                  Existing: <strong>Grey uPVC downpipes and gutters</strong><br>
+                  Proposed: <strong>Grey uPVC downpipes and gutters</strong></li>
+                </ul>
+            </li>
+            <li>
+                Are you supplying additional information on submitted plans, drawings or a design and access statement?  <strong>Yes </strong>
+              <br>Architectural Drawings Ref.: <strong>38104 - 101, 102, 103, 104, 201, 202, 301, 302 ; Block Plan Ref.: 38104 - 401; Site Location plan and CIL form</strong>
+            </li>
+            <li>
+                Are there any trees or hedges on your own property or on adjoining properties which are within falling distance of your proposed development? <strong>No</strong>
+            </li>
+            <li>
+              Will any trees or hedges need to be removed or pruned in order to carry out your proposal? <strong>No</strong>
+            </li>
+            <li>
+               Is a new or altered vehicle access proposed to or from the public highway? <strong>No</strong>
+            </li>
+            <li>
+              Is a new or altered pedestrian access proposed to or from the public highway? <strong>No</strong>
+            </li>
+            <li>
+              Do the proposals require any diversions, extinguishment and/or creation of public rights of way? <strong>No</strong>
+            </li>
+           <li>
+              Will the proposed works affect existing car parking arrangements? <strong>No</strong>
+            </li>
+            <li>
+              Can the site be seen from a public road, public footpath, bridleway or other public land? <strong>No</strong>
+            </li>
+            <li>
+              If the planning authority needs to make an appointment to carry out a site visit, whom should they contact?<strong>The applicant</strong>
+            </li>
+            <li>
+            Has assistance or prior advice been sought from the local authority about this application? <strong>No</strong>
+            </li>
+            <li>With respect to the Authority, is the applicant and/or agent one of the following:<br>
+                  (a) a member of staff<br>
+                  (b) an elected member<br>
+                  (c) related to a member of staff<br>
+                  (d) related to an elected member<br>
+                  It is an important principle of decision-making that the process is open and transparent.<br>
+                  For the purposes of this question, "related to" means related, by birth or otherwise, closely enough that a fair-minded and
+                  informed observer, having considered the facts, would conclude that there was bias on the part of the decision-maker in
+                  the Local Planning Authority.<br>
+                  Do any of the above statements apply?<br>
+                  <strong>No</strong>
+            </li>
+        </ol>
+        
+          
+
+        
+        
+<! -- Save button -->           
+
+
+    <br>
+    <a class="govuk-button" data-module="govuk-button" href="full-householder-hp.html">
+        Back 
+    </a>  
+       
+        </div>
+
+<! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ rightstatus() }} {{ rightaccordion() }}
+  </div>
+
+    </div>
+{% endblock %}

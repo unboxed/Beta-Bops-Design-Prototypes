@@ -4,15 +4,14 @@
     font-size: 200;
 }
 
-.govuk-header{
-    background: blue;
-}
-
-.govuk-heading-l{
-    color: aqua;
-}
-
 .govuk-header__logotype {
   display: none;
   margin-right: 5px;
+}
+
+
+.govuk-accordion__section-content{
+    max-height: 600px;
+    overflow: scroll;
+
 }

@@ -1,0 +1,387 @@
+{% macro rightaccordion(params) %}
+
+{% block head %} 
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} 
+{% block content %}
+  <! –– Right panel with additional information in accordion ––>
+
+
+    <h2 class="app-task-list__section" style="float: none; clear: both;">
+      <span class="app-task-list__section-number">&nbsp;</span>
+    
+    <div
+      class="govuk-accordion"
+      data-module="govuk-accordion"
+      id="accordion-default"
+    >
+      {# <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Planning history
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Permitted development rights: Active
+            </li>
+            <li>
+              No relevant planning history
+            </li>
+          </ul>
+        </div>
+      </div> #}
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Constraints
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              None
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-accordion__section" >
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Proposal documents
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-2"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-2"
+          
+        >
+          <div id="id="proposal-documents">
+
+          <p class="govuk-body">
+            <a href="document-management-upload.html">Manage documents</a>
+          </p>
+
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body">
+              <strong>FH-20AP0870-PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS-858712.PDF</strong><br />[DD MM
+              YYYY]<br /><a
+                href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf"
+                target="_blank"
+                >View PDF in new window</a
+              >
+            </p>
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong class="govuk-tag govuk-tag--blue">
+                Section - Proposed
+              </strong>
+            <br>
+              <strong class="govuk-tag govuk-tag--blue">
+                Shed elevation - Proposed
+              </strong>
+            </p>
+            <img
+              src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body">
+              <strong>FH-20AP0870-EXISTING-AND-PROPOSED-BLOCK-PLANS-858713.PDF</strong><br />[DD MM
+              YYYY]<br /><a
+                href="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.pdf"
+                target="_blank"
+                >View PDF in new window</a
+              >
+            </p>
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong class="govuk-tag govuk-tag--blue">
+                Block plan - Existing
+              </strong>
+            <br>
+              <strong class="govuk-tag govuk-tag--blue">
+                Block plan - Proposed
+              </strong>
+            </p>
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.png"
+              style="width: 200px;"
+            />
+          </div>
+
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body">
+              <strong><br /><br />FH-20AP0870-EXISTING-ELEVATIONS-858708.PDF</strong
+              ><br />[DD MM YYYY]<br /><a
+                href="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.pdf"
+                target="_blank"
+                >View PDF in new window</a
+              >
+            </p>
+
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong class="govuk-tag govuk-tag--blue">
+                Elevations - Existing
+              </strong>
+            </p>
+
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png"
+              style="width: 200px;"
+            />
+          </div>
+
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body">
+              <strong><br /><br />FH-20AP0870-EXISTING-FIRST-FLOOR-AND-ROOF-PLANS-858703 </strong
+              ><br />[DD MM YYYY]<br /><a
+                href="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.pdf"
+                target="_blank"
+                >View PDF in new window</a
+              >
+            </p>
+
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong class="govuk-tag govuk-tag--blue">
+                Roof plan - Existing
+              </strong>
+              <br>
+              <strong class="govuk-tag govuk-tag--blue">
+                Floorplan - Existing
+              </strong>
+            </p>
+
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.png"
+              style="width: 200px;"
+            />
+          </div>
+
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body">
+              <strong><br /><br />FH-20AP0870-EXISTING-GROUND-FLOOR-PLANS-858701.PDF</strong
+              ><br />[DD MM YYYY]<br /><a
+                href="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.pdf"
+                target="_blank"
+                >View PDF in new window</a
+              >
+            </p>
+
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong class="govuk-tag govuk-tag--blue">
+                Rear elevation - Proposed
+              </strong>
+            </p>
+
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.png"
+              style="width: 200px;"
+            />
+          </div>
+          <div style="float: none; clear: both;">
+            <div style="float: left; margin-left: 0px;">
+              <p class="govuk-body">
+                <strong><br /><br />FH-20AP0870-EXISTING-SECTION-A-A-858711.PDF</strong
+                ><br />[DD MM YYYY]<br /><a
+                  href="/public/images/FH-20AP0870-EXISTING_SECTION_A-A-858711.pdf"
+                  target="_blank"
+                  >View PDF in new window</a
+                >
+              </p>
+
+              <p class="govuk-body" style="line-height: 1.6;">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Section - Existing
+                </strong>
+              </p>
+
+              <img
+                src="/public/images/FH-20AP0870-EXISTING_SECTION_A-A-858711.png"
+                style="width: 200px;"
+              />
+            </div>
+  
+
+            <div style="float: left; margin-left: 0px;">
+              <p class="govuk-body">
+                <br /><br /><strong>FH-20AP0870-PROPOSED-ELEVATIONS-858709.PDF</strong
+                ><br />[DD MM YYYY]<br /><a
+                  href="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.pdf"
+                  target="_blank"
+                  >View PDF in new window</a
+                >
+              </p>
+
+              <p class="govuk-body" style="line-height: 1.6;">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Elevation - Proposed
+                </strong>
+              </p>
+
+              <img
+                src="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.png"
+                style="width: 200px;"
+              />
+            </div>
+
+      <div style="float: left; margin-left: 0px;">
+              <p class="govuk-body">
+                <strong><br /><br />FH-20AP0870-PROPOSED-FIRST-FLOOR-AND-ROOF-PLANS-858705.PDF</strong
+                ><br />[DD MM YYYY]<br /><a
+                  href="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.pdf"
+                  target="_blank"
+                  >View PDF in new window</a
+                >
+              </p>
+
+              <p class="govuk-body" style="line-height: 1.6;">
+              <strong class="govuk-tag govuk-tag--blue">
+                Roof plan - Proposed
+              </strong>
+              <br>
+              <strong class="govuk-tag govuk-tag--blue">
+                Floorplan - Proposed
+              </strong>
+            </p>
+
+              <img
+                src="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.png"
+                style="width: 200px;"
+              />
+            </div>
+
+            <div style="float: left;">
+              <p class="govuk-body">
+                <br /><br /><strong>FH-20AP0870-PROPOSED-GROUND-FLOOR-PLAN-858702.PDF</strong
+                ><br />[DD MM YYYY]<br /><a
+                  href="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.pdf"
+                  target="_blank"
+                  >View PDF in new window</a
+                >
+              </p>
+
+              <p class="govuk-body" style="line-height: 1.6;">
+                <strong class="govuk-tag govuk-tag--blue">
+                  Groundfloor - Proposed
+                </strong>
+              </p>
+
+              <img
+                src="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.png"
+                style="width: 200px;"
+              />
+            </div>
+            <div style="clear: both; float: none;">&nbsp;</div>
+          </div>
+        </div>
+      </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Key application dates
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <p><strong>Application status:</strong> Waiting for assessment</p>
+          <p><strong>Application received:</strong> 2 March 2020</p>
+          <p><strong>Validation complete:</strong> 4 March 2020</p>
+          <p><strong>Fast track date date:</strong> 12 June 2020</p>
+          <p><strong>Statuatory date:</strong> 26 June 2020</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-3"
+            >
+              Contact information
+            </span>
+          </h2>
+        </div>
+        <div
+          id="accordion-default-content-3"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-3"
+        >
+          <p class="govuk-body"><strong>Agent:</strong><br />Alberto Ochoa<br>Resi<br>+44203 868 9453<br><a href="">hello@resi.co.uk</a>
+          </p>
+          <p class="govuk-body">
+            <strong>Applicant:</strong><br />Ambreen Khasru <br /> Not applicable<br /><a
+              href=""
+              >&nbsp;</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-4"
+            >
+              Consultation
+            </span>
+          </h2>
+        </div>
+        <div
+          id="accordion-default-content-4"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-4"
+        >
+          <p class="govuk-body">
+            In progress. No documents uploaded.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock %}
+
+{% endmacro %}
