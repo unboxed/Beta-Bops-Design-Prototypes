@@ -12,7 +12,7 @@ router.post('/approve-recommendation-answer', function (req, res) {
   let over18 = req.session.data['how-contacted']
 
   if (over18 === 'phone') {
-    res.redirect('v08/application-list-manager-amendments')
+    res.redirect('v08/application-list-manager-amendments#amendment')
   } else {
     res.redirect('v08/review-recommendation')
   }
