@@ -1,7 +1,7 @@
 {%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
 type: 'information', text: 'Select text to add comment.', iconFallbackText:
 'information' }) }} {% extends "layout.html" %} {% from
-"../customnjk/left-accordion-pd-v08.njk" import leftaccordion %} {% from
+"../customnjk/left-accordion-pd-manager-v08.njk" import leftaccordion %} {% from
 "../customnjk/right-accordion-pd-v08.njk" import rightaccordion %} {% from
 "../customnjk/right-status-red-pd-v08.njk" import rightstatus %} {% block
 head %} {{ super() }}
@@ -59,24 +59,20 @@ head %} {{ super() }}
               <br>
                 <br>
 
-      {# <h3 class="govuk-heading-s">Planning officer's recommendation:</h3> #}
-
       <p class="govuk-body">
-        The planning officer has responded to your comment. <br><br>The recommended by the planning officer is 
-
-
-        <strong>refused</strong> 
-         based on the following comment:
+        The recommended by the planning officer is  
+        <strong>refused</strong>
+        because the following policy requirment has not been met:
       </p>
-
+        <ul class="govuk-list govuk-list--bullet">
+          <li>GPDO 2015 S.2 P.1 A.1 (f)(i)</li>
+        </ul>
+        <p class="govuk-body">
+          The officer has submitted the following comment for you:
+          </p>
       <div style="border: 1px solid; padding: 10px;">
         <p class="govuk-body">
-          The proposal does not comply with the limitations and conditions set
-          out in Class A of the Order, by Schedule 2, Article 3, Part 1
-          (Development Within the Curtilage of a Dwellinghouse) as the extension
-          will project more than 3 metres from the main elevation, and as such
-          it is recommended that the certificate for proposed development be
-          REFUSED.
+          Property not detached; extension is single storey and extends off an original rear wall by > 3m. The extension will have a depth of 3.66 metres.
         </p>
       </div>
 
