@@ -24,10 +24,11 @@ head %} {{ super() }}
             >
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a href="cert-of-law-reqs-recommended.html">Application</a>
+            <a href="cert-of-law-reqs-recommended">
+            Application</a>
           </li>
           <li class="govuk-breadcrumbs__list-item" aria-current="page">
-            Assess the proposal
+            View the determined proposal
           </li>
         </ol>
       </div>
@@ -44,18 +45,33 @@ head %} {{ super() }}
 
       <! –– Left panel with tasks and map ––>
       <h2 class="govuk-heading-m">
-        Assess the proposal
+        View the determined proposal
       </h2>
 
-      <h3 class="govuk-heading-s">Planning officer's recommendation:</h3>
-
       <p class="govuk-body">
-        Based on the evidence given by applicant, the planning officer
-        recommended that permitted development should be
-        <strong>refused</strong>. <br /><br />
-        The officer submitted this comment to the applicant:
+        The recommended by the planning officer is  
+        <strong>refused</strong>
+        because the following policy requirment has not been met:
       </p>
-
+        <ul class="govuk-list govuk-list--bullet">
+          <li>GPDO 2015 S.2 P.1 A.1 (f)(i)</li>
+        </ul>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <p class="govuk-body">
+        The manager sent following comment based on the officer's recommendation on [DD MM YYY]. 
+      </p>
+          
+        <div style="border: 1px solid; padding: 10px;">
+            <p class="govuk-body">
+               [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ]
+            </p>
+             
+             </div>
+              <br>
+                <br>
+      <p class="govuk-body">
+        The officer sent following comment based on the manager's comment on [DD MM YYY]. 
+      </p>
       <div style="border: 1px solid; padding: 10px;">
         <p class="govuk-body">
           The proposal does not comply with the limitations and conditions set
@@ -66,12 +82,7 @@ head %} {{ super() }}
           REFUSED.
         </p>
       </div>
-
-      <br />
-      <br />
-
-      <h3 class="govuk-heading-s">Applicant's answers:</h3>
-
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
       <p class="govuk-body">
         The applicant submitted the following application.
       </p>
@@ -213,8 +224,7 @@ head %} {{ super() }}
     <a
       class="govuk-button"
       data-module="govuk-button"
-      href=""
-      >Back</a
+      href="cert-of-law-reqs-recommended">Back</a
     >
   </div>
 
