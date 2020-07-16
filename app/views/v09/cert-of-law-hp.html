@@ -1,5 +1,5 @@
 {% extends "layout.html" %} {% from "../customnjk/left-accordion-pd-v08.njk"
-import leftaccordion %} {% from "../customnjk/right-accordion-pd-v08.njk" import
+import leftaccordion %} {% from "../customnjk/right-accordion-pd-v09.njk" import
 rightaccordion %} {% from "../customnjk/right-status-green-pd-v08.njk" import
 rightstatus %} {% block head %} {{ super() }}
 <link
@@ -80,6 +80,20 @@ rightstatus %} {% block head %} {{ super() }}
               aria-describedby="external-review-completed"
             >
               Assess the proposal
+            </a>
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="drawing-numbers"
+              aria-describedby="external-review-completed"
+            >
+              Attach drawing numbers
             </a>
             <!--
                 <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">

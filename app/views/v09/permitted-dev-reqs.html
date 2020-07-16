@@ -2,7 +2,7 @@
 type: 'information', text: 'Select text to add comment.', iconFallbackText:
 'information' }) }} {% extends "layout.html" %} {% from
 "../customnjk/left-accordion-pd-v08.njk" import leftaccordion %} {% from
-"../customnjk/right-accordion-pd-v08.njk" import rightaccordion %} {% from
+"../customnjk/right-accordion-pd-v09.njk" import rightaccordion %} {% from
 "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} {% block head
 %} {{ super() }}
 <link
@@ -15,7 +15,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
 <! –– Header ––>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/refuse-or-approve" method="post" class="form">
+    {# <form action="/refuse-or-approve" method="post" class="form"> #}
       <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
@@ -425,13 +425,18 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
       </div>
 
       <! -- Save button -->
+      <a class="govuk-button" data-module="govuk-button" href="drawing-numbers">
+        Save
+      </a>
 
+      <! -- Save button for directing to decision notice specifically-->
+{# 
       <br />
       <button class="govuk-button" data-module="govuk-button">
         Save
       </button>
-    </form>
-  </div>
+    </form>#}
+  </div> 
 
   <! –– Right panel with additional information in accordion ––>
 
