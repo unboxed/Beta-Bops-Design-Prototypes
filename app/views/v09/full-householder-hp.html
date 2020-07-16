@@ -134,11 +134,22 @@ rightstatus %} {% block head %} {{ super() }}
         </li>
           
           <h2 class="app-task-list__section">
-            <span class="app-task-list__section-number">Prepare the decision notice</span>
+            <span class="app-task-list__section-number">Prepare the report</span>
           </h2>
           <ul class="app-task-list__items">
             
               <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="fh-make-recommendation" aria-describedby="external-review-completed">
+                Make recommendation 
+                </a>
+
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
                <a class="app-task-list__task-name" href="fh-conditions" aria-describedby="external-review-completed">
                 Add conditions
                 </a>
@@ -161,9 +172,9 @@ rightstatus %} {% block head %} {{ super() }}
 -->
             </li>
             <li class="app-task-list__item">
-    <!--                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">-->
-                    Edit decision notice
-    <!--                </a>-->   
+               <a class="app-task-list__task-name" href="fh-submit-report" aria-describedby="external-review-completed">
+                    Submit report 
+                </a>
     <!--
                     <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
                         Completed
