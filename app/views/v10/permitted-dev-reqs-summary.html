@@ -1,9 +1,9 @@
 {%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
 type: 'information', text: 'Select text to add comment.', iconFallbackText:
 'information' }) }} {% extends "layout.html" %} {% from
-"../customnjk/left-accordion-pd-manager-v08.njk" import leftaccordion %} {% from
+"../customnjk/left-accordion-pd-v08.njk" import leftaccordion %} {% from
 "../customnjk/right-accordion-pd-v08.njk" import rightaccordion %} {% from
-"../customnjk/right-status-red-pd-v08.njk" import rightstatus %} {% block
+"../customnjk/right-status-yellow-pd-v08.njk" import rightstatus %} {% block
 head %} {{ super() }}
 <link
   href="/public/css/southwark-branding.css"
@@ -15,19 +15,20 @@ head %} {{ super() }}
 <! –– Header ––>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <form action="/approve-recommendation-answer" method="post" class="form">
+    <form action="/approve-recomendation-answer" method="post" class="form">
       <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="application-list-manager-amendments.html"
+            <a class="govuk-breadcrumbs__link" href="application-list.html"
               >Home</a
             >
           </li>
           <li class="govuk-breadcrumbs__list-item">
-            <a href="cert-of-law-hp-manager-4.html">Application</a>
+            <a href="cert-of-law-reqs-recommended">
+            Application</a>
           </li>
           <li class="govuk-breadcrumbs__list-item" aria-current="page">
-            Review the corrections
+            View the assessment
           </li>
         </ol>
       </div>
@@ -44,20 +45,8 @@ head %} {{ super() }}
 
       <! –– Left panel with tasks and map ––>
       <h2 class="govuk-heading-m">
-        Review the corrections
+        View the assessment
       </h2>
-
-        <p class="govuk-body">
-            You sent the following comment about the officer's recommendation. </p>
-          
-        <div style="border: 1px solid; padding: 10px;">
-            <p class="govuk-body">
-               [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ]
-            </p>
-             
-             </div>
-              <br>
-                <br>
 
       <p class="govuk-body">
         The recommended by the planning officer is  
@@ -67,21 +56,35 @@ head %} {{ super() }}
         <ul class="govuk-list govuk-list--bullet">
           <li>GPDO 2015 S.2 P.1 A.1 (f)(i)</li>
         </ul>
-        <p class="govuk-body">
-          The officer has submitted the following comment for you:
-          </p>
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+      <p class="govuk-body">
+        The manager sent following comment based on the officer's recommendation on [DD MM YYY]. 
+      </p>
+          
+        <div style="border: 1px solid; padding: 10px;">
+            <p class="govuk-body">
+               [ Managers comment that was submitted Lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum ]
+            </p>
+             
+             </div>
+              <br>
+                <br>
+      <p class="govuk-body">
+        The officer sent following comment based on the manager's comment on [DD MM YYY]. 
+      </p>
       <div style="border: 1px solid; padding: 10px;">
         <p class="govuk-body">
-          Property not detached; extension is single storey and extends off an original rear wall by > 3m. The extension will have a depth of 3.66 metres.
+          The proposal does not comply with the limitations and conditions set
+          out in Class A of the Order, by Schedule 2, Article 3, Part 1
+          (Development Within the Curtilage of a Dwellinghouse) as the extension
+          will project more than 3 metres from the main elevation, and as such
+          it is recommended that the certificate for proposed development be
+          REFUSED.
         </p>
       </div>
-
-      <br />
-      <br />
-
-
+      <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
       <p class="govuk-body">
-        Please review the applicant's answers:
+        The applicant submitted the following application.
       </p>
 
       <!--    Policy question -->
@@ -217,53 +220,18 @@ head %} {{ super() }}
         </details>
       </div>
 
-
-    <!--        Question-->
-        
-         <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-        <p class="govuk-body">Do you agree with the recommendation?</strong>
-        </p>
-              
-        <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
-        <div class="govuk-radios govuk-radios--small">
-            
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-              Yes
-            </label>
-          </div>
-          <div class="govuk-radios__item">
-            <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
-            <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-              No
-            </label>
-          </div>
-          <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
-            <div class="govuk-form-group"> 
-            <p class="govuk-body" style="clear:both; float:none;"><br>
-                Please provide comments on why you don't agree
-            </p> 
-                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
-            </div>
-          </div>
-          </div>
-        </div>
-             </fieldset>
-        </div>
-       
-<! -- Save button -->            
-        <button class="govuk-button" data-module="govuk-button" >Save and continue</button>
-
-         </form>
-        </div>
- 
+      
+    <a
+      class="govuk-button"
+      data-module="govuk-button"
+      href="cert-of-law-reqs-recommended">Back</a
+    >
+  </div>
 
   <! –– Right panel with additional information in accordion ––>
 
   <div class="govuk-grid-column-one-third">
-    {{ rightstatus() }} {{ rightaccordion() }}
+    <br><br><br> <br><br><br><br> <br> {{ rightaccordion() }}
   </div>
 </div>
 {% endblock %}
