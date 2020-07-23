@@ -126,7 +126,9 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
             <p class="govuk-body">
               <br /><strong
                 >Have permitted development requirements been met?</strong
-              >
+              ></p>
+            <p class="govuk-body">
+              You need to check that the applicant's answers and proposal documents meet the permitted development requirements.
             </p>
 
             <div
@@ -150,25 +152,9 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
                   >
                     Yes
                   </label>
-                </div>
-                <div
-                  class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                  id="conditional-how-contacted-conditional"
-                >
-                  <div class="govuk-form-group">
-                    <p class="govuk-body">
-                      By selecting yes, you are saying that this proposal
-                      complies with the GDPO. <br /><br />Please provide your manager <strong>with the measured dimensions </strong>of the plans and any  add any
-                      comments that are applicable.<br /><br />This will not appear on the decision notice.
-                    </p>
-                    <textarea
-                      class="govuk-textarea"
-                      id="more-detail"
-                      name="more-detail"
-                      rows="3"
-                      aria-describedby="more-detail-hint"
-                    ></textarea>
-                  </div>
+             
+              
+                 
                 </div>
                 <div class="govuk-radios__item">
                   <input
@@ -193,341 +179,15 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
                   <div class="govuk-form-group">
                     <p class="govuk-body">
                       <br />
-                      Which policies are not being met?
+                      <strong>Please provide which GDPO policy (or policies) have not been met. </strong>If there are multiple, please separate by a comma. 
                     </p>
-
+                    <p class="govuk-body"> 
+                      <span class="govuk-hint">
+                        For example, "GPDO 2015 S.2 P.1 A.1 (f)(i), GPDO 2015 S.2 P.1 A.1 (f)(ii)"
+                      </span>
+                    </p>
                     <p class="govuk-body">
-                      <strong>
-                      GDPO Class A - The enlargement, improvement or other alteration of a dwellinghouse.
-                      </strong>
-                    </p>
-                    <div class="govuk-checkboxes govuk-checkboxes--small">
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (a)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (b)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (c)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (d)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (e)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (f)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (g)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (h)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (i)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (j)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.1 (k)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.2 (a)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.2 (b)
-                        </label>
-                      </div>
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 A.2 (c)
-                        </label>
-                      </div>
-                    </div>
-                    </div>
-                    <p class="govuk-body">
-                      <strong>
-                      GDPO Class B - additions etc to the roof of a dwellinghouse.
-                      </strong>
-                    </p>
-                    <div class="govuk-checkboxes govuk-checkboxes--small">
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 B.1 (a)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 B.1 (b)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 B.1 (c)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 B.1 (d)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 B.1 (e)
-                        </label>
-                      </div>
-
-                      <div class="govuk-checkboxes__item">
-                        <input
-                          class="govuk-checkboxes__input"
-                          id="organisation"
-                          name="organisation"
-                          type="checkbox"
-                          value="hmrc"
-                        />
-                        <label
-                          class="govuk-label govuk-checkboxes__label"
-                          for="organisation"
-                        >
-                          GPDO 2015 S.2 P.1 B.1 (f)
-                        </label>
-                      </div>
-
-                      
-
-                    <p class="govuk-body" style="clear: both; float: none;">
-                      <br />
-                      Please provide your manager <strong>with the measured dimensions </strong>of the plans and any  add any
-                      comments that are applicable.<br /><br />This will not appear on the decision notice.
+                      This <strong>will</strong> appear on the decision notice.
                     </p>
                     <textarea
                       class="govuk-textarea"
@@ -543,6 +203,20 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
           </fieldset>
         </div>
       </div>
+          <div class="govuk-form-group">
+                    <p class="govuk-body">
+                      <strong>Please provide supporting information for your manager.</strong> For example, you may want to add any details about the width, depth or height of the proposal.
+                      <br><br>
+                      Your comment will <strong>not</strong> appear on the decision notice.
+                    </p>
+                    <textarea
+                      class="govuk-textarea"
+                      id="more-detail"
+                      name="more-detail"
+                      rows="3"
+                      aria-describedby="more-detail-hint"
+                    ></textarea>
+                  </div>
 
       <! -- Save button -->
       <a class="govuk-button" data-module="govuk-button" href="drawing-numbers">
