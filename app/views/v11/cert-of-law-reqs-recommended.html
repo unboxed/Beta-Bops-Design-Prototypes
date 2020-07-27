@@ -1,0 +1,87 @@
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-pd-v08.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-pd-v08.njk" import
+rightaccordion %} {% from "../customnjk/right-status-green-pd-v08.njk" import
+rightstatus %} {% block head %} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      Fast track application: 20/AP/0607
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+      150 Bellenden Road London SE15 4QY
+    </h2>
+
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+
+    <! -- Task List -->
+    <ol class="app-task-list" style="clear: both; float: none;">
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">View application</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="permitted-dev-reqs-summary.html"
+              aria-describedby="external-review-completed"
+            >
+              View the assessment
+            </a>
+
+            <strong
+              class="govuk-tag app-task-list__task-completed"
+              id="eligibility-completed"
+            >
+              Completed
+            </strong>
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="make-recommendation-summary"
+              aria-describedby="external-review-completed"
+            >
+              View the decision notice
+            </a>
+
+            <strong
+              class="govuk-tag app-task-list__task-completed"
+              id="eligibility-completed"
+            >
+              Completed
+            </strong>
+          </li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    <br><br><br> <br><br><br><br> <br>  {{ rightaccordion() }}
+  </div>
+</div>
+{% endblock %}

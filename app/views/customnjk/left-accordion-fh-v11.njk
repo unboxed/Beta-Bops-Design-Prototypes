@@ -1,0 +1,101 @@
+{% macro leftaccordion(params) %}
+{% block content %}
+  
+  <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default" >
+
+            <div class="govuk-accordion__section ">
+            <div class="govuk-accordion__section-header">
+              <h3 class="govuk-accordion__section-heading">
+                <span class="govuk-accordion__section-button" id="accordion-default-heading-1a">
+                  Application information
+                </span>
+              </h3>
+            </div>
+            <div id="accordion-default-content-1a" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1a">
+
+                  <table class="govuk-table">
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Address: </b></td>
+                <td class="govuk-table__cell">1 Rycott Path, East Dulwich, SE22 0AA</td>
+            </tr>
+              <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><b>Ward: </b></td>
+                  <td class="govuk-table__cell">Dulwich Hill </td>
+            </tr>
+            <tr class="govuk-table__row">
+                  <td class="govuk-table__cell"><b>Property type: </b></td>
+                  <td class="govuk-table__cell">Terrace</td>
+            </tr>
+        <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><b>Application type: </b></td>
+            <td class="govuk-table__cell">Full-householder	</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell"><strong>Proposal: </strong></td>
+            <td class="govuk-table__cell">
+                <p class="govuk-body">
+                    Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.   
+                </p>
+              </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell"><b>Case officer: </b></td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+
+
+        </tbody>
+          </table>
+                </div>
+            </div>
+
+    <!-- Documents -->
+
+            <div class="govuk-accordion__section ">
+                <div class="govuk-accordion__section-header">
+                  <h3 class="govuk-accordion__section-heading">
+                    <span class="govuk-accordion__section-button" id="accordion-default-heading-2a">
+                  Proposal documents
+                </span>
+              </h3>
+            </div>  
+            <div id="accordion-default-content-2a" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-2a"> 
+                <div style="margin-bottom: 10px; float: right;" >
+                    <a href="document-management" class="govuk-link govuk-button govuk-button--secondary" style="margin-bottom: 20px;">
+                        Manage documents
+                    </a>
+                </div>
+                <div class="govuk-grid-row" style="clear: both;">
+                  <div class="govuk-grid-column-one-third">
+                  <p class="govuk-body" style="line-height: 1.6;">
+                    <strong>FH-SITE-LOCATION-PLAN-857983.PDF</strong><br>
+                    <strong class="govuk-tag govuk-tag--turquoise">
+                      Site map
+                    </strong>
+                    <br>	20 Mar 2020<br>
+                    </p>
+                    <p ><a href="/public/images/FH_SITE_LOCATION_PLAN-857983.pdf" target="_blank">View PDF in new window</a><br></p>
+                    
+                    <img src="/public/images/FH_SITE_LOCATION_PLAN-857983.png" style="max-width: 150px; margin-bottom: 10px;" alt="map">
+                  </div>
+                  <div class="govuk-grid-column-one-third">
+                    <p class="govuk-body" style="line-height: 1.6;">
+                    <Strong>FH-20AP0870-APPLICATION-FORM-857987.pdf</Strong>
+                    <br>
+                    <strong class="govuk-tag govuk-tag--turquoise">
+                      Application form
+                    </strong>
+                   <br>	20 Mar 2020<br></p>
+                   <p><a href="/public/images/FH-20AP0870-APPLICATION-FORM-857987.pdf" target="_blank">View PDF in new window</a></p>               
+                    <img src="/public/images/FH-20AP0870-APPLICATION-FORM-857987-1.png" style="max-width: 150px; margin-bottom: 10px; border: grey 1px solid;" alt="map">
+                  </div>
+                </div>
+            </div>
+            
+</div>
+</div>
+
+{% endblock %}
+
+{% endmacro %}

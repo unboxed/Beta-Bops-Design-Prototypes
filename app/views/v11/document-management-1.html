@@ -1,0 +1,89 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item" ><a href="document-management-upload.html">Documents</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Archive document</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Documents: [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      
+        
+        <h2 class="govuk-heading-m">
+            [Name-of-doc.PDF]
+        </h2>
+         <img src="/public/images/existing-floorplan.png" style="width: 300px; margin-bottom: 15px;"><br>
+               <br>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-heading-s">
+                Why do you want to archive this document?
+              </h2>
+            </legend>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                <label class="govuk-label govuk-radios__label" for="changed-name">
+                  Missing scale bar/north arrow
+                </label>
+              </div>
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                  Revise design 
+                </label>
+              </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-3" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-3">
+                  Revise dimensions 
+                </label>
+              </div>
+                <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="changed-name-4" name="changed-name" type="radio" value="year">
+                <label class="govuk-label govuk-radios__label" for="changed-name-4">
+                  Other
+                </label>
+              </div>
+            </div>
+          </fieldset>
+                       <br>
+               <br>
+
+        
+        
+        
+ <a class="govuk-button" data-module="govuk-button" href="document-management-2.html">
+        Continue
+    </a>  
+        
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}
