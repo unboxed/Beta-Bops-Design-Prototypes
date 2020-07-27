@@ -1,0 +1,196 @@
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v11-af.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-fh-v11-af.njk" import
+rightaccordion %} {% from "../customnjk/right-status-yellow-pd-v08.njk" import
+rightstatus %} {% block head %} {{ super() }}
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
+              </ol>
+        </div> 
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Fast track application: 20/AP/0870
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">1 Rycott Path, East Dulwich, SE22 0AA</h2>
+    
+      
+        <! –– Application detail blocks ––>
+        {{ leftaccordion() }}
+    <! -- Task List -->   
+    
+
+    
+      <ol class="app-task-list">
+<!--
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Application allocation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <a class="app-task-list__task-name" href="permitted-dev-rights.html" aria-describedby="external-review-completed">
+                Claim application
+              </a>
+
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+
+            </li>
+            </ul>
+          </li>
+-->
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Consultation</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="fh-consultation" aria-describedby="external-review-completed">
+                Facilitate consultation 
+              </a>   
+
+                <strong class="govuk-tag app-task-list__task-completed govuk-tag--blue app-task-list__tag" id="contact-details-status">
+                    In progress
+                  </strong>
+
+            </li>
+          </ul>
+        </li>
+            
+        <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Document site visit</span>
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="site-visit-doc-upload-1.html" aria-describedby="external-review-completed">
+                    Take or upload photos
+                </a>
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="fh-site-visit.html" aria-describedby="external-review-completed">
+                    Write notes
+                </a>
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            </ul>
+            </li>
+            <li>
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Assess the proposal</span>
+          </h2>
+          <ul class="app-task-list__items">
+            
+              <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="fh-impact-neighbours" aria-describedby="external-review-completed">
+                Asssess the impact on neighbours
+                </a>
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
+                <a class="app-task-list__task-name" href="fh-impact-design-heritage" aria-describedby="external-review-completed">
+                Asssess the impact on design and heritage
+                </a>
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+              <li class="app-task-list__item">
+<!--                <a class="app-task-list__task-name" href="make-recommendation" aria-describedby="external-review-completed">-->
+                Asssess other policy considerations
+<!--                </a>-->   
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+           
+          </ul>
+        </li>
+          
+          <h2 class="app-task-list__section">
+            <span class="app-task-list__section-number">Prepare the report</span>
+          </h2>
+          <ul class="app-task-list__items">
+            
+              <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="fh-make-recommendation" aria-describedby="external-review-completed">
+                Make recommendation 
+                </a>
+
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="fh-conditions" aria-describedby="external-review-completed">
+                Add conditions
+                </a>
+
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="drawing-numbers" aria-describedby="external-review-completed">
+                Attach drawing numbers
+                </a>
+
+<!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+-->
+            </li>
+            <li class="app-task-list__item">
+               <a class="app-task-list__task-name" href="fh-submit-report" aria-describedby="external-review-completed">
+                    Submit report 
+                </a>
+    <!--
+                    <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                        Completed
+                      </strong>
+    -->
+                </li>
+      </ol>
+      </div>
+        
+<! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ rightstatus() }} {{ rightaccordion() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
+

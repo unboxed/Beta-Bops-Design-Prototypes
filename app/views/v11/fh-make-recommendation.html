@@ -6,8 +6,8 @@ text: 'Select text to add comment.',
 iconFallbackText: 'information'
 }) }} 
 
-{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v08.njk"
-import leftaccordion %} {% from "../customnjk/right-accordion-fh-v09.njk" import
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v11.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-fh-v11.njk" import
 rightaccordion %} {% from "../customnjk/right-status-yellow-pd-v08.njk" import
 rightstatus %} {% block head %} {{ super() }}
 <link
@@ -21,7 +21,7 @@ rightstatus %} {% block head %} {{ super() }}
     <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         
-        
+         
 
         
         <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
@@ -50,7 +50,92 @@ rightstatus %} {% block head %} {{ super() }}
         <h2 class="govuk-heading-m">
            Make recommendation
         </h2>
+        <p class="govuk-body">
+        Your assessment:
+        </p>
+        <div
+      style="
+        background-color: #f3f2f1;
+        padding: 30px;
+        clear: both;
+        margin-top: 10px;
+      "
+    >
+      
+      <h2 class="govuk-heading-m">Impact on neighbours</h2>
+      <ol class="govuk-list govuk-list--number">
+        <li>
+                   <strong>Will the proposal negatively impact on the neighbours' privacy as a result of overlooking windows, terraces, or balconies?</strong>
+    <br><br>
+      <strong>
+      Slightly affect
+      </strong>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+      <br><br>
+      </li>
+        <li>
+        <strong>
+           Will the proposal negatively impact on the neighbours' access to sunlight and/or daylight?
+      </strong>
+      <strong> <br><br>
+      Not affect
+      </strong>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+      <br><br>
+      </li>
+        <li>
+      <strong>
+           Will the proposal negatively impact on the neighbours' sense of openness from a loss of outlook and/or through creating a sense of enclosure?
+      <br>
+      <br>
+      Not affect
+      </strong>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+      </p>
+      </li>
+       </ol>
 
+       <h2 class="govuk-heading-m">Impact on design and heritage</h2>
+      <ol class="govuk-list govuk-list--number">
+        <li>
+                   <strong>Will the proposal negatively impact the character of the original property?</strong>
+    <br><br>
+      <strong>
+      Slightly affect
+      </strong>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+      <br><br>
+      </li>
+        <li>
+        <strong>
+           Will the proposal negatively impact the established building line and/or roof line when viewed from the street?
+      </strong>
+      <strong> <br><br>
+      Not affect
+      </strong>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+      <br><br>
+      </li>
+        <li>
+      <strong>
+           Will the proposal fail to enhance or conserve nearby heritage assets?
+      <br>
+      <br>
+      Not affect
+      </strong>
+      <br>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+      </p>
+      </li>
+       </ol>
+    </div>
+
+<br>
         <!--    Policy question -->
             <div class="govuk-form-group">
               <fieldset class="govuk-fieldset">
