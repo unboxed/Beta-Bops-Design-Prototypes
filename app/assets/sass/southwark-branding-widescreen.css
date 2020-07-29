@@ -1,0 +1,10 @@
+
+
+.govuk-width-container{
+  max-width: 1600px;
+  padding: 20px;
+} 
+
+@media all and (min-width:1200px){ 
+  min-width: 1250px;
+}

@@ -10,8 +10,20 @@
 }
 
 
+
 .govuk-accordion__section-content{
     max-height: 600px;
-    overflow: scroll;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
 
+.image-text-labels{
+  line-height: 1.1;
+  margin-bottom: 5px;
+}
+
+.image-row{
+  float:none;
+  clear: both;
+  margin-bottom: 15px;
 }
