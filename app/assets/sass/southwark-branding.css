@@ -10,6 +10,11 @@
 }
 
 
+.application-status-floats{
+  float: right; 
+  margin-bottom: 20px; 
+  display: block;
+}
 
 .govuk-accordion__section-content{
     max-height: 600px;
@@ -27,3 +32,8 @@
   clear: both;
   margin-bottom: 15px;
 }
+
+@media all and (max-width:795px){ 
+  .application-status-floats{
+    float: left;
+  }

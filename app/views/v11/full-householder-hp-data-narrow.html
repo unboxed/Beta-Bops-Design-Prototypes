@@ -1,5 +1,5 @@
-{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v11-af.njk"
-import leftaccordion %} {% from "../customnjk/right-accordion-fh-v11-af.njk" import
+{% extends "layout.html" %} {% from "../customnjk/left-accordion-fh-v11.njk"
+import leftaccordion %} {% from "../customnjk/right-accordion-fh-v11.njk" import
 rightaccordion %} {% from "../customnjk/right-status-yellow-pd-v08.njk" import
 rightstatus %} {%
 from "../customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
@@ -8,8 +8,8 @@ from "../customnjk/full-householder-task-list-incomplete-v11.njk" import tasklis
 {% endblock %} {% block content %}
 
 <! –– Header ––>
-    <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
         <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
               <ol class="govuk-breadcrumbs__list">
                 <li class="govuk-breadcrumbs__list-item">
@@ -27,10 +27,10 @@ from "../customnjk/full-householder-task-list-incomplete-v11.njk" import tasklis
         <! –– Application detail blocks ––>
         {{ leftaccordion() }}
     <! -- Task List -->   
-        {{ tasklist() }}
-      </div>
+     {{ tasklist() }}
+  </div>
         
-<! –– Right panel with additional information in accordion ––>
+  <! –– Right panel with additional information in accordion ––>
 
   <div class="govuk-grid-column-one-third">
     {{ rightstatus() }} {{ rightaccordion() }}

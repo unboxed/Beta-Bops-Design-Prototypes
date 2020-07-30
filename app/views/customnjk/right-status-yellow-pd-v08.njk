@@ -1,23 +1,31 @@
 {% macro rightstatus(params) %}
+{% block head %} 
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} 
 {% block content %}
-  <div
-      class="govuk-breadcrumbs"
-      style="float: right;"
-      style="margin-bottom: 20px; float: right;"
+  
+<div class="application-status-floats" style="float:right; ">
+  <div class="govuk-breadcrumbs" style="margin-bottom: 30px;"
     >
-      <ol class="govuk-breadcrumbs__list">
+      <ol class="govuk-breadcrumbs__list" style="float:right;">
         <li class="govuk-breadcrumbs__list-item">
           <a class="govuk-breadcrumbs__link" href="">Log out</a>
         </li>
       </ol>
-    </div>
-    <div style="float: right; margin: 20px 0 30px 100px;">
-      <p class="govuk-body">
-        <strong class="govuk-tag govuk-tag--yellow">
-          Due: June 12<br />11 days remaining
-        </strong>
-      </p>
-    </div>
+  </div>
+    <br>
+  <div>
+    <p class="govuk-body" >
+      <strong class="govuk-tag govuk-tag--yellow">
+       Due: June 12<br />11 days remaining
+      </strong>
+    </p>
+  </div>
+</div>
 
 {% endblock %}
 

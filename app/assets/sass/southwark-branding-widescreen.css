@@ -5,6 +5,14 @@
   padding: 20px;
 } 
 
-@media all and (min-width:1200px){ 
-  min-width: 1250px;
+
+@media all and (max-width:1450px){ 
+
+  .govuk-width-container{
+  max-width: 1000px;
+  }
+
+  .govuk-tag--yellow{
+    background: pink;
+  }
 }

@@ -11,12 +11,40 @@
   <! –– Right panel with additional information in accordion ––>
 
 
+    <h2 class="app-task-list__section" style="float: none; clear: both;">
+      <span class="app-task-list__section-number">&nbsp;</span>
+    
     <div
       class="govuk-accordion"
       data-module="govuk-accordion"
       id="accordion-default"
-      
     >
+      {# <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Planning history
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Permitted development rights: Active
+            </li>
+            <li>
+              No relevant planning history
+            </li>
+          </ul>
+        </div>
+      </div> #}
 
       <div class="govuk-accordion__section">
         <div class="govuk-accordion__section-header">
@@ -58,23 +86,24 @@
           aria-labelledby="accordion-default-heading-2"
         >
           <div id="id="proposal-drawings">
-          <div style="margin-bottom: 10px;" >
-                    <a href="document-management" class="govuk-link govuk-button govuk-button--secondary" style="margin-bottom: 20px;">
-                        Manage documents
-                    </a>
-                </div>
           <div style="float: left; margin-left: 0px;">
-            <p class="govuk-body" style="line-height: 1.6;">
+            <p class="govuk-body image-text-labels">
               <strong>FH-20AP0870-PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS-858712.PDF</strong>
+            </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Section - Proposed
               </strong>
+            </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Shed elevation - Proposed
               </strong>
-              <br />[DD MM YYYY]<br />
-              </p>
-              <p>
+            </p>
+            <p class="govuk-body image-text-labels">
+              [DD MM YYYY]
+            </p>
+            <p class="govuk-body image-text-labels">
               <a
                 href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf"
                 target="_blank"
@@ -90,18 +119,23 @@
           </div>
 
           <div style="float: left; margin-left: 0px;">
-            <p class="govuk-body" style="line-height: 1.6;">
+            <p class="govuk-body image-text-labels">
               <strong>FH-20AP0870-EXISTING-AND-PROPOSED-BLOCK-PLANS-858713.PDF</strong>
+            </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Block plan - Existing
               </strong>
-              <br>
+            </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Block plan - Proposed
-              </strong>
-              <br />[DD MM YYYY]
-              </p>
-              <p><a
+              </strong></p>
+            <p class="govuk-body image-text-labels">
+              [DD MM YYYY]
+            </p>
+            <p class="govuk-body image-text-labels">
+              <a
                 href="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.pdf"
                 target="_blank"
                 >View PDF in new window</a
@@ -114,43 +148,51 @@
           </div>
 
           <div style="float: left; margin-left: 0px;">
-            <p class="govuk-body" style="line-height: 1.6;">
-              <strong><br /><br />FH-20AP0870-EXISTING-ELEVATIONS-858708.PDF</strong
+            <p class="govuk-body image-text-labels">
+                <strong>
+                  FH-20AP0870-EXISTING-ELEVATIONS-858708.PDF
+                </strong
               >
+              </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Elevations - Existing
               </strong>
-              <br />[DD MM YYYY]</p>
-              <p>
+              </p>
+            <p class="govuk-body image-text-labels">[DD MM YYYY]
+            </p>
+            <p class="govuk-body image-text-labels">
               <a
                 href="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.pdf"
                 target="_blank"
                 >View PDF in new window</a
               >
             </p>
-
-            
-              
-            </p>
-
             <img
               src="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png"
               style="width: 200px;"
             />
           </div>
-
           <div style="float: left; margin-left: 0px;">
-            <p class="govuk-body" style="line-height: 1.6;">
-              <strong><br /><br />FH-20AP0870-EXISTING-FIRST-FLOOR-AND-ROOF-PLANS-858703 </strong
-              >
+            <p class="govuk-body image-text-labels">
+              <strong>
+                FH-20AP0870-EXISTING-FIRST-FLOOR-AND-ROOF-PLANS-858703 
+              </strong>
+              </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Roof plan - Existing
               </strong>
-              <br>
+            </p>
+            <p class="govuk-body image-text-labels">
               <strong class="govuk-tag govuk-tag--turquoise">
                 Floorplan - Existing
-              </strong><br>
-              [DD MM YYYY]<br /><a
+              </strong>
+            </p>
+            <p class="govuk-body image-text-labels">
+              [DD MM YYYY]</p>
+            <p class="govuk-body image-text-labels">
+            <a
                 href="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.pdf"
                 target="_blank"
                 >View PDF in new window</a
@@ -275,55 +317,7 @@
           </div>
       </div>
       </div>
-      <div class="govuk-accordion__section">
-        <div class="govuk-accordion__section-header">
-          <h3 class="govuk-accordion__section-heading">
-            <span
-              class="govuk-accordion__section-button"
-              id="accordion-default-heading-1"
-            >
-              Materials
-            </span>
-          </h3>
-        </div>
-        <div
-          id="accordion-default-content-1"
-          class="govuk-accordion__section-content"
-          aria-labelledby="accordion-default-heading-1"
-        >
-          <ul class="govuk-list govuk-list--bullet">
-                  <li>
-                    Walls: <strong>Red brick</strong>
-                  </li>
-                  <li>
-                    Roof: <strong>Slate tiles</strong>
-                  </li>
-                  <li>
-                    Windows Existing: <strong>White uPVC casement windows</strong>
-                  </li>
-                  <li>
-                    Rooflights existing:<strong> Aluminium</strong></li>
-                  <li>
-                    Windows Proposed: <strong> White uPVC casement windows</strong>
-                  </li>
-                  <li>
-                    Rooflights existing: <strong>Aluminium</strong>
-                  </li>
-                  <li>
-                    Doors existing: <strong>Timber doors</strong></li>
-                  <li>
-                    Doors proposed: <strong>White uPVC doors</strong>
-                  </li>
-                  <li>
-                  Downpipes and gutters existing: <strong>Grey uPVC downpipes and gutters</strong>
-                  </li>
-                  <li>
-                  Proposed: <strong>Grey uPVC downpipes and gutters</strong>
-                  </li>
-                
-          </ul>
-        </div>
-      </div>
+      
       <div class="govuk-accordion__section">
         <div class="govuk-accordion__section-header">
           <h3 class="govuk-accordion__section-heading">
@@ -496,9 +490,20 @@
           class="govuk-accordion__section-content"
           aria-labelledby="accordion-default-heading-4"
         >
-          <p class="govuk-body">
-            In progress. No documents uploaded.
-          </p>
+                    <p class="govuk-body image-text-labels">
+                      <Strong>FH-20AP0870-MeetingMinutes-DDMMYYYY-857987.pdf</Strong>
+                    </p>
+                    <p class="govuk-body image-text-labels">
+                    <strong class="govuk-tag govuk-tag--turquoise">
+                      Meeting Minutes 
+                    </strong>
+                   </p>
+                   <p class="govuk-body image-text-labels">
+                      20 Mar 2020</p>
+                    <p class="govuk-body image-text-labels">
+                      <a href="" target="_blank">View PDF in new window</a>
+                    </p>               
+                    <div style="width: 150px; margin-bottom: 10px; border: grey 1px solid; height: 215px;" alt="map" ><img src="" style="width: 150px; height: 215px;"></div>
         </div>
       </div>
       <div class="govuk-accordion__section">
