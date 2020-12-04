@@ -1,0 +1,161 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Change document</li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            20/AP/0607
+        </h1>
+        <p>150 Bellenden Road London SE15 4QY</p>
+        <h2 class="govuk-heading-m">
+            10390-Proposed-ground-floorplan.PDF
+        </h2>
+
+        <div>
+
+          <fieldset class="govuk-fieldset">
+            <div>
+              <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png" style="width: 300px; border: solid 1px #eeeeee"/>
+              <p>
+              </p>
+              <p>
+                <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank" >View PDF in new window</a>
+              </p>
+            </div>
+            <div class="govuk-form-group">
+              <label class="govuk-heading-s" for="file-upload">
+                Upload a file
+              </label>
+              <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
+            </div>
+
+            <div class="govuk-form-group">
+              <label class="govuk-heading-s" for="document-number">
+                Document number(s)
+              </label>
+              <p class="govuk-hint">For multiple page documents, add drawing numbers separated by a comma.</p>
+              <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
+            </div>
+          </fieldset>
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                <p class="govuk-heading-s">
+                  When was the document received?
+                </p>
+              </legend>
+              <div class="govuk-date-input" id="valid-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="valid-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-day" name="valid-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="valid-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-month" name="valid-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="valid-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-year" name="valid-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </div> 
+          </fieldset>
+
+          <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                <p class="govuk-heading-s">
+                  What does the document contain?
+                </p>
+              </legend>   
+              <div class="govuk-checkboxes govuk-checkboxes--small">
+                <p class="govuk-hint">Please select all tags that apply</p>
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="front elevation - proposed" name="drawing_form[tags][]" id="drawing_form_tags_front_elevation_-_proposed">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_front_elevation_-_proposed">front elevation - proposed</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="side elevation - proposed" name="drawing_form[tags][]" id="drawing_form_tags_side_elevation_-_proposed">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_side_elevation_-_proposed">side elevation - proposed</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - proposed" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_proposed">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_proposed">floor plan - proposed</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="section - proposed" name="drawing_form[tags][]" id="drawing_form_tags_section_-_proposed">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_section_-_proposed">section - proposed</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="front elevation - existing" name="drawing_form[tags][]" id="drawing_form_tags_front_elevation_-_existing">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_front_elevation_-_existing">front elevation - existing</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="side elevation - existing" name="drawing_form[tags][]" id="drawing_form_tags_side_elevation_-_existing">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_side_elevation_-_existing">side elevation - existing</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">floor plan - existing</label>
+                </div>
+
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" type="checkbox" value="section - existing" name="drawing_form[tags][]" id="drawing_form_tags_section_-_existing">
+                  <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_section_-_existing">section - existing</label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          
+
+          <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="pd-drawing-numbers">
+            Save and return
+          </a>
+          <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="pd-drawing-numbers">
+            Cancel
+          </a>
+        
+        </div>
+      </div> 
+  
+    <! –– Right panel with additional information in accordion ––> 
+    <div class="govuk-grid-column-one-third">
+    </div>
+
+</div>
+{% endblock %}

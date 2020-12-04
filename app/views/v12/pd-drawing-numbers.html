@@ -1,0 +1,241 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Documents</li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            20/AP/0607
+        </h1>
+        <p>150 Bellenden Road London SE15 4QY</p>
+        <h2 class="govuk-heading-m">
+            Documents
+        </h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body" style="line-height: 1.6;">
+              Check documents and attach drawing numbers to all proposed documents. These will be published in the decision notice. 
+            </p>
+            <p>
+              <a class="govuk-link" href="document-archive.html">View document archive</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-third" style="text-align: right">
+            <a role="button" class="govuk-button" data-module="govuk-button" href="document-edit">Upload document</a>
+          </div>
+        </div>
+
+        <ul class="app-task-list">
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-quarter">
+              <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png" style="width: 150px; border: solid 1px #eeeeee"/>
+              <p>
+              </p>
+              <p>
+                <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank" >View PDF in new window</a>
+              </p>
+            </div>
+            <div  class="govuk-grid-column-one-half">
+              <p>
+                <strong>10390-Proposed-ground-floorplan.PDF</strong><br/>
+                Date received: 02/11/2020<br/>
+                Drawing number(s): 243646HF
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--turquoise">Floor plan - Proposed</strong>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+              <p style="text-align: right">
+                <a class="govuk-link govuk-link--no-visited-state" href="document-edit.html">Edit</a><br/>
+                <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-quarter">
+              <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 150px; border: solid 1px #eeeeee"/>
+              <p>
+              </p>
+              <p>
+                <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank" >View PDF in new window</a>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <p>
+                <strong>10393-Proposed-rear-elevation.PDF</strong><br/>
+                Date received: 02/11/2020<br/>
+                Drawing number(s): 335466HF, 42626FF
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--turquoise">Rear elevation - Proposed</strong>
+                <strong class="govuk-tag govuk-tag--turquoise">Rear elevation - Existing</strong>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+              <p style="text-align: right">
+                <a class="govuk-link govuk-link--no-visited-state" href="document-edit.html">Edit</a><br/>
+                <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-quarter">
+              <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 150px; border: solid 1px #eeeeee"/>
+              <p>
+              </p>
+              <p>
+                <a href="/public/images/10395-Proposed-roof-plan.PDF" target="_blank" >View PDF in new window</a>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <p>
+                <strong>10395-Proposed-roof-plan.PDF</strong><br/>
+                Date received: 02/11/2020<br/>
+                Drawing number(s): 46666HF
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--turquoise">Roof plan - Proposed</strong>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+              <p style="text-align: right">
+                <a class="govuk-link govuk-link--no-visited-state" href="document-edit.html">Edit</a><br/>
+                <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-quarter">
+              <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png" style="width: 150px; border: solid 1px #eeeeee"/>
+              <p>
+              </p>
+              <p>
+                <a href="/public/images/PROPOSED_SIDE_ELEVATION-848013.pdf" target="_blank" >View PDF in new window</a>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-half">
+              <p>
+                <strong>10397-Proposed-side-elevation.PDF</strong><br/>
+                Date received: 02/11/2020<br/>
+                Drawing number(s): 546774HF
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--turquoise">Side elevation - Proposed</strong>
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+              <p style="text-align: right">
+                <a class="govuk-link govuk-link--no-visited-state" href="document-edit.html">Edit</a><br/>
+                <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+              </p>
+            </div>
+          </li>
+
+        </ul>
+
+
+        <div>
+          
+          <div class="govuk-form-group" style="clear: both; border-top: 1px; padding-top: 50px;">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h3 class="govuk-heading-s" style="margin-bottom: 0">
+                  Document status
+                </h3>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="document-status" name="document-status" type="radio" value="not-checked" checked>
+                  <label class="govuk-label govuk-radios__label" for="document-status">
+                    Not yet checked
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="document-status-2" name="document-status" type="radio" value="documents-requested">
+                  <label class="govuk-label govuk-radios__label" for="document-status-2">
+                    New documents requested
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="document-status-3" name="document-status" type="radio" value="valid">
+                  <label class="govuk-label govuk-radios__label" for="document-status-3">
+                    Valid
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h3 class="govuk-heading-s" style="margin-bottom: 0">
+                  Valid from?
+                </h3>
+              </legend>
+              <div id="valid-date-hint" class="govuk-hint">
+                Date application should be considered valid, e.g. 28 11 2020
+              </div>
+              <div class="govuk-date-input" id="valid-date">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="valid-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-day" name="valid-day" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="valid-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="valid-month" name="valid-month" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="valid-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="valid-year" name="valid-year" type="text" pattern="[0-9]*" inputmode="numeric">
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div> 
+
+          <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html">
+            Save and return
+          </a>
+          <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-hp.html">
+            Cancel
+          </a>
+        
+        </div>
+      </div> 
+  
+    <! –– Right panel with additional information in accordion ––> 
+    <div class="govuk-grid-column-one-third">
+    </div>
+
+</div>
+{% endblock %}

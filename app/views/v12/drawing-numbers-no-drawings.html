@@ -1,0 +1,65 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Attach drawing numbers</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      
+        
+        <h2 class="govuk-heading-m">
+            Attach drawing numbers
+        </h2>
+        <div class="govuk-form-group govuk-form-group--error">
+        <p class="govuk-body">
+          <span id="nationality-error" class="govuk-error-message">
+            No drawings are available.
+          </span> This could be because the proposed plans:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+          <li>have not been submitted</li>
+          <li>are not tagged with proposed document tags</li>
+          <li>were archived</li>
+        </ul>
+
+        <p class="govuk-body">
+          Please <a href="document-management-upload-1" class="govuk-link">upload proposal documents</a> and tag with <span class="govuk-tag govuk-tag--turquoise">PROPOSED</span> to add drawing numbers.
+        </p>
+        </div>
+             
+        
+ <a class="govuk-button" data-module="govuk-button" href="">
+        Back
+    </a>  
+        
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}

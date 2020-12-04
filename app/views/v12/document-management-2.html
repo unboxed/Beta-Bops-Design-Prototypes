@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item" ><a href="document-management-upload.html">Documents</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Archive document</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Documents: [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      
+        
+        <h2 class="govuk-heading-m">
+            Confirm archiving 
+        </h2>
+               <br>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-heading-s">
+                You want to archive the document because:
+              </h2>
+            </legend>
+        </fieldset>
+            <p class="govuk-body">
+                  Missing scale bar/north arrow
+            </p>
+            
+              
+                       <br>
+               <br>
+       
+    <div class="govuk-form-group">
+
+<fieldset class="govuk-fieldset">
+
+ <h2 class="govuk-heading-s">
+  Is this correct?
+
+    </h2>
+<div class="govuk-radios govuk-radios--small">
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="correct" name="correct" type="radio" value="yes">
+    <label class="govuk-label govuk-radios__label" for="correct">
+      Yes
+    </label>
+
+  </div>
+
+  <div class="govuk-radios__item">
+    <input class="govuk-radios__input" id="correct-2" name="correct" type="radio" value="no">
+    <label class="govuk-label govuk-radios__label" for="correct-2">
+      No
+    </label>
+
+  </div>
+
+</div>
+</fieldset>
+
+</div>
+        
+ <a class="govuk-button" data-module="govuk-button" href="document-management-archived.html">
+        Archive document
+    </a>  
+        
+        
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}

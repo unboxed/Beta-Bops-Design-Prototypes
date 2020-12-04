@@ -1,0 +1,105 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                  <li class="govuk-breadcrumbs__list-item"> <a href="document-management-upload.html">Documents</a></li>
+                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Upload document</li>
+              </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            Upload documents: [##/AP/####]
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
+    
+      
+        
+        <h2 class="govuk-heading-m">
+            Upload documents
+        </h2>
+               <br>
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+              <h2 class="govuk-heading-s">
+                You have entered the following information:
+              </h2>
+            </legend>
+        </fieldset>
+           
+            
+              
+                       <br>
+               <br>
+       
+        <ol class="govuk-list govuk-list--number">
+          <li style="margin-bottom: 20px;"><strong>IMG_0249.png</strong><br>
+            <img src="/public/images/existing-floorplan.png" style="width: 300px; margin-top: 10px;"><br>
+                     <strong class="govuk-tag govuk-tag--blue">
+                            Side elevation - Existing
+                     </strong>
+            <br>
+            </li>
+          <li style="margin-bottom: 20px;"><strong>IMG_0250.png</strong><br>
+                  <img src="/public/images/existing-floorplan.png" style="width: 300px; margin-top: 10px;"><br>
+                  
+                          <strong class="govuk-tag govuk-tag--blue" >
+                                Side elevation - Proposed
+                        </strong>
+                        </li>
+          <li style="margin-bottom: 20px;"><strong>IMG_0251.png</strong><br>
+                  <img src="/public/images/existing-floorplan.png" style="width: 300px; margin-top: 10px;"><br>
+                    <strong class="govuk-tag govuk-tag--blue">
+                        Front elevation - Proposed
+                    </strong>
+                    <br>
+                    <strong class="govuk-tag govuk-tag--blue">
+                        Front elevation - Existing
+                   </strong>
+                   <br>
+                   </li>
+            </div>
+    
+        </div>
+        </ol>
+        </p>
+        
+    <div class="govuk-form-group">
+
+<fieldset class="govuk-fieldset">
+
+ 
+
+ <a class="govuk-button govuk-!-margin-right-3" data-module="govuk-button" href="document-management-upload-4.html">
+        Upload
+    </a>  
+       
+
+<a class="govuk-button govuk-button--secondary" href="document-management-upload-2.html" data-module="govuk-button">
+  Back
+</a>
+        
+            </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}

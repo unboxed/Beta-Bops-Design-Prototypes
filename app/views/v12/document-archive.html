@@ -1,0 +1,70 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="pd-drawing-numbers.html">Documents</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Archive</li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            20/AP/0607
+        </h1>
+        <p>150 Bellenden Road London SE15 4QY</p>
+        <h2 class="govuk-heading-m">
+            Document archive
+        </h2>
+
+        <ul class="app-task-list">
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-quarter">
+              <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png" style="width: 150px; border: solid 1px #eeeeee"/>
+              <p>
+              </p>
+              <p>
+                <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank" >View PDF in new window</a>
+              </p>
+            </div>
+            <div  class="govuk-grid-column-one-half">
+              <p>
+                <strong>10390-Proposed-ground-floorplan.PDF</strong><br/>
+                Date received: 02/11/2020<br/>
+                Drawing number(s): 243646HF
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--turquoise">Floor plan - Proposed</strong>
+              </p>
+              <p>
+                Archived: 10/11/2020<br/>
+                Missing scale bar or north arrow
+              </p>
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+              <p style="text-align: right">
+                <a class="govuk-link govuk-link--no-visited-state" href="pd-drawing-numbers.html">Restore</a>
+              </p>
+            </div>
+          </li>
+        
+        </div>
+      </div> 
+  
+    <! –– Right panel with additional information in accordion ––> 
+    <div class="govuk-grid-column-one-third">
+    </div>
+
+</div>
+{% endblock %}
