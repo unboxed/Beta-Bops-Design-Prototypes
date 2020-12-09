@@ -47,6 +47,11 @@
       </h2>
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#not-started">
+            Not started
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#in-assessment">
             In assessment
           </a>
@@ -57,13 +62,13 @@
           </a>
         </li>
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#determined">
-            Determined
+          <a class="govuk-tabs__tab" href="#closed">
+            Closed
           </a>
         </li>
       </ul>
-      <div class="govuk-tabs__panel" id="in-assessment">
-        <h2 class="govuk-heading-l">In assessment</h2>
+      <div class="govuk-tabs__panel" id="not-started">
+        <h2 class="govuk-heading-l">Not started</h2>
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -107,6 +112,48 @@
             </tr>
             <tr class="govuk-table_row">
               <td class="govuk-table__cell">
+                19/AP/1852
+              </td>
+              <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
+              <td class="govuk-table__cell">Permitted development</td>
+              <td class="govuk-table__cell">May 30</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  0
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Invalid
+                </strong>
+              </td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="govuk-tabs__panel" id="in-assessment">
+        <h2 class="govuk-heading-l">In assessment</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">
+                Application number
+              </th>
+              <th scope="col" class="govuk-table__header">Site address</th>
+              <th scope="col" class="govuk-table__header">Application type</th>
+              <th scope="col" class="govuk-table__header">Target date</th>
+              <th scope="col" class="govuk-table__header">Days left</th>
+              <th scope="col" class="govuk-table__header">
+                Status
+              </th>
+              <!--            <th scope="col" class="govuk-table__header">Date received</th>-->
+              <th scope="col" class="govuk-table__header">Planning officer</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table_row">
+              <td class="govuk-table__cell">
                 <a href="full-householder-hp.html">
                   20/AP/0870
                 </a>
@@ -140,26 +187,7 @@
               </td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--purple">
-                  Awaiting validation
-                </strong>
-              </td>
-              <td class="govuk-table__cell">Sandra Lewis</td>
-            </tr>
-            <tr class="govuk-table_row">
-              <td class="govuk-table__cell">
-                19/AP/1852
-              </td>
-              <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
-              <td class="govuk-table__cell">Permitted development</td>
-              <td class="govuk-table__cell">May 30</td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--red">
-                  0
-                </strong>
-              </td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--yellow">
-                  Awaiting documents
+                  Awaiting correction
                 </strong>
               </td>
               <td class="govuk-table__cell">Sandra Lewis</td>
@@ -238,8 +266,8 @@
         </table>
       </div>
 
-      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="determined">
-        <h2 class="govuk-heading-l">Determined</h2>
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="closed">
+        <h2 class="govuk-heading-l">Closed</h2>
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -297,11 +325,25 @@
                 Proposed permitted development:<br>Certification of lawfulness
               </td>
               <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--red">
-                  Refused
+                <strong class="govuk-tag govuk-tag--grey">
+                  Withdrawn
                 </strong>
               </td>
               <td class="govuk-table__cell">June 7</td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">17/AP/1353</td>
+              <td class="govuk-table__cell">67 Evelina Road, SE15 6TT</td>
+              <td class="govuk-table__cell">
+                Proposed permitted development:<br>Certification of lawfulness
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  Returned
+                </strong>
+              </td>
+              <td class="govuk-table__cell">June 2</td>
               <td class="govuk-table__cell">Sandra Lewis</td>
             </tr>
           </tbody>
