@@ -159,26 +159,20 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h3 class="govuk-heading-s" style="margin-bottom: 0">
-                  Document status
+                  Are the documents valid?
                 </h3>
               </legend>
-              <div class="govuk-radios">
+              <div class="govuk-radios govuk-radios--inline">
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="document-status" name="document-status" type="radio" value="not-checked" checked>
-                  <label class="govuk-label govuk-radios__label" for="document-status">
-                    Not yet checked
+                  <input class="govuk-radios__input" id="document-status-1" name="document-status" type="radio" value="yes">
+                  <label class="govuk-label govuk-radios__label" for="document-status-yes">
+                    Yes
                   </label>
                 </div>
                 <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="document-status-2" name="document-status" type="radio" value="documents-requested">
-                  <label class="govuk-label govuk-radios__label" for="document-status-2">
-                    New documents requested
-                  </label>
-                </div>
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="document-status-3" name="document-status" type="radio" value="valid">
-                  <label class="govuk-label govuk-radios__label" for="document-status-3">
-                    Valid
+                  <input class="govuk-radios__input" id="document-status-no" name="document-status" type="radio" value="No">
+                  <label class="govuk-label govuk-radios__label" for="document-status-no">
+                    No
                   </label>
                 </div>
               </div>
@@ -188,7 +182,7 @@
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h3 class="govuk-heading-s" style="margin-bottom: 0">
-                  Valid from?
+                  Valid date
                 </h3>
               </legend>
               <div id="valid-date-hint" class="govuk-hint">
