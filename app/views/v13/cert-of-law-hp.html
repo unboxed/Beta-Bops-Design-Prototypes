@@ -1,0 +1,81 @@
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v12.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v09.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      20/AP/0699
+    </h1>
+    <h2 class="govuk-heading-m">
+      150 Bellenden Road London SE15 4QY
+    </h2>
+    <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+    
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+
+    <! -- Task List -->
+    <h2 class="govuk-heading-m">Process application</h2>
+    <dl class="govuk-summary-list">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href="pd-drawing-numbers"
+          aria-describedby="external-review-completed">
+          Check documents
+          </a>
+        </dd>
+        
+      </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href="permitted-dev-reqs"
+          aria-describedby="external-review-completed">
+          Assess the proposal
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+         <dd class="govuk-summary-list__value">
+            Submit recommendation
+          </dd>
+      </div>
+    </dl>
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ rightstatus() }} {{ rightaccordion() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
+
