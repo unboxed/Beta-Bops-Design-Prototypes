@@ -1,6 +1,6 @@
 {% extends "layout.html" %} 
 {% from "../customnjk/left-accordion-pd-v12.njk"  import leftaccordion %} 
-{% from "../customnjk/right-accordion-pd-v09.njk" import  rightaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
 {% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
 {% block head %} {{ super() }}
 <link
@@ -17,9 +17,7 @@
     <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="application-list.html"
-            >Home</a
-          >
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
         </li>
         <li class="govuk-breadcrumbs__list-item" aria-current="page">
           Application
@@ -32,8 +30,15 @@
     <h2 class="govuk-heading-m">
       150 Bellenden Road London SE15 4QY
     </h2>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+    </p>
+    <p>Assigned to <strong>Martyn Evans</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="change-assignment">Change</a></p>
     <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
-    
+  </div>
+</div>  
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
     <! –– Application detail blocks ––>
     {{ leftaccordion() }}
 
@@ -72,7 +77,7 @@
   <! –– Right panel with additional information in accordion ––>
 
   <div class="govuk-grid-column-one-third">
-    {{ rightstatus() }} {{ rightaccordion() }}
+    {{ rightaccordion() }}
   </div>
 
   
