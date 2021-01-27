@@ -1,0 +1,127 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Assign application</li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            20/AP/0607
+        </h1>
+        <p>150 Bellenden Road London SE15 4QY</p>
+        <h2 class="govuk-heading-m">
+            Assign application
+        </h2>
+
+        <div>
+
+          <fieldset class="govuk-fieldset">
+            <div class="govuk-form-group">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h3 class="govuk-heading-s" style="margin-bottom: 0">
+                  Please select the officer you wish to assign this application to.
+                </h3>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-0" name="reason" type="radio" value="option-0">
+                  <label class="govuk-label govuk-radios__label" for="option-0">
+                    Unassigned
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-1" name="reason" type="radio" value="option-1">
+                  <label class="govuk-label govuk-radios__label" for="option-1">
+                    Alisha Barton
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-2" name="reason" type="radio" value="option-2">
+                  <label class="govuk-label govuk-radios__label" for="option-2">
+                    Charles Daniels
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-3" name="reason" type="radio" value="option-3">
+                  <label class="govuk-label govuk-radios__label" for="option-3">
+                    Eris Fanshawe
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-4" name="reason" type="radio" value="option-4">
+                  <label class="govuk-label govuk-radios__label" for="option-4">
+                    Gopi Harare
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-5" name="reason" type="radio" value="option-5">
+                  <label class="govuk-label govuk-radios__label" for="option-5">
+                    Indira Jun
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-6" name="reason" type="radio" value="option-6">
+                  <label class="govuk-label govuk-radios__label" for="option-6">
+                    Option 6
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-7" name="reason" type="radio" value="option-7">
+                  <label class="govuk-label govuk-radios__label" for="option-7">
+                    Option 7
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-8" name="reason" type="radio" value="option-8">
+                  <label class="govuk-label govuk-radios__label" for="option-8">
+                    Option 8
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-9" name="reason" type="radio" value="option-9">
+                  <label class="govuk-label govuk-radios__label" for="option-9">
+                    Option 9
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="option-10" name="reason" type="radio" value="option-10">
+                  <label class="govuk-label govuk-radios__label" for="option-10">
+                    Option 10
+                  </label>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+
+          
+
+          <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp">
+            Confirm
+          </a>
+          <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-hp">
+            Cancel
+          </a>
+        
+        </div>
+      </div> 
+  
+    <! –– Right panel with additional information in accordion ––> 
+    <div class="govuk-grid-column-one-third">
+    </div>
+
+</div>
+{% endblock %}
