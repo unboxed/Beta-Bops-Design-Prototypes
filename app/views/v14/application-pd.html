@@ -1,0 +1,51 @@
+{% extends "layout.html" %} 
+{% from "../v14/customnjk/application-info.njk"  import applicationinfo %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      20/AP/0699
+    </h1>
+    <h2 class="govuk-heading-m">
+      150 Bellenden Road London SE15 4QY
+    </h2>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+  </div>
+</div>
+
+<! –– Application info ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+
+    {{ applicationinfo() }}
+
+  </div>
+</div>
+
+
+{% endblock %}
