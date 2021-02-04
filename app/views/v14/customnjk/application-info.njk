@@ -1,5 +1,11 @@
-{% macro applicationinfo(params) %}
+{% macro applicationinfo(status, officer) %}
 {% block content %}
+
+{% if status.length %}
+  {{ status }}
+{% else %}
+<i>No status yet!</i>
+{% endif %}
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
     <div class="govuk-accordion__section ">

@@ -1,5 +1,8 @@
 {% extends "layout.html" %} 
-{% from "../v14/customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+{% from "./customnjk/application-status.njk" import applicationstatus %} 
+
 {% block head %} {{ super() }}
 <link
   href="/public/sass/southwark-branding.css"
@@ -29,9 +32,7 @@
     <h2 class="govuk-heading-m">
       150 Bellenden Road London SE15 4QY
     </h2>
-    <p>
-      <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
-    </p>
+    {{ applicationstatus("Returned") }}
     <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
     <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
   </div>
@@ -42,9 +43,13 @@
   <div class="govuk-grid-column-two-thirds">
     <! –– Application detail blocks ––>
 
-    {{ applicationinfo() }}
+    {{ applicationinfo("Not started") }}
 
   </div>
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
 </div>
 
 
