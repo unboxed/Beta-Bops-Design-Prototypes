@@ -1,7 +1,7 @@
 {%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
 type: 'information', text: 'Select text to add comment.', iconFallbackText:
 'information' }) }} {% extends "layout.html" %} {% from
-"../customnjk/left-accordion-pd-v10.njk" import leftaccordion %} {% from
+"../customnjk/left-accordion-pd-v12.njk" import leftaccordion %} {% from
 "../customnjk/right-accordion-pd-v09.njk" import rightaccordion %} {% from
 "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} {% block head
 %} {{ super() }}
@@ -20,8 +20,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
             <a class="govuk-breadcrumbs__link" href="application-list.html"
-              >Home</a
-            >
+              >Home</a >
           </li>
           <li class="govuk-breadcrumbs__list-item">
             <a href="cert-of-law-hp.html">Application</a>
@@ -31,178 +30,108 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
           </li>
         </ol>
       </div>
-
+      <div>
       <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-        Fast track application: 20/AP/0607
+      0000600
       </h1>
-      <h2 class="govuk-heading-m" style="margin-bottom: 75px;">
+      <h2 class="govuk-heading-m" style="margin-bottom: 18px;">
         150 Bellenden Road London SE15 4QY
       </h2>
-       
-
+      <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+      </p>
+      <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+    </div>
       <! –– Application detail blocks ––>
       {{ leftaccordion() }}
 
       <! –– Left panel with tasks and map ––>
       <h2 class="govuk-heading-m">
-        Assess the proposal
+        2. Assess the proposal
       </h2>
       <p class="govuk-body">
-        Please review the applicant's answers:
+        You need to check that the applicant's answers and proposal documents meet the permitted development requirements.
       </p>
+      <div class="govuk-!-padding-bottom-3"></div>
 
-      <!--    Policy question -->
-    <div class="govuk-form-group">
-       <ol class="govuk-body" style="line-height: 2;">
-           <li>I want to 
-                <strong>modify or extend</strong>
-           </li>
-           <li>How many storeys does the original house have? 
-                <strong>2 or more</strong>
-           </li>
-           <li>I want to build an 
-                <strong>extension</strong>
-           </li>
-            <li>What kind of extension will it be? 
-                <strong>Side extension</strong>
-           </li>
-           <li>
-                Is there a road or path on that side of the house? <strong>No</strong>
-           </li>
-           <li>The extension will have <strong>1 storey
-                </strong>
-           </li>
-           <li>
-                The new addition <strong>will not extend beyond the front wall of the house</strong>
-           </li>
-           <li>
-                The height of the extension will be <strong>4m or less</strong>
-           </li>
-           <li>The new structure 
-                <strong>will not</strong> extend beyond the rear wall of the original house
-           </li>
-            <li>
-                The width of the new addition will be <strong>less than or equal to</strong> 1/2 of the width of the original house
-           </li>
-           <li>The distance to the boundary will be 
-               <strong>less than 2m</strong>
-           </li>
-           <li>The roof of the extension will be 
-                <strong>flat</strong>
-           </li>
-           <li>
-               The highest part of the extension roof <strong>will be lower </strong>than 3m
-           </li>
-           <li>The materials and appearance 
-                <strong>will match </strong>
-                the existing house
-           </li>
-           <li>
-               The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
-           </li>
-           
-            
-            <li>The width of the new addition will be
-                <strong> less than or equal to</strong> 1/2 of the width of the original house
-           </li>
-         
-           
-           <li>Was your house always a house?
-                <strong> Yes</strong>
-           </li>
-           
-             <li>The house was used as 
-                <strong> a family home</strong>
-           </li>
-        </ol>
-
-        <!--        Question-->
-
-        <div class="govuk-form-group">
-          <fieldset class="govuk-fieldset">
-            <p class="govuk-body">
-              <br /><strong
-                >Have permitted development requirements been met?</strong
-              ></p>
-            <p class="govuk-body">
-              You need to check that the applicant's answers and proposal documents meet the permitted development requirements.
-            </p>
-
-            <div
-              class="govuk-radios govuk-radios--conditional"
-              data-module="govuk-radios"
-              style="margin-bottom: 20px;"
-            >
-              <div class="govuk-radios govuk-radios--small">
-                <div class="govuk-radios__item">
-                  <input
-                    class="govuk-radios__input"
-                    id="how-contacted-conditional"
-                    name="how-contacted"
-                    type="radio"
-                    value="email"
-                    data-aria-controls="conditional-how-contacted-conditional"
-                  />
-                  <label
-                    class="govuk-label govuk-radios__label"
-                    for="how-contacted-conditional"
-                  >
-                    Yes
-                  </label>
-             
-              
-                 
-                </div>
-                <div class="govuk-radios__item">
-                  <input
-                    class="govuk-radios__input"
-                    id="how-contacted-conditional-2"
-                    name="how-contacted"
-                    type="radio"
-                    value="phone"
-                    data-aria-controls="conditional-how-contacted-conditional-2"
-                  />
-                  <label
-                    class="govuk-label govuk-radios__label"
-                    for="how-contacted-conditional-2"
-                  >
-                    No
-                  </label>
-                </div>
-                <div
-                  class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                  id="conditional-how-contacted-conditional-2"
-                >
-                  <div class="govuk-form-group">
-                    <p class="govuk-body">
-                      <br />
-                      <strong>Please provide which GDPO policy (or policies) have not been met. </strong>If there are multiple, please separate by a comma. 
-                    </p>
-                    <p class="govuk-body"> 
-                      <span class="govuk-hint">
-                        For example, "GPDO 2015 S.2 P.1 A.1 (f)(i), GPDO 2015 S.2 P.1 A.1 (f)(ii)"
-                      </span>
-                    </p>
-                    <p class="govuk-body">
-                      This <strong>will</strong> appear on the decision notice.
-                    </p>
-                    <textarea
-                      class="govuk-textarea"
-                      id="more-detail"
-                      name="more-detail"
-                      rows="3"
-                      aria-describedby="more-detail-hint"
-                    ></textarea>
-                  </div>
-                </div>
-              </div>
+<!--        Question-->
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h4 class="govuk-heading-s">Have permitted development requirements been met?</h4>
+          </legend>
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                <h4 class="govuk-heading-s">Yes</h4>
+              </label>
             </div>
-          </fieldset>
-        </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+            <div class="govuk-form-group">
+                  <p class="govuk-body">
+                    <br />
+                    <strong>Please edit the text to indicate which GDPO policy (or policies) have been met.</strong>
+                  </p>
+           
+                  <p class="govuk-body">
+                    This <strong>will</strong> appear on the decision notice.
+                  </p>
+                  <textarea
+                  class="govuk-textarea"
+                  id="more-detail"
+                  name="more-detail"
+                  rows="3"
+                  aria-describedby="more-detail-hint"
+                >It adheres to the limitations and conditions of [Class _] and [_], Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
+              
+    </div>
+
+                      </div>
+                    
+
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+                <h4 class="govuk-heading-s">No</h4>
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                <div class="govuk-form-group">
+                  <p class="govuk-body">
+                    <br />
+                    <strong>Please edit the text to indicate which GDPO policy (or policies) have not been met.</strong>
+                  </p>
+    
+                  <p class="govuk-body">
+                    This <strong>will</strong> appear on the decision notice.
+                  </p>
+                  <textarea
+                    class="govuk-textarea"
+                    id="more-detail"
+                    name="more-detail"
+                    rows="3"
+                    aria-describedby="more-detail-hint"
+                  >It does not adheres to the limitations and conditions of [Class _] and [_], Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
+                
+                </div>
+     
+      
+                  
+                  
+      
+        </fieldset>
       </div>
+      
+    
+   
+        
+        <div class="govuk-!-padding-bottom-1"></div>
           <div class="govuk-form-group">
                     <p class="govuk-body">
-                      <strong>Please provide supporting information for your manager.</strong> For example, you may want to add any details about the width, depth or height of the proposal.
+                      <strong>Please provide supporting information for your manager.</strong>
                       <br><br>
                       Your comment will <strong>not</strong> appear on the decision notice.
                     </p>
@@ -230,9 +159,12 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
   </div> 
 
   <! –– Right panel with additional information in accordion ––>
-
+  
   <div class="govuk-grid-column-one-third">
-    {{ rightstatus() }} {{ rightaccordion() }}
+    <div class="govuk-!-padding-bottom-9"></div>
+    <div class="govuk-!-padding-bottom-9"></div>
+    <div class="govuk-!-padding-bottom-9"></div>
+    <div class="govuk-!-padding-bottom-7"></div>
+   {{ rightaccordion() }}
   </div>
-</div>
 {% endblock %}
