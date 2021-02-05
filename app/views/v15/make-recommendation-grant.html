@@ -1,0 +1,186 @@
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v12.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      0000600
+    </h1>
+    <h2 class="govuk-heading-m">
+      150 Bellenden Road London SE15 4QY
+    </h2>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+  </div>
+</div>  
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+
+
+    <! –– Left panel with letter ––>
+    <h2 class="govuk-heading-m">
+      Submit recommendation
+    </h2>
+    <p>
+      The following decision notice has been created based on your answers.
+    </p>
+    <! –– Letter ––>
+
+    <div
+      style="
+        background-color: #f3f2f1;
+        border: solid 1px;
+        padding: 30px;
+        clear: both;
+        margin-top: 10px;
+      "
+    >
+      <span class="govuk-caption-xl">[Council Name]</span>
+      <h2 class="govuk-heading-s">
+        Town and Country Planning Act 1990 (as amended)<br><br>
+Town and Country Planning (Development Management Procedure)
+(England) Order 2015 (as amended)
+      </h2>
+      <p class="govuk-body"><strong>Decision notice</strong></p>
+      <p class="govuk-body">
+        Certificate of lawfulness of proposed use or development:
+        <strong>granted</strong>
+      </p>
+      <hr
+        class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      />
+
+      <p class="govuk-body">
+        <strong>Applicant:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[applicant name]<br />
+        <strong>Date of Issue of this decision:</strong> &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TBD<br />
+        <strong>Application received:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;[DD MONTH YYYY] <br />
+        <strong>Address:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[Address]<br />
+        <strong>LBS Registered Number:</strong> &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;[Application number]<br />
+      </p>
+      <p class="govuk-body">
+        <strong>Proposed use or development:</strong><br/><br>
+        [proposal summary - for example - a single storey rear extension]
+      </p>
+      <p class="govuk-body">
+        IT IS HEREBY CERTIFIED that the use or operations described are
+        <strong>lawful</strong> for the purposes of S.192 of the Town and
+        Country Planning Act 1990 in accordance with the valid application
+        received on [ DD MONTH YYYY] and supporting documents listed below. Full
+        application is available on the planning register.
+      </p>
+      <p class="govuk-body">
+        <strong
+          >Reasons why use or development is lawful:<br/>
+        </strong>
+        <p class="govuk-body">
+
+       1. [Officer comments go here]
+        </p>
+   
+      <p class="govuk-body">
+        2. The development shall be carried out in accordance with the following
+        approved plans:
+      </p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">
+              Plan reference number
+            </th>
+            <th scope="col" class="govuk-table__header app-custom-class">
+              Plan description
+            </th>
+            <th scope="col" class="govuk-table__header app-custom-class">
+              Date received
+            </th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">[Plan reference number]</td>
+            <td class="govuk-table__cell">[Document name]</td>
+            <td class="govuk-table__cell">[ DD MONTH YYYY ]</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">[Plan reference number]</td>
+            <td class="govuk-table__cell">[Document name]</td>
+            <td class="govuk-table__cell">[ DD MONTH YYYY ]</td>
+          </tr>
+        </tbody>
+      </table>
+  
+
+      <p>
+        Signed: Simon Bevan <br />
+        Director of Planning
+      </p>
+
+      <p>
+        Your attention is drawn to the notes accompanying this document
+      </p>
+      <p class="govuk-body">
+        Any enquiries regarding this document should quote the LBS Registered
+        Number and be sent to the Director of Planning, Southwark Council, Chief
+        executive's department, Planning division, Development management, PO
+        Box 64529, London SE1 5LX, or by email to
+        planning.applications@southwark.gov.uk
+      </p>
+    </div>
+    <br />
+
+    <!--        Question-->
+
+    <p class="govuk-body"><strong>If you agree with the decision notice, please submit it to your manager.</strong> If your manager disagrees with your recommendation they will send it back to you to make changes.</p>
+
+    <a
+      class="govuk-button"
+      data-module="govuk-button"
+      href="cert-of-law-hp"
+      >Submit to manager</a
+    >
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+ {{ rightaccordion() }}
+  </div>
+</div>
+{% endblock %}
