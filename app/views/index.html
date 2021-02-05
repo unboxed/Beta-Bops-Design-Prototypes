@@ -1,60 +1,21 @@
 {% extends "layout.html" %}
-
+{% from "./v15/customnjk/index-table.njk"  import tablerow %}
 {% block content %}
-
-
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-  <h1 class="govuk-heading-xl">
-    Beta Back-Office Planning (BoPs)
-  </h1>
-  <p class="govuk-body-m">
-    This prototype is for:
-      </p>
-      <ul class="govuk-list govuk-list--bullet">
-          <li>communicating design ideas to our developers</li>
-          <li>experimenting and prototyping different options</li>
-      </ul>
-
-      <p class="govuk-body-m">
-      For more information about this prototype please email: claudia.hopkins@unboxed.co
-  </p>
-  <h2 class="govuk-heading-m">
-    Prototype for private beta
-  </h2>
-  <table class="govuk-table" style="margin-bottom: 70px;">
-    <thead class="govuk-table__head">
-      <tr class="govuk-table__row">
-        <th scope="col" class="govuk-table__header">Prototype version</th>
-        <th scope="col" class="govuk-table__header govuk-table__header">Sprint</th>
-        <th scope="col" class="govuk-table__header govuk-table__header">Prototype details for building basic journey</th>
-        <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
-      </tr>
-    </thead>
-    <tbody class="govuk-table__body">  
-      <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">V13<br><a href="/v13/log-in">Officer journey</a><br><br><a href="v13/application-list-manager.html">Manager journey</a>
-          </th>
-        <td class="govuk-table__cell govuk-table__cell">Private beta</td>
-        <td class="govuk-table__cell govuk-table__cell">Prototype for Build</td>
-        <td class="govuk-table__cell govuk-table__cell">-</td>
-      </tr>
-      <tr class="govuk-table__row">
-          <th scope="row" class="govuk-table__header">V12<br><a href="/v12/log-in">Officer journey</a><br><br><a href="v12/application-list-manager.html">Manager journey</a>
-          </th>
-        <td class="govuk-table__cell govuk-table__cell">Private beta</td>
-        <td class="govuk-table__cell govuk-table__cell">Prototype for Build</td>
-        <td class="govuk-table__cell govuk-table__cell">-</td>
-      </tr>
-    </tbody>
-  </table>
-
-
-
-  <h2 class="govuk-heading-m">
-    Prototype for build
+    <h1 class="govuk-heading-xl">
+      Beta Back-Office Planning (BoPs)
+    </h1>
+    <p class="govuk-body-m">
+      This prototype is for:
+    </p>
+    <ul class="govuk-list govuk-list--bullet">
+      <li>communicating design ideas to our developers</li>
+      <li>experimenting and prototyping different options</li>
+    </ul>
+    <h2 class="govuk-heading-m">
+      Prototype for private beta
     </h2>
-
     <table class="govuk-table" style="margin-bottom: 70px;">
       <thead class="govuk-table__head">
         <tr class="govuk-table__row">
@@ -64,193 +25,11 @@
           <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
         </tr>
       </thead>
-      <tbody class="govuk-table__body">  
-        <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Dev V03<br><a href="/dv03/log-in">Officer journey</a><br><br><a href="dv03/application-list-manager.html">Manager journey</a>
-            <br><br>
-                <a href="dv03/application-list-alerts.html">Alert content</a>
-            </th>
-          <td class="govuk-table__cell govuk-table__cell">Private beta</td>
-          <td class="govuk-table__cell govuk-table__cell">Prototype for Build</td>
-          <td class="govuk-table__cell govuk-table__cell">-</td>
-        </tr>
-        <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header">Dev V02<br><a href="/dv02/log-in">Officer journey</a><br><br><a href="dv02/application-list-manager.html">Manager journey</a>
-            <br><br>
-                <a href="dv02/application-list-alerts.html">Alert content</a>
-            </th>
-          <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 3</td>
-          <td class="govuk-table__cell govuk-table__cell">Prototype for Build</td>
-          <td class="govuk-table__cell govuk-table__cell">-</td>
-        </tr>
-         <tr class="govuk-table__row">
-            <th scope="row" class="govuk-table__header"><a href="/dv01/log-in">Dev V01</a></th>
-          <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 2</td>
-          <td class="govuk-table__cell govuk-table__cell">Prototype for finishing up Sprint 2</td>
-          <td class="govuk-table__cell govuk-table__cell">-</td>
-        </tr>
+      <tbody class="govuk-table__body">
+        {{ tablerow("v15") }}
+        {{ tablerow("v13") }}
       </tbody>
     </table>
-
- <h2 class="govuk-heading-m">
-    Prototype for visioning and MVP evaluation
-    </h2>
-
-    <table class="govuk-table">
-  <thead class="govuk-table__head">
-    <tr class="govuk-table__row">
-      <th scope="col" class="govuk-table__header">Prototype version</th>
-      <th scope="col" class="govuk-table__header govuk-table__header">Sprint</th>
-      <th scope="col" class="govuk-table__header govuk-table__header">Prototype details</th>
-      <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
-    </tr>
-  </thead>
-  <tbody class="govuk-table__body">
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V11 - MVP test
-            <br> 
-            
-            <a href="/v11/full-householder-hp">Planning officer Part 1 - PDF route</a>
-            <br>
-            <br>
-            <a href="/v11/full-householder-hp-data-narrow">Planning officer Part 1 - Data route</a>
-            <br>
-            <br>
-            <a href="/v11/application-list-wide">Planning officer Part 1 - PDF route - wide screen</a>
-            <br>
-            <br>
-            <a href="/v11/application-list-manager">Planning manager - Part 1</a>
-            <br>
-            <br>
-          </th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 8</td>
-      <td class="govuk-table__cell govuk-table__cell">Final details and journeys</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V10 - MVP test
-            <br> 
-            <a href="/v10/application-list">Planning officer Part 1 </a>
-            <br>
-            <br>
-            <a href="/v10/application-list-manager">Planning manager - Part 1</a>
-            <br>
-            <br>
-          </th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 7</td>
-      <td class="govuk-table__cell govuk-table__cell">MVP journey mapped for PD, Application form adjusted for FH</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V09 - MVP test
-            <br> 
-            <a href="/v09/application-list">Planning officer Part 1 </a>
-            <br>
-            <br>            
-          </th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 6</td>
-      <td class="govuk-table__cell govuk-table__cell">PD journey with policy details, FH first real prototype</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-      
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V08 - MVP test
-            <br> 
-            <a href="/v08/application-list">Planning officer Part 1 </a>
-            <br>
-            <br>
-            <a href="/v08/application-list-amendment">Planning officer Part 2 </a>
-            <br>
-            <br>
-            <a href="/v08/application-list-manager">Planning manager - Part 1</a>
-            <br>
-            <br>
-            <a href="v08/application-list-manager-amendments-corrections.html">Planning manager - Part 2</a>
-          </th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 5</td>
-      <td class="govuk-table__cell govuk-table__cell">Corrections requested journeys, content design changed</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V07 - MVP test
-            <br> 
-            <a href="/v07/application-list">Planning officer Part 1 </a>
-            <br>
-            <br>
-            <a href="/v07/application-list-amendment">Planning officer Part 2 </a>
-            <br>
-            <br>
-            <a href="/v07/application-list-manager">Planning manager </a></th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 4</td>
-      <td class="govuk-table__cell govuk-table__cell">Testing and iterating on PD</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V06 - MVP test
-            <br> 
-            <a href="/v06/application-list">Planning officer </a>
-            <br>
-            <br>
-            <a href="/v06/application-list-manager">Planning manager </a></th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 3</td>
-      <td class="govuk-table__cell govuk-table__cell">Testing and iterating on PD, document management system started</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V05<br> <a href="/v05/application-list">Planning officer list</a><br><a href="/v05/application-list-manager">Planning manager list</a> </th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 3</td>
-      <td class="govuk-table__cell govuk-table__cell">Testing and iterating on PD</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-      <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header">V04<br> <a href="/v04/application-list">Planning officer list</a><br><a href="/v04/application-list-manager">Planning manager list</a> </th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 2/3</td>
-      <td class="govuk-table__cell govuk-table__cell">Integrated changes from Sprint 1 and 2 testing</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/v03/log-in">V03 - Planner assessment updates</a></th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 2</td>
-      <td class="govuk-table__cell govuk-table__cell">Integrated changes from Sprint 1 testing</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="experiments/experiment-list.html">V03 - Experiments</a></th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 2</td>
-      <td class="govuk-table__cell govuk-table__cell">Playing with Insights from Sprint 1 testing</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="/v02/log-in">V02 - Planner and Manager  assessment</a></th>
-      <td class="govuk-table__cell govuk-table__cell">Beta - Sprint 0-1</td>
-      <td class="govuk-table__cell govuk-table__cell">
-          <ul>
-              <li>
-                  Experiment - moving Figma prototype to GOV UK styling
-              </li>
-              <li>
-                  Tested with 3 planning officers, 1 planning manager
-              </li>
-          </ul>
-        </td>
-      <td class="govuk-table__cell govuk-table__cell">
-          <a href="https://miro.com/app/board/o9J_ktxeW34=/">
-              Miro Synthesis and Design Actions
-          </a>
-      </td>
-    </tr>
-    <tr class="govuk-table__row">
-        <th scope="row" class="govuk-table__header"><a href="https://www.figma.com/file/RgDDCeeVcbR9Ohz41ovcmk/BoPS-planning-manager-screens-Copy?node-id=0%3A1">V01 - Planning manager</a><br><br><a href="https://www.figma.com/file/juLpAcTFDPIvl5MVfTm6XT/BoPS-planner-s-assessment-screens-Copy?node-id=0%3A1">V01 - Planner's assessment</a></th>
-      <td class="govuk-table__cell govuk-table__cell">Alpha</td>
-      <td class="govuk-table__cell govuk-table__cell">Alpha prototype</td>
-      <td class="govuk-table__cell govuk-table__cell">-</td>
-    </tr>
-  </tbody>
-</table>
-
-
-
-    </div>
-    </div>
-
+  </div>
+</div>
 {% endblock %}

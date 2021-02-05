@@ -1,0 +1,20 @@
+{% macro applicationstatus(status, comment) %}
+{% block content %}
+    
+ <p>
+{% switch status %}
+  {% case "Not started" %}
+      <strong class="govuk-tag govuk-tag--grey">Not started</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+  {% case "In progress" %}
+      <strong class="govuk-tag govuk-tag--green">In progress</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+  {% default %}
+      <strong class="govuk-tag govuk-tag--red">Withdrawn</strong>&emsp;12 June 2021<br/><br/>
+      The applicant has changed their mind
+{% endswitch %}
+
+</p>
+
+
+{% endblock %}
+
+{% endmacro %}

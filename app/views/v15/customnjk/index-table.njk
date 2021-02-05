@@ -1,0 +1,16 @@
+{% macro tablerow(version) %}
+  {% block content %}
+
+  <tr class="govuk-table__row">
+    <th scope="row" class="govuk-table__header">{{version}}<br>
+      <a href="/{{version}}/log-in">Officer journey</a><br>
+      <br>
+      <a href="{{version}}/application-list-manager.html">Manager journey</a>
+    </th>
+    <td class="govuk-table__cell govuk-table__cell">Private beta</td>
+    <td class="govuk-table__cell govuk-table__cell">Prototype for Build</td>
+    <td class="govuk-table__cell govuk-table__cell">-</td>
+  </tr>
+
+  {% endblock %}
+{% endmacro %}
