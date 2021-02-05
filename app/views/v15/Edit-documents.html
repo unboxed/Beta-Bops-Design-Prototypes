@@ -1,0 +1,234 @@
+Edit-documents.html
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Change document</li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            0000600
+        </h1>
+        <p><strong>150 Bellenden Road London SE15 4QY</strong></p>
+        <div class="govuk-!-padding-bottom-3"></div>
+      
+
+        <div>
+
+          <fieldset class="govuk-fieldset">
+              <div>
+            <p>File name: Section_proposed.pdf</p>
+            <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 250px; border: solid 1px #eeeeee"/>
+        <p></p>
+        <p>
+          <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank" >Download file</a>
+        </p>
+      </div>
+          
+            <div class="govuk-form-group">
+              <label class="govuk-heading-s" for="file-upload">
+                Upload a file
+              </label>
+              <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
+            </div>
+            <div class="govuk-!-padding-bottom-3"></div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                    <h4 class="govuk-heading-s">Is this document valid?</h4>
+                    <p>
+                        <a href="https://www.legislation.gov.uk/uksi/2015/596/contents/made" target="_blank" >View validation requirements</a><br>
+                      </p>
+        
+                  <div class="govuk-radios govuk-radios--small">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                      <label class="govuk-label govuk-radios__label" for="changed-name">
+                       Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                      <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                        No
+                      </label>
+                    </div>
+                  </div>
+                </legend>
+                </fieldset>
+              </div>
+                
+                    <div class="govuk-form-group">
+                      <label class="govuk-heading-s" for="document-number">
+                        Document number(s)
+                      </label>
+                      <p class="govuk-hint">Please enter the documents number. Where documents contain multiple drawings, enter multiple numbers separated by a comma (e.g. "25A-V2, 25B-V2").</p>
+                      <div class="govuk-!-padding-bottom-3"></div>
+                      <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
+  
+                    </fieldset>
+                  </div>
+                  </div>
+                </div>
+                <div class="govuk-!-padding-bottom-4"></div>
+                <div class="govuk-form-group ">
+                  <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                        <h4 class="govuk-heading-s">What does the document contain?</h4>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                      <p class="govuk-hint">Please select all fields that apply. Selected fields will form this documents description on the decision notice.</p>
+                    </legend>   
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="front elevation - proposed" name="drawing_form[tags][]" id="drawing_form_tags_front_elevation_-_proposed">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_front_elevation_-_proposed">FRONT</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="side elevation - proposed" name="drawing_form[tags][]" id="drawing_form_tags_side_elevation_-_proposed">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_side_elevation_-_proposed">REAR</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - proposed" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_proposed">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_proposed">SIDE</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="section - proposed" name="drawing_form[tags][]" id="drawing_form_tags_section_-_proposed">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_section_-_proposed">ROOF</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="front elevation - existing" name="drawing_form[tags][]" id="drawing_form_tags_front_elevation_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_front_elevation_-_existing">GARDEN</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="side elevation - existing" name="drawing_form[tags][]" id="drawing_form_tags_side_elevation_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_side_elevation_-_existing">FLOOR</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">SITE</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="section - existing" name="drawing_form[tags][]" id="drawing_form_tags_section_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_section_-_existing">PLAN</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">ELEVATION</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">SECTION</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">PROPOSED</label>
+                      </div>
+      
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">EXISTING</label>
+                      </div>
+                      <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" type="checkbox" value="floor plan - existing" name="drawing_form[tags][]" id="drawing_form_tags_floor_plan_-_existing">
+                        <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_floor_plan_-_existing">GENERAL</label>
+                      </div>
+                    </div>
+                </fieldset>
+            </div>
+            <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                  <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                    <h4 class="govuk-heading-s">Do you want to include this document on the decsion notice?</h4>
+                  </legend>
+            
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        No
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                      <label class="govuk-label govuk-radios__label" for="contact-2">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                      <div class="govuk-form-group">
+                        <div class="govuk-form-group">
+                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                                <div class="govuk-!-padding-bottom-3"></div>
+                                <h4 class="govuk-heading-s">This document will be:</h4>
+                              <div class="govuk-!-padding-bottom-1"></div>
+                              <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                                    Public
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                    Private
+                                  </label>
+                                </div>
+                              </div>
+                          
+            
+                  </div>
+              
+                </fieldset>
+              </div>
+
+
+              
+                </fieldset>
+                <div class="govuk-!-padding-bottom-7"></div>
+
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="pd-drawing-numbers">
+                    Save
+                  </a>
+                  <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="pd-drawing-numbers">
+                    Cancel
+                  </a>
+                
+                </div>
+              </div> 
+      
+    
+            
+
+          
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+    
+  </div>
+{% endblock %}

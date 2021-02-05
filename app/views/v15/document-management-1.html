@@ -1,0 +1,95 @@
+{% extends "layout.html" %}
+
+{% block head %}
+  {{ super() }}
+  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+              <li class="govuk-breadcrumbs__list-item">
+                <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+              </li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
+                <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="pd-drawing-numbers.html">Manage documents</a></li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Achieve document</li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            0000600
+        </h1>
+        <p><strong>150 Bellenden Road London SE15 4QY</strong></p>
+        <div class="govuk-!-padding-bottom-7"></div>
+      
+        <h3 class="govuk-heading-m">Achieve document</h3>
+        <div>
+
+          <fieldset class="govuk-fieldset">
+              <div>
+            <p>File name: Section_proposed.pdf</p>
+            <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 250px; border: solid 1px #eeeeee"/>
+            <div class="govuk-!-padding-bottom-3"></div>
+        <p></p>
+
+      </div>
+          <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <h2 class="govuk-heading-s">
+                  Why do you want to archive this document?
+                </h2>
+              <div class="govuk-radios govuk-radios--small">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                    Design changed 
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                    Missing details 
+                  </label>
+                </div>
+                  <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-3" name="changed-name" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-3">
+                    File uploaded by mistake
+                  </label>
+                </div>
+                  <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="changed-name-4" name="changed-name" type="radio" value="year">
+                  <label class="govuk-label govuk-radios__label" for="changed-name-4">
+                    Other
+                  </label>
+                </legend>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        
+        
+          <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="pd-drawing-numbers">
+            Archive and return
+          </a>
+          <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="pd-drawing-numbers">
+            Cancel
+          </a>  
+        
+        </div>
+        
+
+    
+<! –– Right panel with additional information in accordion ––>
+        
+      <div class="govuk-grid-column-one-third">
+          
+         
+    </div>
+</div>
+{% endblock %}
