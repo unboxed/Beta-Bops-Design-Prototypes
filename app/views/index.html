@@ -1,6 +1,7 @@
 {% extends "layout.html" %}
 {% from "./v15/customnjk/index-table.njk"  import tablerow %}
 {% block content %}
+
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <h1 class="govuk-heading-xl">
@@ -21,12 +22,28 @@
         <tr class="govuk-table__row">
           <th scope="col" class="govuk-table__header">Prototype version</th>
           <th scope="col" class="govuk-table__header govuk-table__header">Sprint</th>
-          <th scope="col" class="govuk-table__header govuk-table__header">Prototype details for building basic journey</th>
+          <th scope="col" class="govuk-table__header govuk-table__header">Prototype details for building basic journey
+          </th>
           <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
         </tr>
       </thead>
       <tbody class="govuk-table__body">
         {{ tablerow("v15") }}
+      </tbody>
+    </table>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <table class="govuk-table" style="margin-bottom: 70px;">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">
+            Full householder journey
+          </th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
         {{ tablerow("v13") }}
       </tbody>
     </table>
