@@ -1,76 +1,77 @@
 {% extends "layout.html" %}
 
 {% block head %}
-  {{ super() }}
-  <link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{{ super() }}
+<link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css">
 {% endblock %}
 
 {% block content %}
 
 <! –– Header ––>
-    <div class="govuk-grid-row">
+  <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-              <ol class="govuk-breadcrumbs__list">
-                <li class="govuk-breadcrumbs__list-item">
-                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-                </li>
-                  <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a></li>
-                  <li class="govuk-breadcrumbs__list-item"> <a href="document-management-upload.html">Documents</a></li>
-                  <li class="govuk-breadcrumbs__list-item" aria-current="page">Upload document</li>
-              </ol>
-        </div>
-        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-            Upload documents: [##/AP/####]
-        </h1>
-        <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
-    
-      
-        
-        <h2 class="govuk-heading-m">
-            Choose documents
-        </h2>
-        
+      <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link"
+              href="cert-of-law-hp.html">Application</a></li>
+          <li class="govuk-breadcrumbs__list-item"> <a href="document-management-upload.html">Documents</a></li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">Upload document</li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+        Upload documents: [##/AP/####]
+      </h1>
+      <h2 class="govuk-heading-m" style="margin-bottom: 75px;">[## Address, Street name, AB# #CD]</h2>
 
-        <div class="govuk-form-group">
-          <label class="govuk-label" for="sort">
-            Choose document type
-          </label>
-          <select class="govuk-select" id="sort" name="sort">
-            <option value="published">Proposal documents</option>
-            <option value="updated" selected>Site visit photos</option>
-            <option value="views">Site map</option>
-            <option value="comments">Heritage document</option>
-          </select>
-        </div>
 
+
+      <h2 class="govuk-heading-m">
+        Choose documents
+      </h2>
+
+
+      <div class="govuk-form-group">
         <label class="govuk-label" for="sort">
-            Select documents 
+          Choose document type
         </label>
-         <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
-        
-        
-        
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="published">Proposal documents</option>
+          <option value="updated" selected>Site visit photos</option>
+          <option value="views">Site map</option>
+          <option value="comments">Heritage document</option>
+        </select>
+      </div>
 
-        <br>
-        <br>
+      <label class="govuk-label" for="sort">
+        Select documents
+      </label>
+      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
 
-        
-        
-        
- <a class="govuk-button" data-module="govuk-button" href="document-management-upload-2.html">
+
+
+
+      <br>
+      <br>
+
+
+
+
+      <a class="govuk-button" data-module="govuk-button" href="document-management-upload-2.html">
         Continue
-    </a>  
-        
-            </div>
-        
+      </a>
 
-    
-<! –– Right panel with additional information in accordion ––>
-        
-      <div class="govuk-grid-column-one-third">
-          
-         
     </div>
-</div>
-{% endblock %}
+
+
+
+    <! –– Right panel with additional information in accordion ––>
+
+      <div class="govuk-grid-column-one-third">
+
+
+      </div>
+  </div>
+  {% endblock %}

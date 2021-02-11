@@ -1,13 +1,12 @@
-reassessment-2.html
 {%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
     type: 'information', text: 'Select text to add comment.', iconFallbackText:
     'information' }) }}
-    {% extends "layout.html" %}
-    {% from "../customnjk/left-accordion-pd-v12.njk" import leftaccordion %}
-    {% from "../customnjk/right-accordion-pd-v09.njk" import rightaccordion %}
-    {% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %}
-    {% block head%}
-    {{ super() }}
+{% extends "layout.html" %}
+{% from "../customnjk/left-accordion-pd-v12.njk" import leftaccordion %}
+{% from "../customnjk/right-accordion-pd-v09.njk" import rightaccordion %}
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %}
+{% block head%}
+{{ super() }}
 <link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css" />
 {% endblock %}
 {% block content %}
@@ -50,72 +49,37 @@ reassessment-2.html
           <h2 class="govuk-heading-m">
             Reassess the proposal
           </h2>
-<<<<<<< HEAD:app/views/v15/reassessment-2.html
 
-          <p class="govuk-body">Your manager sent the following comment about your recommendation below. Please take action based on their comment.</p>
-          <div class = "govuk-inset-text" style = "padding-top: 25px; padding-bottom: 0px;" >
-          <div style = "padding-bottom: 20px">
-           
-            <p style = "margin-bottom: 0;"><strong>Submitted recommentation</strong> by Alex Dawson</p>
-          <p style = "margin-bottom: 8px;">
-            <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
-          </p>
-            <p>
-              <em>Always in residential use. Proposed porous material and 18sqm driveway.</em>
-            </p>
-          </div>
+          <p class="govuk-body">Your manager sent the following comment about your recommendation below. Please take
+            action based on their comment.</p>
+          <div class="govuk-inset-text" style="padding-top: 25px; padding-bottom: 0px;">
+            <div style="padding-bottom: 20px">
 
-          <div style = "padding-bottom: 20px">
-           
-            <p style = "margin-bottom: 0;"><strong>Recommendation challenged</strong> by Alex Dawson</p>
-            <p style = "margin-bottom: 8px;">
-            <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
-          </p>
-            <p>
-              <em>Check article 4</em>
-            </p>
-          </div>
-          </div>
-          
-
-         
-    
-    <!--        Question-->
-=======
-          <p class="govuk-body">
-            Your manager sent the following comment about your recommendation below. Please take action based on their
-            comment.
-          </p>
-          <div class="govuk-!-padding-bottom-3"></div>
-
-          <div class="moj-timeline">
-            <div class="moj-timeline__item">
-              <div class="moj-timeline__header">
-                <h2 class="moj-timeline__title">Submitted recoomentation</h2>
-                <p class="moj-timeline__byline">by Alex Dawson</p>
-              </div>
-              <p class="moj-timeline__date">
+              <p style="margin-bottom: 0;"><strong>Submitted recommentation</strong> by Alex Dawson</p>
+              <p style="margin-bottom: 8px;">
                 <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
               </p>
-              <div class="moj-timeline__description">
-                <p>Always in residential use. Proposed porous material and 18sqm driveway.</p>
-              </div>
+              <p>
+                <em>Always in residential use. Proposed porous material and 18sqm driveway.</em>
+              </p>
             </div>
 
-            <div class="moj-timeline__item">
-              <div class="moj-timeline__header">
-                <h2 class="moj-timeline__title">Recommendation Rejected</h2>
-                <p class="moj-timeline__byline">by Jannet Smith</p>
-              </div>
-              <p class="moj-timeline__date">
-                <time datetime="2019-06-06T09:12:00.000Z">6 June 2019 at 9:12am</time>
+            <div style="padding-bottom: 20px">
+
+              <p style="margin-bottom: 0;"><strong>Recommendation challenged</strong> by Alex Dawson</p>
+              <p style="margin-bottom: 8px;">
+                <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
               </p>
-              <div class="moj-timeline__description"></div>
-              <p>Check Article 4 Direction and Conservation Area.</p>
+              <p>
+                <em>Check article 4</em>
+              </p>
             </div>
           </div>
+
+
+
+
           <!--        Question-->
->>>>>>> More tidying up:app/views/v15/reassessment.html
           <div class="govuk-form-group">
             <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
@@ -130,50 +94,25 @@ reassessment-2.html
                   </label>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-<<<<<<< HEAD:app/views/v15/reassessment-2.html
-                <div class="govuk-form-group">
-                      <p class="govuk-body">
-                        <br />
-                        <strong>Please edit the text to indicate which GDPO policy (or policies) have been met.</strong>
-                      </p>
-              
-                      <div class="govuk-!-padding-bottom-3"></div>
-                      <div>
-                      <p class="govuk-body">
-                        This <strong>will</strong> appear on the decision notice.
-                      </div>
-                      <textarea
-                      class="govuk-textarea"
-                      id="more-detail"
-                      name="more-detail"
-                      rows="6"
-                      aria-describedby="more-detail-hint"
-                    >It adheres to the limitations and conditions of Class _ (and _), Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
-                  
-                    
-            <div class="govuk-!-padding-bottom-3"></div>
-        </div>
-    
-                          </div>
-=======
                   <div class="govuk-form-group">
                     <p class="govuk-body">
                       <br />
                       <strong>Please edit the text to indicate which GDPO policy (or policies) have been met.</strong>
                     </p>
 
-                    <p class="govuk-body">
-                      This <strong>will</strong> appear on the decision notice.
-                    </p>
-                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
-                      aria-describedby="more-detail-hint">It adheres to the limitations and conditions of [Class _] and [_], Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
+                    <div class="govuk-!-padding-bottom-3"></div>
+                    <div>
+                      <p class="govuk-body">
+                        This <strong>will</strong> appear on the decision notice.
+                    </div>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6"
+                      aria-describedby="more-detail-hint">It adheres to the limitations and conditions of Class _ (and _), Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
 
+
+                    <div class="govuk-!-padding-bottom-3"></div>
                   </div>
 
                 </div>
-
-
->>>>>>> More tidying up:app/views/v15/reassessment.html
 
                 <div class="govuk-radios__item">
                   <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
@@ -183,66 +122,19 @@ reassessment-2.html
                   </label>
                 </div>
                 <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-<<<<<<< HEAD:app/views/v15/reassessment-2.html
-                    <div class="govuk-form-group">
-                      <p class="govuk-body">
-                        <br />
-                        <strong>Please edit the text to indicate which GDPO policy (or policies) have not been met.</strong>
-                      </p>
-                      <div class="govuk-!-padding-bottom-3"></div>
-                      <p class="govuk-body">
-                        This <strong>will</strong> appear on the decision notice.
-                      </p>
-                      <textarea
-                        class="govuk-textarea"
-                        id="more-detail"
-                        name="more-detail"
-                        rows="8"
-                        aria-describedby="more-detail-hint"
-                      >The development or use specified hereto is not permitted development by virtue of Condition _ of Class _ of The Town and Country Planning (General Permitted Development) Order 2015 (as amended) which removed permitted development rights. Therefore planning permission is required.</textarea>
-                      <div class="govuk-!-padding-bottom-3"></div>
-                    </div>
-                     </div>
-       
-            
-            <div class="govuk-!-padding-bottom-1"></div>
-              <div class="govuk-form-group">
-                        <p class="govuk-body">
-                          <strong>Please provide supporting information for your manager.</strong>
-                          <br><br>
-                          Your comment will <strong>not</strong> appear on the decision notice.
-                        </p>
-                        <textarea
-                          class="govuk-textarea"
-                          id="more-detail"
-                          name="more-detail"
-                          rows="3"
-                          aria-describedby="more-detail-hint"
-                        ></textarea>
-                      </div>
-                      </div>
-    
-          <! -- Save button -->
-          <a class="govuk-button" data-module="govuk-button" href="cert-of-law-hp">
-            Save
-          </a>
-    
-          <! -- Save button for directing to decision notice specifically-->
-    {# 
-=======
                   <div class="govuk-form-group">
                     <p class="govuk-body">
                       <br />
                       <strong>Please edit the text to indicate which GDPO policy (or policies) have not been
                         met.</strong>
                     </p>
-
+                    <div class="govuk-!-padding-bottom-3"></div>
                     <p class="govuk-body">
                       This <strong>will</strong> appear on the decision notice.
                     </p>
-                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
-                      aria-describedby="more-detail-hint">It does not adheres to the limitations and conditions of [Class _] and [_], Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
-
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"
+                      aria-describedby="more-detail-hint">The development or use specified hereto is not permitted development by virtue of Condition _ of Class _ of The Town and Country Planning (General Permitted Development) Order 2015 (as amended) which removed permitted development rights. Therefore planning permission is required.</textarea>
+                    <div class="govuk-!-padding-bottom-3"></div>
                   </div>
                 </div>
 
@@ -266,7 +158,6 @@ reassessment-2.html
 
                 <! -- Save button for directing to decision notice specifically-->
                   {#
->>>>>>> More tidying up:app/views/v15/reassessment.html
           <br />
           <button class="govuk-button" data-module="govuk-button">
             Save
@@ -283,4 +174,5 @@ reassessment-2.html
         <div class="govuk-!-padding-bottom-7"></div>
         {{ rightaccordion() }}
       </div>
-      {% endblock %}
+
+{% endblock %}
