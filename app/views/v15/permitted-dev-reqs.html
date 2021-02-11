@@ -1,26 +1,24 @@
-{%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
-type: 'information', text: 'Select text to add comment.', iconFallbackText:
-'information' }) }} {% extends "layout.html" %} {% from
-"../customnjk/left-accordion-pd-v13.njk" import leftaccordion %} {% from
-"../customnjk/right-accordion-pd-v13.njk" import rightaccordion %} {% from
-"../customnjk/right-status-green-pd-v08.njk" import rightstatus %} {% block head
-%} {{ super() }}
-<link
-  href="/public/css/southwark-branding.css"
-  rel="stylesheet"
-  type="text/css"
-/>
-{% endblock %} {% block content %}
+{%- from "moj/components/banner/macro.njk" import mojBanner -%}
+{{ mojBanner({ type: 'information', text: 'Select text to add comment.', iconFallbackText: 'information' }) }}
+{% extends "layout.html" %}
+{% from "../customnjk/left-accordion-pd-v12.njk" import leftaccordion %}
+{% from "../customnjk/right-accordion-pd-v09.njk" import rightaccordion %}
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %}
 
+{% block head %}
+
+{{ super() }}
+<link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block content %}
 <! –– Header ––>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    {# <form action="/refuse-or-approve" method="post" class="form"> #}
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {# <form action="/refuse-or-approve" method="post" class="form"> #}
       <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
         <ol class="govuk-breadcrumbs__list">
           <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="application-list.html"
-              >Home</a >
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
           </li>
           <li class="govuk-breadcrumbs__list-item">
             <a href="cert-of-law-hp.html">Application</a>
@@ -31,138 +29,128 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
         </ol>
       </div>
       <div>
-      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-      0000600
-      </h1>
-      <h2 class="govuk-heading-m" style="margin-bottom: 18px;">
-        150 Bellenden Road London SE15 4QY
-      </h2>
-      <p>
-        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
-      </p>
-      <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-      <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
-    </div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+          0000600
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 18px;">
+          150 Bellenden Road London SE15 4QY
+        </h2>
+        <p>
+          <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+        </p>
+        <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state"
+            href="assign-application">Change</a></p>
+        <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+      </div>
       <! –– Application detail blocks ––>
-      {{ leftaccordion() }}
+        {{ leftaccordion() }}
 
-      
-      <! –– Left panel with tasks and map ––>
-      <h2 class="govuk-heading-m">
-      Assess the proposal
-      </h2>
-      <p class="govuk-body">
-        You need to check that the applicant's answers and proposal documents meet the permitted development requirements.
-      </p>
-      <div class="govuk-!-padding-bottom-3"></div>
 
-  <!--        Question-->
-  <div class="govuk-form-group">
-    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-        <h4 class="govuk-heading-s">Have permitted development requirements been met?</h4>
-      </legend>
-      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
-          <label class="govuk-label govuk-radios__label" for="contact">
-            <h4 class="govuk-heading-s">Yes</h4>
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-        <div class="govuk-form-group">
-              <p class="govuk-body">
-                <br />
-                <strong>Please edit the text to indicate which GDPO policy (or policies) have been met.</strong>
-              </p>
-      
-              <div class="govuk-!-padding-bottom-3"></div>
-              <div>
-              <p class="govuk-body">
-                This <strong>will</strong> appear on the decision notice.
-              </div>
-              <textarea
-              class="govuk-textarea"
-              id="more-detail"
-              name="more-detail"
-              rows="6"
-              aria-describedby="more-detail-hint"
-            >It adheres to the limitations and conditions of Class _ (and _), Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
-          
-            
-    <div class="govuk-!-padding-bottom-3"></div>
-</div>
+        <! –– Left panel with tasks and map ––>
+          <h2 class="govuk-heading-m">
+            Assess the proposal
+          </h2>
+          <p class="govuk-body">
+            You need to check that the applicant's answers and proposal documents meet the permitted development
+            requirements.
+          </p>
+          <div class="govuk-!-padding-bottom-3"></div>
 
-                  </div>
-
-        <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
-          <label class="govuk-label govuk-radios__label" for="contact-2">
-            <h4 class="govuk-heading-s">No</h4>
-          </label>
-        </div>
-        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-            <div class="govuk-form-group">
-              <p class="govuk-body">
-                <br />
-                <strong>Please edit the text to indicate which GDPO policy (or policies) have not been met.</strong>
-              </p>
-              <div class="govuk-!-padding-bottom-3"></div>
-              <p class="govuk-body">
-                This <strong>will</strong> appear on the decision notice.
-              </p>
-              <textarea
-                class="govuk-textarea"
-                id="more-detail"
-                name="more-detail"
-                rows="8"
-                aria-describedby="more-detail-hint"
-              >The development or use specified hereto is not permitted development by virtue of Condition _ of Class _ of The Town and Country Planning (General Permitted Development) Order 2015 (as amended) which removed permitted development rights. Therefore planning permission is required.</textarea>
-              <div class="govuk-!-padding-bottom-3"></div>
-            </div>
-             </div>
-    
-   
-        
-        <div class="govuk-!-padding-bottom-1"></div>
+          <!--        Question-->
           <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h4 class="govuk-heading-s">Have permitted development requirements been met?</h4>
+              </legend>
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
+                    data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    <h4 class="govuk-heading-s">Yes</h4>
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
                     <p class="govuk-body">
-                      <strong>Please provide supporting information for your manager.</strong>
-                      <br><br>
-                      Your comment will <strong>not</strong> appear on the decision notice.
+                      <br />
+                      <strong>Please edit the text to indicate which GDPO policy (or policies) have been met.</strong>
                     </p>
-                    <textarea
-                      class="govuk-textarea"
-                      id="more-detail"
-                      name="more-detail"
-                      rows="3"
-                      aria-describedby="more-detail-hint"
-                    ></textarea>
-                  </div>
+
+                    <div class="govuk-!-padding-bottom-3"></div>
+                    <div>
+                      <p class="govuk-body">
+                        This <strong>will</strong> appear on the decision notice.
+                    </div>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6"
+                      aria-describedby="more-detail-hint">It adheres to the limitations and conditions of Class _ (and _), Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
+
+
+                    <div class="govuk-!-padding-bottom-3"></div>
                   </div>
 
-      <! -- Save button -->
-      <a class="govuk-button" data-module="govuk-button" href="cert-of-law-hp">
-        Save
-      </a>
+                </div>
 
-      <! -- Save button for directing to decision notice specifically-->
-{# 
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
+                    data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    <h4 class="govuk-heading-s">No</h4>
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                  <div class="govuk-form-group">
+                    <p class="govuk-body">
+                      <br />
+                      <strong>Please edit the text to indicate which GDPO policy (or policies) have not been
+                        met.</strong>
+                    </p>
+                    <div class="govuk-!-padding-bottom-3"></div>
+                    <p class="govuk-body">
+                      This <strong>will</strong> appear on the decision notice.
+                    </p>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"
+                      aria-describedby="more-detail-hint">The development or use specified hereto is not permitted development by virtue of Condition _ of Class _ of The Town and Country Planning (General Permitted Development) Order 2015 (as amended) which removed permitted development rights. Therefore planning permission is required.</textarea>
+                    <div class="govuk-!-padding-bottom-3"></div>
+                  </div>
+                </div>
+
+
+
+                <div class="govuk-!-padding-bottom-1"></div>
+                <div class="govuk-form-group">
+                  <p class="govuk-body">
+                    <strong>Please provide supporting information for your manager.</strong>
+                    <br><br>
+                    Your comment will <strong>not</strong> appear on the decision notice.
+                  </p>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
+                    aria-describedby="more-detail-hint"></textarea>
+                </div>
+              </div>
+
+              <! -- Save button -->
+                <a class="govuk-button" data-module="govuk-button" href="cert-of-law-hp">
+                  Save
+                </a>
+
+                <! -- Save button for directing to decision notice specifically-->
+                  {#
       <br />
       <button class="govuk-button" data-module="govuk-button">
         Save
       </button>
     </form>#}
-  </div> 
-</div>
-  <! –– Right panel with additional information in accordion ––>
-  
-  <div class="govuk-grid-column-one-third">
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-8"></div>
-   {{ rightaccordion() }}
-  </div>
-{% endblock %}
+          </div>
+    </div>
+    <! –– Right panel with additional information in accordion ––>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-8"></div>
+        {{ rightaccordion() }}
+      </div>
+      {% endblock %}
