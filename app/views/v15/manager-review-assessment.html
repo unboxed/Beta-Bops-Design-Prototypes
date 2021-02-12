@@ -1,0 +1,137 @@
+manager-review-assessment.html
+{%- from "moj/components/banner/macro.njk" import mojBanner -%} {{ mojBanner({
+    type: 'information', text: 'Select text to add comment.', iconFallbackText:
+    'information' }) }}
+{% extends "layout.html" %}
+{% from "../customnjk/left-accordion-pd-v13.njk" import leftaccordion %}
+{% from "../customnjk/right-accordion-pd-v09.njk" import rightaccordion %}
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %}
+{% block head%}
+{{ super() }}
+<link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+{% block content %}
+
+<! –– Header ––>
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      {# <form action="/refuse-or-approve" method="post" class="form"> #}
+      <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list-manager.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="manager-task-list.html">Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Review recommendation
+          </li>
+        </ol>
+      </div>
+      <div>
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+          0000600
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 18px;">
+          150 Bellenden Road London SE15 4QY
+        </h2>
+        <p>
+          <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+        </p>
+        <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state"
+            href="assign-application">Change</a></p>
+        <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+      </div>
+      <! –– Application detail blocks ––>
+        {{ leftaccordion() }}
+
+        <! –– Review recommendation ––>
+
+          <h2 class="govuk-heading-m" style="margin-bottom: 30px;">
+            Review the recommendation
+          </h2>
+
+        
+          <div>
+          <p style="margin-bottom: 30px;" >The planning officer recommends that the application is <strong>granted.</strong></p>
+
+        </div>
+         
+
+          <div class="govuk-inset-text" style="padding-top: 25px; padding-bottom: 0px;">
+            <div style="padding-bottom: 20px">
+
+              <p style="margin-bottom: 4px;"><strong>Submitted recommentation</strong> by Eris Fanshawe</p>
+              <p style="margin-bottom: 20px;">
+                <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
+              </p>
+             
+              <p style="margin-bottom: 7px;"> <strong>Reasons why use or development is lawful:</strong>
+              </p>
+              <p style="margin-bottom: 20px;">It adheres to the limitations and conditions of Part 1 Class A and F, Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).
+            
+                </p>
+                <p style="margin-bottom: 7px;"> <strong>
+                Case officer's comment:</strong>
+                </p>
+                <p>Always in residential use. Proposed porous material and 18sqm driveway.</p>
+              
+            </div>
+          </div>
+
+
+
+
+          <!--        Question-->
+        
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+          <p class="govuk-body"><strong>Do you agree with the recommendation?</strong></strong>
+          </p>
+                
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-bottom: 20px;">
+          <div class="govuk-radios govuk-radios--small">
+              
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted" type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted" type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2">
+              <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                No 
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-how-contacted-conditional-2">
+              <div class="govuk-form-group"> 
+              <p class="govuk-body" style="clear:both; float:none;"><br>
+                  Please provide comments on why you don't agree 
+              </p> 
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3" aria-describedby="more-detail-hint"></textarea> 
+              </div>
+            </div>
+            </div>
+          </div>
+               </fieldset>
+          </div>
+         
+          <! -- Save button -->
+          <a class="govuk-button" data-module="govuk-button" href="manager-task-list">
+            Save
+          </a>
+        </div>
+
+    <! –– Right panel with additional information in accordion ––>
+
+      <div class="govuk-grid-column-one-third">
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-9"></div>
+        <div class="govuk-!-padding-bottom-7"></div>
+        {{ rightaccordion() }}
+      </div>
+
+{% endblock %}
