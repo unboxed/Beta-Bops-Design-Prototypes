@@ -53,103 +53,91 @@
           <p class="govuk-body">Your manager sent the following comment about your recommendation below. Please take
             action based on their comment.</p>
           <div class="govuk-inset-text" style="padding-top: 25px; padding-bottom: 0px;">
-            <div style="padding-bottom: 20px">
+            <div style="padding-bottom: 15px">
 
-              <p style="margin-bottom: 0;"><strong>Submitted recommentation</strong> by Alex Dawson</p>
-              <p style="margin-bottom: 8px;">
+              <p style="margin-bottom: 0;"><strong>Submitted recommentation</strong> by Eris Fanshawe</p>
+              <p style="margin-bottom: 15px;">
                 <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
               </p>
-              <p>
-                <em>Always in residential use. Proposed porous material and 18sqm driveway.</em>
-              </p>
+        
+                <p  style="padding-bottom: 20px"><em>Always in residential use. Proposed porous material and 18sqm driveway.</em></p>
+            
             </div>
 
             <div style="padding-bottom: 20px">
 
-              <p style="margin-bottom: 0;"><strong>Recommendation challenged</strong> by Alex Dawson</p>
-              <p style="margin-bottom: 8px;">
+              <p style="margin-bottom: 0;"><strong>Recommendation challenged </strong> by Alex Dawson</p>
+              <p style="margin-bottom: 15px;">
                 <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
               </p>
-              <p>
-                <em>Check article 4</em>
-              </p>
+         
+                <p><em>Check article 4</em></p>
+             
             </div>
           </div>
 
 
 
 
-          <!--        Question-->
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-                <h4 class="govuk-heading-s">Have permitted development requirements been met?</h4>
-              </legend>
-              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email"
-                    data-aria-controls="conditional-contact">
-                  <label class="govuk-label govuk-radios__label" for="contact">
-                    <h4 class="govuk-heading-s">Yes</h4>
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
-                  <div class="govuk-form-group">
-                    <p class="govuk-body">
-                      <br />
-                      <strong>Please edit the text to indicate which GDPO policy (or policies) have been met.</strong>
-                    </p>
+        <!--        Question-->
 
-                    <div class="govuk-!-padding-bottom-3"></div>
-                    <div>
-                      <p class="govuk-body">
-                        This <strong>will</strong> appear on the decision notice.
-                    </div>
-                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6"
-                      aria-describedby="more-detail-hint">It adheres to the limitations and conditions of Class _ (and _), Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended).</textarea>
+  <div class="govuk-form-group">
 
+    <h3 class="govuk-body" >
+    <strong>Have permitted development requirements been met?</strong>
+    </h3>
+  </legend>
+  <div class="govuk-radios">
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+        Yes
+      </label>
+    </div></br>
+    <div class="govuk-radios__item">
+      <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+      <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+        No
+      </label>
+    </div>
 
-                    <div class="govuk-!-padding-bottom-3"></div>
-                  </div>
+         <div class="govuk-!-padding-bottom-8"></div>
+         <div class="govuk-form-group">
+                   <p class="govuk-body">
+                     <strong>Please provide supporting information to indicate which GDPO policy (or policies) have or have not been met.</strong>
+                     <div id="changed-name-hint" class="govuk-hint">
+                        Example: It meets the conditions of Part 1 Class A
+                      </div>
+                      <p>
+                     Your comment <strong>will</strong> appear on the decision notice.
+                   </p>
+                   <textarea
+                     class="govuk-textarea"
+                     id="more-detail"
+                     name="more-detail"
+                     rows="3"
+                     aria-describedby="more-detail-hint"
+                   ></textarea>
+                 </div>
+                 </div>
 
-                </div>
-
-                <div class="govuk-radios__item">
-                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone"
-                    data-aria-controls="conditional-contact-2">
-                  <label class="govuk-label govuk-radios__label" for="contact-2">
-                    <h4 class="govuk-heading-s">No</h4>
-                  </label>
-                </div>
-                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
-                  <div class="govuk-form-group">
-                    <p class="govuk-body">
-                      <br />
-                      <strong>Please edit the text to indicate which GDPO policy (or policies) have not been
-                        met.</strong>
-                    </p>
-                    <div class="govuk-!-padding-bottom-3"></div>
-                    <p class="govuk-body">
-                      This <strong>will</strong> appear on the decision notice.
-                    </p>
-                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"
-                      aria-describedby="more-detail-hint">The development or use specified hereto is not permitted development by virtue of Condition _ of Class _ of The Town and Country Planning (General Permitted Development) Order 2015 (as amended) which removed permitted development rights. Therefore planning permission is required.</textarea>
-                    <div class="govuk-!-padding-bottom-3"></div>
-                  </div>
-                </div>
-
-
-                <div class="govuk-!-padding-bottom-1"></div>
-                <div class="govuk-form-group">
-                  <p class="govuk-body">
-                    <strong>Please provide supporting information for your manager.</strong>
-                    <br><br>
-                    Your comment will <strong>not</strong> appear on the decision notice.
+    <div class="govuk-!-padding-bottom-7"></div>
+      <div class="govuk-form-group">
+                <p class="govuk-body" style = "margin-bottom: 12px;">
+                  <strong>Please provide supporting information for your manager.</strong>
                   </p>
-                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
-                    aria-describedby="more-detail-hint"></textarea>
-                </div>
+                  <p>
+                  Your comment will <strong>not</strong> appear on the decision notice.
+                </p>
+                <textarea
+                  class="govuk-textarea"
+                  id="more-detail"
+                  name="more-detail"
+                  rows="3"
+                  aria-describedby="more-detail-hint"
+                ></textarea>
               </div>
+             
 
               <! -- Save button -->
                 <a class="govuk-button" data-module="govuk-button" href="cert-of-law-hp">
