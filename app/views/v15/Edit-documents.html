@@ -51,8 +51,7 @@ Edit-documents.html
           <label class="govuk-heading-s" for="document-number">
             Document number(s)
           </label>
-          <p class="govuk-hint">Please enter the documents number. Where documents contain multiple drawings, enter
-            multiple numbers separated by a comma (e.g. "25A-V2, 25B-V2").</p>
+          <p class="govuk-hint">Please enter the documents number. Where documents contain multiple drawings, enter multiple numbers separated by a comma (e.g. "25A-V2, 25B-V2").</p>
           <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
         </fieldset>
       </div>
@@ -63,8 +62,8 @@ Edit-documents.html
             <h4 class="govuk-heading-s">What does the document contain?</h4>
           </legend>
           <div class="govuk-checkboxes govuk-checkboxes--small">
-            <p class="govuk-hint">Please select all fields that apply. Selected fields will form this documents description on the decision notice.
-            </p>
+            <p class="govuk-hint">Please select all fields that apply.</p>
+            
             {{ document_options_checkbox("FRONT") }}
             {{ document_options_checkbox("REAR") }}
             {{ document_options_checkbox("SIDE") }}
@@ -84,7 +83,7 @@ Edit-documents.html
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
-            <h4 class="govuk-heading-s">Do you want to include this document on the decision notice?</h4>
+            <h4 class="govuk-heading-s">Do you want to list this document on the decision notice?</h4>
           </legend>
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
@@ -108,6 +107,7 @@ Edit-documents.html
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h4 class="govuk-heading-s">Should this document be made publicly avaialable?</h4>
           </legend>
+          <p class="govuk-hint">Please indicate whether this document should be made available for public viewing on the planning register or via the public API. Select "No" if the document contains any sensitive personal information.</p>
           <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
             <div class="govuk-radios__item">
               <input class="govuk-radios__input" id="public-yes" name="public" type="radio">

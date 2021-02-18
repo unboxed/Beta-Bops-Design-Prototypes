@@ -1,6 +1,6 @@
 {% extends "layout.html" %} 
-{% from "../customnjk/left-accordion-pd-v12.njk"  import leftaccordion %} 
-{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
 {% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
 {% block head %} {{ super() }}
 <link
@@ -40,7 +40,7 @@
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <! –– Application detail blocks ––>
-    {{ leftaccordion() }}
+    {{ applicationinfo() }}
 
     <! -- Task List -->
     <h2 class="govuk-heading-m">Process application</h2>
@@ -109,7 +109,7 @@
   <! –– Right panel with additional information in accordion ––>
 
   <div class="govuk-grid-column-one-third">
-    {{ rightaccordion() }}
+    {{ relatedinfo() }}
   </div>
 
   
