@@ -1,11 +1,7 @@
 {% macro applicationinfo(status, officer) %}
 {% block content %}
 
-{% if status.length %}
-  {{ status }}
-{% else %}
-<i>No status yet!</i>
-{% endif %}
+
 
 <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-default">
     <div class="govuk-accordion__section ">
@@ -24,9 +20,13 @@
                 <td class="govuk-table__cell"><b>Address: </b></td>
                 <td class="govuk-table__cell">150 Bellenden Road London SE15 4QY</td>
             </tr>
-              <tr class="govuk-table__row">
-                  <td class="govuk-table__cell"><b>Ward: </b></td>
-                  <td class="govuk-table__cell">Rye Lane</td>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>UPRN: </b></td>
+                <td class="govuk-table__cell">100081043511</td>
+            </tr>
+            <tr class="govuk-table__row">
+                <td class="govuk-table__cell"><b>Ward: </b></td>
+                <td class="govuk-table__cell">Rye Lane</td>
             </tr>
             <tr class="govuk-table__row">
                   <td class="govuk-table__cell"><b>Property type: </b></td>
