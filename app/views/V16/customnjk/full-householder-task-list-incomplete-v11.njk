@@ -1,0 +1,204 @@
+
+
+    {% macro tasklist(params) %}
+    {% block content %}
+
+
+    <! -- Task List -->
+
+    <ol class="app-task-list">
+     <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Consultation</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <a class="app-task-list__task-name" href="fh-consultation" aria-describedby="external-review-completed">
+              Validate documents
+            </a>
+
+            <strong
+              class="govuk-tag app-task-list__task-completed govuk-tag--blue app-task-list__tag"
+              id="contact-details-status"
+            >
+              Complete
+            </strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Consultation</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-consultation"
+              aria-describedby="external-review-completed"
+            >
+              Facilitate consultation
+            </a>
+
+            <strong
+              class="govuk-tag app-task-list__task-completed govuk-tag--blue app-task-list__tag"
+              id="contact-details-status"
+            >
+              In progress
+            </strong>
+          </li>
+        </ul>
+      </li>
+
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Site visit</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="site-visit.html"
+              aria-describedby="external-review-completed"
+            >
+             Document site visit
+            </a>
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+  
+        </ul>
+      </li>
+      <li>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Assess the proposal</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-proposal-description"
+              aria-describedby="external-review-completed"
+            >
+             Summarise the proposal
+            </a>
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-impact-neighbours"
+              aria-describedby="external-review-completed"
+            >
+              Asssess the impact on neighbours
+            </a>
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-impact-design-heritage"
+              aria-describedby="external-review-completed"
+            >
+              Asssess the impact on design and heritage
+            </a>
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+          <li class="app-task-list__item">
+            <a class="app-task-list__task-name" href="fh-impact-misc" aria-describedby="external-review-completed">
+              Asssess other policy considerations
+            </a>
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+        </ul>
+        <h2 class="app-task-list__section">
+          <span class="app-task-list__section-number">Prepare the report</span>
+        </h2>
+        <ul class="app-task-list__items">
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-make-recommendation"
+              aria-describedby="external-review-completed"
+            >
+              Make recommendation
+            </a>
+
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-conditions"
+              aria-describedby="external-review-completed"
+            >
+              Add conditions
+            </a>
+
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+            -->
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="attach-documents"
+              aria-describedby="external-review-completed"
+            >
+              Attact relevent documents
+
+            </a>
+
+            <!--
+                <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                    Completed
+                  </strong>
+              -->
+          </li>
+          <li class="app-task-list__item">
+            <a
+              class="app-task-list__task-name"
+              href="fh-submit-report"
+              aria-describedby="external-review-completed"
+            >
+              Submit report
+            </a>
+            <!--
+                    <strong class="govuk-tag app-task-list__task-completed" id="eligibility-completed">
+                        Completed
+                      </strong>
+            -->
+          </li>
+        </ul>
+      </li>
+    </ol>
+
+{% endblock %}
+
+{% endmacro %}

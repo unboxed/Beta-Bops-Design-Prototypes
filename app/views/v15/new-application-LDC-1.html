@@ -1,0 +1,59 @@
+new-application-LDC-1.html
+{% extends "layout.html" %} 
+
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link"href="cert-of-law-hp.html">Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page" >Upload documents</a>
+          </li>
+       
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+        0000603
+      </h1>
+      <h3 class="govuk-heading-m">115 Bushey Hill Road London SE5 8QQ</h3>
+      <div class="govuk-!-padding-bottom-3"></div>
+    
+        <div class="govuk-!-padding-bottom-3"></div>
+        <h2 class="govuk-heading-m">
+          Documents
+        </h2>
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+            <p class="govuk-body" style="line-height: 1.6;">
+              Check all documents to ensure they support the information provided by the applicant.
+            </p>
+            <div class="govuk-!-padding-bottom-2"></div>
+            <p>
+              <a class="govuk-link" href="document-archive.html">View document archive</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-third" style="text-align: right">
+            <a role="button" class="govuk-button" data-module="govuk-button" href="edit-documents.html">Upload
+              document</a>
+          </div>
+        </div>
+
+</div>
+
+
+  {% endblock %}

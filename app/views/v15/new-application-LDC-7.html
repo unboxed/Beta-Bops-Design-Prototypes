@@ -1,0 +1,111 @@
+new-application-LDC-7.html
+{% extends "layout.html" %} 
+
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page" href="new-application.html">New application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page">LDC: Permitted Development</a>
+          </li>
+      </ol>
+    </div>
+    <a class="govuk-button" data-module="govuk-button" style="float: right; margin: 40px 0 0px 0;">
+        Upload application
+      </a> 
+    <h1 class="govuk-heading-l" style="margin-top: 55px;">
+        New Application
+      </h1>  
+     
+      <p style="margin-bottom: 35px;">Appliation number:  00007000</p>
+
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+        <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="new-application-LDC-2.html">Application information</a>
+        </li>
+        
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="new-application-LDC-4.html">Contact inforamtion</a>
+        </li>
+        
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page"  href="new-application-LDC-5.html">Documents</a>
+        </li>
+        </ul>
+        
+        </nav>    
+     
+   <! –– Documents ––>
+
+   <div style="margin-bottom: 40px;">
+    <h2 class="govuk-heading-m">
+        Documents
+    </h2>
+      
+    <img
+      src="/public/images/PROPOSED_REAR_ELEVATION-848012.png"  style="width: 250px; border: solid 1px #eeeeee"
+      style="width: 250px;" >
+          <p class="govuk-body" style = "margin-top: 20px;">
+            <strong class="govuk-tag govuk-tag--turquoise">
+                Section
+              </strong> <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> </br>
+            Date received: 02 January 2021<br/>
+            Document reference(s): 243646HF<br/>
+            Document reference(s): 243646HF<br/>
+            Public: No
+      </p>
+  </div>
+  <div style="border-bottom: 1px solid #b1b4b6;" >
+    </div>
+
+   <h2 class="govuk-heading-m" style="margin-top: 30px;">
+    Choose documents
+</h2>
+
+
+<div class="govuk-form-group">
+  <label class="govuk-label" for="sort">
+    Choose document type
+  </label>
+  <select class="govuk-select" id="sort" name="sort">
+    <option value="published">Application form</option>
+    <option value="updated" selected>Proposal documents</option>
+    <option value="comments">Statement</option>
+  </select>
+</div>
+
+<label class="govuk-label" for="sort">
+    Select documents 
+</label>
+ <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+
+ <div style="margin-top: 40px;">
+    <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="new-application-LDC-7.html">
+        Add
+      </a>
+    </div>
+          
+</div>
+
+
+  {% endblock %}

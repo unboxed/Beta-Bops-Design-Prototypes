@@ -1,0 +1,46 @@
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v12.njk" import leftaccordion %} 
+{% from "./customnjk/right-accordion-fh-v12.njk" import rightaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
+              </ol>
+        </div> 
+        <div style="margin-bottom: 40px">
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            00000900
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 20px;">1 Rycott Path, East Dulwich, SE22 0AA</h2>
+        <p>
+          <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+        </p>
+        <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      </div>
+      
+        <! –– Application detail blocks ––>
+        {{ leftaccordion() }}
+    <! -- Task List -->   
+        {{ tasklist() }}
+      </div>
+        
+<! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third" Style = "margin-top: 180px;">
+  {{ rightaccordion() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
+

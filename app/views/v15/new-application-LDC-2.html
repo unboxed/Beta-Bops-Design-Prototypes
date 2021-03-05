@@ -1,0 +1,174 @@
+new-application-LDC-2.html
+{% extends "layout.html" %} 
+
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page" href="new-application.html">New application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page">LDC: Permitted Development</a>
+          </li>
+      </ol>
+    </div>
+    <a class="govuk-button" data-module="govuk-button" style="float: right; margin: 40px 0 0px 0;">
+        Upload application
+      </a> 
+    <h1 class="govuk-heading-l" style="margin-top: 55px;">
+        New Application
+      </h1>  
+      <p style="margin-bottom: 35px;">Appliation number:  00007000</p>
+
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+        <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" aria-current="page" href="new-application-LDC-2.html">Application information</a>
+        </li>
+        
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="new-application-LDC-4.html">Contact inforamtion</a>
+        </li>
+        
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="new-application-LDC-5.html">Documents</a>
+        </li>
+        </ul>
+        
+        </nav>    
+     
+          <div class="govuk-form-group" style="margin-top: 55px;">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <h2 class="govuk-heading-m">
+                Application received 
+              </h2>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+            <div style = "margin-top: 50px;">
+              <fieldset class="govuk-fieldset">
+                  <h2 class="govuk-heading-m">
+                      Site address
+                    </h2>
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-line-1">
+                      Building and street <span class="govuk-visually-hidden">line 1 of 2</span>
+                    </label>
+                    <input class="govuk-input" id="address-line-1" name="address-line-1" type="text"></div>
+                
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-line-2">
+                      <span class="govuk-visually-hidden">Building and street line 2 of 2</span>
+                    </label>
+                    <input class="govuk-input" id="address-line-2" name="address-line-2" type="text"></div>
+                
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-town">
+                      Town or city
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
+                
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-county">
+                      County
+                    </label>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+                
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="address-postcode">
+                      Postcode
+                    </label>
+                    <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+                
+                </fieldset>
+                <! ––  Description of work––>
+                <div class="govuk-form-group" style = "margin-top: 40px;">
+                        <h2 class="govuk-heading-m">
+                          Summary of work
+                        </h2>
+                    
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                      </div>
+      
+                      <! ––  Description of work––>
+                <div class="govuk-form-group" style = "margin-top: 40px;">
+                    
+                        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                          <h2 class="govuk-heading-m">
+                            Has the work already been started?
+                          </h2>
+                      
+                          <div class="govuk-radios govuk-radios--inline">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                              <label class="govuk-label govuk-radios__label" for="changed-name">
+                                Yes
+                              </label>
+                            </div>
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                No
+                              </label>
+                            </div>
+                          </div>
+                      
+                        </fieldset>
+                        </div>
+              
+              <! –– Payment reference––>
+              <div class="govuk-form-group"  style = "margin-bottom: 50px;">
+             <h2 class="govuk-heading-m">
+                 Payment reference
+            </h2>    
+        
+              <input class="govuk-input" id="event-name" name="event-name" type="text">
+            </div>
+         
+            <div style="margin-top: 40px;">
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="new-application-LDC-4.html">
+                    Next
+                  </a>
+                </div>
+</div>
+
+
+  {% endblock %}

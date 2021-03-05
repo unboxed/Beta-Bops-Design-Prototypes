@@ -1,0 +1,121 @@
+new-application-LDC-6.html
+{% extends "layout.html" %} 
+{% from "./customnjk/document-options.njk"  import document_options_checkbox %}
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page" href="new-application.html">New application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page">LDC: Permitted Development</a>
+          </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-top: 55px;">
+        New Application
+      </h1>  
+      <p style="margin-bottom: 35px;">Appliation number:  00007000</p>
+
+   <! –– Documents ––>
+
+   <h2 class="govuk-heading-m">
+    Proposal document
+</h2>
+<div>
+    <fieldset class="govuk-fieldset">
+      <div>
+        <p>File name: Section_proposed.pdf</p>
+        <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png"
+          style="width: 250px; border: solid 1px #eeeeee" />
+        <p></p>
+       
+      </div>
+     
+    </fieldset>
+  </div>
+</div>
+</div>
+<div class="govuk-!-padding-bottom-4"></div>
+<div class="govuk-form-group ">
+<fieldset class="govuk-fieldset">
+  <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+    <h4 class="govuk-heading-s">What does the document contain?</h4>
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+     
+  </legend>
+  {{ document_options_checkbox("FRONT") }}
+  {{ document_options_checkbox("REAR") }}
+  {{ document_options_checkbox("SIDE") }}
+  {{ document_options_checkbox("ROOF") }}
+  {{ document_options_checkbox("GARDEN") }}
+  {{ document_options_checkbox("FLOOR") }}
+  {{ document_options_checkbox("SITE") }}
+  {{ document_options_checkbox("PLAN") }}
+  {{ document_options_checkbox("ELEVATION") }}
+  {{ document_options_checkbox("PROPOSED") }}
+  {{ document_options_checkbox("EXISTING") }}
+  {{ document_options_checkbox("GENERAL") }}
+  {{ document_options_checkbox("STATEMENT") }}
+</div>
+</fieldset>
+</div>
+<div class="govuk-form-group" style="margin-bottom: 40px;">
+    <label class="govuk-heading-s" for="document-number">
+      Document reference(s)
+    </label>
+    <p class="govuk-hint">Where documents contain multiple drawings, enter multiple numbers separated by a comma (e.g. "25A-V2, 25B-V2").</p>
+    <div class="govuk-!-padding-bottom-3"></div>
+    <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
+</div>
+    <div class="govuk-form-group" style="margin-bottom: 40px;">
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+            <strong>Should this document be made publicly available?</strong>
+          </legend>
+          <p class="govuk-hint" style="margin-bottom: 25px;">Please indicate whether this document should be made available for public viewing on the planning register or via the public API. Select "No" if the document contains any sensitive personal information</p>
+
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+     
+      <div style="margin-top: 40px;">
+        <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="new-application-LDC-7.html">
+            Save
+          </a>
+        </div>
+                    
+          
+</div>
+
+
+  {% endblock %}

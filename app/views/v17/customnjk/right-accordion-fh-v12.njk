@@ -1,0 +1,549 @@
+{% macro rightaccordion(params) %}
+
+{% block head %} 
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} 
+{% block content %}
+  <! –– Right panel with additional information in accordion ––>
+
+  <div style="float: none; clear: both; display: inline-block; margin-top: 80px;">
+
+    <div
+      class="govuk-accordion"
+      data-module="govuk-accordion"
+      id="accordion-default"
+      
+    >
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Constraints
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              None
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-accordion__section" >
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Documents
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-2"
+        >
+          <div id="id="documents">
+  
+          <div style="margin-bottom: 30px;">
+         <a href="attach-documents" class="govuk-body" style="line-height: 1.6;">
+                        Manage documents
+                    </a>
+                </div>
+
+          <div style="float: left; margin-left: 0px;">
+      
+            <img
+              src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                Section
+              </strong> <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+              <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+    <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+      
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                Floor
+              </strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">
+                Plan
+              </strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.png"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+
+            <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+      
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                Elevation
+              </strong> 
+              
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+
+            <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+      
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                First Floor
+              </strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">
+               Roof
+              </strong>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Existing
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.pdf"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+
+            <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+            <img
+              src="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+                Rear
+              </strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">
+               Elevation
+              </strong>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.pdf"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+          
+
+              <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+            <img
+              src="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+               Elevation
+              </strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.pdf"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+
+              <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+            <img
+              src="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+              First floor
+              </strong> 
+                  <strong class="govuk-tag govuk-tag--turquoise">
+              Roof
+              </strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.pdf"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+            <div style="float: left; margin-left: 0px;" style = "margin-bottom: 20px;">
+            <img
+              src="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.png"
+              style="width: 250px;" style = "margin-bottom: 20px;"/>
+                  <p style = "margin-bottom: 7px;">
+                <strong class="govuk-tag govuk-tag--turquoise">
+              Floor
+              </strong> 
+                  <strong class="govuk-tag govuk-tag--turquoise">
+              Plan
+              </strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Proposed
+              </strong> 
+              </p>
+             <p style = "margin-bottom: 60px;">
+              <a
+                href="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.pdf"
+                target="_blank"
+                >View in new window</a>
+            </p>
+          </div>
+
+           
+
+
+
+
+
+            <div style="clear: both; float: none;">&nbsp;</div>
+          </div>
+        
+      </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Materials
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <ul class="govuk-list govuk-list--bullet">
+                  <li>
+                    Walls: <strong>Red brick</strong>
+                  </li>
+                  <li>
+                    Roof: <strong>Slate tiles</strong>
+                  </li>
+                  <li>
+                    Windows Existing: <strong>White uPVC casement windows</strong>
+                  </li>
+                  <li>
+                    Rooflights existing:<strong> Aluminium</strong></li>
+                  <li>
+                    Windows Proposed: <strong> White uPVC casement windows</strong>
+                  </li>
+                  <li>
+                    Rooflights existing: <strong>Aluminium</strong>
+                  </li>
+                  <li>
+                    Doors existing: <strong>Timber doors</strong></li>
+                  <li>
+                    Doors proposed: <strong>White uPVC doors</strong>
+                  </li>
+                  <li>
+                  Downpipes and gutters existing: <strong>Grey uPVC downpipes and gutters</strong>
+                  </li>
+                  <li>
+                  Proposed: <strong>Grey uPVC downpipes and gutters</strong>
+                  </li>
+                
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Site visit
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <p class="govuk-body">
+            Site visit notes go here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec nibh turpis, consequat ac commodo a, interdum sed ligula. Etiam eget augue vel ex tincidunt porttitor. 
+          </p>
+          <p class="govuk-body">
+            Maecenas eget porttitor magna, vitae suscipit risus. Duis consectetur, odio ut aliquet euismod, nunc diam fringilla est, non eleifend dui urna sit amet ipsum. 
+          </p>
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong>SITE-VISIT-1.jpg</strong><br>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Site Visit
+              </strong>
+              <br />[DD MM YYYY]<br />
+              </p>
+              <p>
+              <a
+                href="/public/images/fh-sitevis-1.jpg"
+                target="_blank"
+                >View image in new window</a
+              >
+            </p>
+            <img
+              src="/public/images/fh-sitevis-1.jpg"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong>SITE-VISIT-2.jpg</strong><br>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Site Visit
+              </strong>
+              <br />[DD MM YYYY]<br />
+              </p>
+              <p>
+              <a
+                href="/public/images/fh-sitevis-2.jpg"
+                target="_blank"
+                >View image in new window</a
+              >
+            </p>
+            <img
+              src="/public/images/fh-sitevis-2.jpg"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong>SITE-VISIT-3.jpg</strong><br>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Site Visit
+              </strong>
+              <br />[DD MM YYYY]<br />
+              </p>
+              <p>
+              <a
+                href="/public/images/fh-sitevis-3.jpg"
+                target="_blank"
+                >View image in new window</a
+              >
+            </p>
+            <img
+              src="/public/images/fh-sitevis-3.jpg"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong>SITE-VISIT-4.jpg</strong><br>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Site Visit
+              </strong>
+              <br />[DD MM YYYY]<br />
+              </p>
+              <p>
+              <a
+                href="/public/images/fh-sitevis-4.jpg"
+                target="_blank"
+                >View image in new window</a
+              >
+            </p>
+            <img
+              src="/public/images/fh-sitevis-4.jpg"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong>SITE-VISIT-5.jpg</strong><br>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Site Visit
+              </strong>
+              <br />[DD MM YYYY]<br />
+              </p>
+              <p>
+              <a
+                href="/public/images/fh-sitevis-5.jpg"
+                target="_blank"
+                >View image in new window</a
+              >
+            </p>
+            <img
+              src="/public/images/fh-sitevis-5.jpg"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+          <div style="float: left; margin-left: 0px;">
+            <p class="govuk-body" style="line-height: 1.6;">
+              <strong>SITE-VISIT-6.jpg</strong><br>
+              <strong class="govuk-tag govuk-tag--turquoise">
+                Site Visit
+              </strong>
+              <br />[DD MM YYYY]<br />
+              </p>
+              <p>
+              <a
+                href="/public/images/fh-sitevis-6.jpg"
+                target="_blank"
+                >View image in new window</a
+              >
+            </p>
+            <img
+              src="/public/images/fh-sitevis-6.jpg"
+              style="width: 200px;"
+            />
+            <br>
+            <br>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-4"
+            >
+              Consultation
+            </span>
+          </h2>
+        </div>
+        <div
+          id="accordion-default-content-4"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-4"
+        >
+          <p class="govuk-body">
+            In progress. No documents uploaded.
+          </p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Key application dates
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          <p><strong>Application status:</strong> Waiting for assessment</p>
+          <p><strong>Application received:</strong> 2 March 2020</p>
+          <p><strong>Acknoweldgement letter sent:</strong> 2 March 2020</p>
+          <p><strong>Validation complete:</strong> 4 March 2020</p>
+          <p><strong>Validation letter sent:</strong> 4 March 2020</p>
+          <p><strong>Officer introduction letter sent:</strong> 4 March 2020</p>
+          <p><strong>Fast track date date:</strong> 12 June 2020</p>
+          <p><strong>Statuatory date:</strong> 26 June 2020</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-3"
+            >
+              Contact information
+            </span>
+          </h2>
+        </div>
+        <div
+          id="accordion-default-content-3"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-3"
+        >
+          <p class="govuk-body"><strong>Agent:</strong><br />Alberto Ochoa<br>Resi<br>+44203 868 9453<br><a href="">hello@resi.co.uk</a>
+          </p>
+          <p class="govuk-body">
+            <strong>Applicant:</strong><br />Ambreen Khasru <br /> Not applicable<br /><a
+              href=""
+              >&nbsp;</a
+            >
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+</div>
+{% endblock %}
+
+{% endmacro %}

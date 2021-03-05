@@ -1,0 +1,106 @@
+new-application-LDC-4.html
+{% extends "layout.html" %} 
+
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page" href="new-application.html">New application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" aria-current="page">LDC: Permitted Development</a>
+          </li>
+      </ol>
+    </div>
+    <a class="govuk-button" data-module="govuk-button" style="float: right; margin: 40px 0 0px 0;">
+        Upload application
+      </a> 
+    <h1 class="govuk-heading-l" style="margin-top: 55px;">
+        New Application
+      </h1>  
+      <p style="margin-bottom: 35px;">Appliation number:  00007000</p>
+
+      <nav class="moj-sub-navigation" aria-label="Sub navigation">
+
+        <ul class="moj-sub-navigation__list">
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="new-application-LDC-2.html">Application information</a>
+        </li>
+        
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link"aria-current="page" href="new-application-LDC-4.html">Contact inforamtion</a>
+        </li>
+        
+        <li class="moj-sub-navigation__item">
+          <a class="moj-sub-navigation__link" href="new-application-LDC-5.html">Documents</a>
+        </li>
+        </ul>
+        
+        </nav>    
+     
+                <! –– Applicant information––>
+                <div class="govuk-form-group" style = "margin-top: 50px;">
+                        <h2 class="govuk-heading-m">
+                          Applicant information
+                        </h2>
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="full-name">
+                            Full name
+                          </label>
+                          <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="email">
+                            Email address
+                          </label>
+                          <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                        </div>
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="telephone-number">
+                            UK telephone number
+                          </label>
+                          <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+                  
+                          <! –– Agent information––>
+                          <div class="govuk-form-group" style = "margin-top: 50px;">
+                            <h2 class="govuk-heading-m">
+                              Agent information
+                            </h2>
+                             <div class="govuk-form-group">
+                           <label class="govuk-label" for="full-name">
+                               Full name
+                            </label>
+                           <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                           <div class="govuk-form-group">
+                           <label class="govuk-label" for="email">
+                            Email address
+                           </label>
+                           <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                           </div>
+                           <div class="govuk-form-group" style="margin-bottom: 60px;">
+                          <label class="govuk-label" for="telephone-number">
+                            UK telephone number
+                         </label>
+                        <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+                        <div style="margin-top: 40px;">
+                            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="new-application-LDC-5.html">
+                                Next
+                              </a>
+                            </div>
+</div>
+
+
+  {% endblock %}

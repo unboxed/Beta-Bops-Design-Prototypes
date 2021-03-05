@@ -1,28 +1,38 @@
-{% extends "layout.html" %}
-{% block head %}
-{{ super() }}
-<link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css">
-{% endblock %}
-{% block content %}
+manage-documents.html
+
+
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v12.njk" import leftaccordion %} 
+{% from "./customnjk/right-accordion-fh-v12.njk" import rightaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+
+{% endblock %} {% block content %}
+
 <! –– Header ––>
-<div class="govuk-grid-row">
-  <div class="govuk-grid-column-full">
-    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item"> <a class="govuk-breadcrumbs__link"
-              href="cert-of-law-hp.html">Application</a></li>
-        <li class="govuk-breadcrumbs__list-item" aria-current="page">Documents</li>
-      </ol>
-    </div>
-    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-      0000600
-    </h1>
-    <h3 class="govuk-heading-m">150 Bellenden Road London SE15 4QY</h3>
-    <div class="govuk-!-padding-bottom-3"></div>
-  
+    <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+              <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                  <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">Application</li>
+              </ol>
+        </div> 
+        <div style="margin-bottom: 40px">
+        <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+            00000900
+        </h1>
+        <h2 class="govuk-heading-m" style="margin-bottom: 20px;">1 Rycott Path, East Dulwich, SE22 0AA</h2>
+        <p>
+          <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+        </p>
+        <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      </div>
+      </div>
+      </div>
+
       <div class="govuk-!-padding-bottom-3"></div>
       <h2 class="govuk-heading-m">
         Documents
@@ -51,15 +61,18 @@
               style="width: 150px; border: solid 1px #eeeeee" />
             </p>
             <p>
-              <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View in new window</a>
+              <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View PDF in new window</a>
             </p>
           </div>
           <div class="govuk-grid-column-one-half">
             <p>
               <div class="govuk-!-padding-bottom-0.5"></div>
-              <strong class="govuk-tag govuk-tag--turquoise">FLOOR</strong> <strong class="govuk-tag govuk-tag--turquoise">PLAN</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+              <strong class="govuk-tag govuk-tag--turquoise">VALID</strong>
             </p>
             <p>
+              <strong>FLOOR</strong>
+              <strong>PLAN</strong>
+              <strong>PROPOSED</strong><br>
               File name: 10390-Proposed-ground-floorplan.PDF<br />
               Date received: 02 January 2021<br />
               Document reference(s): 243646HF<br />
@@ -88,9 +101,10 @@
           <div class="govuk-grid-column-one-half">
             <p>
               <div class="govuk-!-padding-bottom-0.5"></div>
-              <strong class="govuk-tag govuk-tag--turquoise">SIDE</strong> <strong class="govuk-tag govuk-tag--turquoise">ELEVATION</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+              <strong class="govuk-tag govuk-tag--red">INVALID</strong>
             </p>
             <p>
+              <strong>PROPOSED</strong><br>
               File name: 10393-Proposed-rear-elevation.PDF<br />
               Date received: 02 January 2021
             </p>
@@ -114,9 +128,9 @@
           </div>
           <div class="govuk-grid-column-one-half">
             <p>
-            <div class="govuk-!-padding-bottom-0.5"></div>
-            <strong class="govuk-tag govuk-tag--turquoise">ROOF</strong> <strong class="govuk-tag govuk-tag--turquoise">PLAN</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
-          </p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--grey">SUBMITTED</strong>
+            </p>
             <p>
               File name: 10395-Proposed-roof-plan.PDF<br />
               Date received: 02 January 2021<br />
@@ -132,7 +146,7 @@
         <li class="app-task-list__item">
           <div class="govuk-grid-column-one-quarter">
             <p>
-              <div class="govuk-!-padding-bottom-1"></div>
+              <div class="govuk-!-padding-bottom-0.5"></div>
               <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png"
               style="width: 150px; border: solid 1px #eeeeee" />
             </p>
@@ -140,10 +154,10 @@
               <a href="/public/images/PROPOSED_SIDE_ELEVATION-848013.pdf" target="_blank">View PDF in new window</a>
             </p>
           </div>
-          <div class="govuk-grid-column-one-half" >
+          <div class="govuk-grid-column-one-half">
             <p>
               <div class="govuk-!-padding-bottom-0.5"></div>
-              <strong class="govuk-tag govuk-tag--turquoise">SIDE</strong> <strong class="govuk-tag govuk-tag--turquoise">ELEVATION</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+              <strong class="govuk-tag govuk-tag--grey">SUBMITTED</strong>
             </p>
             <p>
               File name: 10397-Proposed-side-elevation.PDF<br />
