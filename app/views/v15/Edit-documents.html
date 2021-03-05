@@ -27,6 +27,8 @@ Edit-documents.html
       <p><strong>150 Bellenden Road London SE15 4QY</strong></p>
       <div class="govuk-!-padding-bottom-7"></div>
       <div>
+
+      <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <div style="margin-bottom: 40px;">
             <p>
@@ -139,5 +141,127 @@ Edit-documents.html
   </div>
   </fieldset>
   </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <label class="govuk-heading-s" for="document-number">
+            Document number(s)
+          </label>
+          <p class="govuk-hint">Please enter the documents number. Where documents contain multiple drawings, enter multiple numbers separated by a comma (e.g. "25A-V2, 25B-V2").</p>
+          <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group ">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h4 class="govuk-heading-s">What does the document contain?</h4>
+          </legend>
+          <div class="govuk-checkboxes govuk-checkboxes--small">
+            <p class="govuk-hint">Please select all fields that apply.</p>
+            
+            {{ document_options_checkbox("FRONT") }}
+            {{ document_options_checkbox("REAR") }}
+            {{ document_options_checkbox("SIDE") }}
+            {{ document_options_checkbox("ROOF") }}
+            {{ document_options_checkbox("GARDEN") }}
+            {{ document_options_checkbox("FLOOR") }}
+            {{ document_options_checkbox("SITE") }}
+            {{ document_options_checkbox("PLAN") }}
+            {{ document_options_checkbox("ELEVATION") }}
+            {{ document_options_checkbox("PROPOSED") }}
+            {{ document_options_checkbox("EXISTING") }}
+            {{ document_options_checkbox("GENERAL") }}            
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h4 class="govuk-heading-s">Do you want to list this document on the decision notice?</h4>
+          </legend>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="decision-yes"  name="decision" type="radio">
+              <label class="govuk-label govuk-radios__label" for="decision-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="decision-no" name="decision" type="radio">
+              <label class="govuk-label govuk-radios__label" for="decision-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h4 class="govuk-heading-s">Should this document be made publicly avaialable?</h4>
+          </legend>
+          <p class="govuk-hint">Please indicate whether this document should be made available for public viewing on the planning register or via the public API. Select "No" if the document contains any sensitive personal information.</p>
+          <div class="govuk-radios govuk-radios--inline" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-yes" name="public" type="radio">
+              <label class="govuk-label govuk-radios__label" for="public-yes">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="public-no" name="public" type="radio">
+              <label class="govuk-label govuk-radios__label" for="public-no">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+<!-- add later
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h4 class="govuk-heading-s">Is this document valid?</h4>
+          </legend>
+            <p class="govuk-hint"><a href="https://www.legislation.gov.uk/uksi/2015/596/contents/made" target="_blank">View validation requirements</a>
+            </p>          
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio"
+                value="year">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+-->
+
+      <p>
+        <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="pd-drawing-numbers">
+          Save
+        </a>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="pd-drawing-numbers">Cancel
+        </a>
+      </p>
+
+    </div>
   </div>
+ 
+
+
+  
   {% endblock %}
