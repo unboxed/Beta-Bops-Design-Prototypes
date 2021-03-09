@@ -1,4 +1,4 @@
-task-list-wide.html
+consultation.html
 {% extends "layout.html" %} 
 {% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
 {% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
@@ -53,17 +53,31 @@ task-list-wide.html
 
 <! –– Rows ––>
 
-<div class="govuk-grid-row" style="clear: both; float: none;">
+<div class="govuk-grid-row" style="clear: both; float: none;" >
   <div class="govuk-grid-column-one-third">
     <! –– Application detail blocks ––>
     {{ leftaccordion() }}
   </div>
 
   <div class="govuk-grid-column-two-thirds">
-    <! -- Task List -->
-      <div  style="margin-top: 10px;">
-      {{ tasklist() }}
-  </div>
+    <! -- consultation -->
+
+    <div style="margin-top: 20px;">
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+       
+       
+        <div class="govuk-width-container">
+          <main class="govuk-main-wrapper govuk-main-wrapper--l">
+        
+            <div class="govuk-grid-row">
+              <div class="govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-l">Consultation</h1>
+              </div>
+            </div>
+        
+          </main>
+        </div>
+    
   </div>
 </div>
 

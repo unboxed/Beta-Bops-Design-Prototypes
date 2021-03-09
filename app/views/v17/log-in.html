@@ -1,0 +1,34 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Fast track applications
+    </h1>
+    <h2 class="govuk-tabs__title">
+      Log in
+    </h2>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-30">
+        Email address
+      </label>
+      <input class="govuk-input govuk-input--width-30" id="width-30" name="width-30" type="text">
+    </div>
+    <div class="govuk-form-group">
+      <label class="govuk-label" for="width-30">
+        Password
+      </label>
+      <input class="govuk-input govuk-input--width-30" id="width-30" name="width-30" type="password">
+      <br>
+      <a href="">Forgot password?</a>
+    </div>
+    <a class="govuk-button" data-module="govuk-button" href="application-list.html">
+      Log in
+    </a>
+  </div>
+</div>
+{% endblock %}

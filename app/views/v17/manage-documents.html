@@ -1,0 +1,364 @@
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+            >Application</a
+          >
+        </li>
+     
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Manage documents
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+ 
+    <h2 class="govuk-heading-l">
+      Documents
+    </h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body" style="line-height: 1.6;">
+          Check all documents to ensure they support the information provided by the applicant.
+        </p>
+        <div class="govuk-!-padding-bottom-2"></div>
+        <p>
+          <a class="govuk-link" href="document-archive.html">View document archive</a>
+        </p>
+      </div>
+      <div class="govuk-grid-column-one-third" style="text-align: right">
+        <a role="button" class="govuk-button" data-module="govuk-button" href="upload-document.html">Upload
+          document</a>
+      </div>
+    </div>
+    <ul class="app-task-list">
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png" style="width:400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p >
+            <div class="govuk-!-padding-top-0.5">
+               <strong class="govuk-tag govuk-tag--turquoise">Section</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">elevation</strong>
+               <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+              </p>
+              </div>
+              <p class="govuk-body"> 
+              File name: PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS.pdf</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+          
+          
+        </li>
+          <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+               <strong class="govuk-tag govuk-tag--turquoise">Plan</strong> 
+          <strong class="govuk-tag govuk-tag--turquoise">existing</strong>
+               <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-AND-PROPOSED-BLOCK-PLANS-858713.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-third">
+          
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+               <strong class="govuk-tag govuk-tag--turquoise">elevation</strong> 
+          
+               <strong class="govuk-tag govuk-tag--turquoise">existing</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-ELEVATIONS.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+          <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+             <strong class="govuk-tag govuk-tag--turquoise">Ground</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">Floor</strong> 
+                <strong class="govuk-tag govuk-tag--turquoise">Plan</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">existing</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-FIRST-FLOOR-AND-ROOF-PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+         <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--turquoise">First</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">Floor</strong> 
+                <strong class="govuk-tag govuk-tag--turquoise">Plan</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">existing</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-GROUND-FLOOR-PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--turquoise">elevation</strong> 
+              
+               <strong class="govuk-tag govuk-tag--turquoise">proposed</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED_ELEVATIONS.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+
+           <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--turquoise">floor</strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">roof</strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">plan</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">proposed</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+
+           <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.png" style="width: 400px; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Check document</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--turquoise">ground</strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">floor</strong> 
+              <strong class="govuk-tag govuk-tag--turquoise">plan</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">proposed</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED-GROUND-FLOOR-PLAN.PDF</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+        </li>
+     
+          </div>
+      </ul>
+   
+    <! –– Right panel with additional information in accordion ––>
+    <div class="govuk-grid-column-one-third">
+    </div>
+  </div>
+
+</div>
+</div>
+</div>
+
+{% endblock %}
