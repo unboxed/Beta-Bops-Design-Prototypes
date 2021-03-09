@@ -1,0 +1,193 @@
+check-documents.html
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% from "./customnjk/document-options.njk"  import document_options_checkbox %}
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+            >Application</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="manage-documents.html"
+            >Manage documents</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Check document
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+ 
+    <h2 class="govuk-heading-l" style="margin-bottom: 60px;">
+      Check document
+    </h2>
+   
+
+    <div>
+        <fieldset class="govuk-fieldset">
+          <div style="margin-bottom: 40px;">
+            <p>
+            <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png"
+              style="width: 400px; border: solid 1px #eeeeee" />
+            </p>
+              <p styel="margin-top: 20px" >
+              File name: Section_proposed.pdf</br> 
+              Date received: [DD MM YYYY]</p>
+          <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf" target="_blank">View in new window</a>
+            </p>
+          </div>
+          
+          <div class="govuk-form-group">
+            <label class="govuk-heading-s" for="file-upload">
+              Replace this file
+            </label>
+            <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
+          </div>
+        </fieldset>
+      </div>
+
+      <div>
+
+  <div class="govuk-form-group ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+        <h4 class="govuk-heading-s">What does the document contain?</h4>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+      
+      </legend>
+      {{ document_options_checkbox("FRONT") }}
+      {{ document_options_checkbox("REAR") }}
+      {{ document_options_checkbox("SIDE") }}
+      {{ document_options_checkbox("ROOF") }}
+      {{ document_options_checkbox("GARDEN") }}
+      {{ document_options_checkbox("FLOOR") }}
+      {{ document_options_checkbox("SITE") }}
+      {{ document_options_checkbox("PLAN") }}
+      {{ document_options_checkbox("ELEVATION") }}
+      {{ document_options_checkbox("PROPOSED") }}
+      {{ document_options_checkbox("EXISTING") }}
+      {{ document_options_checkbox("EVIDENCE") }}
+      {{ document_options_checkbox("STATEMENT") }}
+    
+  </div>
+  </fieldset>
+  </div>
+  <div class="govuk-form-group"  style="margin-bottom: 45px;">
+    <label class="govuk-heading-s" for="document-number">
+      Document number(s)
+    </label>
+    <p class="govuk-hint" style="margin-bottom: 25px;">Where documents contain multiple drawings, enter multiple document numbers separated by a comma (e.g. "25A-V2, 25B-V2").</p>
+
+    <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
+
+</div>
+
+<div class="govuk-form-group" style="margin-bottom: 40px;">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+      <strong>Do you want to list this document on the decision notice?</strong>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" style="margin-bottom: 45px;">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="govuk-form-group" style="margin-bottom: 40px;">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+          <strong>Should this document be made publicly available?</strong>
+        </legend>
+        <p class="govuk-hint" style="margin-bottom: 25px;">Please indicate whether this document should be made available for public viewing on the planning register or via the public API. Select "No" if the document contains any sensitive personal information</p>
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+  </fieldset>
+  <div class="govuk-!-padding-bottom-7"></div>
+  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="pd-drawing-numbers">
+    Save
+  </a>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </fieldset>
+  </div>
+
+
+    
+
+
+    
+ 
+
+</div>
+</div>
+</div>
+
+{% endblock %}

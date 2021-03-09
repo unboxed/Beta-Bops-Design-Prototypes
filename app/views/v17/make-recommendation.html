@@ -1,0 +1,228 @@
+make-recommendation.html
+
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+              >Application</a
+            >
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        Make recommendation
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+  
+
+
+
+<! –– Rows ––>
+
+<div class="govuk-grid-row" style="clear: both; float: none;" >
+  <div class="govuk-grid-column-one-third">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+      
+    <! -- Make recommendation -->
+   <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+       
+       
+        <div class="govuk-width-container">
+          <main class="govuk-main-wrapper govuk-main-wrapper--l">
+        
+            
+            
+                <h1 class="govuk-heading-l">Make recommendation</h1>
+
+
+
+                <p class="govuk-body">
+                Your assessment:
+                </p>
+                <div
+              style="
+             background-color: #f3f2f1;
+                border: solid 1px;
+                padding: 30px;
+                clear: both;
+                margin-top: 10px;
+              "
+            >
+            <h2 class="govuk-heading-m">Summary</h2>
+            
+          
+           
+          <p class="govuk-body">
+          
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            </p>
+          
+          
+         
+      
+      <br>
+              <h2 class="govuk-heading-m">Impact on neighbours</h2>
+              <ol class="govuk-list govuk-list--number">
+                <li>
+                           <strong>Will the proposal negatively impact on the neighbours' privacy as a result of overlooking windows, terraces, or balconies?</strong>
+            <br><br>
+              <strong>
+              Slightly affect
+              </strong>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+              <br><br>
+              </li>
+                <li>
+                <strong>
+                   Will the proposal negatively impact on the neighbours' access to sunlight and/or daylight?
+              </strong>
+              <strong> <br><br>
+              Not affect
+              </strong>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+              <br><br>
+              </li>
+                <li>
+              <strong>
+                   Will the proposal negatively impact on the neighbours' sense of openness from a loss of outlook and/or through creating a sense of enclosure?
+              <br>
+              <br>
+              Not affect
+              </strong>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+              </p>
+              </li>
+               </ol>
+        
+               <h2 class="govuk-heading-m">Impact on design and heritage</h2>
+              <ol class="govuk-list govuk-list--number">
+                <li>
+                           <strong>Will the proposal negatively impact the character of the original property?</strong>
+            <br><br>
+              <strong>
+              Slightly affect
+              </strong>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+              <br><br>
+              </li>
+                <li>
+                <strong>
+                   Will the proposal negatively impact the established building line and/or roof line when viewed from the street?
+              </strong>
+              <strong> <br><br>
+              Not affect
+              </strong>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+              <br><br>
+              </li>
+                <li>
+              <strong>
+                   Will the proposal fail to enhance or conserve nearby heritage assets?
+              <br>
+              <br>
+              Not affect
+              </strong>
+              <br>
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+              </p>
+              </li>
+               </ol>
+            </div>
+        
+        <br>
+                <!--    Policy question -->
+                    <div class="govuk-form-group" style="margin-top: 20px;">
+                      <fieldset class="govuk-fieldset">
+                        <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                          <p class="govuk-fieldset">
+                            <strong>Based on your assessment, what do you recommend? </strong>
+                          </p>
+                        </legend>
+                        <div class="govuk-radios govuk-radios--small">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+                            <label class="govuk-label govuk-radios__label" for="changed-name">
+                              Approve 
+                            </label>
+                          </div>
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="year">
+                            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                              Refuse
+                            </label>
+                          </div>
+                        </div>
+                      </fieldset>
+                    </div>
+                
+
+                    <div class="govuk-button-group">
+                        <a class="govuk-button" data-module="govuk-button" href="task-list-wide.html">
+                          Save
+                        </a>
+                      
+                        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-wide.html">
+                          Cancel
+                        </a>
+                      </div>
+
+
+
+           
+            </div>
+        
+          </main>
+        </div>
+    
+  </div>
+</div>
+{% endblock %}

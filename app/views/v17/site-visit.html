@@ -1,0 +1,128 @@
+site-visit.html
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+  
+
+
+
+<! –– Rows ––>
+
+<div class="govuk-grid-row" style="clear: both; float: none;" >
+  <div class="govuk-grid-column-one-third">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <! -- site visit -->
+
+    <div style="margin-top: 10px;">
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper">
+            <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l"> Document site visit</h1>
+
+      <div style="margin-top: 60px" class="govuk-grid-row image-row">
+        <div class="govuk-grid-column-one-quarter">
+          <p>File name: IMG_0249.png </br>
+           Date uploaded: [DD MM YY]</p>
+          </p>
+          <img src="/public/images/fh-sitevis-2.jpg" style="max-width: 200px; margin-bottom: 10px;" ></br>
+        <p class="govuk-body image-text-labels"><a href="" target="_blank">View in new window</a></p> 
+
+        </div>
+        
+
+        <div class="govuk-grid-column-one-quarter">
+          <p class="govuk-body">File name: IMG_0249.png</br>
+            Date uploaded: [DD MM YY]</p>
+          <img src="/public/images/fh-sitevis-3.jpg" style="max-width: 200px; margin-bottom: 10px;" ></br>
+         
+          <p class="govuk-body image-text-labels"><a href="" target="_blank">View in new window</a></p> 
+        </div>
+
+      </div>
+    
+      
+      
+      <label class="govuk-label" for="sort" style ="margin-top: 40px;">
+        <strong>Upload images from site visit:</strong>
+    </label>
+     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+     <div style ="margin-top: 30px;">
+     <p class="govuk-body">
+      <strong>Site visit notes:</strong>
+    </p>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+
+    <div class="govuk-button-group">
+      <a class="govuk-button" data-module="govuk-button" href="task-list.html">
+        Complete
+      </a>
+    
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list.html">
+        Save as draft
+      </a>
+    </div>
+</div>
+</div>
+
+</main>
+</div>
+
+
+
+  </div>
+    
+  </div>
+</div>
+
+{% endblock %}

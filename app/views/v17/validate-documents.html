@@ -1,0 +1,147 @@
+validate-documents.html
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+     
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+            >Application</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Validate documents
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+  
+
+
+
+<! –– Rows ––>
+
+<div class="govuk-grid-row" style="clear: both; float: none;" >
+  <div class="govuk-grid-column-one-third">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds">
+    <! -- site visit -->
+
+    <div style="margin-top: 10px;">
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper">
+            <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l"> Validate documents</h1>
+          
+
+          <p>
+            Please check all the applicant's documents before proceeding.
+          </p>
+          <p><a class="govuk-link govuk-link--no-visited-state" href="manage-documents.html">Check documents</a></p>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+                <p><strong>Are the document valid?</strong></p>
+                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios"
+                  style="margin-bottom: 20px;">
+                  <div class="govuk-radios govuk-radios--small">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted"
+                        type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional" />
+                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
+                        Yes
+                      </label>
+                    </div>
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted"
+                        type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" />
+                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
+                        No
+                      </label>
+                    </div>
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                      id="conditional-how-contacted-conditional-2">
+                      <div class="govuk-form-group">
+                        <p class="govuk-body">
+                          <br />
+                          <strong>For Planning Officer:</strong> invalid documents notes.<br>
+                        </p>
+                        <p class="govuk-body">
+                          This <strong>will not</strong> appear on the decision notice.
+                        </p>
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
+                          aria-describedby="more-detail-hint"></textarea>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+            </fieldset>
+          </div>
+
+
+    <div class="govuk-button-group">
+      <a class="govuk-button" data-module="govuk-button" href="task-list-wide.html">
+        Save
+      </a>
+    
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-wide.html">
+        Back
+      </a>
+    </div>
+</div>
+</div>
+
+</main>
+</div>
+
+
+
+  </div>
+    
+  </div>
+</div>
+
+{% endblock %}
+
