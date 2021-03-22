@@ -1,0 +1,307 @@
+responses-internal-external.html
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+        >Application</a
+      >
+    </li>
+    </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Internal and external consultee responses
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+  
+
+
+
+<! –– Rows ––>
+
+<div class="govuk-grid-row" style="clear: both; float: none;" style="padding-right: 7px;" >
+  <div class="govuk-grid-column-one-third">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds" style="padding-left: 120px;">
+    <! -- site visit -->
+
+    <div style="margin-top: -30px;">
+      
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper">
+            <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l" style="margin-bottom: 30px;">Internal and external consultee responses</h1>
+
+          <hr style="height:4px;border-width:0;color:rgb(29, 112, 184);background-color:rgb(29, 112, 184)">
+         
+          <p class="govuk-heading-m" style="margin-top: 60px;">Awaiting responses<p>
+
+
+          <div class="govuk-grid-row" style="margin-top: 30px;">
+            <div class="govuk-grid-column-one-quarter">
+              <p><strong>Consultee</strong></p>
+              <p class="govuk-body">Name of Conultee</p>
+              <p class="govuk-body">Name of Conultee</p>
+            </div>
+            <div class="govuk-grid-column-one-quarter">
+                <p><strong>Status</strong></p>
+                <p class="govuk-body">Notifed</p>
+                <p class="govuk-body">Re-consulated</p>
+              </div>
+         
+            <div class="govuk-grid-column-one-quarter">
+              <p><strong>Expiry date</strong></p>
+              <p class="govuk-body"> 23 March 2021</p>
+              <p class="govuk-body"> 23 March 2021</p>
+            </div>
+          
+         
+            <div class="govuk-grid-column-one-quarter">
+              <p><strong>Days remaining</strong></p>
+              <strong class="govuk-tag govuk-tag--orange">
+                12
+              </strong></br></br>
+              <strong class="govuk-tag govuk-tag--orange">
+               12
+              </strong>
+
+            </div>
+            </div>
+        
+          
+
+
+          <h2 class="govuk-heading-m" style="margin-top: 60px;">Request further information</h2>
+          <strong class="govuk-tag govuk-tag--green">
+            1 
+          </strong>
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+  
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                    Name of consultee
+                  </span>
+                </h2>
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                  Date received: 21 March 2021
+                </div>
+              </div>
+              <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1" style="margin-bottom: 20px;">
+                  <strong class="govuk-tag govuk-tag--green">
+                      Applicant notified 
+                    </strong>
+                 
+                  
+                  <p class="govuk-body" style="margin-top: 20px;">
+                      <strong>Further information required:</strong> <em>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</em>
+                  </p>
+               <a class="govuk-body" href="#">View response</a>
+              </div>
+            </div>
+
+            </div>
+
+
+
+          <h2 class="govuk-heading-m" style="margin-top: 60px;">Objections</h2>
+          <strong class="govuk-tag govuk-tag--green">
+            3 
+          </strong>
+        
+          
+<div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections">
+  
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+          Name of consultee
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        Date received: 21 March 2021
+      </div>
+    </div>
+    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1" style="margin-bottom: 20px;">
+        <strong class="govuk-tag govuk-tag--red">
+            Tag Name
+          </strong>
+          <strong class="govuk-tag govuk-tag--red">
+            Tag Name
+          </strong>
+        
+        <p class="govuk-body" style="margin-top: 20px;">
+            <strong>Objection:</strong> <em>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</em>
+        </p>
+     <a class="govuk-body" href="#">View response</a>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+          Name of consultee
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        Date received: 21 March 2021
+      </div>
+    </div>
+    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1" style="margin-bottom: 20px;">
+        <strong class="govuk-tag govuk-tag--red">
+            Tag Name
+          </strong>
+          <strong class="govuk-tag govuk-tag--red">
+            Tag Name
+          </strong>
+        
+        <p class="govuk-body" style="margin-top: 20px;">
+            <strong>Objection:</strong> <em>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</em>
+        </p>
+     <a class="govuk-body" href="#">View response</a>
+    </div>
+  </div>
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+      <h2 class="govuk-accordion__section-heading">
+        <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+          Name of consultee
+        </span>
+      </h2>
+      <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+        Date received: 21 March 2021
+      </div>
+    </div>
+    <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1" style="margin-bottom: 20px;">
+        <strong class="govuk-tag govuk-tag--red">
+            Tag Name
+          </strong>
+          <strong class="govuk-tag govuk-tag--red">
+            Tag Name
+          </strong>
+        
+        <p class="govuk-body" style="margin-top: 20px;">
+            <strong>Objection:</strong> <em>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</em>
+        </p>
+     <a class="govuk-body" href="#">View response</a>
+    </div>
+  </div>
+  
+</div>
+          <h2 class="govuk-heading-m" style="margin-top: 60px;">No objections</h2>
+          <strong class="govuk-tag govuk-tag--green">
+            1 
+          </strong>
+
+          <div class="govuk-accordion" data-module="govuk-accordion" id="accordion-with-summary-sections" >
+  
+            <div class="govuk-accordion__section ">
+              <div class="govuk-accordion__section-header">
+                <h2 class="govuk-accordion__section-heading">
+                  <span class="govuk-accordion__section-button" id="accordion-with-summary-sections-heading-1">
+                    Name of consultee
+                  </span>
+                </h2>
+                <div class="govuk-accordion__section-summary govuk-body" id="accordion-with-summary-sections-summary-1">
+                  Date received: 21 March 2021
+                </div>
+              </div>
+              <div id="accordion-with-summary-sections-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-with-summary-sections-heading-1" style="margin-bottom: 20px;">
+                  <strong class="govuk-tag govuk-tag--green">
+                      Applicant notified 
+                    </strong>
+                 
+                  
+                  <p class="govuk-body" style="margin-top: 20px;">
+                      <strong>No objection:</strong> <em>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</em>
+                  </p>
+               <a class="govuk-body" href="#">View response</a>
+              </div>
+            </div>
+
+            </div>
+
+
+          <h2 class="govuk-heading-m" style="margin-top: 60px;">Suggested conditions</h2>
+
+        
+          <ul class="govuk-list govuk-list--bullet" style="margin-left: 30px;">
+            <li>Materials to be as specified</li>
+           
+          </ul>
+
+
+          <div class="govuk-form-group" style="padding-top: 60px;">
+            <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail" style="margin-bottom: 20px;">
+                Summarise consultee responses for the report
+              </label>
+            </h2>
+          
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          </div>
+          <div class="govuk-button-group">
+            <a class="govuk-button" data-module="govuk-button" href="task-list.html">
+              Complete
+            </a>
+          
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list.html">
+              Save as draft
+            </a>
+          </div>
+</main>
+</div>
+
+
+
+
+  </div>
+    
+  </div>
+</div>
+
+{% endblock %}

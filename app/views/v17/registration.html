@@ -1,4 +1,4 @@
-validate-documents.html
+registration.html
 {% extends "layout.html" %} 
 {% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
 {% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
@@ -73,12 +73,12 @@ validate-documents.html
         <div class="govuk-width-container">
             <main class="govuk-main-wrapper">
             <div class="govuk-grid-column-full">
-          <h1 class="govuk-heading-l" > Validate documents</h1>
+          <h1 class="govuk-heading-l" > Register documents</h1>
 
     
           
           <p style="padding-top: 10px;">
-            Please check all documents meet the requirements for validation before proceeding.
+            Please check that all the required documents are present.
           </p>
          
     
@@ -95,38 +95,45 @@ validate-documents.html
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                   <strong>Location plan</strong> 
-                   <div id="waste-hint" class="govuk-hint" style="margin-top: 10px;">
-                 Scale is 1:1250 or 1:2500. Application site, all access and any proposed dropped kerb / crossover are outlined in red. There is only one red edged area. It matches any other red-edged area on other plans received. Adjoining or nearby land also owned by the applicant is outlined in blue. </div>
-                  </label>
+                   Location plan
+                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
                   <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="site-block-plan">
                   <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                   <strong>Site / Block Plan</strong> 
-                   <div id="waste-hint" class="govuk-hint" style="margin-top: 10px;">
-                   Only required if the footprint of the building is changing. Scale is 1:200 or 1:500. Plan shows the proposed development in relation to site boundaries and existing dwelling (usually done by shading/hatching etc.). Drop kerb / crossover applications must include the area of kerb concerned. There is only one red edged area. It matches any other red-edged area on other plans. </label>
-                </div>
+                   Site / Block Plan
+                   </label>
                 </div>
                 <div class="govuk-checkboxes__item">
-                  <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                  <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                   <strong>Proposed elevations</strong> 
-                   <div id="waste-hint" class="govuk-hint" style="margin-top: 10px;">
-                    Scale is 1:50 or 1:100. Proposed works clearly shown in relation to the existing dwelling.</div>
-                  </label>
-              
-              </div>
-              <div class="govuk-checkboxes__item">
-                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
-                <label class="govuk-label govuk-checkboxes__label" for="organisation">
-                 <strong>Proposed floor plans</strong> 
-                 <div id="waste-hint" class="govuk-hint" style="margin-top: 10px;">
-                  Scale is 1:50 or 1:100. Proposed works clearly shown in relation to the existing dwelling</div>
-                </label>
-              </div>
-           
-          
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="site-block-plan">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                     Ownership certificate
+                     </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="site-block-plan">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                     Fee
+                     </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="site-block-plan">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                     Existing and proposed elevations
+                     </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="site-block-plan">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                    Existing and proposed floor plans
+                     </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="site-block-plan">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                     Additional document
+                     </label>
+                  </div>
             </fieldset>
           </div>
 
@@ -142,35 +149,7 @@ validate-documents.html
               <input id="planning-application-status-in-assessment-field" class="govuk-radios__input" type="radio" value="in_assessment" name="planning_application[status]" aria-controls="planning-application-status-in-assessment-conditional" aria-expanded="false">
               <label for="planning-application-status-in-assessment-field" class="govuk-label govuk-radios__label">Yes</label>
             </div>
-            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="planning-application-status-in-assessment-conditional">
-              <div class="govuk-form-group">
-                <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
-                  
-                  <span class="govuk-hint" id="planning-application-documents-validated-at-hint">Please add the date the application was valid, e.g. 28 12 2021</span>
-                  <div class="govuk-date-input">
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_3i">Day</label>
-                        <input id="planning_application_documents_validated_at_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="planning_application[documents_validated_at(3i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
-                      </div>
-                    </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_2i">Month</label>
-                        <input id="planning_application_documents_validated_at_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="planning_application[documents_validated_at(2i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="3">
-                      </div>
-                    </div>
-                    <div class="govuk-date-input__item">
-                      <div class="govuk-form-group">
-                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_1i">Year</label>
-                        <input id="planning_application_documents_validated_at_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="planning_application[documents_validated_at(1i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="2021">
-                      </div>
-                    </div>
-                  </div>
-                </fieldset>
-              </div>
-
-    </div>
+         
     <div class="govuk-radios__item"><input id="planning-application-status-invalidated-field" class="govuk-radios__input" type="radio" value="invalidated" name="planning_application[status]"><label for="planning-application-status-invalidated-field" class="govuk-label govuk-radios__label">No</label>
     </div>
     </div>

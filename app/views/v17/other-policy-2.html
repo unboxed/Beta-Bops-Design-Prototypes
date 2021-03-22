@@ -1,4 +1,4 @@
-other-policy.html
+other-policy-2.html
 {% extends "layout.html" %} 
 {% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
 {% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
@@ -109,14 +109,50 @@ other-policy.html
               </div>
               </div>
             </div><br>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    
+
+            <div style="margin-top: 60px;">
+                <div>
+                  <p class="govuk-body">
+                    <strong>Add title</strong>
+                    </p>
+                  <input class="govuk-input" id="event-name" name="event-name" type="text">
+                   
+                <div class="govuk-radios govuk-radios--inline" style="padding-top: 15px;">
+                  <div class="govuk-radios govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                      Significantly affect
+                    </label>
+                  </div>
+                    </div>
+                <div class="govuk-radios govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                      Slightly affect
+                    </label>
+                  </div>
+                  <div class="govuk-radios govuk-radios--small">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                      Not affect
+                    </label>
+                  </div>
+                  </div>
+                  </div>
+                </div><br>
                     
                     <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-                    
+    
                     <div class="govuk-body" style="padding-top: 40px;">
-                      <a class="govuk-link" href="other-policy-2.html" >
-                       Add new policy consideration
-                      </a>
-                      </div>
+                    <a class="govuk-link" href="" >
+                     Add new policy consideration
+                    </a>
+                    </div>
       
             </div>
             </div>
