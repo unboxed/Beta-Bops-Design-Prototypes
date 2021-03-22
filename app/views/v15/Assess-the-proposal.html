@@ -15,7 +15,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
 
 <! –– Header ––>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-width-container">
     {# <form action="/refuse-or-approve" method="post" class="form"> #}
       <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
         <ol class="govuk-breadcrumbs__list">
@@ -32,20 +32,27 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
         </ol>
       </div>
       <div>
-      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
-      0000600
-      </h1>
-      <h2 class="govuk-heading-m" style="margin-bottom: 18px;">
-        150 Bellenden Road London SE15 4QY
-      </h2>
-      <p>
-        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
-      </p>
-      <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-      <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+        <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+          0000600
+        </h1>
+        <p class="govuk-body">
+          Certificate of lawfulness (proposed) for the construction of a single storey side extension.
+        </p>
+        <p class="govuk-body">
+          150 Bellenden Road London SE15 4QY
+        </p>
+        <p>
+          <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+        </p>
+        <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+        
+      </div>
+    </div> 
     </div>
-      <! –– Application detail blocks ––>
-      {{ leftaccordion() }}
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <! –– Application detail blocks ––>
+        {{ leftaccordion() }}
 
       
       <! –– Left panel with tasks and map ––>
@@ -53,7 +60,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
       Assess the proposal
       </h2>
       <p class="govuk-body">
-        Please check the applicant's answers and the proposal documents have met permitted development requirements.
+        Please check the applicant's answers and proposal documents have met permitted development requirements.
       </p>
       <div class="govuk-!-padding-bottom-3"></div>
 
@@ -132,11 +139,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
   <! –– Right panel with additional information in accordion ––>
   
   <div class="govuk-grid-column-one-third">
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-9"></div>
-    <div class="govuk-!-padding-bottom-8"></div>
+    
    {{ rightaccordion() }}
   </div>
 {% endblock %}
