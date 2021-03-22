@@ -26,8 +26,14 @@ site-visit.html
             >Home</a
           >
         </li>
+        <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+        >Application</a
+      >
+    </li>
+    </li>
         <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Application
+          Site visit
         </li>
       </ol>
     </div>
@@ -53,26 +59,26 @@ site-visit.html
 
 <! –– Rows ––>
 
-<div class="govuk-grid-row" style="clear: both; float: none;" >
+<div class="govuk-grid-row" style="clear: both; float: none;" style="padding-right: 7px;" >
   <div class="govuk-grid-column-one-third">
     <! –– Application detail blocks ––>
     {{ leftaccordion() }}
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds" style="padding-left: 120px;">
     <! -- site visit -->
 
-    <div style="margin-top: 10px;">
-        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+    <div style="margin-top: -30px;">
+      
         <div class="govuk-width-container">
             <main class="govuk-main-wrapper">
             <div class="govuk-grid-column-full">
           <h1 class="govuk-heading-l"> Document site visit</h1>
 
       <div style="margin-top: 60px" class="govuk-grid-row image-row">
-        <div class="govuk-grid-column-one-quarter">
-          <p>File name: IMG_0249.png </br>
-           Date uploaded: [DD MM YY]</p>
+        <div class="govuk-grid-column-one-third">
+          <p>File name: IMG-0249.png </br>
+           [DD MM YY]</p>
           </p>
           <img src="/public/images/fh-sitevis-2.jpg" style="max-width: 200px; margin-bottom: 10px;" ></br>
         <p class="govuk-body image-text-labels"><a href="" target="_blank">View in new window</a></p> 
@@ -80,9 +86,17 @@ site-visit.html
         </div>
         
 
-        <div class="govuk-grid-column-one-quarter">
-          <p class="govuk-body">File name: IMG_0249.png</br>
-            Date uploaded: [DD MM YY]</p>
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">File name: IMG-0249.png</br>
+           [DD MM YY]</p>
+          <img src="/public/images/fh-sitevis-3.jpg" style="max-width: 200px; margin-bottom: 10px;" ></br>
+         
+          <p class="govuk-body image-text-labels"><a href="" target="_blank">View in new window</a></p> 
+        </div>
+
+        <div class="govuk-grid-column-one-third">
+          <p class="govuk-body">File name: IMG-0249.png</br>
+           [DD MM YY]</p>
           <img src="/public/images/fh-sitevis-3.jpg" style="max-width: 200px; margin-bottom: 10px;" ></br>
          
           <p class="govuk-body image-text-labels"><a href="" target="_blank">View in new window</a></p> 

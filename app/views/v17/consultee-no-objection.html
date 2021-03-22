@@ -1,0 +1,134 @@
+consultee-no-objection.html
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% from "./customnjk/document-options.njk"  import document_options_checkbox %}
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+            >Application</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="responses-internal-external.html"
+            >Internal and external consultee responses </a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Consultee response
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
+      20/AP/0870
+    </h1>
+    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA
+    </h2>
+    <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+      </p>
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+  
+    
+      
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+              <h1 class="govuk-heading-l">  [Name of consultee]</h1>
+              <p class="govuk-body">Response received: 21 March 2021</p>
+              <strong class="govuk-tag govuk-tag--red">
+                Objection
+               </strong>
+
+          
+                    
+                    <div class="govuk-form-group " style="padding-top: 30px;">
+                        <fieldset class="govuk-fieldset">
+                          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                            <h4 class="govuk-heading-s">What actions have been completed?</h4>
+                            <div class="govuk-checkboxes govuk-checkboxes--small">
+                          
+                          </legend>
+                          {{ document_options_checkbox("Request additional informaiton/ updates from applicant") }}
+                          {{ document_options_checkbox("REAR") }}
+                          {{ document_options_checkbox("SIDE") }}
+                   
+                        
+                      </div>
+                      </fieldset>
+                      </div>
+                
+        
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-heading-m"> Summary of planning policy / guidence</p>
+    
+          <p class="govuk-body">This application was assessed againtst Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+      
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-heading-m"> Clarification or addtional information required</p>
+          <p class="govuk-body">None.</p>
+      
+
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-heading-m">Reason for objection</p>
+
+          <p class="govuk-body">Objecttion due to Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.</p>
+          
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-heading-m">Reason for no objection</p>
+
+          <p class="govuk-body">None.</p>
+      
+          <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+          <p class="govuk-heading-m">Request further information/ action from consultee?</p>
+
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+          <button class="govuk-button" data-module="govuk-button">
+            Send
+          </button>
+         
+          <div>
+
+
+        </div>
+    </div>
+  
+
+
+</div>
+
+{% endblock %}

@@ -1,0 +1,413 @@
+update-constraints-2.html
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a>
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Edit details
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      0000600
+    </h1>
+    <h2 class="govuk-heading-m">
+      150 Bellenden Road London SE15 4QY
+    </h2>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+  </div>
+</div>  
+<div>
+<h2 class="govuk-heading-l" style="margin-top: 40px;">
+    Constraints
+  </h2>
+  <div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">General Policy</h3>
+    <div>
+   
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="general-policy" name="general-policy" type="checkbox" value="article-4-area">
+          <label class="govuk-label govuk-checkboxes__label" for="general-policy">
+            Article 4 Area
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="general-policy" name="general-policy" type="checkbox" value="green-belt">
+          <label class="govuk-label govuk-checkboxes__label" for="general-policy">
+            Green belt
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+
+<div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Heritage & conservation</h3>
+    <div>
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="heritage-&-conservation" name="heritage-&-conservation" type="checkbox" value="listed-building">
+          <label class="govuk-label govuk-checkboxes__label" for="heritage-&-conservation">
+            Listed building
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="heritage-&-conservation" name="heritage-&-conservation" type="checkbox" value="conservation-area">
+          <label class="govuk-label govuk-checkboxes__label" for="heritage-&-conservation">
+            Conservation Area
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" >
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="heritage-&-conservation" name="heritage-&-conservation" type="checkbox" value="area-of-outstanding-natural-beauty">
+          <label class="govuk-label govuk-checkboxes__label" for="heritage-&-conservation">
+            Area of Outstanding Natural Beauty
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" >
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="heritage-&-conservation" name="heritage-&-conservation" type="checkbox" value="national-park">
+          <label class="govuk-label govuk-checkboxes__label" for="heritage-&-conservation">
+            National Park
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" >
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="heritage-&-conservation" name="heritage-&-conservation" type="checkbox" value="broads">
+          <label class="govuk-label govuk-checkboxes__label" for="heritage-&-conservation">
+            Broads
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" >
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="heritage-&-conservation" name="heritage-&-conservation" type="checkbox" value="world-heritage-site">
+          <label class="govuk-label govuk-checkboxes__label" for="heritage-&-conservation">
+            World Heritage Site
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>  
+
+<div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Trees</h3>
+    <div>
+   
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="trees" name="trees" type="checkbox" value="tree-preservation-order">
+          <label class="govuk-label govuk-checkboxes__label" for="trees">
+            Tree Preservation Order
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+
+
+<div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Ecology</h3>
+<div>
+   
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="ecology" name="ecology" type="checkbox" value="special-area-of-donservation-(SAC)">
+          <label class="govuk-label govuk-checkboxes__label" for="ecology">
+            Special Area of Conservation (SAC)
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="ecology" name="ecology" type="checkbox" value="site-of-special-scientific-interest-(SSSI)">
+          <label class="govuk-label govuk-checkboxes__label" for="ecology">
+            Site of Special Scientific Interest (SSSI)
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="ecology" name="ecology" type="checkbox" value="ancient-semi-natural-woodland-(ASNW)">
+          <label class="govuk-label govuk-checkboxes__label" for="ecology">
+            Ancient Semi-Natural Woodland (ASNW)
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="ecology" name="ecology" type="checkbox" value="local-wildlife-biological-notification-site">
+          <label class="govuk-label govuk-checkboxes__label" for="ecology">
+            Local Wildlife / Biological notification site
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="ecology" name="ecology" type="checkbox" value="priority-habitat">
+          <label class="govuk-label govuk-checkboxes__label" for="ecology">
+            Priority habitat
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+
+<div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Flooding</h3>
+    <div>
+   
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="flooding" name="flooding" type="checkbox" value="flood-zone">
+          <label class="govuk-label govuk-checkboxes__label" for="flooding">
+            Flood zone
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="flooding" name="flooding" type="checkbox" value="flood-zone-1">
+          <label class="govuk-label govuk-checkboxes__label" for="flooding">
+            Flood zone 1
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="flooding" name="flooding" type="checkbox" value="flood-zone-2">
+          <label class="govuk-label govuk-checkboxes__label" for="flooding">
+            Flood zone 2
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" >
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="flooding" name="flooding" type="checkbox" value="flood-zone-3">
+          <label class="govuk-label govuk-checkboxes__label" for="flooding">
+            Flood zone 3
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+
+<div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Military and defence</h3>
+    <div>
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="military-and-defence" name="military-and-defence" type="checkbox" value="explosives-&-ordnance-storage">
+          <label class="govuk-label govuk-checkboxes__label" for="military-and-defence">
+            Explosives & ordnance storage
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="flooding" name="flooding" type="checkbox" value="safeguarded-land">
+          <label class="govuk-label govuk-checkboxes__label" for="flooding">
+            Safeguarded land
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+
+<div style="margin-top: 60px;">
+    <h3 class="govuk-heading-s" style="margin-bottom: 15px;">Other</h3>
+    <div>
+</div>
+  <div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="other" name="other" type="checkbox" value="safety-hazard-area">
+          <label class="govuk-label govuk-checkboxes__label" for="other">
+            Safety hazard area
+          </label>
+        </div>
+  </div>
+</div>
+<div class="govuk-grid-column-full">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div>
+<div class="govuk-grid-column-full">
+    <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="other" name="other" type="checkbox" value="within-3km-of-the-permiter-of-an-aerodrome">
+          <label class="govuk-label govuk-checkboxes__label" for="other">
+            Within 3km of the permiter of an aerodrome
+          </label>
+        </div>
+  </div>
+ </div>
+ <div class="govuk-grid-column-full" style="margin-bottom: 60px;">
+    <hr class="govuk-section-break govuk-section-break--visible">
+</div> 
+
+
+
+<div>
+    <h3 class="govuk-heading-s" style="margin-bottom: 25px;">Local constraints</h3>
+    <div style="padding-left: 10px;">
+        <div class="govuk-form-group">
+          <p>
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </p>
+          <p>
+            <input class="govuk-input" id="event-name" name="event-name" type="text">
+          </p>
+
+  <p> 
+      <a class="govuk-button" data-module="govuk-button" href="update-constraints-2.html">
+          Add
+        </a>
+  </p>             
+</div>
+</div>
+
+
+
+  <div style="margin-top: 60px;">
+  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html">
+    Save
+  </a>
+  <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-hp.html">
+    Cancel
+  </a>
+  </div>
+</div>
+          
+  {% endblock %}

@@ -37,9 +37,7 @@ task-list-wide.html
     <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
       1 Rycott Path, East Dulwich, SE22 0AA
     </h2>
-    <p>
-        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
-      </p>
+ 
       <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
       
 
@@ -54,14 +52,15 @@ task-list-wide.html
 <! –– Rows ––>
 
 <div class="govuk-grid-row" style="clear: both; float: none;">
-  <div class="govuk-grid-column-one-third">
+  <div class="govuk-grid-column-one-third" style="padding-right: 7px;">
     <! –– Application detail blocks ––>
     {{ leftaccordion() }}
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
+  <div class="govuk-grid-column-two-thirds" style="padding-left: 120px;">
     <! -- Task List -->
       <div  style="margin-top: 10px;">
+
       {{ tasklist() }}
   </div>
   </div>
