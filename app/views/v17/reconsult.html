@@ -1,0 +1,216 @@
+reconsult.html
+
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+      20/AP/0870 
+    </h1>
+  
+      <p class="govuk-body-m" style="margin-bottom: 20px;">
+      Full householder: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA </p>
+
+      <p>
+        <strong class="govuk-tag govuk-tag--blue">In assessment</strong> Target date: 12 June 2021
+      </p>
+ 
+      <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+
+</div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+ 
+    <h2 class="govuk-heading-l">
+      Reconsult consultee
+    </h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body" style="line-height: 1.6;">
+          Please select the updated document
+        </p>
+
+    
+      </div>
+   
+    </div>
+    <ul class="app-task-list">
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+            <div class="govuk-checkboxes" style="margin-top: 20px;">
+                <div class="govuk-checkboxes__item">
+                  <input class="govuk-checkboxes__input" id="image-1" name="image-1" type="checkbox" value="carcasses" style="margin-top: 100px;">
+                  <label class="govuk-label govuk-checkboxes__label" for="image-1" >
+                    
+            
+
+                            <p style="margin-top: 0px; margin-left: 40px;">
+                                <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png" style="width:100px; border: solid 1px #eeeeee"/>
+                                </p>
+                    
+                                <p style="margin-left: 40px;">
+                                
+                                  <a href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf" target="_blank" >View PDF in new window</a>
+                                
+                                </p>
+                            </label>
+                        </div>
+                        </div>
+                        </div>
+          
+          <div  class="govuk-grid-column-two-third" style="float: left; margin-top: 20px;">
+            <p>
+               <strong class="govuk-tag govuk-tag--turquoise">Section</strong> 
+               <strong class="govuk-tag govuk-tag--turquoise">elevation</strong>
+               <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+              </p>
+            
+              <p class="govuk-body"> 
+              File name: PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS.pdf</br>
+              Date received: [DD MM YYYY]
+            </p>
+          </div>
+          
+          
+        </li>
+        <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-checkboxes" style="margin-top: 20px;">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="image-2" name="image-2" type="checkbox" value="carcasses" style="margin-top: 100px;">
+                    <label class="govuk-label govuk-checkboxes__label" for="image-2" >
+                      
+              
+  
+                              <p style="margin-top: 0px; margin-left: 40px;">
+                                  <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png" style="width:100px; border: solid 1px #eeeeee"/>
+                                  </p>
+                      
+                                  <p style="margin-left: 40px;">
+                                  
+                                    <a href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf" target="_blank" >View PDF in new window</a>
+                                  
+                                  </p>
+                              </label>
+                          </div>
+                          </div>
+                          </div>
+            
+            <div  class="govuk-grid-column-two-third" style="float: left; margin-top: 20px;">
+              <p>
+                 <strong class="govuk-tag govuk-tag--turquoise">Section</strong> 
+                 <strong class="govuk-tag govuk-tag--turquoise">elevation</strong>
+                 <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+                </p>
+              
+                <p class="govuk-body"> 
+                File name: PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS.pdf</br>
+                Date received: [DD MM YYYY]
+              </p>
+            </div>
+            
+            
+          </li>
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-third">
+              <div class="govuk-checkboxes" style="margin-top: 20px;">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="image-3" name="image-3" type="checkbox" value="carcasses" style="margin-top: 100px;">
+                    <label class="govuk-label govuk-checkboxes__label" for="image-3" >
+                      
+              
+  
+                              <p style="margin-top: 0px; margin-left: 40px;">
+                                  <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png" style="width:100px; border: solid 1px #eeeeee"/>
+                                  </p>
+                      
+                                  <p style="margin-left: 40px;">
+                                  
+                                    <a href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf" target="_blank" >View PDF in new window</a>
+                                  
+                                  </p>
+                              </label>
+                          </div>
+                          </div>
+                          </div>
+            
+            <div  class="govuk-grid-column-two-third" style="float: left; margin-top: 20px;">
+              <p>
+                 <strong class="govuk-tag govuk-tag--turquoise">Section</strong> 
+                 <strong class="govuk-tag govuk-tag--turquoise">elevation</strong>
+                 <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+                </p>
+              
+                <p class="govuk-body"> 
+                File name: PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS.pdf</br>
+                Date received: [DD MM YYYY]
+              </p>
+            </div>
+            
+            
+          </li>
+       
+          
+     
+          </div>
+      </ul>
+    </div>
+
+
+      <div class="govuk-form-group" style="margin-top: 60px;">
+        <h2 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            Please indicate the reason for reconsultation:
+          </label>
+        </h2>
+   
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
+      <div class="govuk-button-group">
+        <a class="govuk-button" data-module="govuk-button"  href="responses-internal-external.html">
+          Send
+      </a>
+      
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button"  href="consultee-no-objection.html">
+          Cancel
+        </a>
+      </div>
+
+      
+</div>
+
+{% endblock %}

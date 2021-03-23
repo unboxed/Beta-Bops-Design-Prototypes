@@ -20,76 +20,82 @@
           </li>
         </ol>
       </div>
-      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+      <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
         0000600
       </h1>
-      <h2 class="govuk-heading-m">
-        150 Bellenden Road London SE15 4QY
-      </h2>
-      <p>
-        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+      <p class="govuk-body">
+        Certificate of lawfulness (proposed) for the construction of a single storey side extension.
       </p>
-      <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state"
-          href="assign-application">Change</a></p>
-      <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+      <p class="govuk-body">
+        150 Bellenden Road London SE15 4QY
+      </p>
+      <p>
+        <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+      </p>
+      <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
     </div>
-  </div>
+  </div> 
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <! –– Application detail blocks ––>
         {{ leftaccordion() }}
         <div>
-          <h2 class="govuk-heading-m">Validate documents</h2>
-          <p>
-            Please check all the applicant's documents before proceeding.
-          </p>
+          <h2 class="govuk-heading-m">Validate application</h2>
+          
           <p><a class="govuk-link govuk-link--no-visited-state" href="pd-drawing-numbers.html">Check documents</a></p>
-          <div class="govuk-form-group">
-            <fieldset class="govuk-fieldset">
-              <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
-                <p><strong>Are the document valid?</strong></p>
-                <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios"
-                  style="margin-bottom: 20px;">
-                  <div class="govuk-radios govuk-radios--small">
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="how-contacted-conditional" name="how-contacted"
-                        type="radio" value="email" data-aria-controls="conditional-how-contacted-conditional" />
-                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional">
-                        Yes
-                      </label>
-                    </div>
-                    <div class="govuk-radios__item">
-                      <input class="govuk-radios__input" id="how-contacted-conditional-2" name="how-contacted"
-                        type="radio" value="phone" data-aria-controls="conditional-how-contacted-conditional-2" />
-                      <label class="govuk-label govuk-radios__label" for="how-contacted-conditional-2">
-                        No
-                      </label>
-                    </div>
-                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden"
-                      id="conditional-how-contacted-conditional-2">
+          <fieldset class="govuk-fieldset">
+            <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" style="margin-bottom: 10px;">Is the application valid?</legend>
+            <p id="waste-hint" class="govuk-hint" style="margin-top: 10px;">
+              If the application is invalid, please contact the applicant via email.
+      
+            </p>
+            <div class="govuk-radios" data-module="govuk-radios" style="margin-top: 10px;">
+            <div class="govuk-radios__item">
+              <input id="planning-application-status-in-assessment-field" class="govuk-radios__input" type="radio" value="in_assessment" name="planning_application[status]" aria-controls="planning-application-status-in-assessment-conditional" aria-expanded="false">
+              <label for="planning-application-status-in-assessment-field" class="govuk-label govuk-radios__label">Yes</label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="planning-application-status-in-assessment-conditional">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
+                  
+                  <span class="govuk-hint" id="planning-application-documents-validated-at-hint">Enter valid date, e.g. 28 12 2021</span>
+                  <div class="govuk-date-input">
+                    <div class="govuk-date-input__item">
                       <div class="govuk-form-group">
-                        <p class="govuk-body">
-                          <br />
-                          <strong>For Planning Officer:</strong> invalid documents notes.<br>
-                        </p>
-                        <p class="govuk-body">
-                          This <strong>will not</strong> appear on the decision notice.
-                        </p>
-                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="3"
-                          aria-describedby="more-detail-hint"></textarea>
+                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_3i">Day</label>
+                        <input id="planning_application_documents_validated_at_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="planning_application[documents_validated_at(3i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_2i">Month</label>
+                        <input id="planning_application_documents_validated_at_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="planning_application[documents_validated_at(2i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="3">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_1i">Year</label>
+                        <input id="planning_application_documents_validated_at_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="planning_application[documents_validated_at(1i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="2021">
                       </div>
                     </div>
                   </div>
-                </div>
-            </fieldset>
-          </div>
+                </fieldset>
+              </div>
 
+    </div>
+    <div class="govuk-radios__item"><input id="planning-application-status-invalidated-field" class="govuk-radios__input" type="radio" value="invalidated" name="planning_application[status]"><label for="planning-application-status-invalidated-field" class="govuk-label govuk-radios__label">No</label>
+    </div>
+    </div>
+  </fieldset>
+<div style="margin-top: 30px;">
           <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html">
             Save
           </a>
           <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-hp.html">
             Cancel
           </a>
+        </div>
         </div>
 
     </div>
