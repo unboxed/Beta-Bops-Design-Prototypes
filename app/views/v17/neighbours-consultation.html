@@ -1,0 +1,236 @@
+neighbours-consultation.html
+{% extends "layout.html" %} 
+{% from "./customnjk/left-accordion-fh-v11-af-wide.njk" import leftaccordion %} 
+{% from "./customnjk/full-householder-task-list-incomplete-v11.njk" import tasklist %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding-widescreen.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+<! –– Header ––>
+<div style="display: block; float: left;">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+              >Application</a
+            >
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Facilitate public consultation
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+        20/AP/0870 
+      </h1>
+    
+        <p class="govuk-body-m" style="margin-bottom: 20px;">
+        Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+      </p>
+      <p class="govuk-body-m" style="margin-bottom: 20px;">
+        1 Rycott Path, East Dulwich, SE22 0AA </p>
+  
+        <p>
+          <strong class="govuk-tag govuk-tag--blue">In assessment</strong> Target date: 12 June 2021
+        </p>
+   
+        <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+        
+  
+  </div>
+
+    <! –– Right panel with additional information in accordion ––>
+ 
+  
+
+
+
+<! –– Rows ––>
+
+<div class="govuk-grid-row" style="clear: both; float: none;" style="padding-right: 7px;">
+  <div class="govuk-grid-column-one-third">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+  </div>
+
+  <div class="govuk-grid-column-two-thirds" style="padding-left: 120px;">
+    <! -- Facilitate public consultation -->
+
+    <div style="margin-top: -30px;">
+  
+        <div class="govuk-width-container">
+            <main class="govuk-main-wrapper">
+            <div class="govuk-grid-column-full">
+          <h1 class="govuk-heading-l">Facilitate public consultation</h1>
+
+          <div class="govuk-form-group" style="margin-top: 50px;">
+            <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+              <legend class="govuk-fieldset__legend">
+                <strong>Please select the start date for public consultation</strong> 
+              </legend>
+              <div id="passport-issued-hint" class="govuk-hint">
+                For example, 12 11 2007
+              </div>
+              <div class="govuk-date-input" id="passport-issued">
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                      Day
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                      Month
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+                <div class="govuk-date-input__item">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                      Year
+                    </label>
+                    <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+
+          <button class="govuk-button" data-module="govuk-button" style="margin-top: 10px;">
+            Save
+          </button>
+          <! –– Letter ––>
+      
+          <div
+            style="
+              background-color: #ffffff;
+              border: solid 1px;
+              padding: 30px;
+              clear: both;
+              margin-top: 10px;
+            "
+          >
+          <p class="govuk-caption-xl" style="margin-top: 20px;">[COUNCIL NAME]</p>
+            <h2 class="govuk-heading-xl" style="margin-top: 15px;">PLANNING NOTICE</h2>
+            
+            <p class="govuk-heading-s" style="margin-top: 15px;">
+              Notice under Article 13 of the Town and Country Planning (General Development Procedure)
+        (England) Order 2010 (and associated legislation)
+            </p>
+            <hr
+              class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+            />
+            <p class="govuk-body">
+                An application has been received for the following development:
+              </p>
+      
+    
+            <p class="govuk-body" style="margin-top: 40px;">
+                <strong>Proposal:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; Proposed two storey side extension, new front shed, floor 
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                plan redesign and all associated works at 1 Rycott Path.<br />
+            </p>
+         
+            <p class="govuk-body">
+              <strong>At:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;1 Rycott Path, East Dulwich, SE22 0AA<br />
+            </p>
+         
+            <p class="govuk-body">
+              <strong>By:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 
+              &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; 
+              &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;Alberto Ochoa<br />
+            </p>
+           
+            <p class="govuk-body">
+              <strong>Application reference:</strong> &nbsp; &nbsp; &nbsp; &nbsp;
+              &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; 00005500<br />
+            </p>
+            
+           
+            <hr
+            class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+          />
+            <p class="govuk-body">
+              <strong
+                >View plans and dococuments at:<br/>
+              </strong>
+              </p>
+              <p class="govuk-body">
+                Website address: www.council.name@bops.gov
+            </p>
+            <p class="govuk-body">
+                <strong
+                  >Using reference:<br/>
+                </strong>
+                </p>
+                <p class="govuk-body">
+                    00005500
+              </p>
+              <hr
+              class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+            />
+              <p class="govuk-body">
+                Comments must be received by <strong>[DD MM YYYY].</strong> This notice will be removed after this date.
+          </p>
+        
+            
+          </div>
+          <br />
+      
+          <!--        Question-->
+      
+          <p class="govuk-body"><strong>Download and print site notice. </strong> Attach to closest lamp post to site address.</p>
+      
+          <a
+            class="govuk-button"
+            data-module="govuk-button"
+            href=""
+            >Download</a
+          >
+        </div>
+      
+    
+            
+  
+</div>
+</div>
+
+</main>
+</div>
+
+
+
+  </div>
+    
+  </div>
+</div>
+
+{% endblock %}
