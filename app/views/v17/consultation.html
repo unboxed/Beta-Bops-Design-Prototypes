@@ -26,25 +26,35 @@ consultation.html
             >Home</a
           >
         </li>
+        <li class="govuk-breadcrumbs__list-item">
+        <a class="govuk-breadcrumbs__link" href="task-list-wide.html"
+        >Application
+        </a
+      >
+    </li>
         <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Application
+          Facilitate internal and external consultation 
         </li>
       </ol>
     </div>
-    <h1 class="govuk-heading-xl" style="margin-bottom: 7px;">
-      20/AP/0870
+    <h1 class="govuk-heading-xl" style="margin-bottom: 20px;">
+      20/AP/0870 
     </h1>
-    <h2 class="govuk-heading-m" style="margin-bottom: 20px;">
-      1 Rycott Path, East Dulwich, SE22 0AA
-    </h2>
-    <p>
-        <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 30 days remaining
+  
+      <p class="govuk-body-m" style="margin-bottom: 20px;">
+      Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body-m" style="margin-bottom: 20px;">
+      1 Rycott Path, East Dulwich, SE22 0AA </p>
+    </p>
+      <p>
+        <strong class="govuk-tag govuk-tag--blue">In assessment</strong> Target date: 12 June 2021
       </p>
+ 
       <p style="margin-bottom: 70px;">Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
       
 
 </div>
-
     <! –– Right panel with additional information in accordion ––>
  
   
@@ -53,32 +63,59 @@ consultation.html
 
 <! –– Rows ––>
 
-<div class="govuk-grid-row" style="clear: both; float: none;" >
-  <div class="govuk-grid-column-one-third">
+<div class="govuk-grid-row" style="clear: both; float: none;">
+  <div class="govuk-grid-column-one-third" style="padding-right: 7px;">
     <! –– Application detail blocks ––>
     {{ leftaccordion() }}
   </div>
 
-  <div class="govuk-grid-column-two-thirds">
+
+  <div class="govuk-grid-column-two-thirds" style="padding-left: 120px;">
     <! -- consultation -->
 
-    <div style="margin-top: 20px;">
+    <div style="margin-top: -50px;">
        
        
        
-        <div class="govuk-width-container">
-          <main class="govuk-main-wrapper govuk-main-wrapper--l">
+      <div class="govuk-width-container">
+      <main class="govuk-main-wrapper govuk-main-wrapper--l">
         
-            <div class="govuk-grid-row">
-              <div class="govuk-grid-column-two-thirds">
-                <h1 class="govuk-heading-l"></h1>
-              </div>
-            </div>
-        
-          </main>
-        </div>
+        <h1 class="govuk-heading-l">Facilitate internal and external consultation</h1>
+           
+           <p class="govuk-body" style="margin-bottom: 50px;">
+          Please enter the email address for the internal and external consultees that need to be consulted for this proposal.</p>
+           </p>
+
+           
+         <div class="govuk-form-group" >
+      
+        <p id="account-number-hint" class="govuk-hint">
+         Name of consultee
+        </p>
+        <input class="govuk-input" id="event-name" name="event-name" type="text">
+        <p id="account-number-hint" class="govuk-hint" style="margin-top: 20px;">
+        Add the email address for consultee
+        </p>
+       <input class="govuk-input" id="event-name" name="event-name" type="text"></div>
+
+       <p style="margin-top: 50px;">
+        <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+          Add addtional consultee
+        </button>
+       
+      </p>
+
+       <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+       <button class="govuk-button" data-module="govuk-button">
+        Run consultation
+      </button>
+
+      </main>
+     </div>
     
   </div>
+</div>
 </div>
 
 {% endblock %}
