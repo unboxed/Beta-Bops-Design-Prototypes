@@ -1,0 +1,205 @@
+task-list-new.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- Task List -->
+    <div style="margin-top: 60px;">
+    <h2 class="govuk-heading-m">Validation</h2>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Validate application
+          </a>
+        </dd>
+      </div>
+    </dl>
+    </div>
+    <div style="margin-top: 60px;">
+    <h2 class="govuk-heading-m">Consultation</h2>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Facilitate public consultation
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Facilitate internal and external consultation
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Public consultation responses
+          </a>
+        </dd>
+      </div>
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Internal and external consultee responses
+          </a>
+        </dd>
+      </div>
+    </dl>
+    </div>
+    <div style="margin-top: 60px;">
+    <h2 class="govuk-heading-m">Site visit</h2>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Document site visit
+          </a>
+        </dd>
+        
+      </div>
+    </dl>
+    </div>
+    <div style="margin-top: 60px;">
+    <h2 class="govuk-heading-m">Assess the proposal</h2>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+            <p
+            class="app-task-list__task-name"
+            aria-describedby="external-review-completed">
+           No assessment criteria indicated
+        </p>
+          </dd>
+      </div>
+    </dl>
+</div>
+<div style="margin-top: 60px;">
+    <h2 class="govuk-heading-m">Recommendation</h2>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <a
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Make recommendation
+          </a>
+        </dd>
+      </div>
+    </dl>
+</div>
+<div style="margin-top: 60px;">
+    <p class="govuk-heading-m">Conditions</p>
+        <p style="float: right;">
+              <a class="govuk-link" href="">Add</a>
+        </p>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+            <p
+            class="app-task-list__task-name"
+            aria-describedby="external-review-completed">
+           No conditions added
+        </p>
+          </dd>
+      </div>
+    </dl>
+</div>
+<div style="margin-top: 60px;">
+    <h2 class="govuk-heading-m">Submit</h2>
+    <dl class="govuk-summary-list" style="padding-left: 30px;">
+      <div class="govuk-summary-list__row">
+        <dd class="govuk-summary-list__value">
+          <p
+          class="app-task-list__task-name"
+          href=""
+          aria-describedby="external-review-completed">
+          Submit recommendation
+        </p>
+        </dd>
+      </div>
+    </dl>
+</div>
+</div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

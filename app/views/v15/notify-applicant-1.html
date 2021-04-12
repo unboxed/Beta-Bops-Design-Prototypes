@@ -1,0 +1,80 @@
+notify-applicant-1.html
+
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+
+    <! -- edit details -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l">Notify applicant</h2>
+
+                <p class="govuk-body">
+                     Please indicate the reason why the applicantion is invalid.
+                </p>
+             
+
+                
+            
+                    <p class="govuk-heading-s" style="margin-top: 30px;">Invalid document: FLOOR PLAN PROPOSED</p>
+                    <p>
+                        <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png"
+                        style="width: 350px; border: solid 1px #eeeeee" />
+                      </p>
+                   
+
+                       <p class="govuk-body">
+                        10390-Proposed-ground-floorplan.PDF
+                    </p>
+                    <div class="govuk-form-group">
+                        <p class="govuk-label-wrapper">
+                            <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
+                            Reason the document is invalid:
+                          </label>
+                        </p>
+                     
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Document is missing a scale bar.</textarea>
+                      </div>
+                    
+
+                      <p class="govuk-heading-s" style="margin-top: 60px;">Invalid document: SIDE EVLEVATION PROPOSED</p>
+                      <p>
+                        <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 250px; border: solid 1px #eeeeee" />
+                      </p>
+                   
+                       <p class="govuk-body">
+                     10390-Proposed-ground-floorplan.PDF
+                    </p>
+                    <div class="govuk-form-group">
+                        <p class="govuk-label-wrapper">
+                            <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
+                            Reason the document is invalid:
+                          </label>
+                        </p>
+                     
+                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Document is missing a scale bar.</textarea>
+                      </div>
+                
+                   
+                  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html" style="margin-top: 40px;">
+                    Request update
+                  </a>
+                </div>
+              </main>
+          </div>
+          </div>
+          
+  {% endblock %}

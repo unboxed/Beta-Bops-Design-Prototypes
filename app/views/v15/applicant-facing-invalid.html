@@ -1,0 +1,81 @@
+applicant-facing-invalid.html
+
+{% extends "layout.html" %} 
+
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+
+    <! -- edit details -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <h2 class="govuk-heading-l"> Update your planning application </h2>
+
+                <p class="govuk-body">
+                     Updates are required for your planning application <strong>0003000</strong> please update the documents below.
+                </p>
+             
+                
+                  <div class="moj-banner">
+
+                    <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                    <path d="M13.7,18.5h-2.4v-2.4h2.4V18.5z M12.5,13.7c-0.7,0-1.2-0.5-1.2-1.2V7.7c0-0.7,0.5-1.2,1.2-1.2s1.2,0.5,1.2,1.2v4.8
+                    C13.7,13.2,13.2,13.7,12.5,13.7z M12.5,0.5c-6.6,0-12,5.4-12,12s5.4,12,12,12s12-5.4,12-12S19.1,0.5,12.5,0.5z" /></svg>
+                    
+                    <div class="moj-banner__message">
+                    <span class="moj-banner__assistive">information</span>Your planning application will not be processed untill these documents are replaced. If you do not provide indicated updates by [DD MM YYYY], your application will be returned and you will be refunded munis £50 administration fee.
+                </div>
+                    
+                    </div> 
+             
+
+                
+            
+                    <p class="govuk-heading-m" style="margin-top: 30px;">Document 1</p>
+                    
+                    <p class="govuk-body">
+                       Replacement required for file: 10390-Proposed-ground-floorplan.PDF
+                    </p>
+                    <p class="govuk-body"><strong>Reason the file needs replacing:</strong></br>
+                        Document is missing a scale bar.</p>
+                    <div class="govuk-form-group">
+                        <label class="govuk-label" for="file-upload-1">
+                          UUpload a replacement file
+                        </label>
+                        <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                      </div>
+
+                      <p class="govuk-heading-m" style="margin-top: 60px;">Document 2</p>
+                      <p class="govuk-body">
+                         Replacement required for file: 10390-Proposed-side-elevation.PDF
+                      </p>
+                      <p class="govuk-body"><strong>Reason the file needs replacing:</strong></br>
+                     Document is missing a scale bar.</p>
+                     
+                      <div class="govuk-form-group">
+                          <label class="govuk-label" for="file-upload-1">
+                            Upload a replacement file
+                          </label>
+                          <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+                        </div>
+  
+
+                   
+                  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html" style="margin-top: 40px;">
+                   Send
+                  </a>
+                </div>
+              </main>
+          </div>
+          </div>
+          
+  {% endblock %}

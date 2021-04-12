@@ -89,6 +89,47 @@ Edit-documents.html
   </div>
   </fieldset>
   </div>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    
+        <label class="govuk-heading-s" for="valid-document">
+          Is the document valid?
+        </label>
+     
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+          <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+          </label>
+        </div>
+       
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            No
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+      
+            <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
+                
+             
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                  Please state the reason why this document is invalid?
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+      
+        </div>
+      </div>
+  
+    </fieldset>
+  </div>
+
   <div class="govuk-form-group"  style="margin-bottom: 45px;">
     <label class="govuk-heading-s" for="document-number">
       Document reference(s)
