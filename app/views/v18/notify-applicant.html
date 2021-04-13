@@ -1,0 +1,60 @@
+notify-applicant.html
+
+
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+
+    <! -- edit details -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+              
+      
+                <div class="govuk-form-group" >
+                    <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h2 class="govuk-fieldset__heading" style="margin-bottom: 20px;">
+                          Do you want to notify the applicant?
+                        </h2>
+                      </legend>
+                      <div class="govuk-radios govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                          <label class="govuk-label govuk-radios__label" for="changed-name">
+                            Yes
+                          </label>
+                        </div>
+                  
+
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                          <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                            No
+                          </label>
+                        </div>
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="invalid-application.html">
+                    Save
+                  </a>
+                </div>
+              </main>
+          </div>
+          </div>
+          
+  {% endblock %}

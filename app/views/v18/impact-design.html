@@ -1,0 +1,239 @@
+impact-design.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Assess the impact on design and heritage
+          </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- impact on design -->
+
+    <div style="margin-top: 40px;">
+        
+ 
+          <h1 class="govuk-heading-m"> Assess the impact on design and heritage</h1>
+
+      <div style="margin-top: 60px">
+       
+        <div style="margin-bottom: 60px;">
+            <div>
+                <p class="govuk-body">
+                    Will the proposal negatively impact the character of the original dwelling? 
+                </p>
+                <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Policy and guidance
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Lorem ipsum standard policy text description goes here to explain what policies this pertains to 
+          </div>
+        </details>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                  Significantly affect
+                </label>
+              </div>
+                </div>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                  Slightly affect
+                </label>
+              </div>
+              <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                  Not affect
+                </label>
+              </div>
+              </div>
+              </div>
+            </div><br>
+                    
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    
+      
+            </div>
+            </div>
+    
+            <!--    Policy question -->
+            <div style="margin-bottom: 60px;">
+            <div>
+                <p class="govuk-body">
+                    Will the proposal negatively impact the established building line and/or roof line when viewed from the street?
+                </p>
+                <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Policy and guidance
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+            Lorem ipsum standard policy text description goes here to explain what policies this pertains to 
+          </div>
+        </details>
+           <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                  Significantly affect
+                </label>
+              </div>
+                </div>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                  Slightly affect
+                </label>
+              </div>
+              <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                  Not affect
+                </label>
+              </div>
+              </div>
+              </div>
+            </div><br>
+                    
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" ></textarea>
+    
+      
+            </div>
+            </div>
+    
+            <!--    Policy question -->
+            <div>
+                <p class="govuk-body">
+                    Will the proposal fail to enhance or conserve nearby heritage assets?
+                </p>
+                <details class="govuk-details" data-module="govuk-details">
+          <summary class="govuk-details__summary">
+            <span class="govuk-details__summary-text">
+              Policy and guidance
+            </span>
+          </summary>
+          <div class="govuk-details__text">
+                  Lorem ipsum standard policy text description goes here to explain what policies this pertains to 
+          </div>
+        </details>
+            <div class="govuk-radios govuk-radios--inline">
+              <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                  Significantly affect
+                </label>
+              </div>
+                </div>
+            <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                  Slightly affect
+                </label>
+              </div>
+              <div class="govuk-radios govuk-radios--small">
+              <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                  Not affect
+                </label>
+              </div>
+              </div>
+              </div>
+            </div><br>
+                    
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    
+      
+            </div>
+            </div>
+ 
+
+          <div style="margin-top: 30px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html">
+              Complete 
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Save as draft
+            </a>
+          </div>
+          </div>
+  
+      </div>
+      
+        </fieldset>
+
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

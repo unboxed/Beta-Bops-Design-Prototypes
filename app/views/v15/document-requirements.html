@@ -1,0 +1,80 @@
+
+
+{% extends "layout.html" %} 
+{% from "./customnjk/document-options.njk"  import document_options_checkbox %}
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+
+
+    <! -- edit details -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-two-thirds">
+                <h2 class="govuk-heading-l">Document 1</h2>
+
+ 
+                <div class="govuk-!-padding-bottom-4"></div>
+  <div class="govuk-form-group ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+        <h4 class="govuk-heading-s">Specify what the document will contain?</h4>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+      
+      </legend>
+      {{ document_options_checkbox("FRONT") }}
+      {{ document_options_checkbox("REAR") }}
+      {{ document_options_checkbox("SIDE") }}
+      {{ document_options_checkbox("ROOF") }}
+      {{ document_options_checkbox("GARDEN") }}
+      {{ document_options_checkbox("FLOOR") }}
+      {{ document_options_checkbox("SITE") }}
+      {{ document_options_checkbox("PLAN") }}
+      {{ document_options_checkbox("ELEVATION") }}
+      {{ document_options_checkbox("PROPOSED") }}
+      {{ document_options_checkbox("EXISTING") }}
+      {{ document_options_checkbox("EVIDENCE") }}
+      {{ document_options_checkbox("STATEMENT") }}
+    
+  </div>
+  </fieldset>
+  </div>
+
+
+            
+
+
+             <div class="govuk-form-group">
+                 <p class="govuk-label-wrapper">
+                     <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
+                    Clarify document requirements
+                   </label>
+                   </p>
+
+                 
+              
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+               </div>
+                   
+                <div class="govuk-button-group">
+                  <a class="govuk-button" href="notify-applicant-1.html">
+                    Save
+                  </a>
+                
+                  <button class="govuk-button govuk-button--secondary" data-module="govuk-button">
+                    Back
+                  </button>
+                </div>
+                </div>
+              </main>
+          </div>
+          </div>
+          
+  {% endblock %}
