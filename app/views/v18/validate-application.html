@@ -1,0 +1,155 @@
+validate-application.html
+
+
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Validate application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- validate application-->
+
+   
+      
+            <div>
+              <h2 class="govuk-heading-m">Validate application</h2>
+              
+              <p><a class="govuk-link govuk-link--no-visited-state" href="manage-documents-invalid.html">Check documents</a></p>
+    
+              <div class="moj-banner moj-banner--warning">
+    
+                <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" /></svg>
+                
+                <div class="moj-banner__message">
+                <span class="moj-banner__assistive">Warning</span>Invalid documents <strong>2</strong></div>
+                
+                </div> 
+      
+    
+      <div class="govuk-form-group" style="margin-top: 30px;">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" style="margin-bottom: 20px;">Is the application valid?</legend>
+    
+          <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-radios__label" for="contact">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
+                  
+                  <span class="govuk-hint" id="planning-application-documents-validated-at-hint">Enter valid date, e.g. 28 12 2021</span>
+                  <div class="govuk-date-input">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_3i">Day</label>
+                        <input id="planning_application_documents_validated_at_3i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="planning_application[documents_validated_at(3i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="2">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_2i">Month</label>
+                        <input id="planning_application_documents_validated_at_2i" class="govuk-input govuk-date-input__input govuk-input--width-2" name="planning_application[documents_validated_at(2i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="3">
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="planning_application_documents_validated_at_1i">Year</label>
+                        <input id="planning_application_documents_validated_at_1i" class="govuk-input govuk-date-input__input govuk-input--width-4" name="planning_application[documents_validated_at(1i)]" type="text" pattern="[0-9]*" inputmode="numeric" value="2021">
+                      </div>
+                    </div>
+                  </div>
+                </fieldset>
+              </div>
+      
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+              <label class="govuk-label govuk-radios__label" for="contact-2">
+               No
+              </label>
+            </div>
+           
+         </div>
+          </div>
+          <div style="margin-top: 30px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="notify-applicant.html">
+              Save
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="cert-of-law-hp.html">
+              Cancel
+            </a>
+          </div>
+          </div>
+  
+      </div>
+      
+        </fieldset>
+
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

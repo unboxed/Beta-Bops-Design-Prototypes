@@ -1,4 +1,4 @@
-applicant-facing-invalid.html
+applicant-facing-invalid-2.html
 
 {% extends "layout.html" %} 
 
@@ -40,15 +40,18 @@ applicant-facing-invalid.html
                <p class="govuk-body">
                     Replacement required for file: 10390-Proposed-ground-floorplan.PDF
                 </p>
-                <div class="moj-banner moj-banner--warning">
+                <p class="govuk-body">
+             <em>This document needs a scale bar at Scale is 1:50 or 1:100.</em>
+                      </p>
+                      <div class="moj-banner moj-banner--success">
 
-                      <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
-                      <path d="M13.6,15.4h-2.3v-4.5h2.3V15.4z M13.6,19.8h-2.3v-2.2h2.3V19.8z M0,23.2h25L12.5,2L0,23.2z" /></svg>
-                      
-                      <div class="moj-banner__message">
-                      <span class="moj-banner__assistive">Warning</span>This document needs a scale bar at Scale is 1:50 or 1:100. </div>
-                      
-                      </div> 
+                        <svg class="moj-banner__icon" fill="currentColor" role="presentation" focusable="false" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 25 25" height="25" width="25">
+                        <path d="M25,6.2L8.7,23.2L0,14.1l4-4.2l4.7,4.9L21,2L25,6.2z" /></svg>
+                        
+                        <div class="moj-banner__message">
+                        <span class="moj-banner__assistive">Success</span>Replacement document successfully uploaded</div>
+                        
+                        </div> 
                 <p>
                  <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png"
                   style="width: 150px; border: solid 1px #eeeeee" />
@@ -60,10 +63,9 @@ applicant-facing-invalid.html
                    </label>
                     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
                      </div>
-                     <a class="govuk-button" data-module="govuk-button" href="applicant-facing-invalid-2.html">
-                      Save
-                     </a>
-
+                     <button class="govuk-button" data-module="govuk-button">
+                        Save
+                      </button>
 
                      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
                     
@@ -90,12 +92,12 @@ applicant-facing-invalid.html
                      <label class="govuk-label" for="file-upload-1">
                         <strong>Upload a replacement file</strong> 
                      </label>
+
                      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
                      </div>
                      <button class="govuk-button" data-module="govuk-button">
-                      Save
-                    </button>
-
+                        Save
+                      </button>
                      <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
                     
                      <p class="govuk-body">

@@ -1,0 +1,10 @@
+{% macro document_options_checkbox(site_location) %}
+  {% block content %}
+    <div class="govuk-checkboxes__item">
+      <input class="govuk-checkboxes__input" type="checkbox" value="front elevation - proposed" name="drawing_form[tags][]" id="drawing_form_tags_front_elevation_-_proposed">
+      <label class="govuk-label govuk-checkboxes__label tag_checkbox_label" for="drawing_form_tags_front_elevation_-_proposed">
+        {{site_location}}
+      </label>
+    </div>
+  {% endblock %}
+{% endmacro %}

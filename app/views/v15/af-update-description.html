@@ -1,0 +1,103 @@
+af-update-description.html
+
+
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Your planning application </h2>
+
+            <p class="govuk-body">
+            <strong>Application number: </strong>006000</br>
+           <strong>At:</strong> 150 Bellenden Road London SE15 4QY </br>
+           <strong>Date received:</strong> 12 May 2021 </br>
+           </br>
+            
+            The planning officer working on your application has made changes to your application description. Please confirm the changes below.
+            
+            </p>
+         
+
+               
+      
+                
+         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+                
+         <p class="govuk-heading-s" style="margin-top: 30px;">Previous description </p>
+                                    
+           <p class="govuk-body">
+           <em> Construction of a single storey side extension.</em>
+            </p>
+     
+                
+                <p class="govuk-heading-s" style="margin-top: 30px;">New description</p>
+                <p class="govuk-body">
+                  <em> Certificate of lawfulness (proposed) for the construction of a single storey side extension.</em>
+               </p>
+                
+               
+                
+                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                  <div class="govuk-form-group">
+                    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                    <p class="govuk-heading-m" style="margin-bottom: 15px;">
+                        Do you agree with the change(s)?
+                    </p>
+                     
+                      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                          <label class="govuk-label govuk-radios__label" for="contact">
+                          Yes
+                          </label>
+                        </div>
+                       
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                          <label class="govuk-label govuk-radios__label" for="contact-2">
+                            No
+                          </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                      
+                            <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
+                                
+                             
+                              <div class="govuk-form-group">
+                                <label class="govuk-label" for="more-detail">
+                                 Describe in full why the disagree with the changes.
+                                </label>
+                                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+                              </div>
+                      
+                        </div>
+                      </div>
+                  
+                    </fieldset>
+                  </div>
+                
+                
+                                
+                                   
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html" style="margin-top: 20px;">
+                 Save
+                </a>
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}

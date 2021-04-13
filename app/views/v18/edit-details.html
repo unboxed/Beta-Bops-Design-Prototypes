@@ -1,0 +1,235 @@
+edit-details.html
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">
+           Edit details
+          </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+    <! -- edit details -->
+    <div class="govuk-width-container">
+        <main class="govuk-main-wrapper " id="main-content" role="main">
+          <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+      
+              <h1 class="govuk-heading-l">Edit details</h1>
+              <div class="govuk-form-group" style = "margin-top: 50px;">
+           
+              <! ––  Description of work––>
+              <div class="govuk-form-group" style = "margin-top: 50px;">
+                      <h2 class="govuk-heading-m">
+                        Summary of work
+                      </h2>
+                  
+                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"> Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.</textarea>
+                    </div>
+          
+          
+              <div class="govuk-form-group" style="margin-top: 50px;">
+                <fieldset class="govuk-fieldset" role="group" aria-describedby="passport-issued-hint">
+                  <h2 class="govuk-heading-m">
+                    Date received 
+                  </h2>
+                  <div class="govuk-date-input" id="passport-issued">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-day">
+                          Day
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-day" name="passport-issued-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-month">
+                          Month
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="passport-issued-month" name="passport-issued-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label class="govuk-label govuk-date-input__label" for="passport-issued-year">
+                          Year
+                        </label>
+                        <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="passport-issued-year" name="passport-issued-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+                    </div>
+                  </div>
+              
+                </fieldset>
+              </div>
+                <div style = "margin-top: 50px;">
+                  <fieldset class="govuk-fieldset">
+                      <h2 class="govuk-heading-m">
+                          Site Details
+                        </h2>
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-line-1">
+                         Address 1 
+                        </label>
+                        <input class="govuk-input" id="address-line-1" name="address-line-1" type="text"></div>
+          
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-2">
+                            Address 2
+                          </label>
+                          <input class="govuk-input" id="address-line-1" name="address-line-1" type="text"></div>
+                          
+                    
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-town">
+                          Town
+                        </label>
+                        <input class="govuk-input govuk-!-width-two-thirds" id="address-town" name="address-town" type="text"></div>
+                        
+                        <div class="govuk-form-group">
+                          <label class="govuk-label" for="address-county">
+                            County
+                          </label>
+                          <input class="govuk-input govuk-!-width-two-thirds" id="address-county" name="address-county" type="text"></div>
+                      
+                    
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="address-postcode">
+                          Postcode
+                        </label>
+                        <input class="govuk-input govuk-input--width-10" id="address-postcode" name="address-postcode" type="text"></div>
+                    
+          
+                      <div class="govuk-form-group">
+                        <label class="govuk-label" for="uprn">
+                          UPRN
+                        </label>
+                        <input class="govuk-input govuk-input--width-10" id="uprn" name="uprn" type="text"></div>
+                    
+                    </fieldset>
+                     
+      
+                    
+                 
+                          <! ––  Description of work––>
+                    <div class="govuk-form-group" style = "margin-top: 50px;">
+                        
+                            <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+                              <h2 class="govuk-heading-m">
+                                Has the work been completed?
+                              </h2>
+                          
+                              <div class="govuk-radios govuk-radios--inline">
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name">
+                                    Yes
+                                  </label>
+                                </div>
+                                <div class="govuk-radios__item">
+                                  <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+                                  <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                                    No
+                                  </label>
+                                </div>
+                              </div>
+                          
+                            </fieldset>
+                            </div>
+                    <! –– Applicant information––>
+                    <div class="govuk-form-group" style = "margin-top: 50px;">
+                            <h2 class="govuk-heading-m">
+                              Applicant information
+                            </h2>
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="full-name">
+                                Full name
+                              </label>
+                              <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="email">
+                                Email address
+                              </label>
+                              <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                            </div>
+                            <div class="govuk-form-group">
+                              <label class="govuk-label" for="telephone-number">
+                                UK telephone number
+                              </label>
+                              <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+                      
+                              <! –– Agent information––>
+                              <div class="govuk-form-group" style = "margin-top: 50px;">
+                                <h2 class="govuk-heading-m">
+                                  Agent information
+                                </h2>
+                                 <div class="govuk-form-group">
+                               <label class="govuk-label" for="full-name">
+                                   Full name
+                                </label>
+                               <input class="govuk-input" id="full-name" name="full-name" type="text" spellcheck="false" autocomplete="name"></div>
+                               <div class="govuk-form-group">
+                               <label class="govuk-label" for="email">
+                                Email address
+                               </label>
+                               <input class="govuk-input" id="email" name="email" type="email" spellcheck="false" aria-describedby="email-hint" autocomplete="email">
+                               </div>
+                               <div class="govuk-form-group" style="margin-bottom: 60px;">
+                              <label class="govuk-label" for="telephone-number">
+                                UK telephone number
+                             </label>
+                            <input class="govuk-input govuk-input--width-20" id="telephone-number" name="telephone-number" type="tel" autocomplete="tel"></div>
+                  <! –– Payment reference––>
+                  <div class="govuk-form-group"  style = "margin-bottom: 50px;">
+                 <h2 class="govuk-heading-m">
+                     Payment reference
+                </h2>    
+            
+                  <input class="govuk-input" id="event-name" name="event-name" type="text">
+                </div>
+          
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html">
+                  Save
+                </a>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+                  Cancel
+                </a>
+                </div>
+              </main>
+          </div>
+          </div>
+          
+  {% endblock %}

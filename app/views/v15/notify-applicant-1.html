@@ -1,9 +1,8 @@
 notify-applicant-1.html
 
 {% extends "layout.html" %} 
-{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
-{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
-{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+
+{% from "./customnjk/document-options.njk"  import document_options_checkbox %}
 {% block head %} {{ super() }}
 <link
   href="/public/sass/southwark-branding.css"
@@ -19,58 +18,83 @@ notify-applicant-1.html
     <div class="govuk-width-container">
         <main class="govuk-main-wrapper " id="main-content" role="main">
           <div class="govuk-grid-row">
-            <div class="govuk-grid-column-full">
+            <div class="govuk-grid-column-two-thirds">
                 <h2 class="govuk-heading-l">Notify applicant</h2>
 
-                <p class="govuk-body">
-                     Please indicate the reason why the applicantion is invalid.
-                </p>
+  
+
+                <div class="govuk-form-group" style="margin-top: 60px;">
+                  <p class="govuk-heading-m">1. Summary</p>
+                  <p class="govuk-body">
+                    Please summarise the requested change(s)?
+               </p>
+                
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
              
 
-                
-            
-                    <p class="govuk-heading-s" style="margin-top: 30px;">Invalid document: FLOOR PLAN PROPOSED</p>
-                    <p>
-                        <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png"
-                        style="width: 350px; border: solid 1px #eeeeee" />
-                      </p>
-                   
+                <p class="govuk-heading-m" style="margin-top: 60px;"> 2. Submit replacement document(s)</p>     
 
-                       <p class="govuk-body">
-                        10390-Proposed-ground-floorplan.PDF
-                    </p>
-                    <div class="govuk-form-group">
-                        <p class="govuk-label-wrapper">
-                            <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
-                            Reason the document is invalid:
-                          </label>
-                        </p>
-                     
-                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Document is missing a scale bar.</textarea>
+                  <div style="margin-top: 30px;">
+          
+                    <dl class="govuk-summary-list" >
+                      <div class="govuk-summary-list__row">
+                        <dd class="govuk-summary-list__value">
+                          <a
+                          class="app-task-list__task-name"
+                          href="notify-applicant-2.html"
+                          aria-describedby="external-review-completed">
+                          Floor plan proposed
+                          </a>
+                        </dd>
                       </div>
-                    
+                      <div class="govuk-summary-list__row">
+                        <dd class="govuk-summary-list__value">
+                          <a
+                          class="app-task-list__task-name"
+                          href="notify-applicant-2.html"
+                          aria-describedby="external-review-completed">
+                        Side elevation proposed
+                          </a>
+                        </dd>
+                      </div>
+        
+                    </dl>
+                    </div>
+              
+                      <p class="govuk-heading-m" style="margin-top: 60px;"> 3. Request new document(s)</p>     
 
-                      <p class="govuk-heading-s" style="margin-top: 60px;">Invalid document: SIDE EVLEVATION PROPOSED</p>
-                      <p>
-                        <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 250px; border: solid 1px #eeeeee" />
-                      </p>
-                   
-                       <p class="govuk-body">
-                     10390-Proposed-ground-floorplan.PDF
-                    </p>
-                    <div class="govuk-form-group">
-                        <p class="govuk-label-wrapper">
-                            <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
-                            Reason the document is invalid:
-                          </label>
-                        </p>
-                     
-                        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">Document is missing a scale bar.</textarea>
+                      <dl class="govuk-summary-list" >
+                        <div class="govuk-summary-list__row">
+                          <dd class="govuk-summary-list__value">
+                            <a
+                            class="app-task-list__task-name"
+                            href="document-requirements.html"
+                            aria-describedby="external-review-completed">
+                            Statement
+                            </a>
+                          </dd>
+                        </div>
+                        <div class="govuk-summary-list__row">
+                          <dd class="govuk-summary-list__value">
+                            <a
+                            class="app-task-list__task-name"
+                            href="notify-applicant-2.html"
+                            aria-describedby="external-review-completed">
+                            Add
+                            </a>
+                          </dd>
+                        </div>
+                       
+          
+                      </dl>
                       </div>
-                
+                      </div>
+
+
                    
-                  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html" style="margin-top: 40px;">
-                    Request update
+                  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="updates-received.html" style="margin-top: 40px;">
+                    Next
                   </a>
                 </div>
               </main>

@@ -1,0 +1,179 @@
+time-limit.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-conditions.html"> Application</a>
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Time limit
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- add conditions->
+
+    <h2 class="govuk-heading-m">Time limit</h2>
+
+    
+
+    <p class="govuk-body" style="margin-top: 30px;">
+    The proposal must be built within X years of receiving approval.
+</p>
+<details class="govuk-details" data-module="govuk-details" style="margin-top: 20px;">
+    <summary class="govuk-details__summary">
+      <span class="govuk-details__summary-text">
+        Policy and guidance
+      </span>
+    </summary>
+    <div class="govuk-details__text">
+        Paragraph 55 of the National Planning Policy Framework makes clear that planning conditions should be kept to a minimum, and only used where they satisfy the following tests:
+    </br></br>
+        1. necessary;</br>
+        2. relevant to planning;</br>
+        3. relevant to the development to be permitted;</br>
+       4.  enforceable;</br>
+       5.  precise; and</br>
+        6. reasonable in all other respects.
+    </div>
+  </details>
+
+
+    <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h1 class="govuk-fieldset__heading" style="margin-bottom: 20px;">
+             Please select the number of years the proposal must be built within?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+                1 year
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
+                2 years
+              </label>
+            </div>
+            <div class="govuk-radios__item" aria-current="page">
+              <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+                3 years
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+              <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+               5 years
+              </label>
+            </div>
+            <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-email">
+                     Specify length
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-email" name="contact-by-email" type="email" spellcheck="false"></div>
+          
+                </div>
+          </div>
+      
+        </fieldset>
+      </div>
+
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 20px;">
+            Please state the reason this condition has been added?
+          </label>
+        </h1>
+       
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      </div>
+
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove condition</a>
+   </p>
+      
+
+        
+          <div style="margin-top: 40px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
+              Save
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Cancel
+            </a>
+          </div>
+          </div>
+
+      
+        </fieldset>
+  
+
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

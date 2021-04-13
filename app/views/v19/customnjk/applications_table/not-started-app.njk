@@ -1,0 +1,68 @@
+{% macro application_not_started() %}
+  {% block content %}
+<div class="govuk-tabs__panel" id="not-started">
+        <h2 class="govuk-heading-l">Not started</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">
+                Application number
+              </th>
+              <th scope="col" class="govuk-table__header">Site address</th>
+              <th scope="col" class="govuk-table__header">Application type</th>
+               <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header">Target date</th>
+           <th scope="col" class="govuk-table__header">Expiry date</th>
+              <th scope="col" class="govuk-table__header">
+                Status
+              </th>
+               <th scope="col" class="govuk-table__header">Planning officer</th>
+              <!--            <th scope="col" class="govuk-table__header">Date received</th>-->
+           
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+                <a href="cert-of-law-hp.html">
+                  0000545
+                </a>
+              </td>
+              <td class="govuk-table__cell">150 Bellenden Road, SE15 4QY</td>
+              <td class="govuk-table__cell">
+                LDC (proposed)
+              </td>
+              <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--yellow">
+                  June 6
+                </strong></td>
+           <td class="govuk-table__cell">June 12</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>
+              <td class="govuk-table__cell"></td>
+            </tr>
+            <tr class="govuk-table_row">
+              <td class="govuk-table__cell">
+                0000500
+              </td>
+              <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
+              <td class="govuk-table__cell">LDC (existing)</td>
+              <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                 June 8
+                </strong></td>
+           <td class="govuk-table__cell">June 12</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Invalid
+                </strong>
+              </td>
+               <td class="govuk-table__cell"></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+  {% endblock %}
+{% endmacro %}
