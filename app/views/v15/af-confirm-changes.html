@@ -1,0 +1,54 @@
+af-confirm-changes.html
+
+
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+        <div class="govuk-panel govuk-panel--confirmation">
+            <h1 class="govuk-panel__title">
+              All done!
+            </h1>
+            <div class="govuk-panel__body">
+              Your application number<br><strong>000600</strong>
+            </div>
+          </div>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+
+       
+           
+
+            <p class="govuk-body" style="margin-top: 20px;">
+                We have sent you a confirmation email.
+
+            </p>
+                
+         <p class="govuk-heading-m" style="margin-top: 30px;">What happens next </p>
+                                    
+           <p class="govuk-body">
+          Your planning officer will check the document(s), if everything looks good you will receive a email confirming your planning officer has started to assess your application.</br> </br> 
+          If further updates are required you will receive another request to update a document(s).
+            </p>
+     
+                
+           
+                                
+                                   
+                
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}
