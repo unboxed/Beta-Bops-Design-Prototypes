@@ -1,3 +1,4 @@
+
 time-limit.html
 
 {% extends "layout.html" %} {% block head %} {{ super() }}
@@ -61,25 +62,29 @@ time-limit.html
 
     <h2 class="govuk-heading-m">Conditions</h2>
 
-    <p class="govuk-body-l">Standard Time Limit 3 years</p>
+    <p class="govuk-body-l">Materials to be as specified</p>
 
  <div class="govuk-form-group">
-  <p class="govuk-body"> <strong>Condition</strong></br>
-    The development hereby permitted shall be begun before the expiration of three years from the date of this permission.
-  </p>
+  <p class="govuk-body"> <strong>Condition</strong></p>
+
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">The materials to be used in the implementation of this permission shall not be otherwise than as described and specified in the application and on the drawings hereby approved unless the prior written consent of the local planning authority has been obtained for any proposed change or variation.</textarea>
+    
+</div>
 
       <div class="govuk-form-group">
-        <p class="govuk-body"> <strong>Reason</strong></br>
-      To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (As amended).
-        </p>
-</div>
+        <p class="govuk-body"> <strong>Reason</strong></p>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">To ensure that the new works blend in with the existing building in the interest of the design and appearance of the building in accordance with: the National Planning Policy Framework 2019; Strategic Policy 12 (Design and Conservation) of the Core Strategy 2011, and; Saved Policies 3.12 (Quality in Design) and 3.13 (Urban Design) of the Southwark Plan 2007.
+          </textarea>
+            </div>
+
+
 <div class="govuk-form-group">
   <p class="govuk-body"> <strong> Condition type</strong></br>
     Compliance
   </p>
 </div>
 
-  </div>
+
     <p class="govuk-body">
     <a href="#" class="govuk-link">Remove condition</a>
    </p>
@@ -111,3 +116,5 @@ time-limit.html
   
 </div>
   {% endblock %}
+
+
