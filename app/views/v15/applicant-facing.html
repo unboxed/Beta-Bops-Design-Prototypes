@@ -1,0 +1,107 @@
+applicant-facing.html
+applicant-facing-invalid.html
+
+{% extends "layout.html" %} 
+
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<h1 class="govuk-heading-xl">Your planning appliction</h1>
+
+<p class="govuk-body">
+  
+   <strong>At:</strong> 150 Bellenden Road London SE15 4QY </br>
+   <strong>Date received:</strong> 12 May 2021 </br>
+   <strong>Application number: </strong>006000</br>
+   </br>
+    
+
+    </p>
+
+<p class="govuk-body">
+ 
+The case officer working on your application has requested the following change(s).
+
+
+  </p>
+  <div class="govuk-body">
+    If updates are not reveived by the <strong>21 May 2021</strong>
+    your application will be returned and your payment refunded.
+  </div>
+
+  
+     
+  
+</div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+
+<ol class="moj-task-list">
+    <li>
+    <h2 class="moj-task-list__section">
+      <span class="moj-task-list__section-number">1. </span>Confirm changes to your applicantion description
+    </h2>
+  
+    <ul class="moj-task-list__items">
+   
+      <li class="moj-task-list__item">
+        <a class="moj-task-list__task-name" href="af-update-description.html">Description</a>
+    
+    
+      </li>
+    </ul>
+    </li>
+    
+    <li>
+    <h2 class="moj-task-list__section">
+      <span class="moj-task-list__section-number">2. </span>Provide replacement documents 
+    </h2>
+    <ul class="moj-task-list__items">
+      <li class="moj-task-list__item">
+        <a class="moj-task-list__task-name" href="#">10390-Proposed-ground-floorplan.PDF</a>
+      </li>
+    
+      <li class="moj-task-list__item">
+        <a class="moj-task-list__task-name" href="#">10378-Proposed-side-elevation.PDF</a>
+      </li>
+    
+   
+    </ul>
+    </li>
+    
+    <li>
+    <h2 class="moj-task-list__section">
+      <span class="moj-task-list__section-number">3. Provide new or missing documents </span>
+    </h2>
+    <ul class="moj-task-list__items">
+      <li class="moj-task-list__item">
+        <a class="moj-task-list__task-name" href="#">New file</a>
+        <strong class="govuk-tag moj-task-list__task-completed">
+    completed
+    </strong>
+    
+      </li>
+    
+
+    </ul>
+    </li>
+    
+
+    </ol> 
+
+</div>
+</div>
+                              
+{% endblock %}
+                    
