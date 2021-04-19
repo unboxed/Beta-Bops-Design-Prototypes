@@ -1,0 +1,78 @@
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Request for change(s)</h2>
+
+            <p class="govuk-body">
+            <strong>Application number: </strong>006000</br>
+           <strong>At:</strong> 150 Bellenden Road London SE15 4QY </br>
+           <strong>Date received:</strong> 12 May 2021 </br>
+        
+       
+          <h2 class="govuk-heading-m">1. Description of work </h2>
+          
+
+
+          <div class="govuk-inset-text" style="padding-top: 25px; padding-bottom: 0px;">
+            <div style="padding-bottom: 20px">
+
+              <p style="margin-bottom: 4px;"><strong>Request approval of desctription</strong> by Eris Fanshawe</p>
+              <p style="margin-bottom: 20px;">
+                <time datetime="2019-06-14T14:01:00.000Z">14 June 2019 at 2:01pm</time>
+              </p>
+             
+          
+    
+                <p style="margin-bottom: 4px;"><strong></strong></p>
+                <p>  Suugested description: Certificate of lawfulness (proposed) for the construction of a single storey side extension</p>
+              
+            </div>
+            <div style="padding-bottom: 20px">
+
+                <p style="margin-bottom: 4px;"><strong>Applicant response</strong> by John Smith</p>
+                <p style="margin-bottom: 20px;">
+                  <time datetime="2019-06-14T14:01:00.000Z">19 June 2019 at 2:34pm</time>
+                </p>
+               
+            
+      
+                  <p style="margin-bottom: 4px;"><strong></strong></p>
+                  <p> It is not just a single storey side extension, also changes to windows</p>
+                          
+       
+               
+          </div>
+        </div>
+     
+          <div  class="govuk-heading-s">
+            Please suggest a new description:
+          </div>
+          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+       
+        
+        
+                
+                                
+                                   
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="cert-of-law-hp.html" style="margin-top: 20px;">
+                 Send
+                </a>
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}
