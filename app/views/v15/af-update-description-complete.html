@@ -1,0 +1,67 @@
+af-update-description-complete.html
+
+
+
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Confirm changes to your applicantion description </h2>
+
+            <p class="govuk-body">
+          
+              The following changes have been made to your application's description.
+              Please select if you agree or disagree with the changes made. If you disagree please describe in full why.
+            
+            </p>
+         
+       
+      
+        
+                <div style="margin-top: 50px;">                   
+           <p class="govuk-body"><strong>Previous description</strong></br>
+          Construction of a single storey side extension.
+            </p>
+     
+                
+          </div>  
+          <div style="margin-top: 30px;">    
+                <p class="govuk-body"><strong>New description</strong></br>
+                 Certificate of lawfulness (proposed) for the construction of a single storey side extension.
+               </p>
+             
+               </div>
+                
+                 <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
+             
+                
+                 <div style="margin-top: 30px;">    
+                    <p class="govuk-body"><strong>My objection and suggested wording for description: </strong></br>
+                    Here is my reason plus my new description suggestion. 
+                   </p>
+                 
+                   </div>
+                                
+                                   
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="applicant-facing.html" style="margin-top: 20px;">
+                 Back
+                </a>
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}
