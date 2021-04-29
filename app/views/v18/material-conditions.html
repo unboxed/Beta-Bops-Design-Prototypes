@@ -60,29 +60,68 @@ time-limit.html
 
     <! -- add conditions->
 
-    <h2 class="govuk-heading-m">Conditions</h2>
+    <h2 class="govuk-heading-m" style="margin-top: 40px;">Materials to be as specified</h2>
 
-    <p class="govuk-body-l">Materials to be as specified</p>
 
- <div class="govuk-form-group">
-  <p class="govuk-body"> <strong>Condition</strong></p>
-
-    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">The materials to be used in the implementation of this permission shall not be otherwise than as described and specified in the application and on the drawings hereby approved unless the prior written consent of the local planning authority has been obtained for any proposed change or variation.</textarea>
+ <div class="govuk-form-group" style="margin-top: 40px;">
+  <p class="govuk-body"> <strong>Condition</strong></br>
+  The materials to be used in the implementation of this permission shall not be 
+  otherwise than as described and specified in the application and on the drawings 
+  hereby approved unless the prior written consent of the local planning authority 
+  has been obtained for any proposed change or variation.
+  </p>
     
 </div>
 
       <div class="govuk-form-group">
-        <p class="govuk-body"> <strong>Reason</strong></p>
-          <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">To ensure that the new works blend in with the existing building in the interest of the design and appearance of the building in accordance with: the National Planning Policy Framework 2019; Strategic Policy 12 (Design and Conservation) of the Core Strategy 2011, and; Saved Policies 3.12 (Quality in Design) and 3.13 (Urban Design) of the Southwark Plan 2007.
-          </textarea>
+        <p class="govuk-body"> <strong>Reason</strong><br>
+          To ensure that the new works blend in with the existing building in the 
+          interest of the design and appearance of the building in accordance with: 
+          the National Planning Policy Framework 2019; Strategic Policy 12 (Design and 
+          Conservation) of the Core Strategy 2011, and; Saved Policies 3.12 (Quality 
+          in Design) and 3.13 (Urban Design) of the Southwark Plan 2007.
+        </p>
             </div>
 
+            <p class="govuk-body">
+              <a href="#" class="govuk-link">Edit condition and reason</a>
+              </p>
 
-<div class="govuk-form-group">
-  <p class="govuk-body"> <strong> Condition type</strong></br>
-    Compliance
-  </p>
-</div>
+            <div class="govuk-form-group" style="margin-top: 40px;">
+              <fieldset class="govuk-fieldset">
+                  <p class="govuk-heading-s">
+                    Condition type
+                  </p>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      Pre-commencement 
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Above Ground
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                      Pre-occupation
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Compliance 
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            
 
 
     <p class="govuk-body">
@@ -93,10 +132,10 @@ time-limit.html
         
           <div style="margin-top: 40px;">
             <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
-              Save
+              Complete
             </a>
             <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
-              Cancel
+              Save as draft
             </a>
           </div>
           </div>

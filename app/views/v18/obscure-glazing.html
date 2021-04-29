@@ -31,7 +31,7 @@ time-limit.html
             <a class="govuk-breadcrumbs__link" href="task-list-conditions.html"> Application</a>
           </li>
         <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Time limit
+          Obscure glazing
         </li>
       </ol>
     </div>
@@ -60,29 +60,63 @@ time-limit.html
     <! -- add conditions->
 
     
-  <h2 class="govuk-heading-m">Conditions</h2>
+  <h2 class="govuk-heading-m" style="margin-top: 40px;">Obscure glazing</h2>
 
-  <p class="govuk-body-l">Obscure glazing</p>
 
-<div class="govuk-form-group">
+
+<div class="govuk-form-group" style="margin-top: 40px;">
 <p class="govuk-body"> <strong>Condition</strong></br>
-
-  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">The window(s) on the ^IN; elevation of the building shall be obscure glazed and fixed shut and shall not be replaced or repaired otherwise than with obscure glazing.
-  </textarea>
+The window(s) on the ^IN; elevation of the building shall 
+be obscure glazed and fixed shut and shall not be replaced 
+or repaired otherwise than with obscure glazing.
+ 
 </p>
 
     <div class="govuk-form-group">
       <p class="govuk-body"> <strong>Reason</strong></br>
-  
+  In order to protect the privacy and amenity of the occupiers and users of the adjoining 
+  premises at ^IN; from undue overlooking in accordance with: the National Planning Policy 
+  Framework 2019; Strategic Policy 13 (High Environmental Standards) of the Core Strategy 2011, 
+  and; Saved Policy 3.2 (Protection of Amenity) of the Southwark Plan 2007
       </p>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">In order to protect the privacy and amenity of the occupiers and users of the adjoining premises at ^IN; from undue overlooking in accordance with: the National Planning Policy Framework 2019; Strategic Policy 13 (High Environmental Standards) of the Core Strategy 2011, and; Saved Policy 3.2 (Protection of Amenity) of the Southwark Plan 2007
-      </textarea>
-</div>
-<div class="govuk-form-group">
-<p class="govuk-body"> <strong> Condition type</strong></br>
-  Compliance
-</p>
-</div>
+      </div>
+      <p class="govuk-body">
+        <a href="#" class="govuk-link">Edit condition and reason</a>
+        </p>
+        <div class="govuk-form-group" style="margin-top: 40px;">
+          <fieldset class="govuk-fieldset">
+              <p class="govuk-heading-s">
+                Condition type
+              </p>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                  Pre-commencement 
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                  Above Ground
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                  Pre-occupation
+                </label>
+              </div>
+              <div class="govuk-checkboxes__item">
+                <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT" checked>
+                <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                  Compliance 
+                </label>
+              </div>
+            </div>
+        
+          </fieldset>
+        </div>
 
   </div>
     <p class="govuk-body">
@@ -93,10 +127,10 @@ time-limit.html
         
           <div style="margin-top: 40px;">
             <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
-              Save
+              Complete
             </a>
             <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
-              Cancel
+              Save as draft
             </a>
           </div>
           </div>

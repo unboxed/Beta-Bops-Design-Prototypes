@@ -1,3 +1,5 @@
+impact-transport.html
+
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -19,7 +21,7 @@
 
 <! –– Header ––>
 <div class="govuk-grid-row">
-  <div class="govuk-width-container">
+  <div class="govuk-grid-column-three-quarters">
     <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
@@ -29,18 +31,18 @@
           <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
         </li>
         <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Assess the impact on design and heritage
+          Assess the impact on transport
         </li>
       </ol>
     </div>
-    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
       0000600
     </h1>
     <p class="govuk-body">
-     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+   <strong> Description:</strong> Proposed two storey side extension, new front shed, floor plan redesign and all associated works.
     </p>
     <p class="govuk-body">
-    1 Rycott Path, London, SE22 0AA
+   <strong>At:</strong>1 Rycott Path, London, SE22 0AA
     </p>
     <p>
       <strong class="govuk-tag govuk-tag--green">In assessment</strong>
@@ -58,10 +60,10 @@
     <! -- impact on neighbours -->
 
    
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 60px;">
         
        
- <h1 class="govuk-heading-l" > Assess the impact on design and heritage
+ <h1 class="govuk-heading-l" > Assess the impact on transport
 </h1>
 <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 40px;">
   <summary class="govuk-details__summary">
@@ -70,10 +72,24 @@
     </span>
   </summary>
   <div class="govuk-details__text">
-    Good design is indivisible from good planning. It should reinforce a sense of place 
-    and conform to the council’s current guidance on design. Where a development may 
-    affect a heritage asset or its setting it should conserve or enhance its importance 
-    and its setting avoiding harm to its features and spaces.
+    <strong>Policy 5.2 - Transport Impacts</strong></br>
+    Planning permission will be granted for development unless:</br>
+    i. There is an adverse impact on transport networks for example through significant
+    increases in traffic or pollution; and/or</br>
+    ii. Adequate provision has not been made for servicing, circulation and access to, from
+    and through the site; and/or</br>
+    iii. Consideration has not been given to impacts of development on the Bus Priority
+    Network and the Transport for London Road Network.</br>
+    Where a development proposal is likely to have significant transport implications applicants will
+    be asked to submit a Transport Assessment (TA), which includes a Travel Plan with their
+    application. A Transport Assessment will form part of the Sustainability Assessment.</br></br>
+   <strong> Reasons</strong></br>
+    Land use development and transport are strongly linked. New development has the potential to
+    increase the negative impacts of transport networks, through increased congestion, reduced
+    safety, increased pollution etc. Effects can be temporary, permanent or cumulative.
+    All effects on transport networks need to be considered in assessing a planning application to
+    determine whether the proposal is acceptable and whether any adverse effects will be able to be
+    avoided or mitigated. The submission of a TA and Travel Plan
 
 
   </div>
@@ -84,7 +100,7 @@
         <div style="margin-bottom: 60px;">
             <div>
                 <p class="govuk-body">
-                  Will the proposal fail to conserve or enhance nearby Heritage Assets and their settings?
+                  Assessment of impact:
                 </p>
        
         <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
@@ -93,27 +109,6 @@
             </div>
             </div>
     
-            <!--    Policy question -->
-            <div style="margin-bottom: 60px;">
-            <div>
-                <p class="govuk-body">
-                  Will the proposal harm the established building line, roof line and/or streetscene?
-                </p>
-   
-            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint" ></textarea>
-            </div>
-            </div>
-    
-            <!--    Policy question -->
-            <div style="margin-bottom: 60px;">
-                <p class="govuk-body">
-                  Will the proposal harm the character of the host dwelling due to being of an excessive scale, massing or height, or through the use of inappropriate materials?
-                </p>
-             
-           <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    
-      
-            </div>
 
 
                        <!--    Policy question -->
@@ -142,11 +137,14 @@
             
                   </div>
           
+                  <p class="govuk-body">
+                    <a class="govuk-link govuk-link--no-visited-state" href="task-list-new.html"> Remove consideration</a>
+                  </p>
             
        
 
-          <div style="margin-top: 30px;">
-            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html">
+          <div style="margin-top: 50px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html" >
               Complete 
             </a>
             <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">

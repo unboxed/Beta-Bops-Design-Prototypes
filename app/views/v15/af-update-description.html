@@ -19,13 +19,21 @@ af-update-description.html
             <p class="govuk-body">
           
               The following changes have been made to your application's description.
-              Please select if you agree or disagree with the changes made. If you disagree please describe in full why and provided your suggested wording for the description.
-            
+  
+
             </p>
          
+            <p class="govuk-heading-s">What you need to do:</p>
+  <ul class="govuk-list govuk-list--bullet">
+    <li>Select if you agree or disagree with the changes made by your case officer</li>
+    <li>If you disagree, write in the box provided your reason for disagreeing with the changes and provided your suggested wording for the new description</li>
+    <li>Click submit to complete this action </li>
+  </ul>
        
       
-        
+            
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+
                 <div style="margin-top: 50px;">                   
            <p class="govuk-body"><strong>Previous description</strong></br>
           Construction of a single storey side extension.
@@ -44,22 +52,23 @@ af-update-description.html
 
                   <div class="govuk-form-group">
                     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-                    <p class="govuk-heading-m" style="margin-bottom: 15px;">
-                        Do you agree with the changes made to your application descriptopn?
+                    <p class="govuk-heading-s" style="margin-bottom: 15px;">
+                        Do you agree with the changes made to your application description?
                     </p>
+                  
                      
                       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
                           <label class="govuk-label govuk-radios__label" for="contact">
-                          Yes
+                          Yes, I agree with the changes made
                           </label>
                         </div>
                        
                         <div class="govuk-radios__item">
                           <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
                           <label class="govuk-label govuk-radios__label" for="contact-2">
-                            No
+                            No, I disagree with the changes made
                           </label>
                         </div>
                         <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
@@ -68,10 +77,10 @@ af-update-description.html
                                 
                              
                               <div class="govuk-form-group">
-                                <label class="govuk-label" for="more-detail">
+                                <label class="govuk-label" for="more-detail" style="margin-top: 20px;">
                                  Please indicate why you disagree with the changes and provided your suggested wording for the description?
                                 </label>
-                                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+                                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8"></textarea>
                               </div>
                       
                         </div>
@@ -79,13 +88,17 @@ af-update-description.html
                   
                     </fieldset>
                   </div>
+                 
                 
-                
-                                
+                         
                                    
-                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="applicant-facing.html" style="margin-top: 20px;">
-                 Save
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="applicant-facing-complete.html" style="margin-top: 20px;">
+                Submit 
                 </a>
+                <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 20px;">
+                  Back
+                 </button>
+
                   </div>
                  
                   </main>

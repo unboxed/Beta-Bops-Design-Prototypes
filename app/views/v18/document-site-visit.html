@@ -59,12 +59,12 @@ document-site-visit.html
     {{ applicationinfo() }}
 
     <! -- Document site visit-->
-    <div style="margin-top: 30px;">
+    <div style="margin-top: 50px;">
       
       
-          <h1 class="govuk-heading-m"> Document site visit</h1>
+          <h1 class="govuk-heading-l" > Document site visit</h1>
 
-      <div style="margin-top: 30px" class="govuk-grid-row image-row">
+      <div style="margin-top: 50px" class="govuk-grid-row image-row">
         <div class="govuk-grid-column-one-third">
           <p>IMG-0249.png </br>
          
@@ -99,12 +99,34 @@ document-site-visit.html
         <strong>Upload images from site visit:</strong>
     </label>
      <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+     
      <div style ="margin-top: 30px;">
-     <p class="govuk-body">
-      <strong>Site visit notes:</strong>
+      <p class="govuk-body">
+       <strong>Notes:</strong>
+     </p>
+       <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+     </div>
+     
+     <div class="govuk-form-group" style ="margin-top: 30px;">
+      <p class="govuk-body">
+       Are the exisiting plans accurate?
+      </p>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2" aria-describedby="more-detail-hint"></textarea>
+  </div>
+  <div class="govuk-form-group" style ="margin-top: 30px;">
+    <p class="govuk-body">
+     Are there any differences in ground level?
     </p>
-      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2" aria-describedby="more-detail-hint"></textarea>
+</div>
+<div class="govuk-form-group" style ="margin-top: 30px;">
+  <p class="govuk-body">
+   Will the proposal impact the amenity of neighbouring occupiers?
+  </p>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="2" aria-describedby="more-detail-hint"></textarea>
+</div>
+     
+  
 
     <div class="govuk-button-group">
       <a class="govuk-button" data-module="govuk-button" href="task-list-new.html">
