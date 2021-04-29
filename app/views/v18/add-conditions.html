@@ -31,7 +31,7 @@ add-conditions.html
         </li>
       </ol>
     </div>
-    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
       0000600
     </h1>
     <p class="govuk-body">
@@ -55,7 +55,7 @@ add-conditions.html
 
     <! -- add conditions->
 
-    <h2 class="govuk-heading-m">Add conditions</h2>
+    <h2 class="govuk-heading-l" style="margin-top: 60px;">Add conditions</h2>
     <div id="waste-hint" class="govuk-hint">
         Select all that apply.
       </div>
@@ -68,15 +68,9 @@ add-conditions.html
         
           <div class="govuk-checkboxes">
             <div class="govuk-checkboxes__item">
-              <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
-              <label class="govuk-label govuk-checkboxes__label" for="waste">
-                Standard Time Limit (5 years)
-              </label>
-            </div>
-            <div class="govuk-checkboxes__item">
               <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
               <label class="govuk-label govuk-checkboxes__label" for="waste-2">
-                Standard Time Limit (3 years)
+                Standard Time Limit
               </label>
             </div>
           </div>
@@ -84,7 +78,7 @@ add-conditions.html
         </fieldset>
       </div>
 
-      <div class="govuk-form-group" style="margin-top: 40px;">
+      <div class="govuk-form-group" style="margin-top: 60px;">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <h3 class="govuk-heading-s">
          Material
@@ -114,7 +108,7 @@ add-conditions.html
         </fieldset>
       </div>
       
-      <div class="govuk-form-group" style="margin-top: 40px;">
+      <div class="govuk-form-group" style="margin-top: 60px;">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <h3 class="govuk-heading-s">
          Tree
@@ -138,11 +132,11 @@ add-conditions.html
       
         </fieldset>
       </div>
-      <div class="govuk-form-group" style="margin-top: 40px;">
+      <div class="govuk-form-group" style="margin-top: 60px;">
       <div class="govuk-checkboxes">
         <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
           <h3 class="govuk-heading-s">
-            Privacy
+           Amenity
           </h3>
         <div class="govuk-checkboxes__item">
           <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
@@ -150,20 +144,49 @@ add-conditions.html
             Obscure glazing
           </label>
         </div>
-        <div class="govuk-checkboxes">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+          <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Roof to be used in emergency
+          </label>
+        </div>
           <div class="govuk-checkboxes__item">
             <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
             <label class="govuk-label govuk-checkboxes__label" for="waste">
-              Roof to be used in emergency
+              Privacy screen: No use prior to implementation
             </label>
           </div>
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+            <label class="govuk-label govuk-checkboxes__label" for="waste">
+              Approved privacy screen
+            </label>
           </div>
         </div>
       </fieldset>
         </div>
+
+
+    <div class="govuk-form-group" style="margin-top: 40px;">
+      <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+        <h3 class="govuk-heading-s">
+        Bespoke condition
+        </h3>
+      
+        <div class="govuk-checkboxes">
+          <div class="govuk-checkboxes__item">
+            <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+            <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+             New condition
+            </label>
+          </div>
+        </div>
+    
+      </fieldset>
+    </div>
       
         
-          <div style="margin-top: 40px;">
+          <div style="margin-top: 60px;">
             <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
               Save
             </a>
