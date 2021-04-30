@@ -1,5 +1,3 @@
-request-for-changes-1.html
-
 
 {% extends "layout.html" %}
 {% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %}
@@ -51,109 +49,88 @@ request-for-changes-1.html
       <! –– Application detail blocks ––>
       {{ applicationinfo() }}
         <div>
-          <h2 class="govuk-heading-m">Validate application</h2>
+          <h2 class="govuk-heading-l">Validate application</h2>
           
           <p><a class="govuk-link govuk-link--no-visited-state" href="manage-documents-invalid.html">Check documents</a></p>
 
           
       
-            <div style="margin-top: 40px;">
+            <div style="margin-top: 60px;">
 
-    <div
-    style="
-      background-color: #f3f2f1;
-      border: solid 0px;
-      padding: 30px;
-      clear: both;
-      margin-top: 10px;
-      margin-bottom: 0px;
-    "
-  >
-   
+             
 
-    <h2 class="govuk-heading-m">Request changes</h2>
-  <div style="margin-top: 10px;">
-
-<p class="govuk-body"> Request replacement or missing documents from applicant, or approve changes to the description.</p>
-<a href="request-for-change-4.html" class="govuk-button" data-module="govuk-button" style="margin-top: 20px;">
-  Start new request</a>
-  
-       
-        </div>
-        </div>
+    <h2 class="govuk-heading-m">Change requests</h2>
 
 
-    <!--div style="margin-top: 30px;">
+<p class="govuk-body" style="margin-top: 10px;"> Request replacement or missing documents from applicant, or approve changes to the description.</p>
 
 
-          
+<p><a class="govuk-link govuk-link--no-visited-state" href="rfc-edit.html">Start new or view exisiting requests</a></p>
 
-      <table class="govuk-table">
+      <!--table class="govuk-table">
          
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
               <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Request</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Time</th>
-              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Status</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Detail</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Reason</th>
+              <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Applicant repsonse</th>
+          <div class="govuk-button-group">
+              
+              </div>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
+         
             <tr class="govuk-table__row">
-              
-              <td class="govuk-table__cell"><a class="govuk-link" href="request-description.html">Description </a></td>
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">
-                  Closed
-                 </strong></td>
-              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--red">
-                  Rejected
-                 </strong></td>
-              
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a class="govuk-link" href="request-documents.html">10390-Proposed-ground-floorplan.PDF</a></td>
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">
-                  15 days
-                 </strong></td>
-              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--grey">
-                  Open
-                 </strong></td>
+              <td class="govuk-table__cell">  Replacement document</td>
+              <td class="govuk-table__cell">10390-Proposed-ground-floorplan.PDF</td>
+              <td class="govuk-table__cell"> The document is missing a scale bar</td>
+              <td class="govuk-table__cell"> </td>
                 
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a class="govuk-link" href="request-documents-2.html">10378-Proposed-side-elevation.PDF</a></td>
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--grey">
-                Closed
-                 </strong></td>
-              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
-                Received
-                 </strong></td>
+              <td class="govuk-table__cell"> Replacement document</td>
+              <td class="govuk-table__cell">10289-Proposed-side-elevation.PDF</td>
+              <td class="govuk-table__cell"> The document is missing a scale bar</td>
+              <td class="govuk-table__cell"> </td>
+                
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a class="govuk-link" href="request-new-document.html">New document</a></td>
-              <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--green">
-                  13 days
-                 </strong></td>
-              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--grey">
-                 Open
-                 </strong></td>
+              <td class="govuk-table__cell"> New document</td>
+              <td class="govuk-table__cell">Design & Access Statement</td>
+              <td class="govuk-table__cell"> Officers reason for request</td>
+              <td class="govuk-table__cell"><div class="govuk-button-group">
+          </td>
+                
             </tr>
-       
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">Change of description</td>
+              <td class="govuk-table__cell">Add a chimney stack to the rear of the property</td>
+              <td class="govuk-table__cell"> New description: This will be a new description to add a chimney stack to the rear of the property</td>
+              <td class="govuk-table__cell"><div class="govuk-button-group">
+              </td>
+                
+            </tr>
+        
+
+           
           </tbody>
-        </table>
-       
-        </div-->
- 
-          
-  </div>
+        </table-->
+
 
        
+
+
+         </div>
+
                     
                 
 
 
-  <div class="govuk-form-group" style="margin-top: 30px;">
+  <div class="govuk-form-group" style="margin-top: 60px;">
     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend--s" style="margin-bottom: 20px;">Is the application valid?</legend>
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--m" style="margin-bottom: 20px;">Is the application valid?</legend>
 
       <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
         <div class="govuk-radios__item">
@@ -192,7 +169,7 @@ request-for-changes-1.html
   
         </div>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2" checked>
           <label class="govuk-label govuk-radios__label" for="contact-2">
            No
           </label>
