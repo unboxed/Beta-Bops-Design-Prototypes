@@ -1,0 +1,150 @@
+rfc-new-document.html
+
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Request a new document</h2>
+
+       <div style="margin-top: 60px;">
+    
+
+        <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+   
+                <p class="govuk-heading-s">
+                 Select the document type:
+                </p>
+              
+              <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-top: 20px;">
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                  <label class="govuk-label govuk-radios__label" for="contact">
+                    Existing & proposed floor plans 
+                  </label>
+                </div>
+             
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                  <label class="govuk-label govuk-radios__label" for="contact-2">
+                    Existing & proposed elevations
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-3" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-3">
+                    <label class="govuk-label govuk-radios__label" for="contact-3">
+                        Existing & proposed roof plan
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-4" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-4">
+                    <label class="govuk-label govuk-radios__label" for="contact-4">
+                        Existing & proposed sections
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-5" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-5">
+                    <label class="govuk-label govuk-radios__label" for="contact-5">
+                        Design & access statement
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-6" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-6">
+                    <label class="govuk-label govuk-radios__label" for="contact-6">
+                        Heritage statement
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-7" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-7">
+                    <label class="govuk-label govuk-radios__label" for="contact-7">
+                        Flood risk assessment
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-8" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-8">
+                    <label class="govuk-label govuk-radios__label" for="contact-8">
+                        Archaeology assessment
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-9" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-9">
+                    <label class="govuk-label govuk-radios__label" for="contact-9">
+                        Daylight/sunlight statement
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-10" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-10">
+                    <label class="govuk-label govuk-radios__label" for="contact-10">
+                        Tree survey
+                    </label>
+                  </div>
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="contact-11" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-11">
+                    <label class="govuk-label govuk-radios__label" for="contact-11">
+                        Transport assessment
+                    </label>
+                  </div>
+                <div class="govuk-radios__item">
+                  <input class="govuk-radios__input" id="contact-12" name="contact" type="radio" value="text" data-aria-controls="conditional-contact-12">
+                  <label class="govuk-label govuk-radios__label" for="contact-12">
+                    Other
+                  </label>
+                </div>
+                <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-12">
+                  <div class="govuk-form-group">
+                    <label class="govuk-label" for="contact-by-text">
+                     Specify document type
+                    </label>
+                    <input class="govuk-input govuk-!-width-one-third" id="contact-by-text" name="contact-by-text" type="tel"></div>
+          
+                </div>
+              </div>
+          
+            </fieldset>
+          </div>
+
+          <div class="govuk-form-group" style="margin-top: 60px;">
+            <label class="govuk-fieldset__legend--s" for="more-detail">
+              Please specify the reason you have requested this document?
+            </label>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" style="margin-top: 20px;"></textarea>
+          </div>
+
+          <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="rfc-edit.html" style="margin-top: 40px;">
+            Send
+           </a>
+           <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 40px;">
+            Back
+          </button>
+       </div>
+     
+
+         
+            
+                </div>
+         
+                </div>
+                
+                        
+                
+                                
+                                   
+          
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}

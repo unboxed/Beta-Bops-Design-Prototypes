@@ -1,0 +1,88 @@
+
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Request replacement documents</h2>
+
+       <div style="margin-top: 30px;">
+        <p class="govuk-body">
+           The following documents have been marked as invalid.
+         </p>
+
+          </div>
+          <div style="margin-top: 30px;">
+          <table class="govuk-table">
+               
+            <thead class="govuk-table__head">
+              <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Document</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">File name</th>
+                <th scope="col" class="govuk-table__header govuk-!-width-one-quarter">Invalid reason</th>
+               
+              </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+           
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell"> FLOOR PLAN PROPOSED</td>
+                <td class="govuk-table__cell">10390-Proposed-ground-floorplan.PDF</td>
+                <td class="govuk-table__cell"> The document is missing a scale bar</td>
+                
+                  
+              </tr>
+              <tr class="govuk-table__row">
+                <td class="govuk-table__cell">SIDE ELEVATION PROPOSED</td>
+                <td class="govuk-table__cell">10289-Proposed-side-elevation.PDF</td>
+                <td class="govuk-table__cell"> The document is missing a scale bar</td>
+            
+                  
+              </tr>
+             
+            </tbody>
+          </table>
+         
+ 
+  
+            </div>
+            <p class="govuk-body" style="margin-top: 60px;">
+               If you want to make any changes to the requests, return to <a class="govuk-link govuk-link--no-visited-state" href="manage-documents-invalid.html">documents</a></p>
+             
+          <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="rfc-edit.html" style="margin-top: 40px;">
+            Send
+           </a>
+           <button class="govuk-button govuk-button--secondary" data-module="govuk-button" style="margin-top: 40px;">
+            Back
+          </button>
+       </div>
+     
+
+         
+            
+                </div>
+         
+                </div>
+                
+                        
+                
+                                
+                                   
+          
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}
