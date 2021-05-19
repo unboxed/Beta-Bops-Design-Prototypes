@@ -1,3 +1,5 @@
+impact-design-3.html
+
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -66,7 +68,7 @@
     
       <div class="govuk-radios govuk-radios--small">
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="status" name="status" type="radio" value="not-started">
+          <input class="govuk-radios__input" id="status" name="status" type="radio" value="not-started" checked>
           <label class="govuk-label govuk-radios__label" for="status">
             <strong class="govuk-tag govuk-tag--grey">
                 Not started
@@ -74,7 +76,7 @@
           </label>
         </div>
         <div class="govuk-radios__item">
-          <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="actio-required" checked>
+          <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="actio-required">
           <label class="govuk-label govuk-radios__label" for="status-2">
             <strong class="govuk-tag govuk-tag--red">
                 Action required
@@ -335,7 +337,7 @@
          
  
                     <div style="margin-top: 30px;">
-                      <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-considerations-5.html">
+                      <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-considerations-4.html">
                        Save
                       </a>
                       <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-considerations-5.html">
