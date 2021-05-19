@@ -55,7 +55,7 @@ Edit-documents.html
 
           
           <div class="govuk-form-group" style="margin-top: 50px;">
-            <label class="govuk-heading-s" for="file-upload">
+            <label class="govuk-heading-m" for="file-upload">
               Upload a replacement file
             </label>
             <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
@@ -64,33 +64,76 @@ Edit-documents.html
       </div>
     
   
-  <div class="govuk-!-padding-bottom-4"></div>
-  <div class="govuk-form-group ">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend">
-        <h4 class="govuk-heading-s">What does the document contain?</h4>
-        <div class="govuk-checkboxes govuk-checkboxes--small">
+  <div style="margin-top: 40px;">
+    <h4 class="govuk-heading-m">What does the document contain?</h4>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <div class="govuk-form-group ">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+            <h4 class="govuk-heading-s">Drawings</h4>
+            <div class="govuk-checkboxes govuk-checkboxes--small">
+          
+          </legend>
+          {{ document_options_checkbox("FRONT") }}
+          {{ document_options_checkbox("REAR") }}
+          {{ document_options_checkbox("SIDE") }}
+          {{ document_options_checkbox("ROOF") }}
+          {{ document_options_checkbox("GARDEN") }}
+          {{ document_options_checkbox("FIRST") }}
+          {{ document_options_checkbox("SECOND") }}
+          {{ document_options_checkbox("THIRD") }}
+          {{ document_options_checkbox("FLOOR") }}
+          {{ document_options_checkbox("SITE") }}
+          {{ document_options_checkbox("PLAN") }}
+          {{ document_options_checkbox("ELEVATION") }}
+          {{ document_options_checkbox("PROPOSED") }}
+          {{ document_options_checkbox("EXISTING") }}
+
+      </div>
+      </fieldset>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+          
+          <div class="govuk-checkboxes" data-module="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="contact" name="contact" type="checkbox" value="email" data-aria-controls="conditional-contact">
+              <label class="govuk-label govuk-checkboxes__label" for="contact">
+                EVIDENCE
+              </label>
+            </div>
+            <div class="govuk-checkboxes__conditional govuk-checkboxes__conditional--hidden" id="conditional-contact">
+              <div class="govuk-form-group">
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+           
+                {{ document_options_checkbox("PHOTOGRAPHS") }}
+                {{ document_options_checkbox("UTILITY BILLS") }}
+                {{ document_options_checkbox("BUILDING CONTROL CERTIFICATE") }}
+                {{ document_options_checkbox("CONSTRUCTION INVOICE") }}
+                {{ document_options_checkbox("COUNCIL TAX DOCUMENTS") }}
+                {{ document_options_checkbox("TENANCY AGREEMENTS") }}
+                {{ document_options_checkbox("TENANCY INVOICE") }}
+                {{ document_options_checkbox("BANK STATEMENTS") }}
+                {{ document_options_checkbox("A STATUTORY DECLARATION") }}
+                {{ document_options_checkbox("DOCUMENT") }}
+             
+              
+            </div>
+          </div>
       
-      </legend>
-      {{ document_options_checkbox("FRONT") }}
-      {{ document_options_checkbox("REAR") }}
-      {{ document_options_checkbox("SIDE") }}
-      {{ document_options_checkbox("ROOF") }}
-      {{ document_options_checkbox("GARDEN") }}
-      {{ document_options_checkbox("FLOOR") }}
-      {{ document_options_checkbox("SITE") }}
-      {{ document_options_checkbox("PLAN") }}
-      {{ document_options_checkbox("ELEVATION") }}
-      {{ document_options_checkbox("PROPOSED") }}
-      {{ document_options_checkbox("EXISTING") }}
-      {{ document_options_checkbox("EVIDENCE") }}
-      {{ document_options_checkbox("STATEMENT") }}
-    
-  </div>
-  </fieldset>
-  </div>
+            </div>
+            
+          </div>
+      
+        </fieldset>
+      </div>
+      </div>
+    </div>
 
-
+  </div>
   <div class="govuk-form-group">
     <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
     
