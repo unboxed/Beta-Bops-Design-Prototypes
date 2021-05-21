@@ -1,0 +1,212 @@
+case-officer-view-decision-notice.html
+
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          View recommendation
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+      Certificate of lawfulness (proposed) for the construction of a single storey side extension.
+    </p>
+    <p class="govuk-body">
+      150 Bellenden Road London SE15 4QY
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--purple">Awaiting determindation</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div> 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ leftaccordion() }}
+
+
+    <! –– Left panel with letter ––>
+    <h2 class="govuk-heading-m">
+     View recommendation
+    </h2>
+    <p class="govuk-body">
+      Recommendation submitted by Eris Fanshawe 2 June 2021.
+      </p>
+    <! –– Letter ––>
+
+    <div
+      style="
+        background-color: #f3f2f1;
+        border: solid 1px;
+        padding: 30px;
+        clear: both;
+        margin-top: 10px;
+      "
+    >
+      <span class="govuk-caption-xl">[Council Name]</span>
+      <h2 class="govuk-heading-s">
+        Town and Country Planning Act 1990 (as amended)<br><br>
+Town and Country Planning (Development Management Procedure)
+(England) Order 2015 (as amended)
+      </h2>
+      <p class="govuk-body"><strong>CERTIFICATE OF LAWFUL USE OR DEVELOPMENT</strong></p>
+      <p class="govuk-body">
+        Certificate of lawfulness of proposed use or development:
+        <strong>granted</strong>
+      </p>
+      <hr
+        class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      />
+
+      <p class="govuk-body">
+        <strong>Applicant:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[applicant name]<br />
+        <strong>Date of Issue of this decision:</strong> &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TBD<br />
+        <strong>Application received:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;[DD MONTH YYYY] <br />
+        <strong>Site Address:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[Address]<br />
+        <strong>Application number:</strong> &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Application number]<br />
+      </p>
+    
+      <p class="govuk-body">
+      Southwark Council hereby certify that on [date of application to the council] the development described in the First Schedule 
+      to this certificate in respect of the land specified in the Second Schedule to this certificate and edged 
+      in a red line on the plan attached to this certificate, would have been lawful within the meaning 
+      of section 191 of the Town and Country Planning Act 1990 for the following reason(s):
+      </p>
+      <p class="govuk-body">
+
+      [Officer comment here]
+       </p>
+   
+      <p class="govuk-body">
+       <strong>Permission is subject to the following approved plans:</strong> 
+      </p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header app-custom-class">
+              Plan reference number
+            </th>
+            <th scope="col" class="govuk-table__header app-custom-class">
+              Plan description
+            </th>
+            <th scope="col" class="govuk-table__header app-custom-class">
+              Date received
+            </th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              21A
+            </td>
+            <td class="govuk-table__cell">SIDE EVLEVATION PROPSED
+            </td>
+            <td class="govuk-table__cell">02 January 2021</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">243646HF</td>
+            <td class="govuk-table__cell">FLOOR PLAN PROPOSED</td>
+            <td class="govuk-table__cell">02 January 2021</td>
+          </tr>
+        </tbody>
+      </table>
+
+        <p class="govuk-body">
+          <strong>First Schedule</strong>
+      </p>
+      <p class="govuk-body">
+        Certificate of lawfulness (proposed) for the construction of a single storey side extension.
+    </p>
+    <p class="govuk-body">
+      <strong>Second Schedule</strong>
+  </p>
+  <p class="govuk-body">
+    150 Bellenden Road London SE15 4QY
+</p>
+
+<p class="govuk-body">
+  Simon Bevan </br>
+  Director of Planning</br>
+  On behalf of Southwark Council </br>
+  Date [DD MONTH YYYY]
+  </p>
+  <hr
+        class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      />
+
+
+
+
+
+
+
+
+
+      <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible" style="margin-top: 350px;"/>
+
+
+
+      <p class="govuk-body" >
+        Your attention is drawn to the notes accompanying this document. </br></br>
+        Any enquiries regarding this document should quote the Application Number and be sent to the Director of Planning, Southwark Council, Postal address: Planning London Borough of Southwark PO Box 734 Winchester SO23 5DG. or by email to planning@southwark.gov.uk
+  
+      </p>
+
+      
+    </div>
+    <br />
+
+    <!--        Question-->
+
+
+    <a
+      class="govuk-button"
+      data-module="govuk-button"
+      href="task-list-view-decision-notice.html"
+      >Back</a
+    >
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+ {{ rightaccordion() }}
+  </div>
+</div>
+{% endblock %}
