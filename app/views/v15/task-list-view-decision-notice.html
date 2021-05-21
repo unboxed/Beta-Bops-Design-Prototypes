@@ -1,0 +1,128 @@
+task-list-view-decision-notice.html
+{% extends "layout.html" %} 
+{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
+{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
+{% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+      LDC (proposed): for the construction of a single storey side extension.
+    </p>
+    <p class="govuk-body">
+      150 Bellenden Road London SE15 4QY
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- Task List -->
+    <h2 class="govuk-heading-l">Process application</h2>
+    <ol class="moj-task-list" style="margin-top: 60px;">
+        <li>
+          <h2 class="moj-task-list__section">
+            <span class="moj-task-list__section-number">1. </span>Validation
+          </h2>
+          <ul class="moj-task-list__items">
+            <li class="moj-task-list__item">
+             Validate application
+              <strong class="govuk-tag moj-task-list__task-completed">
+        completed
+      </strong>
+      
+    </li>
+          </ul>
+        </li>
+      
+        <li>
+          <h2 class="moj-task-list__section">
+            <span class="moj-task-list__section-number">2. </span>Assessment</h2>
+          <ul class="moj-task-list__items">
+            <li class="moj-task-list__item">
+              Assess proposal
+              <strong class="govuk-tag moj-task-list__task-completed">
+                completed
+              </strong>
+            </li>
+      
+            <li class="moj-task-list__item">
+             Submit recommendation
+             <strong class="govuk-tag moj-task-list__task-completed">
+                completed
+              </strong>
+            </li>
+            
+          </ul>
+        </li>
+          <h2 class="moj-task-list__section">
+            <span class="moj-task-list__section-number">3. </span>Review
+          </h2>
+          <ul class="moj-task-list__items">
+            <li class="moj-task-list__item">
+              <a class="moj-task-list__task-name" href="case-officer-view-decision-notice.html">View assessment            </a>
+              <strong class="govuk-tag govuk-tag--grey" style="float: right; margin-top: -25px;">
+                Awaiting determindation 
+                 </strong>
+      
+            </li>
+      
+            <li class="moj-task-list__item">
+              Publish determination
+       
+            <strong class="govuk-tag govuk-tag--grey" style="float: right; margin-top: 0px;">
+                Awaiting determindation 
+                 </strong>
+      
+            </li>
+      
+        
+          </ul>
+        </li>
+      
+      
+      </ol>
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
+
