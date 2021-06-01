@@ -6,6 +6,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
 "../customnjk/right-accordion-pd-v13.njk" import rightaccordion %} {% from
 "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} {% block head
 %} {{ super() }}
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
 <link
   href="/public/css/southwark-branding.css"
   rel="stylesheet"
@@ -60,7 +61,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
       Assess the proposal
       </h2>
       <p class="govuk-body">
-        Please check that the applicant's answers and documents meet all the requirements.
+        Please check all the information and evidence provided by the applicant.
       </p>
       <div class="govuk-!-padding-bottom-3"></div>
 
@@ -78,7 +79,7 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
           <label class="govuk-label govuk-radios__label" for="where-do-you-live">
             Yes
           </label>
-        </div></br>
+        </div>
         <div class="govuk-radios__item">
           <input class="govuk-radios__input" id="where-do-you-live-2" name="where-do-you-live" type="radio" value="scotland">
           <label class="govuk-label govuk-radios__label" for="where-do-you-live-2">
@@ -89,19 +90,19 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
              <div class="govuk-!-padding-bottom-8"></div>
              <div class="govuk-form-group">
                        <p class="govuk-body">
-                         <strong>Please give the reason(s) why this application is/is not lawful?.</strong>
+                         <strong>State the reasons why this application is, or is not lawful.</strong>
                        </p>
                        <p>
-                        Making reference to which permitted development rights are being evoked.
+                        Refer to the specific permitted development rights being evoked.
                        </p>
-                       <div id="with-hint-hint" class="govuk-hint">
+                       <div id="with-hint-hint" class="govuk-body">
                         This information <strong>will</strong> appear on the decision notice.
                       </div>
                        <textarea
                          class="govuk-textarea"
                          id="more-detail"
                          name="more-detail"
-                         rows="3"
+                         rows="9"
                          aria-describedby="more-detail-hint"
                        ></textarea>
                      </div>
@@ -112,15 +113,15 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
                     <p class="govuk-body" style = "margin-bottom: 12px;">
                       <strong>Please provide supporting information for your manager.</strong>
                       </p>
-                      <div id="with-hint-hint" class="govuk-hint">
-                        Your comment will <strong>not</strong> appear on the decision notice.
+                      <div id="with-hint-hint" class="govuk-body">
+                        This information <strong>will not </strong>appear on the decision notice or the public register, however FOI still apply.
                       </div>
                     
                     <textarea
                       class="govuk-textarea"
                       id="more-detail"
                       name="more-detail"
-                      rows="3"
+                      rows="7"
                       aria-describedby="more-detail-hint"
                     ></textarea>
                   </div>
@@ -130,20 +131,20 @@ type: 'information', text: 'Select text to add comment.', iconFallbackText:
       <a class="govuk-button" data-module="govuk-button" href="make-recommendation-grant">
         Save
       </a>
-
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="make-recommendation-grant">
+        Back
+      </a>
       <! -- Save button for directing to decision notice specifically-->
-{# 
+ 
       <br />
-      <button class="govuk-button" data-module="govuk-button">
-        Save
-      </button>
-    </form>#}
+      
+    </form>
   </div> 
 </div>
   <! –– Right panel with additional information in accordion ––>
   
   <div class="govuk-grid-column-one-third">
-    
-   {{ rightaccordion() }}
+    {{ relatedinfo() }}
   </div>
+
 {% endblock %}
