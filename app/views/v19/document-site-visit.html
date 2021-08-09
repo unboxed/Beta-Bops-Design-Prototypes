@@ -1,0 +1,125 @@
+document-site-visit.html
+
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Document site visit
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- Document site visit-->
+    <div style="margin-top: 50px;">
+      
+      
+          <h1 class="govuk-heading-l" > Document site visit</h1>
+
+    
+      
+      
+      <label class="govuk-label" for="sort" style ="margin-top: 40px;">
+        <strong>Upload images from site visit:</strong>
+    </label>
+     <input class="govuk-file-upload" id="file-upload-1" name="file-upload-1" type="file">
+     
+
+     <div class="govuk-form-group" style ="margin-top: 30px;">
+      <p class="govuk-body">
+       Are the exisiting plans accurate?
+      </p>
+      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+  </div>
+  <div class="govuk-form-group" style ="margin-top: 30px;">
+    <p class="govuk-body">
+     Are there any differences in ground level?
+    </p>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+<div class="govuk-form-group" style ="margin-top: 30px;">
+  <p class="govuk-body">
+   Will the proposal impact the amenity of neighbouring occupiers?
+  </p>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+     
+<div class="govuk-form-group" style ="margin-top: 30px;">
+  <p class="govuk-body">
+ Other considerations
+  </p>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+</div>
+     
+
+    <div class="govuk-button-group">
+      <a class="govuk-button" data-module="govuk-button" href="task-list-considerations-2.html">
+        Complete
+      </a>
+    
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-considerations-2.html">
+        Save as draft
+      </a>
+    </div>
+</div>
+</div>
+
+
+
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

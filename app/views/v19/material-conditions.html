@@ -1,0 +1,159 @@
+
+time-limit.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-conditions.html"> Application</a>
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Time limit
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- add conditions->
+
+    <h2 class="govuk-heading-m" style="margin-top: 40px;">Materials to be as specified</h2>
+
+
+ <div class="govuk-form-group" style="margin-top: 40px;">
+  <p class="govuk-body"> <strong>Condition</strong></br>
+  The materials to be used in the implementation of this permission shall not be 
+  otherwise than as described and specified in the application and on the drawings 
+  hereby approved unless the prior written consent of the local planning authority 
+  has been obtained for any proposed change or variation.
+  </p>
+    
+</div>
+
+      <div class="govuk-form-group">
+        <p class="govuk-body"> <strong>Reason</strong><br>
+          To ensure that the new works blend in with the existing building in the 
+          interest of the design and appearance of the building in accordance with: 
+          the National Planning Policy Framework 2019; Strategic Policy 12 (Design and 
+          Conservation) of the Core Strategy 2011, and; Saved Policies 3.12 (Quality 
+          in Design) and 3.13 (Urban Design) of the Southwark Plan 2007.
+        </p>
+            </div>
+
+            <p class="govuk-body">
+              <a href="#" class="govuk-link">Edit condition and reason</a>
+              </p>
+
+            <div class="govuk-form-group" style="margin-top: 40px;">
+              <fieldset class="govuk-fieldset">
+                  <p class="govuk-heading-s">
+                    Condition type
+                  </p>
+                <div class="govuk-checkboxes govuk-checkboxes--small">
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation">
+                      Pre-commencement 
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+                      Above Ground
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+                      Pre-occupation
+                    </label>
+                  </div>
+                  <div class="govuk-checkboxes__item">
+                    <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT" checked>
+                    <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+                      Compliance 
+                    </label>
+                  </div>
+                </div>
+            
+              </fieldset>
+            </div>
+            
+
+
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove condition</a>
+   </p>
+      
+
+        
+          <div style="margin-top: 40px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
+              Complete
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Save as draft
+            </a>
+          </div>
+          </div>
+
+      
+        </fieldset>
+  
+
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
+
+

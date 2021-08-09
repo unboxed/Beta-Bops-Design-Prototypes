@@ -1,0 +1,173 @@
+impact-transport.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-three-quarters">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Assess the impact on transport
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+   <strong> Description:</strong> Proposed two storey side extension, new front shed, floor plan redesign and all associated works.
+    </p>
+    <p class="govuk-body">
+   <strong>At:</strong>1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- impact on neighbours -->
+
+   
+    <div style="margin-top: 60px;">
+        
+       
+ <h1 class="govuk-heading-l" > Assess the impact on transport
+</h1>
+<details class="govuk-details" data-module="govuk-details" style="margin-bottom: 40px;">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Policy and guidance
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    <strong>Policy 5.2 - Transport Impacts</strong></br>
+    Planning permission will be granted for development unless:</br>
+    i. There is an adverse impact on transport networks for example through significant
+    increases in traffic or pollution; and/or</br>
+    ii. Adequate provision has not been made for servicing, circulation and access to, from
+    and through the site; and/or</br>
+    iii. Consideration has not been given to impacts of development on the Bus Priority
+    Network and the Transport for London Road Network.</br>
+    Where a development proposal is likely to have significant transport implications applicants will
+    be asked to submit a Transport Assessment (TA), which includes a Travel Plan with their
+    application. A Transport Assessment will form part of the Sustainability Assessment.</br></br>
+   <strong> Reasons</strong></br>
+    Land use development and transport are strongly linked. New development has the potential to
+    increase the negative impacts of transport networks, through increased congestion, reduced
+    safety, increased pollution etc. Effects can be temporary, permanent or cumulative.
+    All effects on transport networks need to be considered in assessing a planning application to
+    determine whether the proposal is acceptable and whether any adverse effects will be able to be
+    avoided or mitigated. The submission of a TA and Travel Plan
+
+
+  </div>
+</details>
+
+      
+       
+        <div style="margin-bottom: 60px;">
+            <div>
+                <p class="govuk-body">
+                  Assessment of impact:
+                </p>
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" checked>
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                    Impact
+                    </label>
+                  </div>
+                    </div>
+                <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                    No impact
+                    </label>
+                  </div>
+                  </div>
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                      Does not apply
+                    </label>
+                  </div>
+                  </div>
+                  </div>
+ 
+              </br>
+         
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+      
+            </div>
+            </div>
+    
+
+
+          
+                  <p class="govuk-body">
+                    <a class="govuk-link govuk-link--no-visited-state" href="task-list-new.html"> Remove consideration</a>
+                  </p>
+            
+       
+
+          <div style="margin-top: 50px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html" >
+              Complete 
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Save as draft
+            </a>
+          </div>
+        
+  
+      </div>
+      
+        </fieldset>
+        </div>
+    
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

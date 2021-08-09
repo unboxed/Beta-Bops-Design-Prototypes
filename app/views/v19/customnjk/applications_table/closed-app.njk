@@ -1,0 +1,89 @@
+{% macro application_closed() %}
+  {% block content %}
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="closed">
+        <h2 class="govuk-heading-l">Closed</h2>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">
+                Application number
+              </th>
+              <th scope="col" class="govuk-table__header">Site address</th>
+              <th scope="col" class="govuk-table__header">Application type</th>
+              <th scope="col" class="govuk-table__header">
+                Decision
+              </th>
+              <th scope="col" class="govuk-table__header">
+                Determination date
+              </th>
+              <th scope="col" class="govuk-table__header">Planning officer</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">
+              <a href="/v09/cert-of-law-reqs-recommended">
+                19/AP/1852
+              </a>
+              </td>
+              <td class="govuk-table__cell">
+                28 Something Road, London SE2 4XK
+              </td>
+              <td class="govuk-table__cell">Full householder</td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--red">
+                  Refused
+                </strong>
+              </td>
+              <td class="govuk-table__cell">June 7</td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">19/AP/1883</td>
+              <td class="govuk-table__cell">92 Other Road, SE4 5MJ</td>
+              <td class="govuk-table__cell">
+                Proposed permitted development:<br>Certification of lawfulness
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+                  Granted
+                </strong>
+              </td>
+              <td class="govuk-table__cell">June 6</td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">19/AP/1873</td>
+              <td class="govuk-table__cell">82 Trick Road, SE5 6JK</td>
+              <td class="govuk-table__cell">
+                Proposed permitted development:<br>Certification of lawfulness
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  Withdrawn
+                </strong>
+              </td>
+              <td class="govuk-table__cell">June 7</td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">17/AP/1353</td>
+              <td class="govuk-table__cell">67 Evelina Road, SE15 6TT</td>
+              <td class="govuk-table__cell">
+                Proposed permitted development:<br>Certification of lawfulness
+              </td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  Returned
+                </strong>
+              </td>
+              <td class="govuk-table__cell">June 2</td>
+              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+    {% endblock %}
+{% endmacro %}

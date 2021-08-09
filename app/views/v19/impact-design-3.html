@@ -1,0 +1,364 @@
+impact-design-3.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+      <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+        <ol class="govuk-breadcrumbs__list">
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Application
+          </li>
+        </ol>
+      </div>
+      <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+        0000600
+      </h1>
+      <p class="govuk-heading-m">
+          1 Rycott Path, London, SE22 0AA
+          </p>
+     
+      <p class="govuk-body">
+       Description: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path. <a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+      </p>
+      <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+      
+      <p>
+          <strong class="govuk-tag govuk-tag--purple">In assessment</strong>  &nbsp; &nbsp; <strong class="govuk-tag govuk-tag--green">Target date: 21 June 2021</strong>
+        </p>
+  
+    </div>
+  </div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- impact on neighbours -->
+
+   
+       
+ <h1 class="govuk-heading-l" style="margin-top: 60px;"> Design and heritage
+</h1>
+<div class="govuk-form-group" style="margin-top: 30px;">
+    <fieldset class="govuk-fieldset">
+    
+      <div class="govuk-radios govuk-radios--small">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="status" name="status" type="radio" value="not-started" checked>
+          <label class="govuk-label govuk-radios__label" for="status">
+            <strong class="govuk-tag govuk-tag--grey">
+                Not started
+              </strong>
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="status-2" name="status" type="radio" value="actio-required">
+          <label class="govuk-label govuk-radios__label" for="status-2">
+            <strong class="govuk-tag govuk-tag--red">
+                Action required
+              </strong>
+          </label>
+        </div>
+        <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="status-3" name="status" type="radio" value="awaiting-response">
+            <label class="govuk-label govuk-radios__label" for="status-3">
+                <strong class="govuk-tag govuk-tag--yellow">
+                    Awaiting response
+                  </strong>
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="status-4" name="status" type="radio" value="complete">
+            <label class="govuk-label govuk-radios__label" for="status-4">
+                <strong class="govuk-tag govuk-tag--green">
+                    Complete
+                  </strong>
+            </label>
+          </div>
+      </div>
+  
+    </fieldset>
+  </div>
+
+            <!--    Policy question -->
+            <div class="govuk-form-group">
+                <p class="govuk-heading-s">
+                    Work in progress notes
+                  </p>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+       
+              <p class="govuk-heading-s">
+                Policy and guidance
+              </p>
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint"></textarea>
+      
+           
+              
+
+            </br>
+            <div style="margin-top: 60px;">
+                <p class="govuk-heading-m"> Assess the impact on design and heritage</p>
+                </div>
+              <!--    Policy question -->
+              <div style="margin-top: 40px;">
+                <p class="govuk-body">  Will the proposal fail to conserve or enhance nearby heritage assets and their settings?
+                </p>
+           
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios govuk-radios--small">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" />
+                        <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                        No significant negative impact
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-radios govuk-radios--small">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no" />
+                        <label class="govuk-label govuk-radios__label" for="policy-question-3-no" >
+                       Significant negative impact
+                        </label>
+                      </div>
+                      <div class="govuk-radios govuk-radios--small">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no" />
+                          <label class="govuk-label govuk-radios__label" for="policy-question-3-no"
+                          >
+                          Does not apply
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+          
+             
+                  </div>
+   
+                </br>
+           
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+                <div>
+            
+          </div>
+         
+           
+           </div>
+       
+                  <!--    Policy question 2 -->
+                  <div style="margin-top: 60px;">
+                <p class="govuk-body">  Will the proposal harm the established building line, roof line and/ or street scene?
+                </p>
+       
+                  <div class="govuk-radios govuk-radios--inline">
+                    <div class="govuk-radios govuk-radios--small">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" />
+                        <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                        No significant negative impact
+                        </label>
+                      </div>
+                    </div>
+                    <div class="govuk-radios govuk-radios--small">
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no" />
+                        <label class="govuk-label govuk-radios__label" for="policy-question-3-no" >
+                       Significant negative impact
+                        </label>
+                      </div>
+                      <div class="govuk-radios govuk-radios--small">
+                        <div class="govuk-radios__item">
+                          <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no" />
+                          <label class="govuk-label govuk-radios__label" for="policy-question-3-no"
+                          >
+                          Does not apply
+                          </label>
+                        </div>
+                      </div>
+                    </div>
+                    <br />
+          
+             
+                  </div>
+   
+                </br>
+           
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+                <div>
+            
+          </div>
+       
+                </div>
+
+
+                <!-- Question 3-->
+                
+
+                <div style="margin-top: 80px;">
+                    <p class="govuk-body">  Will the proposal harm the character of the host dwelling due to being of an excessive scale, massing or height, or through the use of inappropriate materials?
+                    </p>
+              
+                      <div class="govuk-radios govuk-radios--inline">
+                        <div class="govuk-radios govuk-radios--small">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" />
+                            <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                            No significant negative impact
+                            </label>
+                          </div>
+                        </div>
+                        <div class="govuk-radios govuk-radios--small">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no" />
+                            <label class="govuk-label govuk-radios__label" for="policy-question-3-no" >
+                           Significant negative impact
+                            </label>
+                          </div>
+                          <div class="govuk-radios govuk-radios--small">
+                            <div class="govuk-radios__item">
+                              <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no" />
+                              <label class="govuk-label govuk-radios__label" for="policy-question-3-no"
+                              >
+                              Does not apply
+                              </label>
+                            </div>
+                          </div>
+                        </div>
+                        <br />
+              
+                 
+                      </div>
+       
+                    </br>
+               
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+                    <div>
+                
+              </div>
+             
+              </div>
+
+              <div class="govuk-form-group" style="margin-top: 80px;">
+                <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+                 
+                    <p class="govuk-heading-m">
+                        How will the impact on design and heritage be mitigated? 
+                    </p>
+               
+                    <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                        <label class="govuk-label govuk-radios__label" for="contact">
+                         No adverse impact
+                        </label>
+                      </div>
+                     
+                  <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios" style="margin-top: 20px;">
+                    <div class="govuk-radios__item">
+                      <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+                      <label class="govuk-label govuk-radios__label" for="contact">
+                        Add condition
+                      </label>
+                    </div>
+                   
+                    <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact">
+                     
+                        <div class="govuk-form-group" >
+                            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                         
+                              <div class="govuk-checkboxes" style="margin-top: 20px;">
+                                <div class="govuk-checkboxes__item">
+                                  <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                                  <label class="govuk-label govuk-checkboxes__label" for="waste">
+                                    Materials to match existing
+                                  </label>
+                                </div>
+                                <div class="govuk-checkboxes__item" style="margin-bottom: 20px;">
+                                  <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                                  <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                                    Sample Materials
+                                  </label>
+                                </div>
+                           
+                              </div>
+                          
+                            </fieldset>
+                          </div>
+                 
+              
+                    </div>
+                  
+           
+                  
+                      <div class="govuk-radios__item">
+                        <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+                        <label class="govuk-label govuk-radios__label" for="contact-2">
+                          Refuse application 
+                        </label>
+                      </div>
+                      <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+                        <div class="govuk-form-group">
+                          <p class="govuk-body" style="margin-top: 20px;"> 
+                          Make reference to the polcies that have not been met.
+                         </p>
+                    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+                      </div>
+                
+                      </div>
+                    
+                  </div>
+              
+                </fieldset>
+              </div>
+         
+ 
+                    <div style="margin-top: 30px;">
+                      <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-considerations-4.html">
+                       Save
+                      </a>
+                      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-considerations-5.html">
+                       Back
+                      </a>
+                    </div>
+                  
+  
+      
+      
+        </fieldset>
+        </div>
+    
+
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

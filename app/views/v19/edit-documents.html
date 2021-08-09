@@ -1,0 +1,236 @@
+Edit-documents.html
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css">
+{% endblock %}
+
+{% from "./customnjk/document-options.njk"  import document_options_checkbox %}
+
+{% block content %}
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        Edit documents
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+    
+
+    <div style="margin-top: 40px;">
+
+      <fieldset class="govuk-fieldset">
+          <div>
+        
+        <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 250px; border: solid 1px #eeeeee"/>
+        <p style="margin-top: 20px;">File name: Section_proposed.pdf</p>
+        <p style="margin-top: 5px;">Date received: DD MM YYYT</p>
+    <p style="margin-top: 5px;">
+      <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank" >View file in new window</a>
+    </p>
+  </div>
+      
+
+          
+          <div class="govuk-form-group" style="margin-top: 50px;">
+            <label class="govuk-heading-s" for="file-upload">
+              Upload a replacement file
+            </label>
+            <input class="govuk-file-upload" id="file-upload" name="file-upload" type="file">
+          </div>
+        </fieldset>
+      </div>
+    
+  
+  <div class="govuk-!-padding-bottom-4"></div>
+  <div class="govuk-form-group ">
+    <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+        <h4 class="govuk-heading-s">What does the document contain?</h4>
+        <div class="govuk-checkboxes govuk-checkboxes--small">
+      
+      </legend>
+      {{ document_options_checkbox("FRONT") }}
+      {{ document_options_checkbox("REAR") }}
+      {{ document_options_checkbox("SIDE") }}
+      {{ document_options_checkbox("ROOF") }}
+      {{ document_options_checkbox("GARDEN") }}
+      {{ document_options_checkbox("FLOOR") }}
+      {{ document_options_checkbox("SITE") }}
+      {{ document_options_checkbox("PLAN") }}
+      {{ document_options_checkbox("ELEVATION") }}
+      {{ document_options_checkbox("PROPOSED") }}
+      {{ document_options_checkbox("EXISTING") }}
+      {{ document_options_checkbox("EVIDENCE") }}
+      {{ document_options_checkbox("STATEMENT") }}
+    
+  </div>
+  </fieldset>
+  </div>
+
+
+  <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+    
+        <label class="govuk-heading-s" for="valid-document">
+          Is the document valid?
+        </label>
+     
+      <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+          <label class="govuk-label govuk-radios__label" for="contact">
+          Yes
+          </label>
+        </div>
+       
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            No
+          </label>
+        </div>
+        <div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+      
+            <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
+                
+             
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                  Describe in full why the doucment is invalid. This will be sent to the applicant.
+                </label>
+                <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+      
+        </div>
+      </div>
+  
+    </fieldset>
+  </div>
+
+  <div class="govuk-form-group"  style="margin-bottom: 45px;">
+    <label class="govuk-heading-s" for="document-number">
+      Document reference(s)
+    </label>
+    <p class="govuk-hint" style="margin-bottom: 25px;">Where documents contain multiple drawings, enter multiple document references separated by a comma (e.g. "25A-V2, 25B-V2").</p>
+
+    <input class="govuk-input govuk-input--width-20" id="document-number" name="document-number" type="text">
+
+</div>
+
+<div class="govuk-form-group" style="margin-bottom: 40px;">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+      <strong>Do you want to list this document on the decision notice?</strong>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" style="margin-bottom: 45px;">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="govuk-form-group" style="margin-bottom: 40px;">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+          <strong>Should this document be made publicly available?</strong>
+        </legend>
+        <p class="govuk-hint" style="margin-bottom: 25px;">Please indicate whether this document should be made available for public viewing on the planning register or via the public API. Select "No" if the document contains any sensitive personal information</p>
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+  </fieldset>
+  <div class="govuk-!-padding-bottom-7"></div>
+  <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="pd-drawing-numbers">
+    Save
+  </a>
+
+  </div>
+  </div>
+  </div>
+  </div>
+  </fieldset>
+  </div>
+
+
+    
+
+<!-- add later
+
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h4 class="govuk-heading-s">Is this document valid?</h4>
+          </legend>
+            <p class="govuk-hint"><a href="https://www.legislation.gov.uk/uksi/2015/596/contents/made" target="_blank">View validation requirements</a>
+            </p>          
+          <div class="govuk-radios govuk-radios--inline">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="month">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio"
+                value="year">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+
+-->
+
+    
+ 
+
+
+  
+  {% endblock %}

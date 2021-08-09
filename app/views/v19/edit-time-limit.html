@@ -1,0 +1,178 @@
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-conditions.html"> Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="time-limit.html"> Condition</a>
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+        Edit condition 
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- add conditions->
+
+    <h2 class="govuk-heading-m" style="margin-top: 40px;">Standard time limit</h2>
+    <p class="govuk-hint"> 
+        If a condition has multiple parts, add each part to a new section.
+    </p>
+    <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+            How many parts will this condition have?
+     </label>
+        <select class="govuk-select" id="sort" name="sort">
+          <option value="1" selected>1</option>
+          <option value="2" >2</option>
+          <option value="3">3</option>
+          <option value="4">4</option>
+          <option value="4">5</option>
+      </select>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="sort">
+            Please indicate the category of condition:
+     </label>
+        <select class="govuk-select" id="sort" name="sort">
+            <option value="1">Select category</option>
+            <option value="amenity">Amenity</option>
+            <option value="material">Material</option>
+          <option value="time-limit"selected>Time limit</option>
+          <option value="trees">Trees</option>
+          <option value="sustainablity">Sustainablity</option>
+      </select>
+      </div>
+
+ <div class="govuk-form-group" style="margin-top: 40px;">
+  <p class="govuk-body"> <strong>Condition: 1</strong></br></br>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">The development hereby permitted shall be begun before the expiration of three years from the date of this permission.
+    </textarea>
+  </p>
+  <div class="govuk-form-group" style="margin-top: 10px;">
+    <fieldset class="govuk-fieldset">
+        <p class="govuk-body">
+        What condition type does this condition part have?
+        </p>
+      <div class="govuk-checkboxes govuk-checkboxes--small">
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation" name="organisation" type="checkbox" value="hmrc">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation">
+            Pre-commencement 
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation-2" name="organisation" type="checkbox" value="employment-tribunal">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation-2">
+            Above Ground
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation-3" name="organisation" type="checkbox" value="MOD">
+          <label class="govuk-label govuk-checkboxes__label" for="organisation-3">
+            Pre-occupation
+          </label>
+        </div>
+        <div class="govuk-checkboxes__item">
+          <input class="govuk-checkboxes__input" id="organisation-4" name="organisation" type="checkbox" value="DfT" checked>
+          <label class="govuk-label govuk-checkboxes__label" for="organisation-4">
+            Compliance 
+          </label>
+        </div>
+      </div>
+  
+    </fieldset>
+  </div>
+  </div>
+ 
+
+
+
+
+      <div class="govuk-form-group">
+        <p class="govuk-body"> <strong>Reason</strong> </br> </br>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (As amended).
+            </textarea>
+        </p>
+</div>
+
+
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove condition</a>
+   </p>
+      
+
+        
+          <div style="margin-top: 40px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="time-limit.html">
+             Save
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="time-limit.html">
+              Back
+            </a>
+          </div>
+          </div>
+
+      
+        </fieldset>
+  
+
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
