@@ -1,0 +1,89 @@
+validation-start.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-heading-m">
+        1 Rycott Path, London, SE22 0AA
+        </p>
+   
+    <p class="govuk-body">
+     Description: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path. <a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+    <p>
+        <strong class="govuk-tag govuk-tag--grey">Not started</strong>  &nbsp; &nbsp; <strong class="govuk-tag govuk-tag--green">Target date: 21 June 2021</strong>
+      </p>
+
+  </div>
+</div>  
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <! –– Application detail blocks ––>
+        {{ applicationinfo() }}
+    
+  
+    <! -- BODY CONTENT -->
+<div style="margin-top: 60px;">
+   <h2 class="govuk-heading-l">Validate Application
+   </h2>
+   <p class="govuk-body"><strong>
+     The application has not yet been marked as invalid or valid </strong> 
+    </p>
+    <p class="govuk-body">Begin the validation process to:</p>
+<ul class="govuk-list govuk-list--bullet">
+  <li>Check the red line boundary, fees and documents</li>
+  <li>Review description and constraints</li>
+  <li>Request any changes and mark the application as valid or invalid</li>
+</ul>
+<a href="validation-red-line.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
+  Start now
+  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
+    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
+  </svg></a>
+   
+
+  <! -– Right panel with additional information in accordion ––>
+</div>
+</div>
+ 
+<div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+</div>
+  {% endblock %}
