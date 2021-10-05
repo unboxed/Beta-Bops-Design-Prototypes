@@ -1,0 +1,116 @@
+decision-notice.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-width-container">
+ <span class="govuk-caption-xl">Council Name</span>
+  <main class="govuk-main-wrapper">
+
+    <div class="govuk-grid-row">
+    
+      <div class="govuk-grid-column-two-thirds">
+        <h2 class="govuk-heading-s">Town and Country Planning Act 1990 (as amended): sections 191 and 192</h2>
+        <h2 class="govuk-heading-s">Town and Country Planning (Development Management Procedure) (England) Order 2015 (as amended): Article 39</h2>
+        <h1 class="govuk-caption-xl">Certificate of Lawful Use or Development</h1>
+        <h2 class="govuk-heading-l">Granted</h2>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+            <div>
+                <p class="govuk-body">
+                <strong>Applicant</strong> <br> Test Test
+                </p>
+            </div>
+            <div>
+                <p class="govuk-body">
+                <strong>Application number</strong> <br> 00000713
+                </p>
+            </div>
+            <div>
+                <p class="govuk-body">
+                <strong>Application received</strong> <br> 30 September 2021
+                </p>
+            </div>
+            <div>
+                <p class="govuk-body">
+                <strong>Decision date</strong> <br> TBD
+                </p>
+            </div>
+            <div>
+                <p class="govuk-body">
+                    <strong>Site address</strong> <br> 20 CREWYS ROAD, LONDON, SE15 2BH
+                </p>
+            </div>
+            <div>
+                <p class="govuk-body">
+                <strong>Proposed or existing</strong> <br> Existing
+                </p>
+            </div>
+            <div>
+                <p class="govuk-body">
+                    <strong>Use/development</strong> <br>  Subdivide the property from a single dwellinghouse to two flats with no external changes.
+                </p>
+            </div>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <div>
+            <p class="govuk-body">
+            We certify that on the date of the application, the existing use or operations described in the application and supporting plans were lawful for the purposes of S.191 of the Town and Country Planning Act 1990.
+            </p>
+            <p class="govuk-body govuk-!-margin-bottom-1">
+            <strong>The proposal complies due to the following reason(s):</strong>
+            </p>
+            <p class="govuk-body">
+            The existing use of the application site for two separate self-contained units is considered to be lawful because on the balance of probabilities the application site has been used as such for in excess of four years at the time of the application, and is therefore immune from planning enforcement action pursuant to S.171B(2) of the Town and Country Planning Act 1990 (as amended).
+            </p>
+            <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+            This decision is based on the following approved plans:
+            </h3>
+            <p class="govuk-body">
+            No plans specified
+            </p>
+        </div>
+        <div>    
+            <h3 class="govuk-heading-s">
+            Site location:
+            </h3>
+        </div>
+        <div>
+        <img src="/public/images/map.png" style="width: 600px; border: solid 1px #eeeeee"/>
+        </div>
+        <h3 class="govuk-heading-s">
+        Notes:
+        </h3>
+        <p class="govuk-body">
+        No notes provided
+        </p>
+        <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+        <p class="govuk-body">
+        Enquiries regarding this document should include the application number and be sent by: 
+        <br>
+        <br><strong>Email</strong>
+        <br> <a href="mailto:planning.applications@southwark.gov.uk"> planning.applications@southwark.gov.uk </a><br>
+        <br><strong>Post</strong><br>
+        Director of Planning and Growth, Southwark Council,<br>Planning, <br> Southwark Council,<br>PO BOX 64529,<br>London<br>SE1P 5LX.
+        </p>
+
+     </div>
+    </div>
+    
+
+  </main>
+</div>
+
+
+
+
+{% endblock %}
