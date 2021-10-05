@@ -1,0 +1,291 @@
+impact-neighbours.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-heading-m">
+        1 Rycott Path, London, SE22 0AA
+        </p>
+   
+    <p class="govuk-body">
+     Description: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path. <a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+    <p>
+        <strong class="govuk-tag govuk-tag--purple">In assessment</strong>  &nbsp; &nbsp; <strong class="govuk-tag govuk-tag--green">Target date: 21 June 2021</strong>
+      </p>
+
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- impact on neighbours -->
+
+   
+    <div style="margin-top: 60px;">
+        
+       
+ <h1 class="govuk-heading-l"> Assess the impact on the amenity of neighbouring occupiers
+</h1>
+<details class="govuk-details" data-module="govuk-details" style="margin-bottom: 40px;">
+  <summary class="govuk-details__summary">
+    <span class="govuk-details__summary-text">
+      Policy and guidance
+    </span>
+  </summary>
+  <div class="govuk-details__text">
+    Saved <a class="govuk-link govuk-link--no-visited-state" href="">Policy 3.2</a> ('Protection of Amenity') of the Southwark Plan 2007 seeks to 
+    ensure an adequate standard of amenity for existing and future occupiers; Strategic Policy 
+    13 ('High Environmental Standards') of the Core Strategy 2011 requires development to comply 
+    with the highest possible environmental standards, including in sustainability, flood risk, 
+    noise and light pollution and amenity problems. The 2015 Technical Update to the  <a class="govuk-link govuk-link--no-visited-state" href="">Residential 
+      Design Standards SPD (2011)</a> also sets out the  guidance for rear extensions which states that 
+    development should not unacceptably affect the amenity of neighbouring properties. 
+    This includes privacy, outlook, daylight and sunlight.
+
+  </div>
+</details>
+
+    
+        <div style="margin-bottom: 60px;">
+            <div>
+                <p class="govuk-body">
+                  Will the proposal negatively impact on the neighbours' privacy as a result of overlooking windows, terraces, or balconies?
+                </p>
+                <details class="govuk-details" data-module="govuk-details" style="margin-bottom: 40px;">
+                  <summary class="govuk-details__summary">
+                    <span class="govuk-details__summary-text">
+                      Policy and guidance
+                    </span>
+                  </summary>
+                  <div class="govuk-details__text">
+                  <strong> Policy 3.2 – Protection of Amenity</strong> </br>
+                    Planning permission for development will not be granted where it would cause loss of amenity,
+                    including disturbance from noise, to present and future occupiers in the surrounding area or on
+                    the application site.</br></br>
+                  <strong> Reasons</strong> </br>
+                    To protect the amenity of an area and the quality of life for people living, or working in, or visiting
+                    the borough.
+                
+                  </div>
+                </details>
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" checked>
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                    Impact
+                    </label>
+                  </div>
+                    </div>
+                <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                    No impact
+                    </label>
+                  </div>
+                  </div>
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                      Does not apply
+                    </label>
+                  </div>
+                  </div>
+                  </div>
+ 
+              </br>
+         
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+      
+            </div>
+            </div>
+    
+            <!--    Policy question -->
+            <div style="margin-bottom: 60px;">
+            <div>
+                <p class="govuk-body">
+                  Will the proposal negatively impact on the neighbours' access to sunlight and/or daylight?
+                </p>
+          
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" checked>
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                    Impact
+                    </label>
+                  </div>
+                    </div>
+                <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                    No impact
+                    </label>
+                  </div>
+                  </div>
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                      Does not apply
+                    </label>
+                  </div>
+                  </div>
+                  </div>
+ 
+              </br>
+         
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+            </div>
+            </div>
+    
+            <!--    Policy question -->
+            <div style="margin-bottom: 60px;">
+                <p class="govuk-body">
+                  Will the proposal harm any neighbour’s sense of openness as a result of excessive scale, massing, proportions and/or proximity?
+                </p>
+             
+                <div class="govuk-radios govuk-radios--inline">
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-1" name="policy-question-1" type="radio" value="yes" checked>
+                    <label class="govuk-label govuk-radios__label" for="policy-question-1">
+                    Impact
+                    </label>
+                  </div>
+                    </div>
+                <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-1-no" name="policy-question-1" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-1-no">
+                    No impact
+                    </label>
+                  </div>
+                  </div>
+                  <div class="govuk-radios govuk-radios">
+                  <div class="govuk-radios__item">
+                    <input class="govuk-radios__input" id="policy-question-1-no" name="policy-question-1" type="radio" value="no">
+                    <label class="govuk-label govuk-radios__label" for="policy-question-1-no">
+                      Does not apply
+                    </label>
+                  </div>
+                  </div>
+                  </div>
+ 
+              </br>
+         
+              <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+            </div>
+
+                       <!--    Policy question -->
+                       <div style="margin-bottom: 60px;">
+                        <p class="govuk-body">
+                          Will the proposal harm any neighbour’s quality of outlook as a result of excessive scale, massing, proportions and/or proximity?
+                        </p>
+                       
+                        <div class="govuk-radios govuk-radios--inline">
+                          <div class="govuk-radios govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="policy-question-3" name="policy-question-3" type="radio" value="yes" checked>
+                            <label class="govuk-label govuk-radios__label" for="policy-question-3">
+                            Impact
+                            </label>
+                          </div>
+                            </div>
+                        <div class="govuk-radios govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                            No impact
+                            </label>
+                          </div>
+                          </div>
+                          <div class="govuk-radios govuk-radios">
+                          <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="policy-question-3-no" name="policy-question-3" type="radio" value="no">
+                            <label class="govuk-label govuk-radios__label" for="policy-question-3-no">
+                              Does not apply
+                            </label>
+                          </div>
+                          </div>
+                          </div>
+         
+                      </br>
+                 
+                      <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="6" aria-describedby="more-detail-hint"></textarea>
+              
+                    </div>
+
+               
+          
+            
+       
+
+          <div style="margin-top: 30px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html">
+              Complete 
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Save as draft
+            </a>
+          </div>
+        
+  
+      </div>
+      
+        </fieldset>
+        </div>
+    
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

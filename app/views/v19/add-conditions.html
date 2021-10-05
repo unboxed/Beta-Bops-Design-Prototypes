@@ -1,0 +1,203 @@
+add-conditions.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment
+%} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %}
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">
+                    Application Name
+                </li>
+            </ol>
+        </div>
+        <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+            0000600
+        </h1>
+        <p class="govuk-body">
+            FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+        </p>
+        <p class="govuk-body">
+            1 Rycott Path, London, SE22 0AA
+        </p>
+        <p>
+            <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+        </p>
+        <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+
+    </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <! –– Application detail blocks ––>
+        {{ applicationinfo() }}
+
+        <! -- add conditions->
+
+        <h2 class="govuk-heading-l" style="margin-top: 60px;">Add conditions</h2>
+        <div id="waste-hint" class="govuk-hint">
+            Select all that apply.
+        </div>
+
+        <div class="govuk-form-group" style="margin-top: 40px;">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <h3 class="govuk-heading-s">
+                    Time Limit
+                </h3>
+
+                <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Standard Time Limit
+              </label>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="govuk-form-group" style="margin-top: 60px;">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <h3 class="govuk-heading-s">
+                    Material
+                </h3>
+
+                <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Materials to be as specificed
+              </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Sample Materials
+              </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-3" name="waste" type="checkbox" value="farm">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-3">
+               Materials to match exisiting
+              </label>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+
+        <div class="govuk-form-group" style="margin-top: 60px;">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <h3 class="govuk-heading-s">
+                    Tree
+                </h3>
+
+                <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+                Tree survey
+              </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+                Tee foundation works
+              </label>
+                    </div>
+
+                </div>
+
+            </fieldset>
+        </div>
+        <div class="govuk-form-group" style="margin-top: 60px;">
+            <div class="govuk-checkboxes">
+                <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                    <h3 class="govuk-heading-s">
+                        Amenity
+                    </h3>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Obscure glazing
+          </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+            Roof to be used in emergency
+          </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+              Privacy screen: No use prior to implementation
+            </label>
+                    </div>
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste" name="waste" type="checkbox" value="carcasses">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste">
+              Approved privacy screen
+            </label>
+                    </div>
+            </div>
+            </fieldset>
+        </div>
+
+
+        <div class="govuk-form-group" style="margin-top: 40px;">
+            <fieldset class="govuk-fieldset" aria-describedby="waste-hint">
+                <h3 class="govuk-heading-s">
+                    Bespoke condition
+                </h3>
+
+                <div class="govuk-checkboxes">
+                    <div class="govuk-checkboxes__item">
+                        <input class="govuk-checkboxes__input" id="waste-2" name="waste" type="checkbox" value="mines">
+                        <label class="govuk-label govuk-checkboxes__label" for="waste-2">
+             New condition
+            </label>
+                    </div>
+                </div>
+
+            </fieldset>
+        </div>
+
+
+        <div style="margin-top: 60px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
+              Save
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Cancel
+            </a>
+        </div>
+    </div>
+
+
+    </fieldset>
+
+
+
+
+    <! –– Right panel with additional information in accordion ––>
+
+    <div class="govuk-grid-column-one-third">
+        {{ relatedinfo() }}
+    </div>
+
+
+</div>
+{% endblock %}

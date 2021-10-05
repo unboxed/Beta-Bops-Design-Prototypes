@@ -1,0 +1,113 @@
+add-assessment-class.html 
+ {% extends "layout.html" %} 
+ {% block head %}  
+ {{ super() }} 
+{% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} 
+{% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment%} 
+{% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} 
+{% from "./customnjk/applications_table/closed-app.njk" import application_closed %} 
+{% from "./customnjk/application-info.njk" import applicationinfo%} 
+{% from "./customnjk/related-info.njk" import relatedinfo %}
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid">
+
+        <! -- add Assessment area, part->
+
+        <h2 class="govuk-heading-l" style="margin-top: 60px;">Assessment -  Part 1</h2>
+        <div class="govuk-body">
+            Select the relevant part. Parts as defined in The Town and Country Planning (General Permitted Development) (England) Order 2015 (GPDO), Schedule 2, Part 1.
+        </div>
+        <div>
+            <a href="https://www.legislation.gov.uk/uksi/2015/596/schedule/2/made" class="govuk-link govuk-link--no-visited-state">View legislation</a>
+        </div>    
+            <br>
+        
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+          <div class="govuk-checkboxes">
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-a" name="class" type="checkbox" value="Class A">
+              <label class="govuk-label govuk-checkboxes__label" for="class-a">
+                <strong> Class A </strong> - The enlargement, improvement or other alteration of a dwellinghouse.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-b" name="class" type="checkbox" value="Class B">
+              <label class="govuk-label govuk-checkboxes__label" for="class-b">
+                <strong> Class B </strong> - The enlargement of a dwellinghouse consisting of an addition or alteration to its roof.   
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-c" name="class" type="checkbox" value="Class C">
+              <label class="govuk-label govuk-checkboxes__label" for="class-c">
+                <strong> Class C </strong> - Any other alteration to the roof of a dwellinghouse.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-d" name="class" type="checkbox" value="Class D">
+              <label class="govuk-label govuk-checkboxes__label" for="class-d" >
+                <strong> Class D </strong> - The erection or construction of a porch outside any external door of a dwellinghouse.
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-e" name="class" type="checkbox" value="Class E">
+              <label class="govuk-label govuk-checkboxes__label" for="class-e" >
+                <strong> Class E </strong> -  Buildings etc incidental to the enjoyment of a dwellinghouse.  
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-f" name="class" type="checkbox" value="Class F">
+              <label class="govuk-label govuk-checkboxes__label" for="class-f" >
+                <strong> Class F </strong> -  Hard surfaces incidental to the enjoyment of a dwellinghouse.  
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-g" name="class" type="checkbox" value="Class G">
+              <label class="govuk-label govuk-checkboxes__label" for="class-G" >
+                <strong> Class G </strong> -  The installation, alteration or replacement of a chimney, flue or soil and vent pipe on a dwellinghouse.  
+              </label>
+            </div>
+            <div class="govuk-checkboxes__item">
+              <input class="govuk-checkboxes__input" id="class-h" name="class" type="checkbox" value="Class H">
+              <label class="govuk-label govuk-checkboxes__label" for="class-h" >
+                <strong> Class H </strong> -   The installation, alteration or replacement of a microwave antenna on a dwellinghouse or within the curtilage of a dwellinghouse.  
+              </label>
+            </div>
+          </div>
+      
+        </fieldset>
+      </div>
+    </div>
+
+ 
+</div>
+
+  <div>
+      <div style="margin-top: 60px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="assessment.html">
+              Continue
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="add-assessment.html">
+              Back
+            </a>
+        </div>
+    </div>
+
+
+    </fieldset>
+
+
+
+
+
+
+
+</div>
+{% endblock %}

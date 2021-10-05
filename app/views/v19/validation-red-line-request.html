@@ -1,0 +1,76 @@
+validation-red-line-request.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Question [n] of [|𝐴|] </span>
+<h1 class="govuk-heading-l">
+  Proposed red line boundary change
+</h1>
+
+<div>
+    <p class="govuk-body">
+        <strong>At: </strong> 11 Abbey Gardens
+    </p>
+    <p class="govuk-body">
+        <strong>Date received: </strong> 13 September 2021
+    </p>
+    <p class="govuk-body">
+        <strong>Application Number: </strong> 00000685
+    </p>
+    <div 
+    class="govuk-!-padding-bottom-6">
+    </div>
+</div>
+
+<div>
+  <img src="/public/images/map3.png" style="width: 600px; border: solid 0px #eeeeee"/>
+</div>
+<div 
+  class="govuk-!-padding-bottom-6">
+</div>
+
+<div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            Explain to the applicant why changes are proposed to the red line boundary
+            </label>
+        </h1>
+        <!--div id="more-detail-hint" class="govuk-hint">
+            Do not include personal or financial information, like your National Insurance number or credit card details.
+        </div-->
+        <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+        <div 
+            class="govuk-!-padding-bottom-6">
+        </div>
+        <p class="govuk-body">
+            This request will be added to the application. The requests will not be sent until the application is marked as invalid.
+        </p>
+    </div>
+</div>
+
+<div>
+    <div class="govuk-button-group">
+      <a class="govuk-button govuk" data-module="govuk-button" href="validation-fee.html">
+        Add request
+      </a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-red-line.html">
+        Back
+      </a>
+    </div>
+</div>
+
+  {% endblock %}

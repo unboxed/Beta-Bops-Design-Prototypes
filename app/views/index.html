@@ -1,57 +1,50 @@
-{% extends "layout.html" %}
-{% from "./v15/customnjk/index-table.njk"  import tablerow %}
-{% block content %}
+{% extends "layout.html" %} {% from "./v15/customnjk/index-table.njk" import tablerow %} {% block content %}
 
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <h1 class="govuk-heading-xl">
-      Beta Back-Office Planning (BoPs)
-    </h1>
-    <p class="govuk-body-m">
-      This prototype is for:
-    </p>
-    <ul class="govuk-list govuk-list--bullet">
-      <li>communicating design ideas to our developers</li>
-      <li>experimenting and prototyping different options</li>
-    </ul>
-    <h2 class="govuk-heading-m">
-      Prototype for private beta
-    </h2>
-    <table class="govuk-table" style="margin-bottom: 70px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">Prototype version</th>
-          <th scope="col" class="govuk-table__header govuk-table__header">Sprint</th>
-          <th scope="col" class="govuk-table__header govuk-table__header">Prototype details for building basic journey
-          </th>
-          <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        {{ tablerow("v18") }}
-        {{ tablerow("v17") }}
-        {{ tablerow("v15") }}
-        {{ tablerow("v12") }}
-        {{ tablerow("v11") }}
-        {{ tablerow("v10") }}
-      </tbody>
-    </table>
-  </div>
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-heading-xl">
+            Beta Back-Office Planning (BoPs)
+        </h1>
+        <p class="govuk-body-m">
+            This prototype is for:
+        </p>
+        <ul class="govuk-list govuk-list--bullet">
+            <li>communicating design ideas to our developers</li>
+            <li>experimenting and prototyping different options</li>
+        </ul>
+        <h2 class="govuk-heading-m">
+            Prototype for private beta
+        </h2>
+        <table class="govuk-table" style="margin-bottom: 70px;">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">Prototype version</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header">Sprint</th>
+                    <th scope="col" class="govuk-table__header govuk-table__header">Prototype details for building basic journey
+                    </th>
+                    <th scope="col" class="govuk-table__header govuk-table__header">Link to research</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                {{ tablerow("v19") }} {{ tablerow("v18") }} {{ tablerow("v17") }} {{ tablerow("v15") }} {{ tablerow("v12") }} {{ tablerow("v11") }} {{ tablerow("v10") }}
+            </tbody>
+        </table>
+    </div>
 </div>
 <div class="govuk-grid-row">
-  <div class="govuk-grid-column-two-thirds">
-    <table class="govuk-table" style="margin-bottom: 70px;">
-      <thead class="govuk-table__head">
-        <tr class="govuk-table__row">
-          <th scope="col" class="govuk-table__header">
-            Full householder journey
-          </th>
-        </tr>
-      </thead>
-      <tbody class="govuk-table__body">
-        {{ tablerow("v13") }}
-      </tbody>
-    </table>
-  </div>
+    <div class="govuk-grid-column-two-thirds">
+        <table class="govuk-table" style="margin-bottom: 70px;">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                    <th scope="col" class="govuk-table__header">
+                        Full householder journey
+                    </th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                {{ tablerow("v13") }}
+            </tbody>
+        </table>
+    </div>
 </div>
 {% endblock %}

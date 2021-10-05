@@ -1,0 +1,294 @@
+{% extends "layout.html" %}
+{% block head %}
+{{ super() }}
+<link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Documents
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+      
+      <h2 class="govuk-heading-m" style="margin-top: 30px;">
+        Documents
+      </h2>
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+          <p class="govuk-body" style="line-height: 1.6;">
+            Check all documents to ensure they support the information provided by the applicant and add tags to indicate the document contents.
+          </p>
+          
+         
+        </div>
+        <div class="govuk-grid-column-one-third" style="text-align: right">
+          <a role="button" class="govuk-button" data-module="govuk-button" href="edit-documents.html">Upload
+            document</a>
+        </div>
+      </div>
+      <ul class="app-task-list">
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png"
+              style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--turquoise">FLOOR</strong> <strong class="govuk-tag govuk-tag--turquoise">PLAN</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+            </p>
+            <p>
+              File name: 10390-Proposed-ground-floorplan.PDF<br />
+              Date received: 02 January 2021<br />
+              Document reference(s): 243646HF<br />
+              Included on decsion notice: Yes<br />
+              Public: No
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png"
+              style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--turquoise">SIDE</strong> <strong class="govuk-tag govuk-tag--turquoise">ELEVATION</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+            </p>
+            <p>
+              File name: 10393-Proposed-rear-elevation.PDF<br />
+              Date received: 02 January 2021
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/10395-Proposed-roof-plan.PDF" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--turquoise">ROOF</strong> <strong class="govuk-tag govuk-tag--turquoise">PLAN</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+          </p>
+            <p>
+              File name: 10395-Proposed-roof-plan.PDF<br />
+              Date received: 02 January 2021<br />
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-1"></div>
+              <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png"
+              style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/PROPOSED_SIDE_ELEVATION-848013.pdf" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half" >
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--turquoise">SIDE</strong> <strong class="govuk-tag govuk-tag--turquoise">ELEVATION</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+            </p>
+            <p>
+              File name: 10397-Proposed-side-elevation.PDF<br />
+              Date received: 02 January 2021<br />
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+
+      <ul class="app-task-list">
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <img src="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.png"
+              style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/EXISTING_GROUND_FLOOR_PLAN-848007.pdf" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--turquoise">FLOOR</strong> <strong class="govuk-tag govuk-tag--turquoise">PLAN</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+            </p>
+            <p>
+              File name: 10390-Proposed-ground-floorplan.PDF<br />
+              Date received: 02 January 2021<br />
+              Document reference(s): 243646HF<br />
+              Included on decsion notice: Yes<br />
+              Public: No
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png"
+              style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--turquoise">SIDE</strong> <strong class="govuk-tag govuk-tag--turquoise">ELEVATION</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+            </p>
+            <p>
+              File name: 10393-Proposed-rear-elevation.PDF<br />
+              Date received: 02 January 2021
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <img src="/public/images/PROPOSED_ROOF_PLAN-848010.png" style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/10395-Proposed-roof-plan.PDF" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half">
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--turquoise">ROOF</strong> <strong class="govuk-tag govuk-tag--turquoise">PLAN</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+          </p>
+            <p>
+              File name: 10395-Proposed-roof-plan.PDF<br />
+              Date received: 02 January 2021<br />
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-quarter">
+            <p>
+              <div class="govuk-!-padding-bottom-1"></div>
+              <img src="/public/images/PROPOSED_SIDE_ELEVATION-848013.png"
+              style="width: 150px; border: solid 1px #eeeeee" />
+            </p>
+            <p>
+              <a href="/public/images/PROPOSED_SIDE_ELEVATION-848013.pdf" target="_blank">View PDF in new window</a>
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-half" >
+            <p>
+              <div class="govuk-!-padding-bottom-0.5"></div>
+              <strong class="govuk-tag govuk-tag--turquoise">SIDE</strong> <strong class="govuk-tag govuk-tag--turquoise">ELEVATION</strong> <strong class="govuk-tag govuk-tag--turquoise">PROPOSED</strong>
+            </p>
+            <p>
+              File name: 10397-Proposed-side-elevation.PDF<br />
+              Date received: 02 January 2021<br />
+            </p>
+          </div>
+          <div class="govuk-grid-column-one-quarter">
+            <p style="text-align: right">
+              <a class="govuk-link govuk-link--no-visited-state" href="edit-documents.html">Edit</a><br />
+              <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+            </p>
+          </div>
+        </li>
+      </ul>
+      
+      <! –– Right panel with additional information in accordion ––>
+      <div class="govuk-grid-column-one-third">
+      </div>
+    </div>
+    {% endblock %}

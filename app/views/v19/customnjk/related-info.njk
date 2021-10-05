@@ -1,0 +1,194 @@
+{% macro relatedinfo(params) %}
+{% block content %}
+  <! –– Right panel with additional information in accordion ––>
+
+
+
+    <div
+      class="govuk-accordion"
+      data-module="govuk-accordion"
+      id="accordion-default"
+    >
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Constraints
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+        
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Conservation area
+            </li>
+          </ul>
+          <p><a class="govuk-link govuk-link--no-visited-state" href="update-constraints-3">Update</a></p>
+        </div>
+      </div>   
+        <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Materials of proposal 
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+        
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+             London stock brick
+            </li>
+             <li>
+             Stone coping timber French doors
+            </li>
+               <li>
+             Membrane flat roof
+            </li>
+                 <li>
+             Glazed rooflight
+            </li>
+          </ul>
+        </div>
+       
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Dimensions of proposal 
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+        
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+             Maximum depth: 2820mm
+            </li>
+             <li>
+             Maximum width: 2400mm
+            </li>
+               <li>
+           Height on party wall: 2700mm
+            </li>
+                 <li>
+            Maximum height: 3200mm
+            </li>
+          </ul>
+        </div>
+       
+      </div>
+
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h3 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-1"
+            >
+              Key application dates
+            </span>
+          </h3>
+        </div>
+        <div
+          id="accordion-default-content-1"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-1"
+        >
+          
+          <p><strong>Application received:</strong> 2 March 2020</p>
+          <p><strong>Validation complete:</strong> 4 March 2020</p>
+          <p><strong>Target date:</strong> 12 June 2020</p>
+          <p><strong>Expiry date:</strong> 19 June 2020</p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-3"
+            >
+              Contact information
+            </span>
+          </h2>
+        </div>
+        <div
+          id="accordion-default-content-3"
+          class="govuk-accordion__section-content"
+          aria-labelledby="accordion-default-heading-3"
+        >
+          <p class="govuk-body"><strong>Agent:</strong><br />Not applicable</p>
+          <p class="govuk-body">
+            <strong>Applicant:</strong><br />David Fryman <br />020 7525 5000<br /><a
+              href=""
+              >david.fryman@email.com</a
+            >
+          </p>
+        </div>
+      </div>
+      <div class="govuk-accordion__section">
+        <div class="govuk-accordion__section-header">
+          <h2 class="govuk-accordion__section-heading">
+            <span
+              class="govuk-accordion__section-button"
+              id="accordion-default-heading-4"
+            >
+              Case notes
+            </span>
+          </h2>
+        </div>
+        <div id="accordion-default-content-4" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-4">
+       <div style="padding-bottom: 20px">
+
+              <p style="margin-bottom: 4px;"><strong>Case note</strong> by Eris Fanshawe</p>
+              <p style="margin-bottom: 20px;">
+                <time datetime="2019-06-14T14:01:00.000Z">14 March 2021 at 2:01pm</time>
+              </p>
+                <p>  <em>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</em></p>
+              
+            </div>
+      <div class="govuk-form-group">
+  <label class="govuk-label" for="more-detail">
+    Case note:
+  </label>
+  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+  <button class="govuk-button" data-module="govuk-button">
+  Add
+</button>
+</div>
+        </div>
+      </div>
+  
+    </div>
+    <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+  </div>
+
+{% endblock %}
+
+{% endmacro %}

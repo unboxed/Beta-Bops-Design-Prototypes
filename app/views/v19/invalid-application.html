@@ -1,0 +1,98 @@
+{% extends "layout.html" %}
+
+
+{% block head %} {{ super() }}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" />
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper " id="main-content" role="main">
+      <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h2 class="govuk-heading-l">Notify applicant </h2>
+
+            <p class="govuk-body">
+            <strong>Application number: </strong>006000</br>
+           <strong>At:</strong> 150 Bellenden Road London SE15 4QY </br>
+           <strong>Date received:</strong> 12 May 2021 </br>
+           </br>
+            
+            Request for specified changes.
+            
+            </p>
+         
+
+               
+      
+                
+         <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+         
+          <h2 class="govuk-heading-m">Document 1</h2>
+
+
+        
+      
+          <p class="govuk-body"> FLOOR PLAN PROPOSED</br>
+           File name: 10390-Proposed-ground-floorplan.PDF
+       </p>
+       <div class="govuk-form-group">
+           <p class="govuk-label-wrapper">
+               <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
+               Reason the document is invalid:
+             </label>
+             </p>
+
+                <p class="govuk-body">
+                  <em> The document is missing a scale bar</em>
+               </p>
+                
+                    
+          <h2 class="govuk-heading-m">Document 2</h2>
+
+
+        
+      
+          <p class="govuk-body"> SIDE ELEVATION PROPOSED</br>
+           File name: 10289-Proposed-side-elevation.PDF
+       </p>
+       <div class="govuk-form-group">
+           <p class="govuk-label-wrapper">
+               <label class="govuk-label govuk-label--s" for="more-detail" style="margin-bottom: 10px;">
+               Reason the document is invalid:
+             </label>
+             </p>
+
+                <p class="govuk-body">
+                  <em> The document is missing a scale bar</em>
+               </p>
+                
+                
+                 <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+
+                 <div class="govuk-form-group">
+            
+                  <h2 class="govuk-heading-m">Additional information</h2>
+                  <div id="more-detail-hint" class="govuk-hint">
+                    Please clarify any additional updates or request a new document(s) 
+                  </div>
+                  <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+                </div>
+                
+                
+                                
+                                   
+                <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html" style="margin-top: 20px;">
+                 Send
+                </a>
+                  </div>
+                 
+                  </main>
+                </div>
+            </div>
+
+
+
+  {% endblock %}

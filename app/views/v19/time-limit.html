@@ -1,0 +1,117 @@
+time-limit.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-conditions.html"> Application</a>
+          </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Time limit
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+    <! -- add conditions->
+
+    <h2 class="govuk-heading-m" style="margin-top: 40px;">Standard Time Limit</h2>
+
+   
+
+ <div class="govuk-form-group" style="margin-top: 40px;">
+  <p class="govuk-body"> <strong>Condition</strong></br></br>
+    The development hereby permitted shall be begun before the expiration of three years from the date of this permission.
+  </p>
+  <strong class="govuk-tag govuk-tag--grey">
+    Compliance 
+  </strong>
+  </div>
+
+
+      <div class="govuk-form-group">
+        <p class="govuk-body"> <strong>Reason</strong></br></br>
+      To comply with the requirements of Section 91 of the Town and Country Planning Act 1990 (As amended).
+        </p>
+</div>
+
+<p class="govuk-body">
+<a href="edit-time-limit.html" class="govuk-link">Edit condition and reason</a>
+</p>
+
+<hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <p class="govuk-body">
+    <a href="#" class="govuk-link">Remove condition</a>
+   </p>
+      
+
+        
+          <div style="margin-top: 40px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-conditions.html">
+              Complete
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="task-list-new.html">
+              Save as draft
+            </a>
+          </div>
+          </div>
+
+      
+        </fieldset>
+  
+
+    
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

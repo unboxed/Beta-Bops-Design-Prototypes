@@ -1,0 +1,444 @@
+validation-all-docuemnts-constraints.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+<! –– Header ––>
+<div> 
+    <span class="govuk-caption-l">Question [n] of [|𝐴|] </span>
+    <h1 class="govuk-heading-l">
+        Check the constraints and documents provided
+    </h1>
+</div>
+
+<div>
+    <h2 class="govuk-heading-m">
+        Constraints
+    </h2>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Article4.WycombeTownCentre</li>
+        <li>Conservation Area</li>
+        <li>Tree Protection Order</li>
+    </ul>
+    <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Update</a>
+</div>
+ <div class="govuk-!-padding-bottom-8"></div>
+ 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+ 
+    <h2 class="govuk-heading-l">
+      Documents
+    </h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body" style="line-height: 1.6;">
+          Check all necessary documents have been provided and add requests for any missing documents.
+        </p>
+        <div class="govuk-!-padding-bottom-2"></div>
+        <p>
+          <a class="govuk-link" href="document-archive.html">View document archive</a>
+        </p>
+      </div>
+      <div class="govuk-grid-column-one-third" style="text-align: right">
+        <a role="button" class="govuk-button" data-module="govuk-button" href="upload-document.html">Upload
+          document</a>
+      </div>
+    </div>
+    <ul class="app-task-list">
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p >
+            <div>
+               <strong class="govuk-tag govuk-tag--purple">Section</strong> 
+               <strong class="govuk-tag govuk-tag--purple">elevation</strong>
+               <strong class="govuk-tag govuk-tag--purple">PROPOSED</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--red">Invalid</strong> 
+              </p>
+              </div>
+              <p class="govuk-body">
+              <strong> Invalid reason: This document doesnt have a scale bar 
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS.pdf</br>
+              Date received: [DD MM YYYY]</br>
+              Document reference(s):Ref0002</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+          
+          
+        </li>
+          <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-1"></div>
+               <strong class="govuk-tag govuk-tag--purple">Plan</strong> 
+          <strong class="govuk-tag govuk-tag--purple">existing</strong>
+               <strong class="govuk-tag govuk-tag--purple">PROPOSED</strong>
+              </p>
+              <p><strong class="govuk-tag govuk-tag--green">Valid</strong></p>
+              <p class="govuk-body"> 
+              File name: EXISTING-AND-PROPOSED-BLOCK-PLANS-858713.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0003</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-third">
+          
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-1"></div>
+               <strong class="govuk-tag govuk-tag--purple">elevation</strong> 
+               <strong class="govuk-tag govuk-tag--purple">existing</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--green">Valid</strong> 
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-ELEVATIONS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0004</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+          <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div></div>
+             <strong class="govuk-tag govuk-tag--purple">Ground</strong> 
+               <strong class="govuk-tag govuk-tag--purple">Floor</strong> 
+                <strong class="govuk-tag govuk-tag--purple">Plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">existing</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--green">Valid</strong> 
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-FIRST-FLOOR-AND-ROOF-PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0005</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+         <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">First</strong> 
+               <strong class="govuk-tag govuk-tag--purple">Floor</strong> 
+                <strong class="govuk-tag govuk-tag--purple">Plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">existing</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--green">Valid</strong> 
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-GROUND-FLOOR-PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0006</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">elevation</strong> 
+              
+               <strong class="govuk-tag govuk-tag--purple">proposed</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--green">Valid</strong> 
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED_ELEVATIONS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0007</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+
+           <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">floor</strong> 
+              <strong class="govuk-tag govuk-tag--purple">roof</strong> 
+              <strong class="govuk-tag govuk-tag--purple">plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">proposed</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--green">Valid</strong> 
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0008</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+
+           <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+
+            <p>
+                <p>
+              <a href="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.pdf" target="_blank" >View PDF in new window</a>
+            </p>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              
+            <div  style="float: right;" style="margin-top: 150px;">
+                <p style="text-align: right">
+                  <a class="govuk-link govuk-link--no-visited-state" href="check-documents.html">Edit</a><br />
+                  <a class="govuk-link govuk-link--no-visited-state" href="document-management-1.html">Archive</a>
+                </p>
+              </div>
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">ground</strong> 
+              <strong class="govuk-tag govuk-tag--purple">floor</strong> 
+              <strong class="govuk-tag govuk-tag--purple">plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">proposed</strong>
+              </p>
+              <p>
+                <strong class="govuk-tag govuk-tag--green">Valid</strong> 
+              </p>
+              
+              <p class="govuk-body"> 
+              File name: PROPOSED-GROUND-FLOOR-PLAN.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0009</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+     
+          </div>
+      </ul>
+   
+    <! –– Right panel with additional information in accordion ––>
+    <div class="govuk-grid-column-one-third">
+    </div>
+  </div>
+
+  <div>   
+    <div class="govuk-!-padding-5"></div>
+        <div>
+            <div class="govuk-form-group" >
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Are any additional documents needed for this application to be valid
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="DocPresent" name="DocMissing" type="radio" value="valid">
+                            <label class="govuk-label govuk-radios__label" for="FeeeValid">
+                                Valid - All documents have been provided
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="DocMissing" name="DocMissing" type="radio" value="invalid">
+                            <label class="govuk-label govuk-radios__label" for="FeeValid-2">
+                                Invalid - One or more documents are needed
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>    
+            </div>
+        </div>
+    </div>
+
+    <div>  
+        <div>
+            <div class="govuk-button-group">
+                <a class="govuk-button govuk" data-module="govuk-button" href="validation-document-missing.html">
+                    Save
+                </a>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-document-2.html">
+                    Back
+                </a>
+            </div>
+            <div>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-summary.html">
+                    Skip
+                </a>
+            </div>
+        </div>
+    </div>  
+
+</div>
+</div>
+</div>
+
+{% endblock %}

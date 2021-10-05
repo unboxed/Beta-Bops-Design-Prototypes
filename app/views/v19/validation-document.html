@@ -1,0 +1,219 @@
+validation-document.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+{% from "./customnjk/document-options.njk" import document_options_checkbox%}
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Question [n] of [|𝐴|] </span>
+<h1 class="govuk-heading-l">
+  Check document 
+</h1>
+
+
+
+<div>
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-one-half">
+            <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 250px; border: solid 1px #eeeeee"/>
+            <p></p>
+        </div>
+        <div class="govuk-grid-column-one-half">
+            <p>
+                <strong>File name:</strong> Section_proposed.pdf
+            </p>
+            <p>
+                <strong>Date received:</strong> DD MM YYYT
+            </p>
+            <p>
+                <strong>Applicant reason for submitting document:</strong> Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+            </p>
+        </div>    
+    <div class="govuk-grid-row">
+       <div class="govuk-grid-column-full">
+            <p style="margin-top: 5px;">
+                <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank" >
+                    View file in new window
+                </a>
+            </p>
+            <div class="govuk-form-group">
+                <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="event-name">
+                    Document reference(s)
+                    </label>
+                </h1>
+                <div id="event-name-hint" class="govuk-hint">
+                    Where documents contain multiple drawings, enter multiple references separated by a comma e.g. "25A-V2, 25B-V2".
+                </div>
+                    <input class="govuk-input govuk-!-width-two-thirds" id="document-reference" name="document-reference" type="text" aria-describedby="event-name-hint">
+            </div>
+        </div>
+    </div>
+    
+  
+  <div style="margin-top: 40px;">
+    <h4 class="govuk-heading-m">What does the document contain?</h4>
+    <div id="event-name-hint" class="govuk-hint">
+        This will form the document name.
+    </div>
+  </div>
+
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                <h4 class="govuk-heading-s">Drawings</h4>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                    </div>
+                </legend>
+                {{ document_options_checkbox("FRONT") }}
+                {{ document_options_checkbox("REAR") }}
+                {{ document_options_checkbox("SIDE") }}
+                {{ document_options_checkbox("ROOF") }}
+                {{ document_options_checkbox("FLOOR") }}
+                {{ document_options_checkbox("SITE") }}
+                {{ document_options_checkbox("PLAN") }}
+                {{ document_options_checkbox("ELEVATION") }}
+                {{ document_options_checkbox("SECTION") }}
+                {{ document_options_checkbox("ELEVATION") }}
+                {{ document_options_checkbox("PROPOSED") }}
+                {{ document_options_checkbox("EXISTING") }}
+            </fieldset>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+        <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                <h4 class="govuk-heading-s">EVIDENCE</h4>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                    </div>
+                </legend>
+                {{ document_options_checkbox("PHOTOGRAPH") }}
+                {{ document_options_checkbox("UTILITY BILL") }}
+                {{ document_options_checkbox("BUILDING CONTROL CERTIFICATE") }}
+                {{ document_options_checkbox("CONSTRUCTION INVOICE") }}
+                {{ document_options_checkbox("COUNCIL TAX DOCUMENT") }}
+                {{ document_options_checkbox("TENANCY AGREEMENT") }}
+                {{ document_options_checkbox("TENANCY INVOICE") }}
+                {{ document_options_checkbox("BANK STATEMENT") }}
+                {{ document_options_checkbox("STATUTORY DECLARATION") }}
+                {{ document_options_checkbox("OTHER") }}
+            </fieldset>
+        </div>
+    </div>
+</div>
+
+<div class="govuk-form-group" style="margin-top: 40px;">
+  <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+    <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+      <strong>Do you want to list this document on the decision notice?</strong>
+    </legend>
+    <div class="govuk-radios govuk-radios--inline" style="margin-bottom: 45px;">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="changed-name">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="changed-name-2">
+          No
+        </label>
+      </div>
+    </div>
+    <div class="govuk-form-group" style="margin-bottom: 40px;">
+      <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+        <legend class="govuk-fieldset__legend" style="margin-bottom: 20px;">
+          <strong>Should this document be made publicly available?</strong>
+        </legend>
+        <p class="govuk-hint" style="margin-bottom: 25px;">Please indicate whether this document should be made available for public viewing on the planning register or via the public API. Select "No" if the document contains any sensitive personal information</p>
+
+        <div class="govuk-radios govuk-radios--inline">
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+            <label class="govuk-label govuk-radios__label" for="changed-name">
+              Yes
+            </label>
+          </div>
+          <div class="govuk-radios__item">
+            <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+            <label class="govuk-label govuk-radios__label" for="changed-name-2">
+              No
+            </label>
+          </div>
+        </div>
+  </fieldset>
+
+<div class="govuk-form-group" style="margin-top: 40px;">
+    <fieldset class="govuk-fieldset" aria-describedby="contact-hint">
+        <label class="govuk-heading-s" for="valid-document">
+          Is the document valid?
+        </label>
+   
+    <div class="govuk-radios govuk-radios--conditional" data-module="govuk-radios">
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact" name="contact" type="radio" value="email" data-aria-controls="conditional-contact">
+          <label class="govuk-label govuk-radios__label" for="contact">
+          Valid  
+          </label>
+        </div>
+       
+        <div class="govuk-radios__item">
+          <input class="govuk-radios__input" id="contact-2" name="contact" type="radio" value="phone" data-aria-controls="conditional-contact-2">
+          <label class="govuk-label govuk-radios__label" for="contact-2">
+            Invalid
+          </label>
+        </div>
+        <!--div class="govuk-radios__conditional govuk-radios__conditional--hidden" id="conditional-contact-2">
+      
+            <fieldset class="govuk-fieldset" aria-describedby="planning-application-documents-validated-at-hint">
+                
+             
+              <div class="govuk-form-group">
+                <label class="govuk-label" for="more-detail">
+                  Describe in full why the doucment is invalid. This will be sent to the applicant.
+                </label>
+                 <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5"></textarea>
+              </div>
+      
+        </div-->
+      </div>
+  
+    </fieldset>
+  </div>
+
+<div>  
+        <div>
+            <div class="govuk-button-group">
+                <a class="govuk-button govuk" data-module="govuk-button" href="validation-document-request.html">
+                    Save
+                </a>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-fee.html">
+                    Back
+                </a>
+            </div>
+            <div>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-document.html">
+                    Skip
+                </a>
+            </div>
+        </div>
+    </div>
+
+  
+{% endblock %}

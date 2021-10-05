@@ -1,0 +1,376 @@
+submit-recommendation.html
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Assess the impact on design and heritage
+          </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+    
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+     <!--    Make recommendation -->
+     <h1 class="govuk-heading-l">Submit recommendation</h1>
+        
+            <p class="govuk-body" style="margin-bottom: 40px;">
+                The following decision notice has been created based on your answers. 
+                
+              </p>
+            
+              
+
+                <div
+                style="
+               background-color: #f3f2f1;
+                  border: solid 1px;
+                  padding: 30px;
+                  clear: both;
+                  margin-top: 10px;
+                "
+              >
+              <span class="govuk-caption-xl">[Council Name]</span>
+              <h2 class="govuk-heading-m">
+                Town and Country Planning Act 1990 (as amended)
+              </h2>
+              <h2 class="govuk-heading-m">
+                Town and Country Planning (Development Management Procedure) (England) Order 2015 (as amended)
+              </h2>
+              <hr
+              class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+            />
+              <p class="govuk-heading-m"><strong>DECISION NOTICE</strong></p>
+          
+                  <p class="govuk-body">
+                    Full-householder:
+                    <strong>Granted</strong> 
+                  </p>
+                  <hr
+                    class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+                  />
+            
+                  <p class="govuk-body">
+                    <strong>Applicant:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[applicant name]<br />
+                    <strong>Date of Issue of this decision:</strong> &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;TBD<br />
+                    <strong>Application received:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp;[DD MONTH YYYY] <br />
+                    <strong>Site Address:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[Site Address]<br />
+                    <strong>Application number:</strong> &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+                    &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Application number]<br />
+                  </p>
+                  <p class="govuk-body">
+                    Planning Permission was <strong>granted</strong> for the following:
+                   
+                  </p>
+                  <p class="govuk-body">
+                    Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path
+                  </p>
+                  <p class="govuk-body">
+                    IT IS HEREBY CERTIFIED that the use or operations described below are
+                    <strong> lawful</strong> under the following policies. 
+                  </p>
+                  
+                  
+            
+                   <h2 class="govuk-heading-m">Conditions</h2>
+                  <ol class="govuk-list govuk-list--number">
+                    <li>
+                    <strong>
+                      The proposal must be built within three years of receiving approval.
+                    </strong>
+                <br>
+                  <br>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+                  <br><br>
+                  </li>
+                   
+                  <li>
+                  <strong>
+                       The development shall be carried out in accordance with the following
+                    approved plans:
+                  </strong>
+                </br>
+              </br>
+                  <table class="govuk-table">
+                    <thead class="govuk-table__head">
+                      <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header app-custom-class">
+                          Plan reference number
+                        </th>
+                        <th scope="col" class="govuk-table__header app-custom-class">
+                          Plan description
+                        </th>
+                        <th scope="col" class="govuk-table__header app-custom-class">
+                          Date received
+                        </th>
+                      </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">[Plan reference number]</td>
+                        <td class="govuk-table__cell">[Document name]</td>
+                        <td class="govuk-table__cell">[ DD MONTH YYYY ]</td>
+                      </tr>
+                      <tr class="govuk-table__row">
+                        <td class="govuk-table__cell">[Plan reference number]</td>
+                        <td class="govuk-table__cell">[Document name]</td>
+                        <td class="govuk-table__cell">[ DD MONTH YYYY ]</td>
+                      </tr>
+                    </tbody>
+                  </table>
+                  </li>
+                  </ol>
+                  
+                  <p class="govuk-body">
+                    Any enquiries regarding this document should quote the LBS Registered
+                    Number and be sent to the Director of Planning, Southwark Council, Chief
+                    executive's department, Planning division, Development management, PO
+                    Box 64529, London SE1 5LX, or by email to
+                    planning.applications@southwark.gov.uk
+                  </p>
+                  <hr
+                    class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+                  />
+            
+                  <p class="govuk-body">
+                    INFORMATIVE NOTES TO APPLICANT RELATING TO THE PROPOSED DEVELOPMENT
+                  </p>
+                  <p class="govuk-body">
+                    <strong> [1] APPEAL TO THE SECRETARY OF STATE. </strong>If the applicant
+                    is aggrieved by this decision of the council to refuse an application
+                    for a Certificate of Lawfulness of Existing Use or Development or to
+                    refuse it in part the applicant may appeal to the Secretary of State in
+                    accordance with Section 195 of the Town and Country Planning Act 1990
+                    within six months of the receipt of this notice. The Secretary of State
+                    can allow a longer period for giving notice of an appeal but will not
+                    normally use this power unless there are special circumstances which
+                    excuse the delay in giving notice of appeal. If you do decide to appeal
+                    you can do so using The Planning Inspectorate’s online appeals service.
+                    You can find the service through the appeals area of the Planning Portal
+                    at www.planningportal.gov.uk/pcs. You can also appeal by completing the
+                    appropriate form which you can get from The Planning Inspectorate,
+                    Customer Support Unit, Temple Quay House, 2 The Square, Temple Quay,
+                    Bristol BS1 6PN [tel. 0117-3726372]. The form can also be downloaded
+                    from the Inspectorate's website at www.planning-inspectorate.gov.uk. The
+                    Planning Inspectorate will publish details of your appeal on the
+                    internet on the appeals area of the Planning Portal. This may include a
+                    copy of the original planning application from and relevant supporting
+                    documents supplied to the council by you or your agent, together with
+                    the completed appeal form and information you submit to The Planning
+                    Inspectorate. Please ensure that you only provide information, including
+                    personal information belonging to you, that you are happy will be made
+                    available to others in this way. If you supply information belonging to
+                    someone else please ensure you have their permission to do so. More
+                    detailed information about data protection and privacy matters is
+                    available on the Planning Portal.
+                  </p>
+                </div>
+                <br />
+
+                <div style="margin-top: 40px;">
+                <p class="govuk-body">
+                  The following report has been created based on your answers.
+                </p>
+              </div>
+              
+              <div
+            style="
+           background-color: #f3f2f1;
+              border: solid 1px;
+              padding: 30px;
+              clear: both;
+              margin-top: 10px;
+            "
+          >
+
+              <p class="govuk-heading-l"><strong>Supporting documentation</strong></p>
+
+
+          <h2 class="govuk-body">
+            Recommendation: To <strong>Grant</strong> planning permission
+        </p></h2>
+          
+        
+        <hr
+        class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      />
+      <h2 class="govuk-heading-m">Summary of proposal</h2>
+        <p class="govuk-body">
+        
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+          </p>
+        
+        
+       
+    
+    <br>
+            <h2 class="govuk-heading-m">Impact on neighbours</h2>
+            <ol class="govuk-list govuk-list--number">
+              <li>
+                         <strong>Will the proposal negatively impact on the neighbours' privacy as a result of overlooking windows, terraces, or balconies?</strong>
+          <br><br>
+            <strong>
+            Slightly affect
+            </strong>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            <br><br>
+            </li>
+              <li>
+              <strong>
+                 Will the proposal negatively impact on the neighbours' access to sunlight and/or daylight?
+            </strong>
+            <strong> <br><br>
+            Not affect
+            </strong>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            <br><br>
+            </li>
+              <li>
+            <strong>
+                 Will the proposal negatively impact on the neighbours' sense of openness from a loss of outlook and/or through creating a sense of enclosure?
+            <br>
+            <br>
+            Not affect
+            </strong>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            </p>
+            </li>
+             </ol>
+      
+             <h2 class="govuk-heading-m">Impact on design and heritage</h2>
+            <ol class="govuk-list govuk-list--number">
+              <li>
+                         <strong>Will the proposal negatively impact the character of the original property?</strong>
+          <br><br>
+            <strong>
+            Slightly affect
+            </strong>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            <br><br>
+            </li>
+              <li>
+              <strong>
+                 Will the proposal negatively impact the established building line and/or roof line when viewed from the street?
+            </strong>
+            <strong> <br><br>
+            Not affect
+            </strong>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            <br><br>
+            </li>
+              <li>
+            <strong>
+                 Will the proposal fail to enhance or conserve nearby heritage assets?
+            <br>
+            <br>
+            Not affect
+            </strong>
+            <br>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sem lacus, gravida nec pulvinar sed, tempor eget est. Morbi a mollis arcu, laoreet elementum ipsum. Aliquam consequat, tortor eu lobortis rutrum, orci dui ultricies eros, sit amet iaculis nunc dui id enim. Nam id elementum justo. Curabitur ornare elit eu efficitur consequat. 
+            </p>
+            </li>
+             </ol>
+          </div>
+      
+            
+                <!-- Question       -->
+                <div class="govuk-form-group" style="margin-top: 50px;">
+                  <p class="govuk-body" style = "margin-bottom: 12px;">
+                    <strong>Please provide supporting information for your manager.</strong>
+                    </p>
+                    <p>
+                    Your comment will <strong>not</strong> appear on the decision notice.
+                  </p>
+                  <textarea
+                    class="govuk-textarea"
+                    id="more-detail"
+                    name="more-detail"
+                    rows="3"
+                    aria-describedby="more-detail-hint"
+                  ></textarea>
+                </div>
+               
+                <a
+                  class="govuk-button"
+                  data-module="govuk-button"
+                  href="task-list-conditions.html"
+                >
+                  Submit to manager
+                </a>
+              </div>
+
+
+           
+        
+
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}

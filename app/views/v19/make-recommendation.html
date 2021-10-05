@@ -1,0 +1,110 @@
+make-recommendation.html
+
+
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item">
+            <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
+          </li>
+          <li class="govuk-breadcrumbs__list-item" aria-current="page">
+            Assess the impact on design and heritage
+          </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-body">
+     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+    </p>
+    <p class="govuk-body">
+    1 Rycott Path, London, SE22 0AA
+    </p>
+    <p>
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+  </div>
+</div>  
+    
+
+<div class="govuk-grid-row" style="margin-top: 30px;">
+  <div class="govuk-grid-column-two-thirds">
+    <! –– Application detail blocks ––>
+    {{ applicationinfo() }}
+
+     <!--    Make recommendation -->
+     <h1 class="govuk-heading-l" style="margin-bottom: 30px;">Make recommendation</h1>
+     
+
+      <div class="govuk-form-group" >
+        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+            <h2 class="govuk-fieldset__heading" style="margin-bottom: 20px;">
+                What do you recommend?
+            </h2>
+          </legend>
+          <div class="govuk-radios govuk-radios">
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
+              <label class="govuk-label govuk-radios__label" for="changed-name">
+                Grant 
+              </label>
+            </div>
+      
+
+            <div class="govuk-radios__item">
+              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
+              <label class="govuk-label govuk-radios__label" for="changed-name-2">
+                Refuse
+              </label>
+            </div>
+          </div>
+          <div style="margin-top: 30px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html">
+              save
+            </a>
+          
+          </div>
+          </div>
+
+      
+        </fieldset>
+      </div>
+
+    
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+  
+</div>
+  {% endblock %}
