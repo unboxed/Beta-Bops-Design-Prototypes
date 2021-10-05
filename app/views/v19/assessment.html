@@ -1,0 +1,186 @@
+assessment.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
+      0000600
+    </h1>
+    <p class="govuk-heading-m">
+        1 Rycott Path, London, SE22 0AA
+        </p>
+   
+    <p class="govuk-body">
+     Description: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path. <a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+    </p>
+    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
+    
+    <p>
+        <strong class="govuk-tag govuk-tag--grey">Not started</strong>  &nbsp; &nbsp; <strong class="govuk-tag govuk-tag--green">Target date: 21 June 2021</strong>
+      </p>
+
+  </div>
+</div>  
+<div class="govuk-grid-row">
+
+    <div class="govuk-grid-column-two-thirds">
+        <! –– Application detail blocks ––>
+        {{ applicationinfo() }}
+    
+  
+    <! -- Task List -->
+<div style="margin-top: 60px;">
+    
+        
+
+    <ol class="moj-task-list" style="margin-top: 30px;">
+        <li>
+          <h2 class="moj-task-list__section">
+            <span class="moj-task-list__section-number">Validation</span>
+          </h2>
+          <ul class="moj-task-list__items">
+            <li class="moj-task-list__item">
+              <a class="moj-task-list__task-name" href="#">Validate application</a>
+              <strong class="govuk-tag govuk-tag--green" style="float: right;">
+                Completed
+              </strong>
+      
+            </li>
+          </ul>
+        </li>
+        <li>
+          <h2 class="moj-task-list__section">
+            <span class="moj-task-list__section-number">Assessment </span>
+          </h2>
+<ul class="moj-task-list__items">
+            <a class="moj-task-list__task-name"> Add assessment area  </a>
+              <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="add-assessment.html"> Add </a>
+          <ul class="moj-task-list__items">
+            <li class="moj-task-list__item">
+              <a class="moj-task-list__task-name" href="assess-class.html">Part 1, Class A</a>
+              <strong class="govuk-tag govuk-tag--grey" style="float: right;">
+                Not started
+              </strong>
+            </li>
+             <li class="moj-task-list__item">
+              <a class="moj-task-list__task-name" href="assess-class.html">Part 1, Class C</a>
+              <strong class="govuk-tag govuk-tag--grey" style="float: right;">
+                Not started
+              </strong>
+            </li>
+            <li class="moj-task-list__item">
+              <a class="moj-task-list__task-name" href="assess-class.html">Part 1, Class D</a>
+              <strong class="govuk-tag govuk-tag--grey" style="float: right;">
+                Not started
+              </strong>
+            </li>
+          </ul>
+        </li>
+        
+       
+       
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">Recommendation</span>
+            </h2>
+            <ul class="moj-task-list__items">
+              <li class="moj-task-list__item">
+                <a class="moj-task-list__task-name" href="#">Make a recommendation</a>
+              </li>
+              <li class="moj-task-list__item">
+                <a class="moj-task-list__task-name" href="#">Submit recommendation</a>
+              </li>
+            </ul>
+          </li>
+      </ol>
+
+    
+   
+    <!--div style="margin-top: 60px;">
+        <span class="govuk-heading-m">Considerations</span>    
+        <dl class="govuk-summary-list" >
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              <a
+              class="app-task-list__task-name"
+              href="validate-application.html"
+              aria-describedby="external-review-completed">
+              Public consultation
+              </a>
+            
+              <strong class="govuk-tag govuk-tag--red" style="float: right;">
+               1 Objection 
+              </strong>
+            </dd>
+          </div>
+        
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              <a
+              class="app-task-list__task-name"
+              href="impact-transport.html"
+              aria-describedby="external-review-completed">
+            Impact on TPO
+            </a>
+            <strong class="govuk-tag govuk-tag--grey" style="float: right;">
+                Awaiting response
+              </strong>
+              </dd>
+          </div>
+          <div class="govuk-summary-list__row">
+            <dd class="govuk-summary-list__value">
+              <a
+              class="app-task-list__task-name"
+              href="validate-application.html"
+              aria-describedby="external-review-completed">
+             Impact on Conservation area
+              </a>
+              <strong class="govuk-tag govuk-tag--grey" style="float: right;">
+                Closed
+               </strong>
+            </dd>
+          </div>
+        </dl>
+        </div-->
+   
+   
+   
+
+  <! –– Right panel with additional information in accordion ––>
+</div>
+</div>
+ 
+<div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+
+</div>
+  {% endblock %}

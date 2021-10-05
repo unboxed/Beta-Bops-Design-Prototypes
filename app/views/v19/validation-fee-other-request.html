@@ -1,0 +1,72 @@
+validation-fee-other-request.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Question [n] of [|𝐴|] </span>
+<h1 class="govuk-heading-l">
+  Request other validation change (fee)
+</h1>
+
+
+<div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            Tell the applicant another reason why the application is invalid.
+            </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+            Only add one reason for each request.
+        </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">
+            </textarea>
+    </div>    
+<div>     
+<div class="govuk-form-group">
+    <div class="govuk-grid-column-two-thirds">
+        <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+            Explain to the applicant how the application can be made valid.
+            </label>
+        </h1>
+        <div id="more-detail-hint" class="govuk-hint">
+            Add all information that they will need to complete this action.
+        </div>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint">
+            </textarea>
+    </div>    
+</div>  
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">
+                This request will be added to the application. The requests will not be sent until the application is marked as invalid.
+        </p>
+    </div>
+</div>
+
+
+<div>
+    <div class="govuk-button-group">
+      <a class="govuk-button govuk" data-module="govuk-button" href="validation-document.html">
+        Add request
+      </a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-fee.html">
+        Back
+      </a>
+    </div>
+</div>
+
+  {% endblock %}

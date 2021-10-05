@@ -1,0 +1,243 @@
+ {% extends "layout.html" %} 
+ {% block head %}  
+ {{ super() }} 
+{% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} 
+{% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment%} 
+{% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} 
+{% from "./customnjk/applications_table/closed-app.njk" import application_closed %} 
+{% from "./customnjk/application-info.njk" import applicationinfo%} 
+{% from "./customnjk/related-info.njk" import relatedinfo %}
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> 
+{% endblock %} 
+{% block content %}
+
+
+
+<div class="govuk-grid-row">
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Application
+        </li>
+      </ol>
+    </div>
+    <div class="govuk-grid">
+
+        <! -- add Assessment area, part, class A, check criteria->
+
+        <h2 class="govuk-heading-l" style="margin-top: 60px;">Assessment - Part 1, Class A</h2>
+        <div class="govuk-body">
+            Select the relevant part. Parts as defined in The Town and Country Planning (General Permitted Development) (England) Order 2015 (GPDO), Schedule 2, Part 1, Class A.
+        </div>
+<div>
+        <table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">Dates and amounts</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Date</th>
+      <th scope="col" class="govuk-table__header">Complies</th>
+      <th scope="col" class="govuk-table__header">Does not comply</th>
+      <th scope="col" class="govuk-table__header">To be determined</th>
+      <th scope="col" class="govuk-table__header">Comment</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"> A.1.a)</th>
+      <td class="govuk-table__cell"> 
+            <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1a" name="A.1.a)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1a">
+                </label>
+            </div>
+        </td>
+        <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1a" name="A.1.a)"  type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1a">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1a" name="A.1.a)"  type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1a">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">A.1.b)</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1b" name="A.1.b)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1b">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1b" name="A.1.b)" type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1b">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1b" name="A.1.b)" type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1b">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">A.1.c)</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1c" name="A.1.c)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1c">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1c" name="A.1.c)" type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1c">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1c" name="A.1.c)" type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1c">
+                </label>
+            </div>
+            </td>
+            </td>
+            <td class="govuk-table__cell"> 
+            <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+    <th scope="row" class="govuk-table__header">A.1.d)</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1d" name="A.1.d)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1d">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1d" name="A.1.d)" type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1d">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1d" name="A.1.d)" type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1d">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell"> 
+            <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+    <th scope="row" class="govuk-table__header">A.1.e)i)</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1ei" name="A.1.e)i)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1ei">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1ei" name="A.1.e)i)" type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1ei">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1ei" name="A.1.e)i)" type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1ei">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell"> 
+            <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+    <th scope="row" class="govuk-table__header">A.1.e)ii)</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1eii" name="A.1.e)ii)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1eii">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1eii" name="A.1.eii)" type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1eii">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1eii" name="A.1.e)ii)" type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1eii">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell"> 
+            <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+    <th scope="row" class="govuk-table__header">A.1.f)i)</th>
+      <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1fi" name="A.1.f)i)" type="radio" value="complies">
+                <label class="govuk-label govuk-radios__label" for="a1fi">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1fi" name="A.1.f)i)" type="radio" value="does not comply">
+                <label class="govuk-label govuk-radios__label" for="a1fi">
+                </label>
+            </div>
+            </td>
+            <td class="govuk-table__cell">
+      <div class="govuk-radios__item">
+                <input class="govuk-radios__input" id="a1fi" name="A.1.f)i)" type="radio" value="TBD">
+                <label class="govuk-label govuk-radios__label" for="a1fi">
+                </label>
+            </div>
+            </td>
+            </td>
+            <td class="govuk-table__cell"> 
+            <a href="#" class="govuk-link">Add comment</a>
+            </td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+  {% endblock %}

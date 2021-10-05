@@ -1,0 +1,99 @@
+validation-fee.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<span class="govuk-caption-l">Question [n] of [|𝐴|] </span>
+<h1 class="govuk-heading-l">
+  Check the fee
+</h1>
+   
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">   
+        <div class="govuk-grid-column-two-thirds">
+            <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Item</th>
+                <th scope="col" class="govuk-table__header">Detail</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">  
+                <th scope="row" class="govuk-table__header">Fee</th>
+                <td class="govuk-table__cell">£109.80</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Payment Reference</th>
+                <td class="govuk-table__cell">PAY00876</td>
+                </tr>
+                <tr class="govuk-table__row">
+                <th scope="row" class="govuk-table__header">Description</th>
+                <td class="govuk-table__cell">Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path House.</td>
+                </tr>
+            </tbody>
+            </table>
+        </div>
+    </div>
+    
+    <div>   
+        <div>
+            <div class="govuk-form-group" >
+                <fieldset class="govuk-fieldset">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                        <h1 class="govuk-fieldset__heading">
+                            Is this fee valid?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios">
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="FeeValid" name="FeeValid" type="radio" value="valid">
+                            <label class="govuk-label govuk-radios__label" for="FeeeValid">
+                                Valid
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item">
+                            <input class="govuk-radios__input" id="FeeInvalid" name="FeeValid" type="radio" value="invalid">
+                            <label class="govuk-label govuk-radios__label" for="FeeValid-2">
+                                Invalid
+                            </label>
+                        </div>
+                    </div>
+                </fieldset>    
+            </div>
+        </div>
+    </div>  
+
+  
+    <div>  
+        <div>
+            <div class="govuk-button-group">
+                <a class="govuk-button govuk" data-module="govuk-button" href="validation-fee-other-request.html">
+                    Save
+                </a>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-red-line.html">
+                    Back
+                </a>
+            </div>
+            <div>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-document.html">
+                    Skip
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

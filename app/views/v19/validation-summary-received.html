@@ -1,0 +1,95 @@
+validation-summary-received.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<!-header->
+<div> 
+    <h1 class="govuk-heading-l">
+        Review the validity of the application
+    </h1>
+</div>
+<div>
+    <p class="govuk-body-l">
+    This application was marked as<strong> invalid </strong> on 30 September 2021.
+    </p>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Item</th>
+                <th scope="col" class="govuk-table__header">Valid status</th>
+                <th scope="col" class="govuk-table__header">Validation request</th>
+                <th scope="col" class="govuk-table__header">Request status</th>
+                <th scope="col" class="govuk-table__header">Update validity</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Red line boundary</th>
+                    <td class="govuk-table__cell"><strong class="govuk-tag--green">Valid</strong></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Fee</th>
+                    <td class="govuk-table__cell"><strong class="govuk-tag--green">Valid</strong></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-fee.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Document 1</th>
+                    <td class="govuk-table__cell"><strong class="govuk-tag--grey">Not Checked</strong></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-document.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Document 2</th>
+                    <td class="govuk-table__cell"><strong class="govuk-tag--grey">Not Checked</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-request.html">view response</a></td>
+                    <td class="govuk-table__cell">Response received <br><strong>01 Oct 2021</strong></br></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-2.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">New document :<br> Proposed ground floor plan</br></th>
+                    <td class="govuk-table__cell"><strong class="govuk-tag--red">Invalid</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-request.html">view request</a></td>
+                    <td class="govuk-table__cell">Not yet sent</td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-2.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-button-group">
+        <a class="govuk-button govuk" data-module="govuk-button" href="validation-request-summary.html">
+            Validate application
+        </a>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-all-documents-constraints.html">
+            Back
+        </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}

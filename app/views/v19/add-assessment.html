@@ -1,0 +1,82 @@
+add-assessment.html 
+ {% extends "layout.html" %} 
+ {% block head %}  
+ {{ super() }} 
+{% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} 
+{% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment%} 
+{% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} 
+{% from "./customnjk/applications_table/closed-app.njk" import application_closed %} 
+{% from "./customnjk/application-info.njk" import applicationinfo%} 
+{% from "./customnjk/related-info.njk" import relatedinfo %}
+
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid">
+
+        <! -- add Assessment area, part->
+
+        <h2 class="govuk-heading-l" style="margin-top: 60px;">Assessment</h2>
+        <div class="govuk-body">
+            Select the relevant part. Parts as defined in The Town and Country Planning (General Permitted Development) (England) Order 2015 (GPDO), Schedule 2.
+        </div>
+        <div>
+            <a href="https://www.legislation.gov.uk/uksi/2015/596/schedule/2/made" class="govuk-link govuk-link--no-visited-state">View legislation</a>
+        </div>    
+            <br>
+        
+
+        <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+    </legend>
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live" name="where-do-you-live" type="radio" value="england">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live">
+          <strong> Part 1 </strong> - Development within the curtilage of a dwelling house
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-3" name="where-do-you-live" type="radio" value="wales">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-3">
+          <strong> Part 2 </strong> - Minor operations
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="where-do-you-live-4" name="where-do-you-live" type="radio" value="northern-ireland">
+        <label class="govuk-label govuk-radios__label" for="where-do-you-live-4">
+          <strong> Part 3 </strong> - Changes of use
+        </label>
+      </div>
+    </div>
+
+  </fieldset>
+</div>
+
+
+        <div style="margin-top: 60px;">
+            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="add-assessment-class">
+              Continue
+            </a>
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment.html">
+              Back
+            </a>
+        </div>
+    </div>
+
+
+    </fieldset>
+
+
+
+
+
+
+
+</div>
+{% endblock %}
