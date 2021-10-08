@@ -1,0 +1,78 @@
+alternative-header.html 
+ {% extends "layout.html" %} 
+ {% block head %}  
+ {{ super() }} 
+{% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} 
+{% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment%} 
+{% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} 
+{% from "./customnjk/applications_table/closed-app.njk" import application_closed %} 
+{% from "./customnjk/application-info.njk" import applicationinfo%} 
+{% from "./customnjk/related-info.njk" import relatedinfo %}
+
+{% endblock %}
+
+{% block content %}
+
+<!breadcrumbs>
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+        <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+            <ol class="govuk-breadcrumbs__list">
+                <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+                </li>
+                <li class="govuk-breadcrumbs__list-item" aria-current="page">
+                    Application
+                </li>
+            </ol>
+        </div>
+    </div>  
+</div>  
+
+<!Address and app no.>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <span class="govuk-caption-l">000000706</span>
+        <h1 class="govuk-heading-l">1 Rycott Path, London, SE22 0AA</h1>
+    </div> 
+</div>
+
+<!Description>
+<div class="govuk-grid-row"> 
+    <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body">Lawful ​Development ​Certificate (Proposed): Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+        </p>
+    </div>
+</div>
+
+<!Dates and dealines>
+<div class="govuk-grid-row"> 
+    <div class="govuk-grid-column-two-thirds">
+        <p><strong>Target date :</strong> 20 October 2021  &nbsp
+        <strong class="govuk-tag govuk-tag--green"> 15 days remaining</strong></p> 
+    </div>
+</div>
+
+<!Application status>
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+        <div class "govuk-grid-column-one-third">
+            <p>
+            <strong class="govuk-tag govuk-tag--yellow">Invalid</strong>
+            </p>
+        </div>
+    </div>
+</div>
+
+<!Assigned to>
+<div class="govuk-grid-row">
+    <div class="govuk-width-container">
+        <div class "govuk-grid-column-one-third">
+            <p>
+            Assigned to: <strong>Unassigned</strong> &nbsp <a href="#"> Change </a>
+            </p>
+        </div>
+    </div>
+</div>
+ 
+{% endblock %}
