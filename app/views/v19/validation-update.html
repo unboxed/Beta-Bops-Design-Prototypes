@@ -1,4 +1,4 @@
-assessment.html
+validation-update.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -57,49 +57,23 @@ assessment.html
         {{ applicationinfo() }}
     
   
-    <! -- Task List -->
+    <! -- BODY CONTENT -->
 <div style="margin-top: 60px;">
-  <ol class="moj-task-list" style="margin-top: 30px;">
-    <li>
-      <h2 class="moj-task-list__section">
-      <span class="moj-task-list__section-number">Validation</span>
-      </h2>
-      <ul class="moj-task-list__items">
-        <li class="moj-task-list__item">
-          <a class="moj-task-list__task-name" href="validation-start.html">Validate application</a>
-            <strong class="govuk-tag govuk-tag--grey" style="float: right;">
-            Not started
-            </strong>    
-        </li>
-      </ul>
-        <li>
-          <h2 class="moj-task-list__section">
-            <span class="moj-task-list__section-number">Assessment </span>
-          </h2>
-        <ul class="moj-task-list__items">
-          <li class="moj-task-list__item">  
-            <p> Add assessment area  </p>
-        </ul>
-        </li>
-       
-            <h2 class="moj-task-list__section">
-              <span class="moj-task-list__section-number">Recommendation</span>
-            </h2>
-            <ul class="moj-task-list__items">
-              <li class="moj-task-list__item">
-                <p>Make a recommendation</p>
-              </li>
-              <li class="moj-task-list__item">
-                <p>Submit recommendation</p>
-              </li>
-            </ul>
-          </li>
-      </ol>
-
-     
+   <h2 class="govuk-heading-l">Validate Application
+   </h2>
+   <p class="govuk-body"><strong>
+     The application is marked as invalid. The applicant was notified on 12 October 2021 </strong> 
+    </p>
+    <h3 class="govuk-heading-m">
+    Validation requests
+    </h3>
+    <p class="govuk-body">This application has <strong> 1 </strong> unresolved validation request and <strong> 1 </strong> resolved validation requests</p>
+<a href="validation-summary-received.html" role="button" draggable="false" class="govuk-button govuk-button" data-module="govuk-button">
+  View updates
+</a>
    
 
-  <! –– Right panel with additional information in accordion ––>
+  <! -– Right panel with additional information in accordion ––>
 </div>
 </div>
  
