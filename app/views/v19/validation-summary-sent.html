@@ -1,4 +1,4 @@
-validation-summary.html
+validation-summary-sent.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -22,53 +22,65 @@ validation-summary.html
 </div>
 <div>
     <p class="govuk-body-l">
-    This application has not yet been marked as valid or invalid
+    This application was marked as<strong> invalid </strong> on 12 October 2021.
     </p>
 </div>
+
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
         <table class="govuk-table">
-        <thead class="govuk-table__head">
+            <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
                 <th scope="col" class="govuk-table__header">Item</th>
                 <th scope="col" class="govuk-table__header">Valid status</th>
+                <th scope="col" class="govuk-table__header">Time remaining</th>
                 <th scope="col" class="govuk-table__header">Validation request</th>
-                <th scope="col" class="govuk-table__header"></th>
+                <th scope="col" class="govuk-table__header">Response received</th>
+                <th scope="col" class="govuk-table__header">Update validity</th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <td class="govuk-table__cell"><strong>Red line boundary</strong></td>
+                    <th scope="row" class="govuk-table__header">Red line boundary 
+                    <!--br><img src="/public/images/map2.png" style="width: 150px; border: solid 1px #eeeeee"></th-->
                     <td class="govuk-table__cell"><strong class="govuk-tag--green">Valid</strong></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
-            </tbody>
-            <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Fee</th>
                     <td class="govuk-table__cell"><strong class="govuk-tag--green">Valid</strong></td>
                     <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-fee.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
-            </tbody>
-            <tbody class="govuk-table__body">
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Document 1</th>
-                    <td class="govuk-table__cell"><strong class="govuk-tag--grey">Not Checked</strong></td>
+                    <th scope="row" class="govuk-table__header">Document 1 
+                    <!--br><img src="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.png" style="width: 150px; border: solid 1px #eeeeee"/></th-->
+                    <td class="govuk-table__cell"><strong class="govuk-tag--green">Valid</strong></td>
+                    <td class="govuk-table__cell"></td>
+                    <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-document.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Document 2</th>
+                    <th scope="row" class="govuk-table__header">Document 2
+                    <!--br><img src="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.png" style="width: 150px; border: solid 1px #eeeeee"/></th-->
                     <td class="govuk-table__cell"><strong class="govuk-tag--red">Invalid</strong></td>
+                     <td class="govuk-table__cell"><strong class="govuk-tag--green">15 days</strong></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-request.html">view request</a></td>
+                    <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-2.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">New document : Proposed ground floor plan</th>
+                    <th scope="row" class="govuk-table__header">New document :<br> Proposed ground floor plan</br></th>
                     <td class="govuk-table__cell"><strong class="govuk-tag--red">Invalid</strong></td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag--green">15 days</strong></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-missing.html">view request</a></td>
+                    <td class="govuk-table__cell"></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-2.html">Update<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
             </tbody>
@@ -77,12 +89,11 @@ validation-summary.html
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">Once the application is marked as invalid. This will send an email to the applicant telling them their application is invalid with a link to the view the requests.</p>
         <div class="govuk-button-group">
-        <a class="govuk-button govuk" data-module="govuk-button" href="validation-complete.html">
-            Mark application as invalid and send requests
+        <a class="govuk-button govuk" data-module="govuk-button" href="validation-request-summary.html">
+            Validate application
         </a>
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-all-docuemtns-constraints.html">
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-all-documents-constraints.html">
             Back
         </a>
         </div>
