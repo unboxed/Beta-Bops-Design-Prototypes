@@ -1,4 +1,4 @@
-validation-start.html
+assessment.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -57,27 +57,49 @@ validation-start.html
         {{ applicationinfo() }}
     
   
-    <! -- BODY CONTENT -->
+    <! -- Task List -->
 <div style="margin-top: 60px;">
-   <h2 class="govuk-heading-l">Validate Application
-   </h2>
-   <p class="govuk-body"><strong>
-     The application has not yet been marked as invalid or valid </strong> 
-    </p>
-    <p class="govuk-body">Begin the validation process to:</p>
-<ul class="govuk-list govuk-list--bullet">
-  <li>Check the red line boundary, fees and documents</li>
-  <li>Review description and constraints</li>
-  <li>Request any changes and mark the application as valid or invalid</li>
-</ul>
-<a href="validation-tasklist.html" role="button" draggable="false" class="govuk-button govuk-button--start" data-module="govuk-button">
-  Start now
-  <svg class="govuk-button__start-icon" xmlns="http://www.w3.org/2000/svg" width="17.5" height="19" viewBox="0 0 33 40" aria-hidden="true" focusable="false">
-    <path fill="currentColor" d="M0 0h13l20 20-20 20H0l20-20z" />
-  </svg></a>
+  <ol class="moj-task-list" style="margin-top: 30px;">
+    <li>
+      <h2 class="moj-task-list__section">
+      <span class="moj-task-list__section-number">Validation</span>
+      </h2>
+      <ul class="moj-task-list__items">
+        <li class="moj-task-list__item">
+          <a class="moj-task-list__task-name" href="validation-update.html">Validate application</a>
+            <strong class="govuk-tag govuk-tag--green" style="float: right;">
+            Valid
+            </strong>    
+        </li>
+      </ul>
+        <li>
+          <h2 class="moj-task-list__section">
+            <span class="moj-task-list__section-number">Assessment </span>
+          </h2>
+        <ul class="moj-task-list__items">
+          <li class="moj-task-list__item">  
+            <a class="moj-task-list__task-name" href="add-assessment-class.html"> Add assessment area  </a>
+        </ul>
+        </li>
+       
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">Recommendation</span>
+            </h2>
+            <ul class="moj-task-list__items">
+              <li class="moj-task-list__item">
+                <p>Make a recommendation</p>
+              </li>
+              <li class="moj-task-list__item">
+                <p>Submit recommendation</p>
+              </li>
+            </ul>
+          </li>
+      </ol>
+   
+   
    
 
-  <! -– Right panel with additional information in accordion ––>
+  <! –– Right panel with additional information in accordion ––>
 </div>
 </div>
  
