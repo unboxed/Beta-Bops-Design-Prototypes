@@ -1,4 +1,4 @@
-validation-tasklist.html
+validation-tasklist-8.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -131,11 +131,11 @@ validation-tasklist.html
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="validation-document.html" aria-describedby="validate-document1">
+                <a href="#" aria-describedby="validate-document1">
                   Validate document 1
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="contact-details-status" style="float: right;">Not checked yet</strong>
+              <strong class="govuk-tag govuk-tag--red app-task-list__tag" id="company-information-status" style="float: right;">Invalid</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -143,7 +143,7 @@ validation-tasklist.html
                   Validate document 2
                 </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="list-convictions-status" style="float: right;">Not checked yet</strong>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -151,7 +151,7 @@ validation-tasklist.html
                 Validate document 3
               </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="financial-evidence-status" style="float: right;">Not checked yet</strong>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
@@ -159,7 +159,7 @@ validation-tasklist.html
                 Validate document 4
               </a>
               </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="medical-information-status" style="float: right;">Not checked yet</strong>
+              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
             </li>
           </ul>
         </li>
@@ -169,6 +169,14 @@ validation-tasklist.html
             Other validation issues
           </h2>
           <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              <a href="validation-other-request.html" aria-describedby="other-requests">
+                Other validation request #1
+              </a>
+              </span>
+              <strong class="govuk-tag app-task-list__tag" id="eligibility-status" style="float: right;">Added</strong>
+            </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-other-request.html" aria-describedby="other-requests">
@@ -186,7 +194,7 @@ validation-tasklist.html
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="validate-document4">
+              <a href="validation-request-summary-prevalid.html" aria-describedby="validate-document4">
                 Review and send validation decision
               </a>
               </span>
