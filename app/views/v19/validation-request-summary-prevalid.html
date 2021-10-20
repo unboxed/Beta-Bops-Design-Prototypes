@@ -1,0 +1,66 @@
+validation-request-summary.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<!-header->
+<div> 
+    <h1 class="govuk-heading-l">
+        Validation requests
+    </h1>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Request</th>
+                <th scope="col" class="govuk-table__header">Detail</th>
+                <th scope="col" class="govuk-table__header">Reason</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+                <th scope="col" class="govuk-table__header">Cancel request</th>
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Red line boundary changes</th>
+                    <!--br><img src="/public/images/map2.png" style="width: 150px; border: solid 1px #eeeeee"></th-->
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line-request.html">View proposed red line boundary</a></td>
+                    <td class="govuk-table__cell">Officers reason goes here</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Cancel<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Other validation request</th>
+                    <td class="govuk-table__cell">test</td>
+                    <td class="govuk-table__cell">Officers reason goes here</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Cancel<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-button-group">
+        <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validation-tasklist-6.html">
+            Back
+        </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
