@@ -57,6 +57,7 @@ validation-tasklist.html
 <!--
 Params from nunjucks
 redline_status, redline_tag, 
+    validation-requests,
     fee_status, fee_tag, 
     constraints_status, constraints_tag, 
     doc1_status, doc1_tag, 
@@ -70,6 +71,7 @@ redline_status, redline_tag,
 
 <div>
 {{validationtasklist(
+  "<a class="govuk-link" href="validation-request-summary-prevalid.html"> View validation requests</a>"
   "Invalid", "red",
   "Invalid", "red",
   "Not checked yet", "grey",
