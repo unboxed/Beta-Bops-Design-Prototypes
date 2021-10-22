@@ -1,5 +1,4 @@
 {% macro validationtasklist(
-    validationRequests,
     redline_status, redline_tag, 
     fee_status, fee_tag, 
     constraints_status, constraints_tag, 
@@ -17,7 +16,7 @@
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
       <h2 class="govuk-heading-s govuk-!-margin-bottom-2">This application has not been marked as valid or invalid</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">{{validationRequests}}</p>
+      <p class="govuk-body govuk-!-margin-bottom-7"><a class="govuk-link" href="validation-request-summary-prevalid.html"> View validation requests</a></p>
 
       <ol class="app-task-list">
         <li>

@@ -1,4 +1,4 @@
-{% macro validationtasklistUpdate(
+{% macro validationtasklist(
     redline_status, redline_tag, 
     fee_status, fee_tag, 
     constraints_status, constraints_tag, 
@@ -6,7 +6,6 @@
     doc2_status, doc2_tag, 
     doc3_status, doc3_tag, 
     doc4_status, doc4_tag, 
-    doc5_status, doc5_tag, 
     listDocs_status, listDoc_tag, 
     review_status, review_tag, 
     decision_status, decision_tag) %}
@@ -16,8 +15,8 @@
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">This application was marked as invalid on the 2 October 2021.</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7"><a class="govuk-link" href="validation-request-summary-invalid.html"> View validation requests</a></p>
+      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">This application has not been marked as valid or invalid</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7">You have no validation requests</p>
 
       <ol class="app-task-list">
         <li>
@@ -104,14 +103,6 @@
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc4_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc4_status}}</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-              <a href="validation-document.html" aria-describedby="validate-document4">
-                Validate document 5
-              </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--{{doc5_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc5_status}}</strong>
             </li>
           </ul>
         </li>

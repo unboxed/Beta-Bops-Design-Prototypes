@@ -7,7 +7,7 @@ validation-tasklist.html
 {% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
 {% from "./customnjk/application-info.njk"  import applicationinfo %} 
 {% from "./customnjk/related-info.njk" import relatedinfo %} 
-{% from "./customnjk/validation-tasklist.njk" import validationtasklist %}
+{% from "./customnjk/validation-tasklist-start.njk" import validationtasklist %}
 
 
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
@@ -56,7 +56,6 @@ validation-tasklist.html
 <! –– Tasklist ––>
 <div>
 {{validationtasklist(
-  "You have no validation requests yet"
   "Not checked yet", 
   "grey",
   "Not checked yet", 
