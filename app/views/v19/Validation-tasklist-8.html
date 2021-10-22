@@ -7,7 +7,7 @@ validation-tasklist-8.html
 {% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
 {% from "./customnjk/application-info.njk"  import applicationinfo %} 
 {% from "./customnjk/related-info.njk" import relatedinfo %} 
-
+{% from "./customnjk/validation-tasklist.njk" import validationtasklist %}
 
 
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
@@ -55,160 +55,34 @@ validation-tasklist-8.html
 
 <! –– Tasklist ––>
 
-<div class="govuk-width-container">
-        
-    <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
-          
+<!--
+Params from nunjucks
+    redline_status, redline_tag, 
+    fee_status, fee_tag, 
+    constraints_status, constraints_tag, 
+    doc1_status, doc1_tag, 
+    doc2_status, doc2_tag, 
+    doc3_status, doc3_tag, 
+    doc4_status, doc4_tag, 
+    listDocs_status, listDoc_tag, 
+    review_status, review_tag, 
+    decision_status, decision_tag)
+-->
 
-  <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-s govuk-!-margin-bottom-2">This application has not been marked as valid or invalid</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7"><a href="validation-request-summary-prevalid.html">View or change valid requests</a></p>
-
-      
-
-      <ol class="app-task-list">
-        <li>
-          <h2 class="app-task-list__section">
-            Red line boundary
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="validation-red-line.html" aria-describedby="eligibility-status">
-                  Validate red line boundary
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--red app-task-list__tag" id="eligibility-status" style="float: right;">Invalid</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            Fee
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="validation-fee.html" aria-describedby="eligibility-status">
-                  Validate fee
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--red app-task-list__tag" id="eligibility-status" style="float: right;">Invalid</strong>
-            </li>
-          </ul>
-        </li>
-
-         <li>
-          <h2 class="app-task-list__section">
-            Constraints
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="validation-constraints.html" aria-describedby="eligibility-status">
-                  Validate constraints
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            Documents
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="company-information-status">
-                    Validate required documents are on application
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--red app-task-list__tag" id="company-information-status" style="float: right;">Invalid</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="validate-document1">
-                  Validate document 1
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--red app-task-list__tag" id="company-information-status" style="float: right;">Invalid</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-                <a href="#" aria-describedby="validate-document2">
-                  Validate document 2
-                </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="validate-document3">
-                Validate document 3
-              </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-              <a href="#" aria-describedby="validate-document4">
-                Validate document 4
-              </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--green app-task-list__tag" id="eligibility-status" style="float: right;">Valid</strong>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            Other validation issues
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-              <a href="validation-other-request.html" aria-describedby="other-requests">
-                Other validation request #1
-              </a>
-              </span>
-              <strong class="govuk-tag app-task-list__tag" id="eligibility-status" style="float: right;">Added</strong>
-            </li>
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-              <a href="validation-other-request.html" aria-describedby="other-requests">
-                Add an other validation request
-              </a>
-              </span>
-            </li>
-          </ul>
-        </li>
-
-        <li>
-          <h2 class="app-task-list__section">
-            Review
-          </h2>
-          <ul class="app-task-list__items">
-            <li class="app-task-list__item">
-              <span class="app-task-list__task-name">
-              <a href="validation-request-summary-prevalid.html" aria-describedby="validate-document4">
-                Review and send validation decision
-              </a>
-              </span>
-              <strong class="govuk-tag govuk-tag--grey app-task-list__tag" id="submit-pay-status" style="float: right;">Not checked yet</strong>
-            </li>
-          </ul>
-        </li>
-      </ol>
-    </div>
-  </div>
-
-
-        </main>
-      </div>
+<div>
+{{validationtasklist(
+  "Invalid", "red",
+  "Invalid", "red",
+  "Valid", "green",
+  "Invalid", "red", 
+  "Valid", "green",
+  "Valid", "green",
+  "Valid", "green",
+  "Invalid", "red", 
+  "Checked", "green",
+  "Not checked yet", "grey"
+)}}
+</div>
     
 
     

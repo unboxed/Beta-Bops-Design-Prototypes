@@ -1,0 +1,315 @@
+validation-all-docuemnts-constraints-test2.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+<! –– Header ––>
+<div> 
+    <h1 class="govuk-heading-l">
+        Check the documents provided
+    </h1>
+</div>
+
+<div>
+    <h2 class="govuk-heading-m">
+        Constraints
+    </h2>
+    <ul class="govuk-list govuk-list--bullet">
+        <li>Article4.WycombeTownCentre</li>
+        <li>Conservation Area</li>
+        <li>Tree Protection Order</li>
+    </ul>
+  
+</div>
+ <div class="govuk-!-padding-bottom-8"></div>
+ 
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+ 
+    <h2 class="govuk-heading-l">
+      Documents
+    </h2>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body" style="line-height: 1.6;">
+          Check all necessary documents have been provided and add requests for any missing documents.
+        </p>
+        <div class="govuk-!-padding-bottom-2"></div>
+      </div>
+      <div class="govuk-grid-column-one-third" style="text-align: right">
+        <a role="button" class="govuk-button" data-module="govuk-button" href="upload-document.html">Upload
+          document</a>
+      </div>
+    </div>
+    <ul class="app-task-list">
+    <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/blank_image.png" style="width:50%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+              <p class="govuk-body"> 
+              <strong>New document requested</strong></br>
+              Document requested: Proposed rear elevation</br>
+              Reason: This is needed to see changes with existing
+            </p>
+          </div>
+          
+          
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_SECTION_A-A_AND_SHED_ELEVATIONS-858712.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p >
+            <div>
+               <strong class="govuk-tag govuk-tag--purple">Section</strong> 
+               <strong class="govuk-tag govuk-tag--purple">elevation</strong>
+               <strong class="govuk-tag govuk-tag--purple">PROPOSED</strong>
+              </p>
+              </div>
+              <p class="govuk-body"> 
+              File name: PROPOSED-SECTION-A-A-AND-SHED-ELEVATIONS.pdf</br>
+              Date received: [DD MM YYYY]</br>
+              Document reference(s):Ref0002</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+          
+          
+        </li>
+          <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_AND_PROPOSED_BLOCK_PLANS-858713.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div class="govuk-!-padding-bottom-1"></div>
+               <strong class="govuk-tag govuk-tag--purple">Plan</strong> 
+          <strong class="govuk-tag govuk-tag--purple">existing</strong>
+               <strong class="govuk-tag govuk-tag--purple">PROPOSED</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-AND-PROPOSED-BLOCK-PLANS-858713.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0003</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+          <li class="app-task-list__item">
+            <div class="govuk-grid-column-one-third">
+          
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_ELEVATIONS-858708.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div class="govuk-!-padding-bottom-1"></div>
+               <strong class="govuk-tag govuk-tag--purple">elevation</strong> 
+               <strong class="govuk-tag govuk-tag--purple">existing</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-ELEVATIONS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0004</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+          <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_FIRST_FLOOR_AND_ROOF_PLANS-858703.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div></div>
+             <strong class="govuk-tag govuk-tag--purple">Ground</strong> 
+               <strong class="govuk-tag govuk-tag--purple">Floor</strong> 
+                <strong class="govuk-tag govuk-tag--purple">Plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">existing</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-FIRST-FLOOR-AND-ROOF-PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0005</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+         <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-EXISTING_GROUND_FLOOR_PLANS-858701.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+             </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">First</strong> 
+               <strong class="govuk-tag govuk-tag--purple">Floor</strong> 
+                <strong class="govuk-tag govuk-tag--purple">Plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">existing</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: EXISTING-GROUND-FLOOR-PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0006</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_ELEVATIONS-858709.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">elevation</strong> 
+              
+               <strong class="govuk-tag govuk-tag--purple">proposed</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED_ELEVATIONS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0007</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+
+           <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS-858705.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">floor</strong> 
+              <strong class="govuk-tag govuk-tag--purple">roof</strong> 
+              <strong class="govuk-tag govuk-tag--purple">plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">proposed</strong>
+              </p>
+              <p class="govuk-body"> 
+              File name: PROPOSED_FIRST_FLOOR_AND_ROOF_PLANS.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0008</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+
+           <li class="app-task-list__item">
+          <div class="govuk-grid-column-one-third">
+
+          <p>  <div class="govuk-!-padding-bottom-0.5"></div>
+            <img src="/public/images/FH-20AP0870-PROPOSED_GROUND_FLOOR_PLAN-858702.png" style="width:100%; border: solid 1px #eeeeee"/>
+            </p>
+          </div>
+          <div  class="govuk-grid-column-two-thirds">
+            
+            <p>
+            <div class="govuk-!-padding-bottom-0.5"></div>
+            <strong class="govuk-tag govuk-tag--purple">ground</strong> 
+              <strong class="govuk-tag govuk-tag--purple">floor</strong> 
+              <strong class="govuk-tag govuk-tag--purple">plan</strong> 
+               <strong class="govuk-tag govuk-tag--purple">proposed</strong>
+              </p>
+              
+              <p class="govuk-body"> 
+              File name: PROPOSED-GROUND-FLOOR-PLAN.PDF</br>
+              Date received: [DD MM YYYY]
+              Document reference(s):Ref0009</br>
+              Included on decisions notice: No</br>
+              Public: No
+            </p>
+          </div>
+        </li>
+        <li class="app-task-list__item">
+          <div class="govuk-grid-column-full">
+
+          <a class="govuk-link govuk-!-font-size-24 govuk-!-font-weight-bold govuk-link--no-visited-state" href="validation-document-missing.html"> Add a request for a missing document 
+            </a>
+          </div>
+        </li>
+     
+          </div>
+      </ul>
+   
+    <! –– Right panel with additional information in accordion ––>
+    <div class="govuk-grid-column-one-third">
+    </div>
+  </div>
+
+  <div>   
+    <div class="govuk-!-padding-5"></div>
+        <div>
+        </div>
+    </div>
+
+    <div>  
+        <div>
+            <div class="govuk-button-group">
+                <a class="govuk-button govuk" data-module="govuk-button" href="validation-tasklist-6.html">
+                    Save
+                </a>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-tasklist-5.html">
+                    Back
+                </a>
+            </div>
+        </div>
+    </div>  
+
+</div>
+</div>
+</div>
+
+{% endblock %}

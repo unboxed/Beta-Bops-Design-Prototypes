@@ -1,4 +1,4 @@
-validation-request-summary.html
+validation-request-summary-prevalid.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
@@ -22,6 +22,8 @@ validation-request-summary.html
 </div>
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+    <p class="govuk-body"> The following requests will be sent when the application is invalidated.
+    </p>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
@@ -29,7 +31,7 @@ validation-request-summary.html
                 <th scope="col" class="govuk-table__header">Detail</th>
                 <th scope="col" class="govuk-table__header">Reason</th>
                 <th scope="col" class="govuk-table__header">Status</th>
-                <th scope="col" class="govuk-table__header">Cancel request</th>
+                <th scope="col" class="govuk-table__header">Delete request</th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -39,14 +41,35 @@ validation-request-summary.html
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line-request.html">View proposed red line boundary</a></td>
                     <td class="govuk-table__cell">Officers reason goes here</td>
                     <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Cancel<span class="govuk-visually-hidden"> name</span></a></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Delete<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
                 <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Other validation request</th>
+                    <th scope="row" class="govuk-table__header">Fee validation request</th>
                     <td class="govuk-table__cell">test</td>
                     <td class="govuk-table__cell">Officers reason goes here</td>
                     <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Cancel<span class="govuk-visually-hidden"> name</span></a></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Replacement document request</th>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Section_proposed.pdf</a></td>
+                    <td class="govuk-table__cell">Officers reason goes here</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">New document request</th>
+                    <td class="govuk-table__cell">[Document requested]</td>
+                    <td class="govuk-table__cell">Officers reason goes here</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> name</span></a></td>
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Other validation request</th>
+                    <td class="govuk-table__cell">Test</td>
+                    <td class="govuk-table__cell">Officers reason goes here</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Delete<span class="govuk-visually-hidden"> name</span></a></td>
                 </tr>
             </tbody>
         </table>
@@ -55,8 +78,11 @@ validation-request-summary.html
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <div class="govuk-button-group">
-        <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validation-tasklist-6.html">
-            Back
+        <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validation-tasklist-8.html">
+            Confirm validation requests
+        </a>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-tasklist-7.html">
+            Return without confirming
         </a>
         </div>
     </div>
