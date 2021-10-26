@@ -8,6 +8,7 @@ validation-tasklist.html
 {% from "./customnjk/application-info.njk"  import applicationinfo %} 
 {% from "./customnjk/related-info.njk" import relatedinfo %} 
 {% from "./customnjk/validation-tasklist-start.njk" import validationtasklist %}
+{% from "./customnjk/header.njk" import header %}
 
 
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
@@ -19,36 +20,12 @@ validation-tasklist.html
 
 
 <! –– Header ––>
-<div class="govuk-grid-row">
-  <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Application
-        </li>
-      </ol>
-    </div>
-    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
-      0000600
-    </h1>
-    <p class="govuk-heading-m">
-        1 Rycott Path, London, SE22 0AA
-        </p>
-   
-    <p class="govuk-body">
-     Description: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path. <a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    
-    </p>
-    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    
-    <p>
-        <strong class="govuk-tag govuk-tag--grey">Not started</strong>  &nbsp; &nbsp; <strong class="govuk-tag govuk-tag--green">Target date: 21 June 2021</strong>
-      </p>
-
-  </div>
+<div>
+{{header(
+    "invalid", "yellow",
+    "10 October 2021", 
+    "15 days remaining", "green"
+)}}
 </div>
 
 

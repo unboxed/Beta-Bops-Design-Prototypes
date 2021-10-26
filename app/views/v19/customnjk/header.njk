@@ -1,5 +1,5 @@
 alternative-header.njk
-{% macro header() %}
+{% macro header(status, status_tag, deadline, days_remaining, days_tag) %}
 {% block content %}
 
 <!breadcrumbs>
@@ -31,7 +31,7 @@ alternative-header.njk
     <div class="govuk-width-container">
         <div class "govuk-grid-column-one-third">
             <p>
-            <strong class="govuk-tag govuk-tag--yellow">Invalid</strong>
+            <strong class="govuk-tag govuk-tag--{{status_tag}}">{{status}}</strong>
             </p>
         </div>
     </div>
@@ -48,8 +48,8 @@ alternative-header.njk
 <!Dates and dealines>
 <div class="govuk-grid-row"> 
     <div class="govuk-grid-column-two-thirds">
-        <p><strong>Expiry date :</strong> 20 October 2021  &nbsp
-        <strong class="govuk-tag govuk-tag--green"> 15 days remaining</strong></p> 
+        <p><strong>Expiry date :</strong> {{deadline}}  &nbsp
+        <strong class="govuk-tag govuk-tag--{{days_tag}}"> {{days_remaining}}</strong></p> 
     </div>
 </div>
 
