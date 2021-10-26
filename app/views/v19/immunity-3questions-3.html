@@ -1,0 +1,53 @@
+immunity-3questions-3.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/header.njk" import header %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+     <fieldset class="govuk-fieldset">
+      <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+       <h1 class="govuk-fieldset__heading">
+        Is the existing development the subject of a grant of planning permission?
+       </h1>
+      </legend>
+     <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="pp-yes" name="pp" type="radio" value="yes">
+        <label class="govuk-label govuk-radios__label" for="pp-yes">
+          Yes
+        </label>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="pp-no" name="pp" type="radio" value="no">
+        <label class="govuk-label govuk-radios__label" for="pp-no">
+          No
+        </label>
+      </div>
+     </fieldset> 
+    </div>
+    <div id="more-detail-hint" class="govuk-hint">
+        Explain your descision
+    </div>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+   
+    <div class="govuk-button-group">
+      <a class="govuk-button govuk" data-module="govuk-button" href="assessment-immunity-2.html">
+        Save
+      </a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="immunity-3questions-2.html">
+        Back
+      </a>
+    </div>
+ </div>    
+</div>
+
+{% endblock %}
