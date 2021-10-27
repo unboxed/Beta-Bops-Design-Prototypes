@@ -1,0 +1,54 @@
+evidence-table.njk
+
+{% macro evidenceTable(
+    type,
+    asset1, date1_1, date1_2, comment1,
+    asset2, date2_1, date2_2, comment2,
+    asset3, date3_1, date3_2, comment3,
+    asset4, date4_1, date4_2, comment4,
+    asset5, date5_1, date5_2, comment5
+) %}
+{% block content %}
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--m">{{type}}</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Document</th>
+      <th scope="col" class="govuk-table__header">Dates covered</th>
+      <th scope="col" class="govuk-table__header">Comment</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><img src="{{asset1}}" style="width:100% border: solid 1px #eeeeee"/></th>
+      <td class="govuk-table__cell">{{date1_1}}<br>-<br>{{date1_2}}</td>
+      <td class="govuk-table__cell">{{comment1}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset2}}</th>
+      <td class="govuk-table__cell">{{date2_1}}<br>-<br>{{date2_2}}</td>
+      <td class="govuk-table__cell">{{comment2}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset3}}</th>
+      <td class="govuk-table__cell">{{date3_1}}<br>-<br>{{date3_2}}</td>
+      <td class="govuk-table__cell">{{comment3}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset4}}</th>
+      <td class="govuk-table__cell">{{date4_1}}<br>-<br>{{date4_2}}</td>
+      <td class="govuk-table__cell">{{comment4}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset5}}</th>
+      <td class="govuk-table__cell">{{date5_1}}<br>-<br>{{date5_2}}</td>
+      <td class="govuk-table__cell">{{comment5}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
+
+{% endmacro %}
