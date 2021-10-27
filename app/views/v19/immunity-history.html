@@ -1,0 +1,36 @@
+immunity-history.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/header.njk" import header %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
+        Enter planning history
+        </label>
+    </h1>
+    <div id="more-detail-hint" class="govuk-hint">
+        Enter all relevant planning history for this application site
+    </div>
+    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
+    </div>
+    <div class="govuk-button-group">
+      <a class="govuk-button govuk" data-module="govuk-button" href="assessment-immunity-2.html">
+        Save
+      </a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
+        Back
+      </a>
+    </div>
+ </div>    
+</div>
+
+{% endblock %}
