@@ -55,27 +55,42 @@ validation-tasklist.html
 
 <! –– Tasklist ––>
 
+<!--
+Params from nunjucks
+    redline_status, redline_tag, 
+    fee_status, fee_tag, 
+    constraints_status, constraints_tag, 
+    doc1_status, doc1_tag, 
+    doc2_status, doc2_tag, 
+    doc3_status, doc3_tag, 
+    doc4_status, doc4_tag,
+    doc5_status, doc5_tag,
+    doc6_status, doc6_tag, 
+    doc7_status, doc7_tag, 
+    doc8_status, doc8_tag, 
+    doc9_status, doc9_tag,  
+    listDocs_status, listDoc_tag, 
+    review_status, review_tag, 
+    decision_status, decision_tag)
+-->
+
 <div>
-{{validationtasklist("Invalid", 
-  "red",
-  "Not checked yet", 
-  "grey", 
-  "Not checked yet", 
-  "grey",
-  "Not checked yet", 
-  "grey",
-  "Not checked yet", 
-  "grey", 
-  "Not checked yet", 
-  "grey",
-  "Not checked yet", 
-  "grey", 
-  "Not checked yet", 
-  "grey", 
-  "Not checked yet", 
-  "grey",
-  "Not checked yet", 
-  "grey"
+{{validationtasklist(
+  "Invalid", "red",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey", 
+  "Not checked yet", "grey",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey", 
+  "Not checked yet", "grey",
+  "Not checked yet", "grey",
+  "Not checked yet", "grey", 
+  "Not checked yet", "grey",
+  "Not checked yet", "grey"
 )}}
 </div>
     
