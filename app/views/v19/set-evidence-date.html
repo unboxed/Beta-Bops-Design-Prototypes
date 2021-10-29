@@ -1,0 +1,107 @@
+set-evidence-date.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% endblock %}
+{% block content %}
+
+<div class="govuk-width-container">
+ <div class="govuk-grid-row">
+   <div class="govuk-grid-column-one-third">
+        <img src="/public/images/PROPOSED_REAR_ELEVATION-848012.png" style="width: 250px; border: solid 1px #eeeeee"/>
+    </div>
+    <div class="govuk-grid-column-two-thirds">
+      <p style="margin-top: 20px;">File name: Section_proposed.pdf</p>
+      <p style="margin-top: 5px;">Date received: DD MM YYYT</p>
+      <p style="margin-top: 5px;">
+       <a href="/public/images/PROPOSED_REAR_ELEVATION-848012.pdf" target="_blank" >View file in new window</a>
+      </p>
+    </div>
+ </div>
+<div class="govuk-grid-row">
+ <h2 class="govuk-heading-m">
+  Enter dates covered by evidence
+ </h2>
+</div>
+ <div class="govuk-grid-row">
+    <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="evidence-start">
+    <legend class="govuk-fieldset__legend">
+      When is start of the period this document evidences?
+    </legend>
+    <div id="evidence-start" class="govuk-hint">
+      For example, 27 3 2007
+    </div>
+    <div class="govuk-date-input" id="evidence-start">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="evidence-start-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="evidence-start-day" name="evidence-start-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="evidence-start-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="evidence-start-month" name="evidence-start-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="evidence-start-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="evidence-start-year" name="evidence-start-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+    </fieldset>
+    </div>
+    <div class="govuk-form-group">
+    <fieldset class="govuk-fieldset" role="group" aria-describedby="evidence-end">
+    <legend class="govuk-fieldset__legend">
+      When is end of the period this document evidences?
+    </legend>
+    <div id="evidence-end" class="govuk-hint">
+      For example, 27 3 2007
+    </div>
+    <div class="govuk-date-input" id="evidence-end">
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="evidence-end-day">
+            Day
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="evidence-end-day" name="evidence-end-day" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="evidence-end-month">
+            Month
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-2" id="evidence-end-month" name="evidence-end-month" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+      <div class="govuk-date-input__item">
+        <div class="govuk-form-group">
+          <label class="govuk-label govuk-date-input__label" for="evidence-end-year">
+            Year
+          </label>
+          <input class="govuk-input govuk-date-input__input govuk-input--width-4" id="evidence-end-year" name="evidence-end-year" type="text" pattern="[0-9]*" inputmode="numeric"></div>
+      </div>
+    </div>
+    </fieldset>
+    </div>
+ </div>
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-button-group">
+      <a class="govuk-button govuk" data-module="govuk-button" href="immunity-bills-2.html">
+        Save
+      </a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="immunity-bills.html">
+        Back
+      </a>
+    </div>
+</div>
+
+
+{% endblock %}
