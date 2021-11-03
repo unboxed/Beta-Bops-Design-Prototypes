@@ -6,7 +6,8 @@ immunity-assessment-table.njk
     tax_status, tax_tag,
     tenancy_status, tenancy_tag,
     other_status, other_tag,
-    summary_status, summary_tag
+    summary_status, summary_tag,
+    submit_status, submit_tag
 ) %}
 {% block content %}
 
@@ -51,6 +52,12 @@ immunity-assessment-table.njk
     <a class="moj-task-list__task-name" href="immunity-summary.html"> Summary of evidence  </a>
     <strong class="govuk-tag govuk-tag--{{summary_tag}}" style="float: right;">
     {{summary_status}}
+    </strong> 
+    </li> 
+    <li class="moj-task-list__item">  
+    <a class="moj-task-list__task-name" href="immunity-submit.html"> Submit assessment  </a>
+    <strong class="govuk-tag govuk-tag--{{submit_tag}}" style="float: right;">
+    {{submit_status}}
     </strong> 
     </li>  
 </ul>
