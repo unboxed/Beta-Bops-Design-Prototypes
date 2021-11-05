@@ -1,4 +1,5 @@
 {% extends "layout.html" %}
+{% from "./customnjk/header.njk" import header %}
 {% block head %}
 {{ super() }}
 <link href="/public/css/southwark-branding.css" rel="stylesheet" type="text/css">
@@ -6,53 +7,25 @@
 {% block content %}
 <! –– Header ––>
 <div class="govuk-grid-row">
-  <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Documents
-        </li>
-      </ol>
-    </div>
-    <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
-      0000600
-    </h1>
-    <p class="govuk-body">
-     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
-    </p>
-    <p class="govuk-body">
-    1 Rycott Path, London, SE22 0AA
-    </p>
-    <p>
-      <strong class="govuk-tag govuk-tag--green">In assessment</strong>
-    </p>
-    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    
+ <div class="govuk-width-container">
+  {{header()}}
   </div>
 </div>  
       
-      <h2 class="govuk-heading-m" style="margin-top: 30px;">
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-third">
+    <h2 class="govuk-heading-m" style="margin-top: 30px;">
         Documents
-      </h2>
-      <div class="govuk-grid-row">
-        <div class="govuk-grid-column-two-thirds">
-          <p class="govuk-body" style="line-height: 1.6;">
-            Check all documents to ensure they support the information provided by the applicant and add tags to indicate the document contents.
-          </p>
-          
-         
-        </div>
-        <div class="govuk-grid-column-one-third" style="text-align: right">
-          <a role="button" class="govuk-button" data-module="govuk-button" href="edit-documents.html">Upload
-            document</a>
-        </div>
-      </div>
+    </h2>
+  </div>
+  <div class="govuk-button-group">
+    <div style="text-align: right">
+      <a class="govuk-button" data-module="govuk-button" href="validate-tasklist-5.html">Request a new document</a>
+      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-5.html">Upload document</a>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
       <ul class="app-task-list">
         <li class="app-task-list__item">
           <div class="govuk-grid-column-one-quarter">
@@ -286,6 +259,7 @@
           </div>
         </li>
       </ul>
+</div>
       
       <! –– Right panel with additional information in accordion ––>
       <div class="govuk-grid-column-one-third">
