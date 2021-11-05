@@ -35,6 +35,8 @@ module.exports = {
     "summary-tag": "grey",
     "submit-check": "Not started",
     "submit-tag": "grey",
+    "start-day1": "Enter start date",
+    "end-day1": "Enter end date"
 
 
 }

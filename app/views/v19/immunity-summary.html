@@ -63,7 +63,7 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             Utility bills evidence summary
           </h2>
           <p class="govuk-body">
-            Summary goes here
+            {{ data['bills-summary'] }}
           </p>
           <hr
             class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
