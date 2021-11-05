@@ -1,0 +1,69 @@
+{% macro application_awaiting_determination() %}
+  {% block content %}
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="awaiting-determination">
+      <h2 class="govuk-heading-l">Awaiting manager's determination</h2>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">
+              Application number
+            </th>
+            <th scope="col" class="govuk-table__header">Site address</th>
+            <th scope="col" class="govuk-table__header">Application type</th>
+             <th scope="col" class="govuk-table__header">Description</th>
+            <th scope="col" class="govuk-table__header">Target date</th>
+            <th scope="col" class="govuk-table__header">Recommendation date</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Planning officer</th>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1833</td>
+            <td class="govuk-table__cell">77 Bushey Hill Rd, SE5 8QQ</td>
+            <td class="govuk-table__cell">LDC</td>
+            <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--red">
+                June 10
+              </strong>
+            </td>
+            <td class="govuk-table__cell">June 1</td>
+          
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+              <a href="cert-of-law-reqs-recommended.html">
+                19/AP/1880
+              </a>
+            </td>
+            <td class="govuk-table__cell">150 Bellenden Road, SE15 4QY</td>
+            <td class="govuk-table__cell">
+              LDC (proposed)
+            </td>
+          <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                June 12
+              </strong>
+            </td>
+            <td class="govuk-table__cell">June 2</td>
+           
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">19/AP/1831</td>
+            <td class="govuk-table__cell">81 Victoria Rd, SE15 8QQ</td>
+            <td class="govuk-table__cell">LDC</td>
+        <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+            <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                June 14
+              </strong>
+            </td>
+            <td class="govuk-table__cell">June 10</td>
+       
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  {% endblock %}
+{% endmacro %}
