@@ -27,6 +27,7 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
       </p>
     </div>
   </div>
+<form action="/v19/immunity-bills-2" method="post" novalidate>
   <div class="govuk-grid-row">
     <h2 class="govuk-heading-m">
       Enter dates covered by evidence
@@ -58,9 +59,9 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
                 class="govuk-input govuk-date-input__input govuk-input--width-2"
                 id="start-day1"
                 name="start-day1"
-                value="{{data['start-day1']}}"
+                value="{{ data['start-day1'] }}"
                 type="text"
-                pattern="[0-9]*"
+                pattern="[0-9]*" 
                 inputmode="numeric"
               />
             </div>
@@ -79,7 +80,7 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
                 name="start-month1"
                 value="{{data['start-month1']}}"
                 type="text"
-                pattern="[0-9]*"
+                pattern="[0-9]*" 
                 inputmode="numeric"
               />
             </div>
@@ -96,9 +97,9 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
                 class="govuk-input govuk-date-input__input govuk-input--width-4"
                 id="start-year1"
                 name="start-year1"
-                value="{{data['start-year1']}}"
+                value="{{ data['start-year1'] }}"
                 type="text"
-                pattern="[0-9]*"
+                pattern="[0-9]*" 
                 inputmode="numeric"
               />
             </div>
@@ -129,10 +130,11 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
               </label>
               <input
                 class="govuk-input govuk-date-input__input govuk-input--width-2"
-                id="evidence-end-day"
-                name="evidence-end-day"
+                id="end-day1"
+                name="end-day1"
+                value="{{ data['end-day1'] }}"
                 type="text"
-                pattern="[0-9]*"
+                pattern="[0-9]*" 
                 inputmode="numeric"
               />
             </div>
@@ -147,10 +149,11 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
               </label>
               <input
                 class="govuk-input govuk-date-input__input govuk-input--width-2"
-                id="evidence-end-month"
-                name="evidence-end-month"
+                id="end-month1"
+                name="end-month1"
+                value="{{ data['end-month1'] }}"
                 type="text"
-                pattern="[0-9]*"
+                pattern="[0-9]*" 
                 inputmode="numeric"
               />
             </div>
@@ -163,12 +166,13 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
               >
                 Year
               </label>
-              <input
+             <input
                 class="govuk-input govuk-date-input__input govuk-input--width-4"
-                id="evidence-end-year"
-                name="evidence-end-year"
+                id="end-year1"
+                name="end-year1"
+                value="{{ data['end-year1'] }}"
                 type="text"
-                pattern="[0-9]*"
+                pattern="[0-9]*" 
                 inputmode="numeric"
               />
             </div>
@@ -177,24 +181,14 @@ set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
       </fieldset>
     </div>
   </div>
-</div>
-
-<div class="govuk-grid-row">
   <div class="govuk-button-group">
-    <a
-      class="govuk-button govuk"
-      data-module="govuk-button"
-      href="immunity-bills.html"
-    >
-      Save
-    </a>
-    <a
-      class="govuk-button govuk-button--secondary"
-      data-module="govuk-button"
-      href="immunity-bills.html"
-    >
-      Back
-    </a>
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="immunity-bills.html">
+        Back
+      </a>
+</form>  
   </div>
 </div>
 

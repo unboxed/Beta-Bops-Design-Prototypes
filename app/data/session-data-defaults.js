@@ -35,8 +35,15 @@ module.exports = {
     "summary-tag": "grey",
     "submit-check": "Not started",
     "submit-tag": "grey",
-    "start-day1": "Enter start date",
-    "end-day1": "Enter end date"
+    "start-date1": "Enter start date",
+    "start-day1": "40",
+    "start-month1": "13",
+    "start-year1": "1991",
+    "end-date1": "Enter end date",
+    "evidence-comment1": "Enter comment",
+    "start-date2": "Enter start date",
+    "end-date2": "Enter end date",
+    "evidence-comment2": "Enter coment"
 
 
 }
