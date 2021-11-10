@@ -10,24 +10,38 @@ immunity-history.html
 
 {% block content %}
 
+
 <div class="govuk-grid-row">
- <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-form-group">
-    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-        Enter comment for this document
-        </label>
-    </h1>
-    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
-    <div class="govuk-button-group">
-      <a class="govuk-button govuk" data-module="govuk-button" href="immunity-bills-4.html">
-        Save
-      </a>
-      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="immunity-bills-2.html">
-        Back
-      </a>
-    </div>
- </div>    
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v19/immunity-bills-4" method="post" class="form">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="bill-comment">
+            Enter comment for this document
+          </label>
+        </h1>
+        <textarea
+          class="govuk-textarea"
+          id="bill-comment"
+          name="bill-comment"
+          value="{{ data['bill-comment'] }}"
+          type="text"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save</button>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="immunity-bills-3.html"
+        >
+          Back
+        </a>
+      </div>
+    </form>
+  </div>
 </div>
+
 
 {% endblock %}

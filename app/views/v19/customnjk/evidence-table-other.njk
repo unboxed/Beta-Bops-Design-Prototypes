@@ -1,11 +1,12 @@
 evidence-table.njk
 
-{% macro evidenceTable(
+
+{% macro evidenceTableOther(
     type,
-    asset1, date1_1, date1_2, comment1,
-    asset2, date2_1, date2_2, comment2,
-    asset3, date3_1, date3_2, comment3,
-    asset4, date4_1, date4_2, comment4
+    asset1, date1, comment1,
+    asset2, date2, comment2,
+    asset3, date3, comment3,
+    asset4, date4, comment4
 ) %}
 {% block content %}
 
@@ -14,29 +15,29 @@ evidence-table.njk
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
-      <th scope="col" class="govuk-table__header">Dates covered</th>
+      <th scope="col" class="govuk-table__header">Date</th>
       <th scope="col" class="govuk-table__header">Comment</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><img src="{{asset1}}" style="width:200; border: solid 1px #bcbcbc"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date1_1}}</a><br>-<br><a class="govuk-link" href="#">{{date1_2}}</a></td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date1}}</a></td>
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment1}}</a></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><img src="{{asset2}}" style="width:200; border: solid 1px #bcbcbc"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date-2.html">{{date2_1}}</a><br>-<br><a class="govuk-link" href="set-evidence-date-2.html">{{date2_2}}</a></td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date-2.html">{{date2}}</a></td>
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment2}}</a></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><img src="{{asset3}}" style="width:200; border: solid 1px #bcbcbc"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date3_1}}</a><br>-<br><a class="govuk-link" href="set-evidence-date.html">{{date3_2}}</a></td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date3}}</a></td>
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment3}}</a></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><img src="{{asset4}}" style="width:200; border: solid 1px #bcbcbc"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date3_1}}</a><br>-<br><a class="govuk-link" href="set-evidence-date.html">{{date3_2}}</a></td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date4}}</a></td>
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment3}}</a></td>
     </tr>
   </tbody>
@@ -46,4 +47,3 @@ evidence-table.njk
 {% endblock %}
 
 {% endmacro %}
-

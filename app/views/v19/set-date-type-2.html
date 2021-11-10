@@ -1,0 +1,58 @@
+set-evidence-date.html {% extends "layout.html" %} {% block head %} {{ super()
+}} {% endblock %} {% block content %}
+
+
+  <div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-column-full">
+      
+  
+<form action="/date-type-check"}} method="post" novalidate>
+  <div class="govuk-grid-row">
+    <h2 class="govuk-heading-m">
+      Does council tax evidence cover a time period or a single date
+    </h2>
+  </div>
+  <div class="govuk-form-group">
+  <fieldset class="govuk-fieldset">
+    <div class="govuk-radios">
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="date-type" name="date-type" type="radio" value="range">
+        <label class="govuk-label govuk-radios__label" for="date-type">
+          A period of time with a start and end date
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, utility bills will cover a period of time
+        </div>
+      </div>
+      <div class="govuk-radios__item">
+        <input class="govuk-radios__input" id="date-type-2" name="date-type" type="radio" value="singleDate">
+        <label class="govuk-label govuk-radios__label" for="date-type-2">
+          A single date
+        </label>
+        <div id="sign-in-item-hint" class="govuk-hint govuk-radios__hint">
+          For example, an invoice will show a single date on which the invoice was prepared
+        </div>
+      </div>
+      
+    </div>
+
+  </fieldset>
+</div>
+
+    
+  <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="immunity-bills.html">
+        Back
+      </a>
+</form>  
+  </div>
+</div>
+  </div>
+  </div>
+  
+
+{% endblock %}
