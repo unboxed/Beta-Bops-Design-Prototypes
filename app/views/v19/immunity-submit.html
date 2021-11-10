@@ -19,8 +19,7 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             <fieldset class="govuk-fieldset">
               <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                 <h1 class="govuk-fieldset__heading">
-                  Are the works or change of use described in this application
-                  immune from enforcment action?
+                  Is the use or operation immune from enforcement?
                 </h1>
               </legend>
               <div class="govuk-radios">
@@ -83,6 +82,9 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
         <div>
           <h2 class="govuk-heading-l">
             Report
+          </h2>
+          <h2 class="govuk-heading-m">
+            Overall summary
           </h2>
           <p class="govuk-body">
             {{data['immunity-summary']}}
