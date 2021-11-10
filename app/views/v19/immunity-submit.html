@@ -13,12 +13,77 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <div class="govuk-form-group">
-      <h1 class="govuk-heading-l">
-        Your report
-      </h1>
       <div>
+        <form class="govuk-!-padding-bottom-5" action="/v19/assessment-immunity" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Is the use or operation immune from enforcement?
+                </h1>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="immune-decision"
+                    name="immune-decision"
+                    type="radio"
+                    value="Immune"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="immune-decision"
+                  >
+                    Immune from enforcement action
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="immune-decision-2"
+                    name="immune-decision"
+                    type="radio"
+                    value="Not immune"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="immune-decision-2"
+                  >
+                    Not immune from enforcement action
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <input type="hidden" name="submit-check" value="Completed" />
+          <input type="hidden" name="submit-tag" value="" />
+          <div class="govuk-button-group">
+            <button
+              type="submit"
+              class="govuk-button"
+              data-module="govuk-button"
+            >
+              Submit decision to manager
+            </button>
+            <a
+              class="govuk-button govuk-button--secondary"
+              data-module="govuk-button"
+              href="assessment-immunity.html"
+            >
+              Back
+            </a>
+          </div>
+        </form>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
         <div>
           <h2 class="govuk-heading-l">
+            Report
+          </h2>
+          <h2 class="govuk-heading-m">
             Overall summary
           </h2>
           <p class="govuk-body">
@@ -153,22 +218,5 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
     </tr>
   </tbody>
 </table>
-
-<form action="/v19/assessment-immunity" method="post" novalidate>
-  <input type="hidden" name="submit-check" value="Completed" />
-  <input type="hidden" name="submit-tag" value="" />
-  <div class="govuk-button-group">
-    <button type="submit" class="govuk-button" data-module="govuk-button">
-      Save
-    </button>
-    <a
-      class="govuk-button govuk-button--secondary"
-      data-module="govuk-button"
-      href="assessment-immunity.html"
-    >
-      Back
-    </a>
-  </div>
-</form>
 
 {% endblock %}
