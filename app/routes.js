@@ -42,7 +42,7 @@ module.exports = router
 
 // Branching for type of evidence entry
 // Found on set-data-type
-router.post('/data-type-check', function(req, res) {
+router.post('/date-type-check', function(req, res) {
     // Get the answer from session data
     // The name between the quotes is the same as the 'name' attribute on the input elements
     // However in JavaScript we can't use hyphens in variable names
@@ -52,7 +52,7 @@ router.post('/data-type-check', function(req, res) {
     if (over20 === 'range') {
         res.redirect('v19/immunity-bills')
     } else {
-        res.redirect('v19/immunity-other')
+        res.redirect('v19/immunity-tax')
     }
 })
 

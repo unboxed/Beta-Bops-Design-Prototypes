@@ -48,13 +48,6 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
           <p class="govuk-body">
             {{data['bills-summary']}}
           </p>
-          {{evidenceTable( "", "/public/images/fh-sitevis-2.jpg", "11 October
-          2011", "10 October 2012", "Suggests that council tax should have been
-          paid from this date", "Gap", "11 October 2012", "10 October 2013", "",
-          "/public/images/fh-sitevis-3.jpg", "11 October 2013", "12 October
-          2014", "", "/public/images/fh-sitevis-4.jpg", "11 October 2014", "12
-          October 2015", "", "/public/images/fh-sitevis-5.jpg", "11 October
-          2015", "12 October 2016", "")}}
         </div>
         <hr
           class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
@@ -94,20 +87,88 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
         />
       </div>
     </div>
-     <form action="/v19/assessment-immunity" method="post" novalidate>
-    <input type="hidden" name="submit-check" value="Completed">
-        <input type="hidden" name="submit-tag" value="">
-    <div class="govuk-button-group">
-        <button type="submit" class="govuk-button" data-module="govuk-button">
-          Save
-        </button>
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
-        Back
-      </a>
-    </div>
-  </div>
-  </form>
   </div>
 </div>
+<div class-"govuk-column-full">
+<h2 class="govuk-heading-m">
+  Evidence timeline
+</h2>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Evidence</th>
+      <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">
+        Reason for submission
+      </th>
+      <th scope="col" class="govuk-table__header">Date(s)</th>
+      <th scope="col" class="govuk-table__header">Officers comment</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">bill_1</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">Shows residence during 2011-12</td>
+      <td class="govuk-table__cell">
+        12 October 2011 <br />-<br />11 October 2012
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tax_1</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell"><em>None</em></td>
+      <td class="govuk-table__cell">
+        30 Nov 2011
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Gap</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">
+        12 October 2012 <br />-<br />11 October 2013
+      </td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">bill_2</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">Shows residence during 2013-14</td>
+      <td class="govuk-table__cell">
+        12 October 2013 <br />-<br />11 October 2014
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">bill_3</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">Shows residence during 2014-15</td>
+      <td class="govuk-table__cell">
+        12 October 2014 <br />-<br />11 October 2015
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+  </tbody>
+</table>
+
+<form action="/v19/assessment-immunity" method="post" novalidate>
+  <input type="hidden" name="submit-check" value="Completed" />
+  <input type="hidden" name="submit-tag" value="" />
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Save
+    </button>
+    <a
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button"
+      href="assessment-immunity.html"
+    >
+      Back
+    </a>
+  </div>
+</form>
 
 {% endblock %}

@@ -23,7 +23,7 @@ immunity-history.html
     -->
 
     {{evidenceTableOther(
-    "Assess evidence - Utility bills",
+    "Assess evidence - Council Tax",
     "/public/images/ctax1.png", "Enter date", "Enter comment",
     "/public/images/ctax2.png", "Enter date",  "Enter comment",
     "/public/images/ctax3.png", "Enter date",  "Enter comment",
@@ -37,17 +37,17 @@ immunity-history.html
     <form action="/v19/assessment-immunity" method="post" novalidate>
       <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="other-summary">
+          <label class="govuk-label govuk-label--m" for="tax-summary">
             Enter a summary for the evidence provided 
           </label>
         </h1>
         <textarea 
           class="govuk-textarea" 
-          id="other-summary" 
-          name="other-summary" 
+          id="tax-summary" 
+          name="tax-summary" 
           rows="5"
           type="text" 
-          value="{{ data['other-summary'] }}" 
+          value="{{ data['tax-summary'] }}" 
           ></textarea>
         <input type="hidden" name="other-check" value="Completed">
         <input type="hidden" name="other-tag" value="">
