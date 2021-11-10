@@ -2,7 +2,7 @@ immunity-history.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/header.njk" import header %}
-{% from "./customnjk/evidence-table.njk" import evidenceTable %}
+{% from "./customnjk/evidence-table-other.njk" import evidenceTableOther %}
 
 
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
@@ -16,18 +16,18 @@ immunity-history.html
     <div class="govuk-form-group">
     <div>
      <!--type,
-    asset1, date1_1, date1_2, comment1,
-    asset2, date2_1, date2_2, comment2,
-    asset3, date3_1, date3_2, comment3,
-    asset4, date4_1, date4_2, comment4,
+    asset1, date1,  comment1,
+    asset2, date2,  comment2,
+    asset3, date3,  comment3,
+    asset4, date4,  comment4,
     -->
 
-    {{evidenceTable(
+    {{evidenceTableOther(
     "Assess evidence - Utility bills",
-    "/public/images/bills1.png", "Enter start date", "Enter end date", data['bill-comment'],
-    "/public/images/bills2.png", "Enter start date", "Enter end date", "Enter comment",
-    "/public/images/bills3.png", "Enter start date", "Enter end date", "Enter comment",
-    "/public/images/bills4.png", "Enter start date", "Enter end date", "Enter comment"
+    "/public/images/ctax1.png", "Enter date", "Enter comment",
+    "/public/images/ctax2.png", "Enter date",  "Enter comment",
+    "/public/images/ctax3.png", "Enter date",  "Enter comment",
+    "/public/images/ctax4.png", "Enter date",  "Enter comment"
     )}}
     </div>
   </div>
@@ -37,20 +37,24 @@ immunity-history.html
     <form action="/v19/assessment-immunity" method="post" novalidate>
       <div class="govuk-form-group">
       <h1 class="govuk-label-wrapper">
-          <label class="govuk-label govuk-label--m" for="planning-history">
+          <label class="govuk-label govuk-label--m" for="other-summary">
             Enter a summary for the evidence provided 
           </label>
         </h1>
         <textarea 
           class="govuk-textarea" 
-          id="bills-summary" 
-          name="bills-summary" 
+          id="other-summary" 
+          name="other-summary" 
           rows="5"
           type="text" 
-          value="{{ data['bills-summary'] }}" 
+          value="{{ data['other-summary'] }}" 
           ></textarea>
-        <input type="hidden" name="bills-check" value="Completed">
-        <input type="hidden" name="bills-tag" value="">
+        <input type="hidden" name="other-check" value="Completed">
+        <input type="hidden" name="other-tag" value="">
+        <input type="hidden" name="tax-check" value="Completed">
+        <input type="hidden" name="tax-tag" value="">
+        <input type="hidden" name="tenancy-check" value="Completed">
+        <input type="hidden" name="tenancy-tag" value="">
         
 
         <div class="govuk-button-group">

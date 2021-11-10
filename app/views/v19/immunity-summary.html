@@ -33,33 +33,6 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
         </div>
         <div>
           <h2 class="govuk-heading-m">
-            Development, Permitted development and Planning permission
-          </h2>
-          <p class="govuk-body">
-            Is the existing development, "development" for which planning
-            permission is required?
-          </p>
-          <p class="govuk-body"><strong> No </strong> - comment goes here</p>
-          <br />
-          <p class="govuk-body">
-            Does the existing development fall within the scope of permitted
-            development rights?
-          </p>
-          <p class="govuk-body"><strong> No </strong> - comment goes here</p>
-          <br />
-          <p class="govuk-body">
-            Is the existing development the subject of a grant of planning
-            permission?
-          </p>
-          <p class="govuk-body"><strong> No </strong> - comment goes here</p>
-          <br />
-
-          <hr
-            class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
-          />
-        </div>
-        <div>
-          <h2 class="govuk-heading-m">
             Utility bills evidence summary
           </h2>
           <p class="govuk-body">
@@ -74,7 +47,7 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             Council tax evidence summary
           </h2>
           <p class="govuk-body">
-            Summary goes here
+            {{ data['tax-summary'] }}
           </p>
           <hr
             class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
@@ -85,7 +58,7 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             Tenancy agreements evidence summary
           </h2>
           <p class="govuk-body">
-            Summary goes here
+            {{ data['tenancy-summary'] }}
           </p>
           <hr
             class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
@@ -96,43 +69,43 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             Other evidence summary
           </h2>
           <p class="govuk-body">
-            Summary goes here
+            {{ data['other-summary'] }}
           </p>
         </div>
         <hr
           class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
         />
       </div>
+      
+      <form action="/v19/assessment-immunity" method="post" novalidate>
       <h1 class="govuk-label-wrapper">
-        <label class="govuk-label govuk-label--l" for="more-detail">
+        <label class="govuk-label govuk-label--l" for="immunity-summary">
           Write your summary for this assessment
         </label>
       </h1>
+      <div>
       <textarea
         class="govuk-textarea"
-        id="more-detail"
-        name="more-detail"
+        id="immunity-summary"
+        name="immunity-summary"
         rows="5"
-        aria-describedby="more-detail-hint"
+        value="{{data['immunity-summary']}}"
+        aria-describedby="immunity-summary-hint"
       ></textarea>
     </div>
+    <input type="hidden" name="summary-check" value="Completed">
+        <input type="hidden" name="summary-tag" value="">
     <div class="govuk-button-group">
-      <a
-        class="govuk-button govuk"
-        data-module="govuk-button"
-        href="assessment-immunity-6.html"
-      >
-        Save
-      </a>
-      <a
-        class="govuk-button govuk-button--secondary"
-        data-module="govuk-button"
-        href="assessment-immunity-5.html"
-      >
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
         Back
       </a>
     </div>
   </div>
+  </form>
+</div>
 </div>
 
 {% endblock %}

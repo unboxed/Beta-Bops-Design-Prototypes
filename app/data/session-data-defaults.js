@@ -40,10 +40,15 @@ module.exports = {
     "start-month1": "13",
     "start-year1": "1991",
     "end-date1": "Enter end date",
-    "evidence-comment1": "Enter comment",
+    "bill-comment": "Enter comment",
     "start-date2": "Enter start date",
     "end-date2": "Enter end date",
-    "evidence-comment2": "Enter coment"
+    "evidence-comment2": "Enter coment",
+    "planning-history": "None added",
+    "bills-summary": "None added",
+    "tax-summary": "None added",
+    "tenancy-summary": "None added",
+    "other-summary": "None added"
 
 
 }
