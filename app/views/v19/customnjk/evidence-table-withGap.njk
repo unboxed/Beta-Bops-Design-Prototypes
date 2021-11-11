@@ -10,13 +10,17 @@ evidence-table-part.njk
 ) %}
 {% block content %}
 
+<h1 class="govuk-heading-l">
+{{type}}
+</h1>
+<p class="govuk-body"><strong>Reason for submitting evidence :</strong> Reason goes here</p>
+  <p class="govuk-body"><strong>Dates covered (submitted by applicant) :</strong> 12 Oct 2011 - 12 Oct 2013 </p>
+
 <table class="govuk-table">
-  <caption class="govuk-table__caption govuk-table__caption--l">{{type}}</caption>
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
       <th scope="col" class="govuk-table__header">Dates covered</th>
-      <th scope="col" class="govuk-table__header">Reason for submission</th>
       <th scope="col" class="govuk-table__header">Officer comment</th>
     </tr>
   </thead>
@@ -24,31 +28,31 @@ evidence-table-part.njk
     <tr class="govuk-table__row">
       <th scope="row" class="govuk-table__header"><img src="{{asset1}}" style="width:200; border: solid 1px #bcbcbc"/></th>
       <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{day1_1}}&nbsp{{month1_1}}&nbsp{{year1_1}}</a><br>-<br><a class="govuk-link" href="#">{{day1_2}}&nbsp{{month1_2}}&nbsp{{year1_2}}</a></td>
-      <td class="govuk-table__cell">Apllicant's reason goes here</td>
+      
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment1}}</a></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><strong> {{asset2}} </strong></th>
       <td class="govuk-table__cell"><a class="govuk-link" href="#">{{day1_2}}&nbsp{{month1_2}}&nbsp{{year1_2}}</a><br>-<br><a class="govuk-link" href="#">{{day2_1}}&nbsp{{month2_1}}&nbsp{{year2_1}}</a></td>
-      <td class="govuk-table__cell"></td>
+      
       <td class="govuk-table__cell"></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><img src="{{asset3}}" style="width:200; border: solid 1px #bcbcbc"/></th>
       <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{day2_1}}&nbsp{{month2_1}}&nbsp{{year2_1}}</a><br>-<br><a class="govuk-link" href="#">{{day2_2}}&nbsp{{month2_2}}&nbsp{{year2_2}}</a></td>
-      <td class="govuk-table__cell">Apllicant's reason goes here</td>
+      
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment3}}</a></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><img src="{{asset4}}" style="width:200; border: solid 1px #bcbcbc"/></th>
       <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date4_1}}</a><br>-<br><a class="govuk-link" href="#">{{date4_2}}</a></td>
-      <td class="govuk-table__cell">Apllicant's reason goes here</td>
+      
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment4}}</a></td>
     </tr>
     <tr class="govuk-table__row">
        <th scope="row" class="govuk-table__header"><img src="{{asset5}}" style="width:200; border: solid 1px #bcbcbc"/></th>
       <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date5_1}}</a><br>-<br><a class="govuk-link" href="#">{{date5_2}}</a></td>
-      <td class="govuk-table__cell">Apllicant's reason goes here</td>
+      
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment5}}</a></td>
     </tr>
   </tbody>
