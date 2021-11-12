@@ -1,12 +1,7 @@
 immunity-assessment-table.njk
 {% macro immunity(
     history_status, history_tag,
-    3q_status, 3q_tag,
-    bills_status, bills_tag,
-    tax_status, tax_tag,
-    tenancy_status, tenancy_tag,
-    other_status, other_tag,
-    summary_status, summary_tag
+    submit_status, submit_tag
 ) %}
 {% block content %}
 
@@ -18,39 +13,9 @@ immunity-assessment-table.njk
     </strong> 
     </li> 
     <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-3questions.html"> Development, Permitted development and Planning permission  </a>
-    <strong class="govuk-tag govuk-tag--{{3q_tag}}" style="float: right;">
-    {{3q_status}}
-    </strong> 
-    </li>  
-    <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-bills.html"> Assess evidence - Utility bills  </a>
-    <strong class="govuk-tag govuk-tag--{{bills_tag}}" style="float: right;">
-    {{bills_status}}
-    </strong> 
-    </li>
-    <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-tax.html"> Assess evidence - Council tax  </a>
-    <strong class="govuk-tag govuk-tag--{{tax_tag}}" style="float: right;">
-    {{tax_status}}
-    </strong> 
-    </li>  
-    <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-tenancy.html"> Assess evidence - Tenancy agreements  </a>
-    <strong class="govuk-tag govuk-tag--{{tenancy_tag}}" style="float: right;">
-    {{tenancy_status}}
-    </strong> 
-    </li> 
-    <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-other.html"> Assess evidence - Other  </a>
-    <strong class="govuk-tag govuk-tag--{{other_tag}}" style="float: right;">
-    {{other_status}}
-    </strong> 
-    </li>    
-    <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-summary.html"> Summary of evidence  </a>
-    <strong class="govuk-tag govuk-tag--{{summary_tag}}" style="float: right;">
-    {{summary_status}}
+    <a class="moj-task-list__task-name" href="immunity-submit.html"> Write summary and submit  </a>
+    <strong class="govuk-tag govuk-tag--{{submit_tag}}" style="float: right;">
+    {{submit_status}}
     </strong> 
     </li>  
 </ul>
