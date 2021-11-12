@@ -14,31 +14,7 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
     <h1 class="govuk-heading-l">
       Summary and submit assessment
     </h1>
-    <h2 class="govuk-heading-m">
-      Planning history
-    </h2>
-
-    <p class="govuk-body">
-      {{ data['planning-history'] }}
-    </p>
-
     <form action="/v20/assessment-immunity" method="post" novalidate>
-      <h1 class="govuk-label-wrapper">
-        <label class="govuk-label govuk-label--m" for="immunity-summary">
-          Write your summary for this assessment
-        </label>
-      </h1>
-
-      <div>
-        <textarea
-          class="govuk-textarea"
-          id="immunity-summary"
-          name="immunity-summary"
-          rows="10"
-          value="{{data['immunity-summary']}}"
-          aria-describedby="immunity-summary-hint"
-        ></textarea>
-      </div>
       <div class="govuk-form-group">
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
@@ -80,6 +56,44 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
           </div>
         </fieldset>
       </div>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="immunity-summary">
+          Write your summary for this assessment
+        </label>
+      </h1>
+      <div id="more-detail-hint" class="govuk-hint">
+        This information <strong> will </strong> appear on the decision notice.
+      </div>
+      <div>
+        <textarea
+          class="govuk-textarea"
+          id="immunity-summary"
+          name="immunity-summary"
+          rows="10"
+          value="{{data['immunity-summary']}}"
+          aria-describedby="immunity-summary-hint"
+        ></textarea>
+      </div>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="manager-comment">
+          Provide supporting information for your manager
+        </label>
+      </h1>
+      <div id="manager-comment-hint" class="govuk-hint">
+        This information <strong> will not </strong> appear on the decision
+        notice or the public register.
+      </div>
+      <div>
+        <textarea
+          class="govuk-textarea"
+          id="manager-comment"
+          name="manager-comment"
+          rows="5"
+          value="{{data['manager-comment']}}"
+          aria-describedby="manager-comment-hint"
+        ></textarea>
+      </div>
+
       <input type="hidden" name="submit-check" value="Completed" />
       <input type="hidden" name="submit-tag" value="" />
       <div class="govuk-button-group">
