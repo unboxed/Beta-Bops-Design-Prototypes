@@ -11,15 +11,17 @@
 
 <main class="govuk-main-wrapper">
   <div class="govuk-grid-row">
-    <div class="govuk-grid-column-two-thirds"
-    style="
-      background-color: #f3f2f1;
-      border: solid 1px;
-      padding: 30px;
-      clear: both;
-      margin-top: 10px;
-    ">
-    <span class="govuk-caption-xl">Council Name</span>
+    <div
+      class="govuk-grid-column-two-thirds"
+      style="
+        background-color: #f3f2f1;
+        border: solid 1px;
+        padding: 30px;
+        clear: both;
+        margin-top: 10px;
+      "
+    >
+      <span class="govuk-caption-xl">Council Name</span>
       <h2 class="govuk-heading-s">
         Town and Country Planning Act 1990 (as amended): sections 191 and 192
       </h2>
@@ -138,16 +140,55 @@
     </div>
   </div>
   <div class="govuk-grid-row govuk-!-padding-top-5">
-   <div class="govuk-grid-column-two-thirds">
-    <h2 class="govuk-heading-m">
-    Comment to your manager
-    </h2>
-    
-    <p class="govuk-body">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Planning history
+      </h2>
+
+      <p class="govuk-body">
+        {{data['planning-history']}}
+      </p>
+    </div>
+  </div>
+  <div class="govuk-grid-row govuk-!-padding-top-5">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-m">
+        Comment to your manager
+      </h2>
+
+      <p class="govuk-body">
         {{data['manager-comment']}}
       </p>
-   <div>
-  <div>
+      <hr
+        class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      />
+      <div class="govuk-body">
+        <strong>
+          If you agree with the decision notice, please submit it to your
+          manager.
+        </strong>
+        If your manager disagrees with your recommendation they will send it
+        back to you to make changes.
+      </div>
+    </div>
+  </div>
 </main>
+
+<form action="/v20/assessment-immunity" method="post" novalidate>
+  <input type="hidden" name="submit-check" value="Completed" />
+  <input type="hidden" name="submit-tag" value="" />
+  <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Submit decision to manager
+    </button>
+    <a
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button"
+      href="assessment-immunity.html"
+    >
+      Back
+    </a>
+  </div>
+</form>
 
 {% endblock %}

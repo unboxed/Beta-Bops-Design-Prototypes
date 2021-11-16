@@ -1,6 +1,7 @@
 immunity-assessment-table.njk
 {% macro immunity(
     history_status, history_tag,
+    summary_status, summary_tag,
     submit_status, submit_tag
 ) %}
 {% block content %}
@@ -13,7 +14,13 @@ immunity-assessment-table.njk
     </strong> 
     </li> 
     <li class="moj-task-list__item">  
-    <a class="moj-task-list__task-name" href="immunity-submit.html"> Write summary and submit  </a>
+    <a class="moj-task-list__task-name" href="immunity-summary.html"> Summarise evidence </a>
+    <strong class="govuk-tag govuk-tag--{{summary_tag}}" style="float: right;">
+    {{summary_status}}
+    </strong> 
+    </li>  
+    <li class="moj-task-list__item">  
+    <a class="moj-task-list__task-name" href="immunity-recommendation.html"> Submit recommendation </a>
     <strong class="govuk-tag govuk-tag--{{submit_tag}}" style="float: right;">
     {{submit_status}}
     </strong> 
