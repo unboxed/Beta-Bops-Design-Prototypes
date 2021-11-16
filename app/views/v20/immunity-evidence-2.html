@@ -1,0 +1,69 @@
+immunity-evidence.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/header.njk" import header %}
+{% from "./customnjk/evidence-table-filled.njk" import evidenceTable %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-full">
+    <div class="govuk-form-group">
+    <div>
+     <!--type,
+    asset1, comment1,
+    asset2, comment2,
+    asset3, comment3,
+    asset4, comment4
+    -->
+
+    {{evidenceTable(
+    "Assess evidence",
+    "/public/images/bills1.png", "Utility bill", data['bill-comment'],
+    "/public/images/bills2.png", "Utility bill", "Enter comment",
+    "/public/images/ctax3.png", "Council tax bill", "Enter comment",
+    "/public/images/bills4.png", "Utility bill", "Enter comment"
+    )}}
+    </div>
+  </div>
+</div>
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v20/assessment-immunity" method="post" novalidate>
+      <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="planning-history">
+            Enter a summary for the evidence provided 
+          </label>
+        </h1>
+        <textarea 
+          class="govuk-textarea" 
+          id="evidence-summary" 
+          name="evidence-summary" 
+          rows="5"
+          type="text" 
+          value="{{ data['evidence-summary'] }}" 
+          ></textarea>
+        <input type="hidden" name="evidence-check" value="Completed">
+        <input type="hidden" name="evidence-tag" value="">
+        
+
+        <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
+        Back
+      </a>
+      </form>  
+    
+    
+  </div>
+</div>  
+
+{% endblock %}

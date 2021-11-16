@@ -1,12 +1,11 @@
-evidence-table.njk
+evidence-table-filled.njk
 
 {% macro evidenceTable(
     type,
-    asset1, date1_1, date1_2, comment1,
-    asset2, date2_1, date2_2, comment2,
-    asset3, date3_1, date3_2, comment3,
-    asset4, date4_1, date4_2, comment4,
-    asset5, date5_1, date5_2, comment5
+    asset1, asset1_tag, comment1,
+    asset2, asset2_tag, comment2,
+    asset3, asset3_tag, comment3,
+    asset4, asset4_tag, comment4
 ) %}
 {% block content %}
 
@@ -15,35 +14,30 @@ evidence-table.njk
   <thead class="govuk-table__head">
     <tr class="govuk-table__row">
       <th scope="col" class="govuk-table__header">Document</th>
-      <th scope="col" class="govuk-table__header">Dates covered</th>
+      <th scope="col" class="govuk-table__header">Document tag</th>
       <th scope="col" class="govuk-table__header">Comment</th>
     </tr>
   </thead>
   <tbody class="govuk-table__body">
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header"><img src="{{asset1}}" width="200"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date1_1}}</a><br>-<br><a class="govuk-link" href="#">{{date1_2}}</a></td>
-      <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment1}}</a></td>
+      <th scope="row" class="govuk-table__header"><img src="{{asset1}}" width="100" style="border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset1_tag}}</strong>  </td>
+      <td class="govuk-table__cell">{{comment1}}<br/><a class="govuk-link" href="immunity-bills-comment.html">Edit comment</a></td>
     </tr>
     <tr class="govuk-table__row">
-      <th scope="row" class="govuk-table__header">{{asset2}}</th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date2_1}}</a><br>-<br><a class="govuk-link" href="#">{{date2_2}}</a></td>
-      <td class="govuk-table__cell">{{comment2}}<br><a class="govuk-link" href="immunity-bills-comment.html">Edit comment</a></td>
+      <th scope="row" class="govuk-table__header"><img src="{{asset2}}" width="100" style="border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset2_tag}}</strong>  </td>
+      <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment2}}</a></td>
     </tr>
     <tr class="govuk-table__row">
-       <th scope="row" class="govuk-table__header"><img src="{{asset3}}" width="200"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date3_1}}</a><br>-<br><a class="govuk-link" href="#">{{date3_2}}</a></td>
+      <th scope="row" class="govuk-table__header"><img src="{{asset3}}" width="100" style="border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset3_tag}}</strong>  </td>
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment3}}</a></td>
     </tr>
     <tr class="govuk-table__row">
-       <th scope="row" class="govuk-table__header"><img src="{{asset4}}" width="200"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date4_1}}</a><br>-<br><a class="govuk-link" href="#">{{date4_2}}</a></td>
+      <th scope="row" class="govuk-table__header"><img src="{{asset4}}" width="100" style="border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset4_tag}}</strong>  </td>
       <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment4}}</a></td>
-    </tr>
-    <tr class="govuk-table__row">
-       <th scope="row" class="govuk-table__header"><img src="{{asset5}}" width="200"/></th>
-      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date5_1}}</a><br>-<br><a class="govuk-link" href="#">{{date5_2}}</a></td>
-      <td class="govuk-table__cell"><a class="govuk-link" href="immunity-bills-comment.html">{{comment5}}</a></td>
     </tr>
   </tbody>
 </table>

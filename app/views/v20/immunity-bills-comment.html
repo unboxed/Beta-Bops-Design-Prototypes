@@ -1,0 +1,47 @@
+immunity-history.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/header.njk" import header %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v20/immunity-evidence-2" method="post" class="form">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="bill-comment">
+            Enter comment for this document
+          </label>
+        </h1>
+        <textarea
+          class="govuk-textarea"
+          id="bill-comment"
+          name="bill-comment"
+          value="{{ data['bill-comment'] }}"
+          type="text"
+          rows="5"
+        ></textarea>
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save</button>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="immunity-evidence.html"
+        >
+          Back
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+
+{% endblock %}
