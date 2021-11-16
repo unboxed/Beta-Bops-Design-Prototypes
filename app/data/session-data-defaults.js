@@ -49,7 +49,10 @@ module.exports = {
     "tax-summary": "None added",
     "tenancy-summary": "None added",
     "other-summary": "None added",
-    "manager-comment": "None added"
+    "manager-comment": "None added",
+    "evidence-check": "Not started",
+    "evidence-tag": "grey",
+    "evidence-summary": "None added"
 
 
 }
