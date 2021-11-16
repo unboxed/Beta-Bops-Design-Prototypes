@@ -48,7 +48,8 @@ module.exports = {
     "bills-summary": "None added",
     "tax-summary": "None added",
     "tenancy-summary": "None added",
-    "other-summary": "None added"
+    "other-summary": "None added",
+    "manager-comment": "None added"
 
 
 }
