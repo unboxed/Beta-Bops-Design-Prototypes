@@ -1,0 +1,49 @@
+evidence-table.njk
+
+{% macro evidenceTable(
+    type,
+    asset1, asset1_tag, comment1,
+    asset2, asset2_tag, comment2,
+    asset3, asset3_tag, comment3,
+    asset4, asset4_tag, comment4
+) %}
+{% block content %}
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--l">{{type}}</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Document</th>
+      <th scope="col" class="govuk-table__header">Document type</th>
+      <th scope="col" class="govuk-table__header">Comment</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset1}}</th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset1_tag}}</strong>  </td>
+      <td class="govuk-table__cell">{{comment1}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset2}}</th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset2_tag}}</strong>  </td>
+      <td class="govuk-table__cell">{{comment2}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset3}}</th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset3_tag}}</strong>  </td>
+      <td class="govuk-table__cell">{{comment3}}</td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset4}}</th>
+      <td class="govuk-table__cell"> <strong class="govuk-tag govuk-tag--purple">{{asset4_tag}}</strong>  </td>
+      <td class="govuk-table__cell">{{comment4}}</td>
+    </tr>
+  </tbody>
+</table>
+
+
+
+{% endblock %}
+
+{% endmacro %}
