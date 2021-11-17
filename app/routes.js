@@ -41,7 +41,7 @@ router.post('/refuse-or-approve', function(req, res) {
 module.exports = router
 
 // Branching for type of evidence entry
-// Found on set-data-type
+// Found on set-date-type
 router.post('/date-type-check', function(req, res) {
     // Get the answer from session data
     // The name between the quotes is the same as the 'name' attribute on the input elements

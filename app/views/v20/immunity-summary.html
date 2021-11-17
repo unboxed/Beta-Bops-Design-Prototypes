@@ -33,10 +33,11 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             <div class="govuk-radios__item">
               <input
                 class="govuk-radios__input"
-                id="immune-decision"
+                id="immune-decision-granted"
                 name="immune-decision"
                 type="radio"
-                value="Immune"
+                value="Granted"
+                {{checked("immune-decision", "Granted")}}
               />
               <label
                 class="govuk-label govuk-radios__label"
@@ -48,10 +49,11 @@ immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
             <div class="govuk-radios__item">
               <input
                 class="govuk-radios__input"
-                id="immune-decision-2"
+                id="immune-decision-refused"
                 name="immune-decision"
                 type="radio"
-                value="Not immune"
+                value="Refused"
+                {{checked("immune-decision", "Refused")}}
               />
               <label
                 class="govuk-label govuk-radios__label"

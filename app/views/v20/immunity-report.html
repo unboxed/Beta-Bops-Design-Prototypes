@@ -1,0 +1,62 @@
+immunity-report.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/header.njk" import header %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  <main class="govuk-main-wrapper">
+    <h1 class="govuk-heading-l">
+      Decision : {{data['immune-decision']}} 
+    </h1>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <div>
+          <h2 class="govuk-heading-m">
+            Overall summary
+          </h2>
+          <p class="govuk-body">
+            {{data['evidence-summary']}}
+          </p>
+          <p><a class="govuk-link" href="immunity-history.html">Change</a></p>
+        </div>
+
+        <div>
+          <h2 class="govuk-heading-m">
+            Planning history
+          </h2>
+          <p class="govuk-body">
+            {{data['planning-history']}}
+          </p>
+          <p><a class="govuk-link" href="immunity-history.html">Change</a></p>
+        </div>
+
+        <div>
+          <h2 class="govuk-heading-m">
+            Evidence summary
+          </h2>
+          <p class="govuk-body">
+            {{data['evidence-summary']}}
+          </p>
+          <p><a class="govuk-link" href="immunity-history.html">Change</a></p>
+        </div>
+        <div class="govuk-button-group">
+          <a
+            class="govuk-button"
+            data-module="govuk-button"
+            href="assessment-immunity.html"
+          >
+            Back
+          </a>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}
