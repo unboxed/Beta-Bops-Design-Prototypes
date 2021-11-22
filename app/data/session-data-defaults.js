@@ -40,7 +40,7 @@ module.exports = {
     "start-month1": "",
     "start-year1": "",
     "end-date1": "Enter end date",
-    "bill-comment": "Enter comment",
+    "bill-comment": "None added",
     "start-date2": "Enter start date",
     "end-date2": "Enter end date",
     "evidence-comment2": "Enter coment",

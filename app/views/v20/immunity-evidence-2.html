@@ -2,7 +2,7 @@ immunity-evidence.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/header.njk" import header %}
-{% from "./customnjk/evidence-table-filled.njk" import evidenceTable %}
+{% from "./customnjk/evidence-table-date.njk" import evidenceTable %}
 
 
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
@@ -24,10 +24,10 @@ immunity-evidence.html
 
     {{evidenceTable(
     "Assess evidence",
-    "/public/images/bills1.png", "Utility bill", data['bill-comment'],
-    "/public/images/bills2.png", "Utility bill", "Enter comment",
-    "/public/images/ctax3.png", "Council tax bill", "Enter comment",
-    "/public/images/bills4.png", "Utility bill", "Enter comment"
+    "/public/images/bills1.png", "Utility bill", data['start-day1'], data['start-month1'] | toMonth, data['start-year1'], data['end-day1'], data['end-month1'] | toMonth, data['end-year1'], data['bill-comment'],
+    "/public/images/bills2.png", "Utility bill", "-", "-", "None added",
+    "/public/images/ctax3.png", "Council tax bill", "-", "-", "None added",
+    "/public/images/bills4.png", "Utility bill", "-", "-", "None added"
     )}}
     </div>
   </div>

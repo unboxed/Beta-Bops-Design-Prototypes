@@ -1,0 +1,295 @@
+edit-evidence.html {% extends "layout.html" %} {% block head %} {{ super() }} {%
+endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-column-full">
+      <form action="/immunity-evidence" method="post" novalidate>
+        <div class="govuk-grid-row">
+          <h2 class="govuk-heading-m">
+            Does utility bill evidence cover a time period or a single date
+          </h2>
+        </div>
+        <div class="govuk-form-group">
+          <fieldset class="govuk-fieldset">
+            <div
+              class="govuk-radios govuk-radios--conditional"
+              data-module="govuk-radios"
+            >
+              <div class="govuk-radios__item">
+                <input
+                  class="govuk-radios__input"
+                  id="date-type"
+                  name="date-type"
+                  type="radio"
+                  value="range"
+                  data-aria-controls="conditional-date"
+                />
+                <label class="govuk-label govuk-radios__label" for="date-type">
+                  A period of time with a start and end date
+                </label>
+                <div
+                  id="sign-in-item-hint"
+                  class="govuk-hint govuk-radios__hint"
+                >
+                  For example, utility bills will cover a period of time
+                </div>
+                <div
+                  class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                  id="conditional-date"
+                >
+                  <div class="govuk-form-group">
+                    <fieldset
+                      class="govuk-fieldset"
+                      role="group"
+                      aria-describedby="evidence-start"
+                    >
+                      <legend class="govuk-fieldset__legend">
+                        When is start of the period this document evidences?
+                      </legend>
+                      <div class="govuk-date-input" id="evidence-start">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label
+                              class="govuk-label govuk-date-input__label"
+                              for="evidence-start-day"
+                            >
+                              Day
+                            </label>
+                            <input
+                              class="govuk-input govuk-date-input__input govuk-input--width-2"
+                              id="start-day1"
+                              name="start-day1"
+                              value="{{ data['start-day1'] }}"
+                              type="text"
+                              pattern="[0-9]*"
+                              inputmode="numeric"
+                            />
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label
+                              class="govuk-label govuk-date-input__label"
+                              for="evidence-start-month"
+                            >
+                              Month
+                            </label>
+                            <input
+                              class="govuk-input govuk-date-input__input govuk-input--width-2"
+                              id="start-month1"
+                              name="start-month1"
+                              value="{{data['start-month1']}}"
+                              type="text"
+                              pattern="[0-9]*"
+                              inputmode="numeric"
+                            />
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label
+                              class="govuk-label govuk-date-input__label"
+                              for="evidence-start-year"
+                            >
+                              Year
+                            </label>
+                            <input
+                              class="govuk-input govuk-date-input__input govuk-input--width-4"
+                              id="start-year1"
+                              name="start-year1"
+                              value="{{ data['start-year1'] }}"
+                              type="text"
+                              pattern="[0-9]*"
+                              inputmode="numeric"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                  <div class="govuk-form-group">
+                    <fieldset
+                      class="govuk-fieldset"
+                      role="group"
+                      aria-describedby="evidence-end"
+                    >
+                      <legend class="govuk-fieldset__legend">
+                        When is end of the period this document evidences?
+                      </legend>
+                      <div class="govuk-date-input" id="evidence-end">
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label
+                              class="govuk-label govuk-date-input__label"
+                              for="evidence-end-day"
+                            >
+                              Day
+                            </label>
+                            <input
+                              class="govuk-input govuk-date-input__input govuk-input--width-2"
+                              id="end-day1"
+                              name="end-day1"
+                              value="{{ data['end-day1'] }}"
+                              type="text"
+                              pattern="[0-9]*"
+                              inputmode="numeric"
+                            />
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label
+                              class="govuk-label govuk-date-input__label"
+                              for="evidence-end-month"
+                            >
+                              Month
+                            </label>
+                            <input
+                              class="govuk-input govuk-date-input__input govuk-input--width-2"
+                              id="end-month1"
+                              name="end-month1"
+                              value="{{ data['end-month1'] }}"
+                              type="text"
+                              pattern="[0-9]*"
+                              inputmode="numeric"
+                            />
+                          </div>
+                        </div>
+                        <div class="govuk-date-input__item">
+                          <div class="govuk-form-group">
+                            <label
+                              class="govuk-label govuk-date-input__label"
+                              for="evidence-end-year"
+                            >
+                              Year
+                            </label>
+                            <input
+                              class="govuk-input govuk-date-input__input govuk-input--width-4"
+                              id="end-year1"
+                              name="end-year1"
+                              value="{{ data['end-year1'] }}"
+                              type="text"
+                              pattern="[0-9]*"
+                              inputmode="numeric"
+                            />
+                          </div>
+                        </div>
+                      </div>
+                    </fieldset>
+                  </div>
+                </div>
+              </div>
+
+              <div class="govuk-radios__item">
+                <input
+                  class="govuk-radios__input"
+                  id="date-type-2"
+                  name="date-type"
+                  type="radio"
+                  value="singleDate"
+                  data-aria-controls="conditional-date-2"
+                />
+                <label
+                  class="govuk-label govuk-radios__label"
+                  for="date-type-2"
+                >
+                  A single date
+                </label>
+                <div
+                  id="sign-in-item-hint"
+                  class="govuk-hint govuk-radios__hint"
+                >
+                  For example, an invoice will show a single date on which the
+                  invoice was prepared
+                </div>
+                <div
+                  class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                  id="conditional-date-2"
+                >
+                <legend class="govuk-fieldset__legend">
+                        What is the date this document evidences?
+                      </legend>
+                  <div class="govuk-date-input" id="evidence-start">
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label
+                          class="govuk-label govuk-date-input__label"
+                          for="evidence-start-day"
+                        >
+                          Day
+                        </label>
+                        <input
+                          class="govuk-input govuk-date-input__input govuk-input--width-2"
+                          id="start-day1"
+                          name="start-day1"
+                          value="{{ data['day1'] }}"
+                          type="text"
+                          pattern="[0-9]*"
+                          inputmode="numeric"
+                        />
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label
+                          class="govuk-label govuk-date-input__label"
+                          for="evidence-start-month"
+                        >
+                          Month
+                        </label>
+                        <input
+                          class="govuk-input govuk-date-input__input govuk-input--width-2"
+                          id="start-month1"
+                          name="start-month1"
+                          value="{{data['month1']}}"
+                          type="text"
+                          pattern="[0-9]*"
+                          inputmode="numeric"
+                        />
+                      </div>
+                    </div>
+                    <div class="govuk-date-input__item">
+                      <div class="govuk-form-group">
+                        <label
+                          class="govuk-label govuk-date-input__label"
+                          for="evidence-start-year"
+                        >
+                          Year
+                        </label>
+                        <input
+                          class="govuk-input govuk-date-input__input govuk-input--width-4"
+                          id="start-year1"
+                          name="start-year1"
+                          value="{{ data['year1'] }}"
+                          type="text"
+                          pattern="[0-9]*"
+                          inputmode="numeric"
+                        />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </fieldset>
+        </div>
+
+        <div class="govuk-button-group">
+          <button type="submit" class="govuk-button" data-module="govuk-button">
+            Save
+          </button>
+          <a
+            class="govuk-button govuk-button--secondary"
+            data-module="govuk-button"
+            href="immunity-bills.html"
+          >
+            Back
+          </a>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
