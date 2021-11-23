@@ -1,0 +1,145 @@
+applicants-description.html {% extends "layout.html" %} {% block head %} {{
+super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">
+        Confirm changes to your application description
+      </h2>
+      <p class="govuk-body">
+        The following changes have been made to your application's description.
+      </p>
+      <p class="govuk-heading-s">What you need to do:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>
+          Select if you agree or disagree with the changes made by your case
+          officer
+        </li>
+        <li>
+          If you disagree, write in the box provided your reason for disagreeing
+          with the changes and provided your suggested wording for the new
+          description
+        </li>
+        <li>Click submit to complete this action</li>
+      </ul>
+      
+<div class="govuk-inset-text">
+  If your response is not received within <strong>5 working days, by [DD Month YYYY], </strong> the proposed description will be automatically accepted as the description of your application. This is to avoid delays in making a determination on your application.
+
+    
+</div>
+
+      <hr
+        class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+      />
+      <div style="margin-top: 50px;">
+        <p class="govuk-body">
+          <strong>Previous description</strong><br />Test
+        </p>
+      </div>
+      <div style="margin-top: 30px;">
+        <p class="govuk-body">
+          <strong>New description</strong><br />
+          Test test test
+        </p>
+      </div>
+      <hr
+        class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+      />
+      <form
+        action="applicants-home"
+        accept-charset="UTF-8"
+        method="post"
+      >
+        <input type="hidden" name="description-check" value="completed" />
+        <input type="hidden" name="description-tag" value="" />
+
+        <div class="govuk-form-group">
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
+                Do you agree with the changes made to your application
+                description?
+              </legend>
+              <div class="govuk-radios" data-module="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input
+                    id="description-change-validation-request-approved-yes-field"
+                    class="govuk-radios__input"
+                    type="radio"
+                    value="yes"
+                    name="description_change_validation_request[approved]"
+                  /><label
+                    for="description-change-validation-request-approved-yes-field"
+                    class="govuk-label govuk-radios__label"
+                    >Yes, I agree with the changes made</label
+                  >
+                </div>
+                <div class="govuk-radios__item">
+                  <input
+                    id="description-change-validation-request-approved-no-field"
+                    class="govuk-radios__input"
+                    type="radio"
+                    value="no"
+                    name="description_change_validation_request[approved]"
+                    aria-controls="description-change-validation-request-approved-no-conditional"
+                    aria-expanded="false"
+                  /><label
+                    for="description-change-validation-request-approved-no-field"
+                    class="govuk-label govuk-radios__label"
+                    >No, I disagree with the changes made</label
+                  >
+                </div>
+                <div
+                  class="govuk-radios__conditional govuk-radios__conditional--hidden"
+                  id="description-change-validation-request-approved-no-conditional"
+                >
+                  <div class="govuk-!-padding-top-4 govuk-!-padding-bottom-2">
+                    <div class="govuk-form-group">
+                      <label
+                        for="description-change-validation-request-rejection-reason-field"
+                        class="govuk-label"
+                        >Please indicate why you disagree with the changes and
+                        provide your suggested wording for the
+                        description.</label
+                      ><textarea
+                        id="description-change-validation-request-rejection-reason-field"
+                        class="govuk-textarea"
+                        rows="6"
+                        name="description_change_validation_request[rejection_reason]"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+        </div>
+        <div class="govuk-button-group">
+          <input
+            type="submit"
+            name="commit"
+            value="Submit"
+            class="govuk-button"
+            data-module="govuk-button"
+            data-disable-with="Submit"
+          />
+          <a
+            class="govuk-button govuk-button--secondary"
+            href="applicants-home.html"
+            >Back</a
+          >
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+
+{% endblock %}

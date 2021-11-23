@@ -62,11 +62,11 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 >
 
                 <strong
-                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  class="govuk-tag govuk-tag--{{data['description-tag']}} app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Not started
+                  {{data['description-check']}}
                 </strong>
               </li>
             </ul>
@@ -85,7 +85,7 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 <a
                   class="moj-task-list__task-name"
                   href="applicants-replace.html"
-                  >Upload a replacement document</a
+                  >DocName.pdf</a
                 >
 
                 <strong
@@ -112,7 +112,22 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 <a
                   class="moj-task-list__task-name"
                   href="applicants-new.html"
-                  >New document</a
+                  >New document [//Validation request]</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  Not started
+                </strong>
+              </li>
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-new-postvalidation.html"
+                  >New document [// Postvalidation]</a
                 >
 
                 <strong
@@ -143,11 +158,11 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 >
 
                 <strong
-                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  class="govuk-tag govuk-tag--{{data['redline-tag']}} app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Not started
+                  {{data['redline-check']}}
                 </strong>
               </li>
             </ul>
