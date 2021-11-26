@@ -1,0 +1,94 @@
+applicants-new-postvalidation.html {% extends "layout.html" %} {% block head %}
+{{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+<div class="govuk-width-container">
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+      <h2 class="govuk-heading-l">
+        Provide a new document
+      </h2>
+      <p class="govuk-body">
+        The case officer has specified below why this document is needed.
+      </p>
+      <p class="govuk-heading-s">What you need to do:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Select 'choose file' and upload a file from your device</li>
+        <li>Click save to add the file</li>
+        <li>Click submit to complete this action</li>
+      </ul>
+      
+      <hr
+        class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+      />
+      <div class="govuk-!-margin-top-6">
+        <p class="govuk-body">
+          <strong>Document requested:</strong><br />
+          Existing floor plans
+        </p>
+      </div>
+      <div class="govuk-!-margin-top-4">
+        <p class="govuk-body">
+          <strong>Case officer's reason for requesting the document:</strong
+          ><br />
+          test
+        </p>
+      </div>
+
+      <form
+        action="/v20/applicants-home"
+        accept-charset="UTF-8"
+        method="post"
+      >
+        <input type="hidden" name="new-pv-check" value="completed" />
+        <input type="hidden" name="new-pv-tag" value="" />
+
+
+        <div class="govuk-form-group">
+          <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-4">
+            <div class="govuk-form-group">
+              <label
+                for="additional-document-validation-request-file-field"
+                class="govuk-label govuk-!-font-weight-bold"
+                >Upload a new file</label
+              ><input
+                id="additional-document-validation-request-file-field"
+                class="govuk-file-upload"
+                accept=".png,image/png,.jpeg,.jpg,image/jpeg,.pdf"
+                required="required"
+                type="file"
+                name="additional_document_validation_request[file]"
+              />
+            </div>
+            <input
+              type="hidden"
+              value="74"
+              name="additional_document_validation_request[id]"
+              id="additional_document_validation_request_id"
+            />
+          </div>
+          <div class="govuk-button-group">
+            <input
+              type="submit"
+              name="commit"
+              value="Submit"
+              class="govuk-button"
+              data-module="govuk-button"
+              data-disable-with="Submit"
+            />
+            <a
+              class="govuk-button govuk-button--secondary"
+              href="applicants-home.html"
+              >Back</a
+            >
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock %}
