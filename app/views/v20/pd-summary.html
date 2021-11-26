@@ -1,0 +1,123 @@
+immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/header.njk" import header %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-l">
+      Assess proposal
+    </h1>
+    <form action="/v20/assessment-pd" method="post" novalidate>
+      <div class="govuk-form-group">
+        <fieldset class="govuk-fieldset">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--m">
+            <h1 class="govuk-fieldset__heading">
+              Is the use or operation lawful?
+            </h1>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="immune-decision"
+                name="immune-decision"
+                type="radio"
+                value="Immune"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="immune-decision"
+              >
+                Yes
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="immune-decision-2"
+                name="immune-decision"
+                type="radio"
+                value="Not immune"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="immune-decision-2"
+              >
+                No
+              </label>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="pd-summary">
+          State the reasons why this application is, or is not lawful.
+        </label>
+      </h1>
+      <p class="govuk-body"> Refer to the specific permitted development rights being evoked.</p>
+      <div id="more-detail-hint" class="govuk-hint">
+        This information <strong> will </strong> appear on the decision notice.
+      </div>
+      <div>
+        <textarea
+          class="govuk-textarea"
+          id="pd-summary"
+          name="pd-summary"
+          rows="10"
+          value="{{data['pd-summary']}}"
+          aria-describedby="immunity-summary-hint"
+        ></textarea>
+      </div>
+      <h1 class="govuk-label-wrapper">
+        <label class="govuk-label govuk-label--m" for="manager-comment">
+          Provide supporting information for your manager
+        </label>
+      </h1>
+      <div id="manager-comment-hint" class="govuk-hint">
+        This information <strong> will not </strong> appear on the decision
+        notice or the public register.
+      </div>
+      <div>
+        <textarea
+          class="govuk-textarea"
+          id="manager-comment"
+          name="manager-comment"
+          rows="5"
+          value="{{data['manager-comment']}}"
+          aria-describedby="manager-comment-hint"
+        ></textarea>
+      </div>
+
+      <input type="hidden" name="summary-check" value="Completed" />
+      <input type="hidden" name="summary-tag" value="" />
+      <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save and mark as complete
+        </button>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="assessment-pd.html"
+        >
+          Save draft
+        </a>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="assessment-pd.html"
+        >
+          Back
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
