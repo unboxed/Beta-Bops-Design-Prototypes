@@ -1,5 +1,6 @@
 applicants-description.html {% extends "layout.html" %} {% block head %} {{
 super() }}
+{% from "./customnjk/fivedays.njk" import fivedays %}
 <link
   href="/public/css/southwark-branding.css"
   rel="stylesheet"
@@ -30,11 +31,7 @@ super() }}
         <li>Click submit to complete this action</li>
       </ul>
       
-<div class="govuk-inset-text">
-  If your response is not received within <strong>5 working days, by [DD Month YYYY], </strong> the proposed description will be automatically accepted as the description of your application. This is to avoid delays in making a determination on your application.
-
-    
-</div>
+      {{fivedays("the proposed description")}}
 
       <hr
         class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"

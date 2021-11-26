@@ -21,6 +21,7 @@ applicants-new-postvalidation.html {% extends "layout.html" %} {% block head %}
         <li>Click save to add the file</li>
         <li>Click submit to complete this action</li>
       </ul>
+      
       <hr
         class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
       />
@@ -39,15 +40,13 @@ applicants-new-postvalidation.html {% extends "layout.html" %} {% block head %}
       </div>
 
       <form
-        action="applicants-home"
+        action="/v20/applicants-home"
         accept-charset="UTF-8"
         method="post"
       >
-        <input type="hidden" name="_method" value="patch" /><input
-          type="hidden"
-          name="authenticity_token"
-          value="lriDHXplJ-tgyekkKP6p1WG2hnkKfWC5ziEw67RgXs6ADgoBw3-OP_VvrrTJ8jFMuS4tQ30MRhDqwfI7jKXYjA"
-        />
+        <input type="hidden" name="new-pv-check" value="completed" />
+        <input type="hidden" name="new-pv-tag" value="" />
+
 
         <div class="govuk-form-group">
           <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-4">

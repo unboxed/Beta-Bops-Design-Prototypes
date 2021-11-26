@@ -84,16 +84,16 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
               <li class="moj-task-list__item">
                 <a
                   class="moj-task-list__task-name"
-                  href="applicants-replace.html"
+                  href="applicants-replacement.html"
                   >DocName.pdf</a
                 >
 
                 <strong
-                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  class="govuk-tag govuk-tag--{{data['replacement-tag']}} app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Not started
+                  {{data['replacement-check']}}
                 </strong>
               </li>
             </ul>
@@ -116,11 +116,11 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 >
 
                 <strong
-                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  class="govuk-tag govuk-tag--{{data['new-tag']}} app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Not started
+                  {{data['new-check']}}
                 </strong>
               </li>
               <li class="moj-task-list__item">
@@ -131,11 +131,11 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 >
 
                 <strong
-                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  class="govuk-tag govuk-tag--{{data['new-pv-tag']}} app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Not started
+                  {{data['new-pv-check']}}
                 </strong>
               </li>
             </ul>
@@ -154,7 +154,7 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 <a
                   class="moj-task-list__task-name"
                   href="applicants-redline.html"
-                  >Red Line Boundary</a
+                  >Red Line Boundary [//Validation request]</a
                 >
 
                 <strong
@@ -163,6 +163,21 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                   id="eligibility-status"
                 >
                   {{data['redline-check']}}
+                </strong>
+              </li>
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-redline-postvalidation.html"
+                  >Red Line Boundary [//Postvalidation request]</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['redline-pv-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['redline-pv-check']}}
                 </strong>
               </li>
             </ul>
@@ -185,11 +200,11 @@ applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
                 >
 
                 <strong
-                  class="govuk-tag govuk-tag--grey app-task-list__tag"
+                  class="govuk-tag govuk-tag--{{data['other-tag']}} app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Not started
+                 {{data['other-check']}}
                 </strong>
               </li>
             </ul>

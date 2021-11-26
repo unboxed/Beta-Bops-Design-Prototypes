@@ -1,4 +1,6 @@
-applicants-replacement.html {% extends "layout.html" %} {% block head %} {{ super() }}
+applicants-replacement.html {% extends "layout.html" %} {% block head %} {{
+super() }} {% from "./customnjk/fifteendays.njk" import fifteendays %}
+
 <link
   href="/public/css/southwark-branding.css"
   rel="stylesheet"
@@ -6,4 +8,105 @@ applicants-replacement.html {% extends "layout.html" %} {% block head %} {{ supe
 />
 {% endblock %} {% block content %}
 
-{% endblock %} 
+<div class="govuk-width-container app-width-container--wide">
+  <main
+    class="govuk-main-wrapper govuk-main-wrapper--auto-spacing"
+    id="main-content"
+    role="main"
+  >
+    <div class="govuk-grid-row govuk-!-margin-top-7">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-width-container">
+          <h2 class="govuk-heading-l">
+            Provide a replacement document
+          </h2>
+          <p class="govuk-body">
+            The case officer has specified below why this document needs
+            replacing.
+          </p>
+          <p class="govuk-heading-s">What you need to do:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Select 'choose file' and upload a replacement file from your
+              device
+            </li>
+            <li>Click save to add the file</li>
+            <li>Click submit to complete this action</li>
+          </ul>
+          {{fifteendays()}}
+
+          <hr
+            class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
+          />
+          <div class="govuk-!-margin-top-8">
+            <p class="govuk-body">
+              <strong>Name of file on submission:</strong><br />
+              proposed-floorplan.png
+            </p>
+          </div>
+          <div class="govuk-!-margin-top-6">
+            <p class="govuk-body">
+              <strong>The reason the file needs replacing:</strong><br />
+              Not good
+            </p>
+          </div>
+          <form
+           
+            action="/v20/applicants-home"
+            accept-charset="UTF-8"
+            method="post"
+          >
+        <input type="hidden" name="replacement-check" value="completed" />
+        <input type="hidden" name="replacement-tag" value="" />
+              
+              name="replacement-check"
+              value="Completed"
+            />
+
+            <div class="govuk-form-group">
+              <div class="govuk-!-padding-top-8 govuk-!-padding-bottom-8">
+                <div class="govuk-form-group">
+                  <label
+                    for="replacement-document-validation-request-file-field"
+                    class="govuk-label govuk-!-font-weight-bold"
+                    >Upload a replacement file</label
+                  ><input
+                    id="replacement-document-validation-request-file-field"
+                    class="govuk-file-upload"
+                    accept=".png,image/png,.jpeg,.jpg,image/jpeg,.pdf"
+                    required="required"
+                    type="file"
+                    name="replacement_document_validation_request[file]"
+                  />
+                </div>
+                <input
+                  type="hidden"
+                  value="44"
+                  name="replacement_document_validation_request[id]"
+                  id="replacement_document_validation_request_id"
+                />
+              </div>
+              <div class="govuk-button-group">
+                <input
+                  type="submit"
+                  name="commit"
+                  value="Submit"
+                  class="govuk-button"
+                  data-module="govuk-button"
+                  data-disable-with="Submit"
+                />
+                <a
+                  class="govuk-button govuk-button--secondary"
+                  href="applicants-home.html"
+                  >Back</a
+                >
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+
+{% endblock %}

@@ -53,7 +53,17 @@ module.exports = {
     "redline-tag": "grey",
     "redline-check": "Not started",
     "description-tag": "grey",
-    "description-check": "Not started"
+    "description-check": "Not started",
+    "replacement-tag": "grey",
+    "replacement-check": "Not started",
+    "new-pv-tag": "grey",
+    "new-pv-check": "Not started",
+    "new-tag": "grey",
+    "new-check": "Not started",
+    "other-tag": "grey",
+    "other-check": "Not started",
+    "redline-pv-tag": "grey",
+    "redline-pv-check": "Not started"
 
 
 }

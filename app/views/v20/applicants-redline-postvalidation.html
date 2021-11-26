@@ -1,6 +1,5 @@
-applicants-redline.html {% extends "layout.html" %} {% block head %} {{ super()
-}}
-{% from "./customnjk/fifteendays.njk" import fifteendays %}
+applicants-redline.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/fivedays.njk" import fivedays %}
 
 <link
   href="/public/css/southwark-branding.css"
@@ -37,7 +36,7 @@ applicants-redline.html {% extends "layout.html" %} {% block head %} {{ super()
             </li>
             <li>Click submit to complete this action</li>
           </ul>
-          {{fifteendays()}}
+          {{fivedays('the proposed redline')}}
           <hr
             class="govuk-section-break govuk-section-break--xl govuk-section-break--visible"
           />
@@ -67,8 +66,8 @@ applicants-redline.html {% extends "layout.html" %} {% block head %} {{ super()
             accept-charset="UTF-8"
             method="post"
           >
-          <input type="hidden" name="redline-check" value="completed" />
-        <input type="hidden" name="redline-tag" value="" />
+          <input type="hidden" name="redline-pv-check" value="completed" />
+        <input type="hidden" name="redline-pv-tag" value="" />
             
 
             <div class="govuk-form-group">
@@ -156,5 +155,4 @@ applicants-redline.html {% extends "layout.html" %} {% block head %} {{ super()
     </div>
   </main>
 </div>
-
 {% endblock %}
