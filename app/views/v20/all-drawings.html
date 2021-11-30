@@ -1,0 +1,49 @@
+all_drawings.html {% extends "layout.html" %} {% block head %} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<h1 class="govuk-heading-l">
+  How to create all drawings and plans
+</h1>
+<h2 class="govuk-heading-m">
+Example plan or drawing
+</h2>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-!-padding-bottom-0.5"></div>
+    <img
+      src="/public/images/General-drawing-existing.svg"
+      style="border: solid 1px #eeeeee;"
+    />
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-body">
+      <h2>All drawings must</h2>
+      <ul>
+        <li>
+          <strong>Be drawn to scale</strong> Usually 1:100 or 1:50 at A3 or A4
+          size
+        </li>
+        <li><strong>Have a scale bar</strong></li>
+        <li><strong>Show the direction of North </strong>if it is a plan</li>
+        <li><strong>Have a unique drawing reference number</strong></li>
+        <li><strong>Be clearly labelled</strong></li>
+      </ul>
+      <p>
+        Your application may not be marked as valid if the drawings do not clearly
+        and accurately describe the site and the proposed changes.
+      </p>
+    </div>
+  </div>
+</div>
+<div>
+  <a class="govuk-button" href="applicants-plans.html">Back</a>
+</div>
+
+{% endblock %}
