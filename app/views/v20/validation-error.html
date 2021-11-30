@@ -1,0 +1,162 @@
+validation-error.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/header.njk" import header %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          <a class="govuk-breadcrumbs__link" href="/planning_applications"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          <a class="govuk-breadcrumbs__link" href="/planning_applications/795"
+            >Application</a
+          >
+        </li>
+
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Validate application
+        </li>
+      </ol>
+    </div>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <form class="button_to" method="post" action="/users/sign_out">
+      <input type="hidden" name="_method" value="delete" /><input
+        class="govuk-button_link"
+        datamodule="govuk-button"
+        type="submit"
+        value="Log out"
+      /><input
+        type="hidden"
+        name="authenticity_token"
+        value="rruJpj1GkM7MHIkluUVjp4xBs00l6zpQqaSIKNPwEoWxE9s9xK1-j7oh5VZE8d3YiHMnlcfO3x4gHrFuFXVrAg"
+      />
+    </form>
+  </div>
+</div>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h1 class="govuk-heading-xl">
+      Validate Application
+    </h1>
+    <p class="govuk-body">
+      Once validated, the application cannot be invalidated. Ensure you have
+      checked this application is valid.
+    </p>
+    <form
+      action="/planning_applications/795/validate"
+      accept-charset="UTF-8"
+      method="post"
+    >
+      <input type="hidden" name="_method" value="patch" /><input
+        type="hidden"
+        name="authenticity_token"
+        value="rruJpj1GkM7MHIkluUVjp4xBs00l6zpQqaSIKNPwEoWxE9s9xK1-j7oh5VZE8d3YiHMnlcfO3x4gHrFuFXVrAg"
+      />
+      <div
+        class="govuk-error-summary"
+        aria-labelledby="error-summary-title"
+        role="alert"
+        tabindex="-1"
+        data-module="govuk-error-summary"
+      >
+        <h2 class="govuk-error-summary__title" id="error-summary-title">
+          There is a problem
+        </h2>
+        <div class="govuk-error-summary__body">
+          <ul class="govuk-list govuk-error-summary__list">
+            <li>
+              This application does not have a digital sitemap and cannot be validated. Please <a class ="govuk-link" href="#">create a digital site map</a> before validating this application.
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="govuk-form-group">
+        <fieldset
+          class="govuk-fieldset"
+          aria-describedby="planning-application-documents-validated-at-hint"
+        >
+          <span
+            class="govuk-hint"
+            id="planning-application-documents-validated-at-hint"
+            >Enter valid date, e.g. 28 12 2021</span
+          >
+          <div class="govuk-date-input">
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="planning_application_documents_validated_at_3i"
+                  >Day</label
+                ><input
+                  id="planning_application_documents_validated_at_3i"
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  name="planning_application[documents_validated_at(3i)]"
+                  type="text"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="planning_application_documents_validated_at_2i"
+                  >Month</label
+                ><input
+                  id="planning_application_documents_validated_at_2i"
+                  class="govuk-input govuk-date-input__input govuk-input--width-2"
+                  name="planning_application[documents_validated_at(2i)]"
+                  type="text"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+            <div class="govuk-date-input__item">
+              <div class="govuk-form-group">
+                <label
+                  class="govuk-label govuk-date-input__label"
+                  for="planning_application_documents_validated_at_1i"
+                  >Year</label
+                ><input
+                  id="planning_application_documents_validated_at_1i"
+                  class="govuk-input govuk-date-input__input govuk-input--width-4"
+                  name="planning_application[documents_validated_at(1i)]"
+                  type="text"
+                  pattern="[0-9]*"
+                  inputmode="numeric"
+                />
+              </div>
+            </div>
+          </div>
+        </fieldset>
+      </div>
+      <p>
+        <input
+          type="submit"
+          name="commit"
+          value="Mark the application as valid"
+          class="govuk-button"
+          data-module="govuk-button"
+          data-disable-with="Mark the application as valid"
+        />
+      </p>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
