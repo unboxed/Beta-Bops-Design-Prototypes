@@ -1,16 +1,16 @@
-{% macro application_not_started() %}
+{% macro application_invalid() %}
   {% block content %}
-<div class="govuk-tabs__panel" id="not-started">
-        <h2 class="govuk-heading-l">Not started</h2>
+<div class="govuk-tabs__panel" id="invalid">
+        <h2 class="govuk-heading-l">Invalid</h2>
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
          
               <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">Application number</th>
+              <th scope="col" class="govuk-table__header">Application </br> number</th>
               <th scope="col" class="govuk-table__header">Site address</th>
               <th scope="col" class="govuk-table__header">Expiry date</th>
-              <th scope="col" class="govuk-table__header">Lastest action</th>
+              <th scope="col" class="govuk-table__header">Latest action</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
@@ -26,9 +26,9 @@
                   5 days overdue
                 </strong>
               </td>
-              <td class="govuk-table__cell">Application created</td>
+              <td class="govuk-table__cell">Sent: validation request</td>
             </tr>
-            <tr class="govuk-table_row">
+             <tr class="govuk-table_row">
               <td class="govuk-table__cell">
                 <a href="assessment-immunity.html">
                 0000500
@@ -38,7 +38,7 @@
               <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">
                   2 Days
                 </strong></td>
-                 <td class="govuk-table__cell">Application created</td>
+              <td class="govuk-table__cell"> 	Sent: validation request</td>
             </tr> 
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
@@ -50,9 +50,9 @@
               <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
                   15 Days
                 </strong></td>
-               <td class="govuk-table__cell">Application created</td>
+              <td class="govuk-table__cell"> 	Received: request for change </td>
             </tr>
-            
+           
             <tr class="govuk-table__row">
               <td class="govuk-table__cell">
                 <a href="assessment-pd.html">
@@ -65,7 +65,7 @@
                   30 Days
                 </strong>
               </td>
-               <td class="govuk-table__cell">Application created</td>
+              <td class="govuk-table__cell">	Applicant email updated</td>
             </tr>
             
             </tr>
@@ -74,3 +74,4 @@
       </div>
   {% endblock %}
 {% endmacro %}
+
