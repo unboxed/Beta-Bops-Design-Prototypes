@@ -71,7 +71,7 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
     </h1>
 
     <p class="govuk-body">
-    The following decision notice has been created based on your answers.
+      The following decision notice has been created based on your answers.
     </p>
     <div
       style="
@@ -229,14 +229,45 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
         </div>
       </main>
     </div>
-  </div>
 
-    <! –– Right panel with additional information in accordion ––>
-
-    <div class="govuk-grid-column-one-third">
-      {{ relatedinfo() }}
+    <div
+      class="govuk-error-summary"
+      aria-labelledby="error-summary-title"
+      style="margin-top: 30px;"
+      data-module="govuk-error-summary"
+    >
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            This application has open non-validation requests. Please 
+            <a class="govuk-link" href="non-validation-request.html">review open requests</a> and resolve them before submitting to your manager.
+          </li>
+        </ul>
+      </div>
     </div>
+    <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Submit decision to manager
+    </button>
+    <a
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button"
+      href="assessment-noclasses-redline.html"
+    >
+      Back
+    </a>
   </div>
 
-  {% endblock %}
+  </div>
 
+  <! –– Right panel with additional information in accordion ––>
+
+  <div class="govuk-grid-column-one-third">
+    {{ relatedinfo() }}
+  </div>
+</div>
+
+{% endblock %}
