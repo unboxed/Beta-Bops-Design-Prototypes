@@ -96,7 +96,7 @@ Edit-documents.html
         <div class="govuk-form-group ">
             <fieldset class="govuk-fieldset">
                 <legend class="govuk-fieldset__legend govuk-fieldset__legend">
-                <h4 class="govuk-heading-s">EVIDENCE</h4>
+                <h4 class="govuk-heading-s">Evidence</h4>
                     <div class="govuk-checkboxes govuk-checkboxes--small">
                     </div>
                 </legend>
@@ -109,8 +109,11 @@ Edit-documents.html
                 {{ document_options_checkbox("TENANCY INVOICE") }}
                 {{ document_options_checkbox("BANK STATEMENT") }}
                 {{ document_options_checkbox("STATUTORY DECLARATION") }}
+                {{ document_options_checkbox("OTHER EVIDENCE") }}
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend" >
+                <h4 class="govuk-heading-s">Other documents</h4>
+                </legend>
                 {{ document_options_checkbox("EMAIL") }}
-                {{ document_options_checkbox("OTHER") }}
             </fieldset>
         </div>
     </div>
