@@ -1,0 +1,39 @@
+validation-complete.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
+{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
+{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
+{% from "./customnjk/application-info.njk"  import applicationinfo %} 
+{% from "./customnjk/related-info.njk" import relatedinfo %} 
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+{% endblock %}
+{% block content %}
+
+<h1 class="govuk-heading-l"> Send validation decision
+</h1>
+
+<div class="govuk-width-container">
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-two-thirds">
+        <p class="govuk-body"><strong>You have no items marked as invalid, so you cannot invalidate this application.</strong></p>
+        <p class="govuk-body">Marking this application as valid and send a valid notification. After this the application will be "In assessment".</p>
+      </div>
+    </div>
+</div>
+
+<div class="govuk-button-group">
+  <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validation-complete.html">
+   Mark application as valid
+  </a>
+  <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-update.html">
+   Back
+  </a>
+
+</div>
+   
+</div>
+
+
+{% endblock %}

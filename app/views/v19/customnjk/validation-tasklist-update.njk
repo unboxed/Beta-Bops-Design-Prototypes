@@ -21,6 +21,9 @@
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">This application is marked as invalid</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7"><strong> 2 of 5 </strong> validation requests have been responsed to </br> <a class="govuk-link" href="validation-request-summary-invalid.html"> View validation requests </a></p>
+     
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
@@ -188,6 +191,30 @@
             </li>
           </ul>
         </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Review
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              <a href="validation-request-summary-prevalid.html" aria-describedby="review_requests">
+                Review validation requests
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--{{review_tag}} app-task-list__tag" id="submit-pay-status" style="float: right;">{{review_status}}</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              <a href="validation-confirm-valid.html" aria-describedby="send_invalid">
+                Send validation decision
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--{{decision_tag}} app-task-list__tag" id="submit-pay-status" style="float: right;">{{decision_status}}</strong>
+            </li>
+          </ul>
+        </li>
+
       </ol>
     </div>
   </div>
