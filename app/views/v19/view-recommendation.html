@@ -1,19 +1,183 @@
-view-recommendation.html
-{% extends "layout.html" %} {% block head %} {{ super() }}
+view-recommendation.html {% extends "layout.html" %} {% block head %} {{ super()
+}} {% from "./customnjk/applications_table/not-started-app.njk" import
+application_not_started %} {% from
+"./customnjk/applications_table/in-assessment-app.njk" import
+application_in_assessment %} {% from
+"./customnjk/applications_table/awaiting-det-app.njk" import
+application_awaiting_determination %} {% from
+"./customnjk/applications_table/closed-app.njk" import application_closed %} {%
+from "./customnjk/application-info.njk" import applicationinfo %} {% from
+"./customnjk/related-info.njk" import relatedinfo %}
 
-{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
-{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
-{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
-{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
-{% from "./customnjk/application-info.njk"  import applicationinfo %} 
-{% from "./customnjk/related-info.njk" import relatedinfo %} 
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
 
-<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+{% endblock %} {% block content %}
+<div
+  class="govuk-grid-row"
+  
+>
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-m">
+      View recommendation
+    </h2>
 
-{% endblock %}
+    <p class="govuk-body">
+      Recommendations submitted by Seymour Morar on 28 Oct 2021
+    </p>
 
-{% block content %}
+    <div style="
+    background-color: #f3f2f1;
+    border: solid 1px;
+    padding: 30px;
+    clear: both;
+    margin-top: 10px;
+  ">
+      <span class="govuk-caption-xl">
+        Southwark Council
+      </span>
+      <br />
+      <h2 class="govuk-heading-s">
+        Town and Country Planning Act 1990 (as amended): sections 191 and 192
+        <br />
+        Town and Country Planning (Development Management Procedure) (England)
+        Order 2015 (as amended): Article 39
+      </h2>
+      <h2 class="govuk-heading-m">
+        Certificate of Lawful Use or Development <br />
+        <strong>Granted</strong>
+      </h2>
+      <hr
+        class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+      />
+      <dl class="govuk-summary-list govuk-summary-list--no-border">
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__key">
+            Applicant
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__value">
+            Albert Manteras
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__key">
+            Application number
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__value">
+            00000739
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__key">
+            Application received
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__value">
+            27 October 2021
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__key">
+            Decision date
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__value">
+            TBD
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__key">
+            Site address
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__value">
+            336 BenJ Avenue, London, SE18 3RQ
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__key">
+            Use/development
+          </dt>
+        </div>
+        <div class="govuk-summary-list__column">
+          <dt class="govuk-summary-list__value">
+            Add a chimney stack
+          </dt>
+        </div>
+      </dl>
+      <p class="govuk-body">
+        We certify that on the date of the application, the proposed use or
+        operations described in the application and supporting plans were lawful
+        for the purposes of S.192 of the Town and Country Planning Act 1990.
+      </p>
+      <p class="govuk-body">
+        <strong>
+          The proposal complies due to the following reason(s):
+        </strong>
+      </p>
+      <p class="govuk-body">
+        yesy
+      </p>
+      <h3 class="govuk-heading-s">
+        This decision is based on the following approved plans:
+      </h3>
+      <p class="govuk-body">
+        No plans specified
+      </p>
+      <h3 class="govuk-heading-s">
+        Site location
+      </h3>
+      <my-map
+        style="width: 100%; height: 400px;"
+        osvectortilesapikey="VgqyKyGclwrFphAv4fw2MrpNI4CnzATT"
+        showscale=""
+        usescalebarstyle=""
+        geojsondata='{"type":"Feature","geometry":{"type":"Polygon","coordinates":[[[-0.07716178894042969,51.50094238217541],[-0.07645905017852783,51.50053497847238],[-0.07615327835083008,51.50115276135022],[-0.07716178894042969,51.50094238217541]]]}}'
+      ></my-map>
 
-
-
+      <script>
+        const map = document.querySelector("my-map");
+      </script>
+      <h3 class="govuk-heading-s">
+        Notes:
+      </h3>
+      <p class="govuk-body">
+        Enquiries regarding this document should include the application number
+        and be sent to:
+      </p>
+      <h3 class="govuk-heading-s">
+        Email
+      </h3>
+      <p class="govuk-body">
+        <a
+          class="govuk-link"
+          href="mailto:planning.applications@southwark.gov.uk"
+          >planning.applications@southwark.gov.uk</a
+        >
+      </p>
+      <h3 class="govuk-heading-s">
+        Post
+      </h3>
+      <p class="govuk-body">
+        Director of Planning and Growth, <br />
+        Southwark Council, <br />
+        Planning, London Borough of Southwark, PO Box 734, Winchester SO23 5DG.
+      </p>
+    </div>
+  </div>
+</div>
+<div class="govuk-button-group" style="margin-top: 30px">
+  <a class="govuk-button" href="assessment-noclasses.html" >Back</a>
+  <a class="govuk-button govuk-button--secondary" href="assessment-noclasses.html" >Withdraw recommendation</a>
+</div>
 {% endblock %}
