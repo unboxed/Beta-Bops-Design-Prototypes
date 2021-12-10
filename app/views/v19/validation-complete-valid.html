@@ -11,28 +11,27 @@ validation-complete.html
 {% endblock %}
 {% block content %}
 
-<h1 class="govuk-heading-l"> Send validation decision
-</h1>
-
 <div class="govuk-width-container">
+  <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body"><strong>You have no items marked as invalid, so you cannot invalidate this application.</strong></p>
-        <p class="govuk-body">Marking this application as valid and send a valid notification. After this the application will be "In assessment".</p>
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Application is valid
+          </h1>
+          <div class="govuk-panel__body">
+            This application is now in assessment
+          </div>
+        </div>
+
+        <p class="govuk-body">The applicant has been sent an email telling them their application is valid and is being assessed.</p>
+
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-noclasses.html">
+            Back to the application
+        </a>
       </div>
     </div>
-</div>
-
-<div class="govuk-button-group">
-  <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validation-complete-valid.html">
-   Mark application as valid
-  </a>
-  <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-update.html">
-   Back
-  </a>
-
-</div>
-   
+  </main>
 </div>
 
 
