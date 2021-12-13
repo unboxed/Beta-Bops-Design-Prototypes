@@ -11,29 +11,27 @@ validation-complete.html
 {% endblock %}
 {% block content %}
 
-<h1 class="govuk-heading-l"> Confirm the application as invalid
-</h1>
-
 <div class="govuk-width-container">
   <main class="govuk-main-wrapper govuk-main-wrapper--l" id="main-content" role="main">
     <div class="govuk-grid-row">
       <div class="govuk-grid-column-two-thirds">
-        <p class="govuk-body">Marking this application as invalid and send an invalid notification. This notification will contain a link to allow the applicant or agent to view all validation requests and to accept and reject requests</p>
+        <div class="govuk-panel govuk-panel--confirmation">
+          <h1 class="govuk-panel__title">
+            Application is valid
+          </h1>
+          <div class="govuk-panel__body">
+            This application is now in assessment
+          </div>
+        </div>
+
+        <p class="govuk-body">The applicant has been sent an email telling them their application is valid and is being assessed.</p>
+
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-noclasses.html">
+            Back to the application
+        </a>
       </div>
     </div>
   </main>
-</div>
-
-<div class="govuk-button-group">
-  <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validation-complete.html">
-   Mark application as invalid
-  </a>
-  <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-9.html">
-   Back
-  </a>
-
-</div>
-   
 </div>
 
 
