@@ -68,30 +68,56 @@ Edit-documents.html
     
   
   <div class="govuk-!-padding-bottom-4"></div>
-  <div class="govuk-form-group ">
-    <fieldset class="govuk-fieldset">
-      <legend class="govuk-fieldset__legend govuk-fieldset__legend">
-        <h4 class="govuk-heading-s">What does the document contain?</h4>
-        <div class="govuk-checkboxes govuk-checkboxes--small">
-      
-      </legend>
-      {{ document_options_checkbox("FRONT") }}
-      {{ document_options_checkbox("REAR") }}
-      {{ document_options_checkbox("SIDE") }}
-      {{ document_options_checkbox("ROOF") }}
-      {{ document_options_checkbox("GARDEN") }}
-      {{ document_options_checkbox("FLOOR") }}
-      {{ document_options_checkbox("SITE") }}
-      {{ document_options_checkbox("PLAN") }}
-      {{ document_options_checkbox("ELEVATION") }}
-      {{ document_options_checkbox("PROPOSED") }}
-      {{ document_options_checkbox("EXISTING") }}
-      {{ document_options_checkbox("EVIDENCE") }}
-      {{ document_options_checkbox("STATEMENT") }}
-    
-  </div>
-  </fieldset>
-  </div>
+ <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-half">
+        <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                <h4 class="govuk-heading-s">Drawings</h4>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                    </div>
+                </legend>
+                {{ document_options_checkbox("FRONT") }}
+                {{ document_options_checkbox("REAR") }}
+                {{ document_options_checkbox("SIDE") }}
+                {{ document_options_checkbox("ROOF") }}
+                {{ document_options_checkbox("FLOOR") }}
+                {{ document_options_checkbox("SITE") }}
+                {{ document_options_checkbox("PLAN") }}
+                {{ document_options_checkbox("ELEVATION") }}
+                {{ document_options_checkbox("SECTION") }}
+                {{ document_options_checkbox("ELEVATION") }}
+                {{ document_options_checkbox("PROPOSED") }}
+                {{ document_options_checkbox("EXISTING") }}
+            </fieldset>
+        </div>
+    </div>
+    <div class="govuk-grid-column-one-half">
+        <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend">
+                <h4 class="govuk-heading-s">Evidence</h4>
+                    <div class="govuk-checkboxes govuk-checkboxes--small">
+                    </div>
+                </legend>
+                {{ document_options_checkbox("PHOTOGRAPH") }}
+                {{ document_options_checkbox("UTILITY BILL") }}
+                {{ document_options_checkbox("BUILDING CONTROL CERTIFICATE") }}
+                {{ document_options_checkbox("CONSTRUCTION INVOICE") }}
+                {{ document_options_checkbox("COUNCIL TAX DOCUMENT") }}
+                {{ document_options_checkbox("TENANCY AGREEMENT") }}
+                {{ document_options_checkbox("TENANCY INVOICE") }}
+                {{ document_options_checkbox("BANK STATEMENT") }}
+                {{ document_options_checkbox("STATUTORY DECLARATION") }}
+                {{ document_options_checkbox("OTHER EVIDENCE") }}
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend" >
+                <h4 class="govuk-heading-s">Other documents</h4>
+                </legend>
+                {{ document_options_checkbox("EMAIL") }}
+            </fieldset>
+        </div>
+    </div>
+</div>
 
 
   <div class="govuk-form-group">

@@ -21,86 +21,7 @@ validate-tasklist-update-2.html
 </div>
 
 <! –– Tabs body ––>
-<div class="govuk-tabs" data-module="govuk-tabs">
-  <h2 class="govuk-tabs__title">
-    Contents
-  </h2>
-  <ul class="govuk-tabs__list">
-    <li class="govuk-tabs__list-item govuk-tabs__list-item--selected">
-      <a class="govuk-tabs__tab" href="#requests">
-        Validation requests
-      </a>
-    </li>
-    <li class="govuk-tabs__list-item">
-      <a class="govuk-tabs__tab" href="#items">
-        Application items
-      </a>
-    </li>
-  </ul>
-  <div class="govuk-tabs__panel" id="requests">
-    <h2 class="govuk-heading-l">Validation Requests</h2>
-    <table class="govuk-table">
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Request</th>
-                <th scope="col" class="govuk-table__header">Detail</th>
-                <th scope="col" class="govuk-table__header">Reason</th>
-                <th scope="col" class="govuk-table__header">Status</th>
-                <th scope="col" class="govuk-table__header">Response received</th>
-                <th scope="col" class="govuk-table__header">Reponses</th>
-                <th scope="col" class="govuk-table__header">Cancel request</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-               <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Red line boundary changes</th>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line-request.html">View proposed red line boundary</a></td>
-                    <td class="govuk-table__cell">Officers reason goes here</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Accepted</strong></td></td>
-                    <td class="govuk-table__cell">10 September 2021</td>
-                    <td class="govuk-table__cell">Proposed red line boundary was accepted by applicant</td>
-                    <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Fee validation request</th>
-                    <td class="govuk-table__cell">test</td>
-                    <td class="govuk-table__cell">Officers reason goes here</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Rejected</strong></td>
-                    <td class="govuk-table__cell">10 October 2021</td>
-                    <td class="govuk-table__cell">I have a fee exemption as I am a person with disabilities</td>
-                    <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Replacement document request</th>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Section_proposed.pdf</a></td>
-                    <td class="govuk-table__cell">Officers reason goes here</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">5 days</strong></td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Cancel<span class="govuk-visually-hidden"> name</span></a></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">New document request</th>
-                    <td class="govuk-table__cell">[Document requested]</td>
-                    <td class="govuk-table__cell">Officers reason goes here</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--grey">Accepted</strong></td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="#">example.pdf</a></td>
-                    <td class="govuk-table__cell">Applicant uploaded a new document</td>
-                    <td class="govuk-table__cell"></td>
-                </tr>
-                <tr class="govuk-table__row">
-                    <th scope="row" class="govuk-table__header">Other validation request</th>
-                    <td class="govuk-table__cell">Test</td>
-                    <td class="govuk-table__cell">Officers reason goes here</td>
-                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">5 days</strong></td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell"></td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Cancel<span class="govuk-visually-hidden"> name</span></a></td>
-                </tr>
-            </tbody>
-        </table>
-  </div>
-  <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="items">
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="items">
     <h2 class="govuk-heading-l">Application items</h2>
     <!--
     Params from nunjucks
@@ -139,6 +60,5 @@ validate-tasklist-update-2.html
 )}}
 </div>
   </div>
-</div>
 
 {% endblock %}
