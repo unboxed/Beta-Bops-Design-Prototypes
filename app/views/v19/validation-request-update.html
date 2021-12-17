@@ -1,0 +1,31 @@
+validation-request-summary-invalid.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/validation-requests-table.njk"  import requestsTable %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<!-header->
+<div> 
+    <h1 class="govuk-heading-l">
+        Validation requests
+    </h1>
+</div>
+{{requestsTable()}}
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-button-group">
+        <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validate-tasklist-update.html">
+            Back
+        </a>
+        </div>
+    </div>
+</div>
+
+
+{% endblock %}
