@@ -1,98 +1,203 @@
 {% macro application_allcases() %}
   {% block content %}
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="all-cases">
-        <h2 class="govuk-heading-l">All cases</h2>
+        <h2 class="govuk-heading-l">All applications</h2>
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
-              <th scope="col" class="govuk-table__header">
-                Application number
-              </th>
+            <th scope="col" class="govuk-table__header">Expiry date</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Application number</th>
               <th scope="col" class="govuk-table__header">Site address</th>
-              <th scope="col" class="govuk-table__header">Application type</th>
-              <th scope="col" class="govuk-table__header">
-                Decision
-              </th>
-              <th scope="col" class="govuk-table__header">
-                Determination date
-              </th>
-              <th scope="col" class="govuk-table__header">Planning officer</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header">View application</th>
             </tr>
           </thead>
           <tbody class="govuk-table__body">
             <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--red">
+                  12 Jan
+                </strong></td>
               <td class="govuk-table__cell">
-              <a href="/v09/cert-of-law-reqs-recommended">
-                0000185
-              </a>
-              </td>
-              <td class="govuk-table__cell">
-                28 Something Road, London SE2 4XK
-              </td>
-              <td class="govuk-table__cell">Full householder</td>
-              <td class="govuk-table__cell">
-                <strong class="govuk-tag govuk-tag--red">
-                  Refused
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
                 </strong>
+              </td>            
+              <td class="govuk-table__cell">0000545</td>
+              <td class="govuk-table__cell">150 Bellenden Road, SE15 4QY</td>
+              <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+              <td class="govuk-table__cell">
+             <a href="assessment-noclasses-prevalid.html">
+                  View
+               </a>
               </td>
-              <td class="govuk-table__cell">June 7</td>
-              <td class="govuk-table__cell">Sandra Lewis</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">0000115</td>
-              <td class="govuk-table__cell">92 Other Road, SE4 5MJ</td>
-              <td class="govuk-table__cell">
-                Proposed permitted development:<br>Certification of lawfulness
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  15 Jan
+                </strong>
               </td>
               <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--purple">
+                Awaiting correction
+              </strong>
+            </td>
+            <td class="govuk-table__cell"> 0000545 </td>
+            <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+            <td class="govuk-table__cell"> Single storey side/rear extension</td>
+            <td class="govuk-table__cell">
+             <a href="assessment-pd.html">
+                  View
+               </a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--green">
-                  Granted
+              20 Jan
                 </strong>
               </td>
-              <td class="govuk-table__cell">June 6</td>
-              <td class="govuk-table__cell">Sandra Lewis</td>
-            </tr>
-            <tr class="govuk-table__row">
-              <td class="govuk-table__cell">0000045</td>
-              <td class="govuk-table__cell">82 Trick Road, SE5 6JK</td>
               <td class="govuk-table__cell">
-                Proposed permitted development:<br>Certification of lawfulness
+              <strong class="govuk-tag govuk-tag--green">
+                In assessment
+              </strong>
+            </td>
+            <td class="govuk-table__cell"> 0000870 </td>
+            <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+            <td class="govuk-table__cell"> LDC proposed - The construction of a single storey side extension.</td>
+            <td class="govuk-table__cell"> <a href="assessment-pd.html">
+                  View
+               </a>
+            </td>
+          </tr>
+          <tr class="govuk-table_row">
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                  23 Jan
+                </strong></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Invalid
+                </strong>
               </td>
+              <td class="govuk-table__cell">0000500</td>
+              <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
+              <td class="govuk-table__cell">Lawful development certificate for a rear, single-storey extnesion</td>
+               <td class="govuk-table__cell">
+                <a href="assessment-immunity.html">
+                View
+                </a>
+              </td>
+              </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+              1 Feb
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Invalid
+              </strong>
+            </td>
+            <td class="govuk-table__cell"> 0000871 </td>
+            <td class="govuk-table__cell">156, Housemann Road SE14 1TT</td>
+            <td class="govuk-table__cell"> Lawful development certificate for the replacement of existing windows with matching UPVC windows on all elevations</td>
+            <td class="govuk-table__cell"> <a href="assessment-pd.html">
+                  View
+               </a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+              11 Feb
+                </strong>
+              </td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Invalid
+              </strong>
+            </td>
+            <td class="govuk-table__cell"> 0000873 </td>
+            <td class="govuk-table__cell">Flat 5, 13 Bussy Court, SW2 3FG</td>
+            <td class="govuk-table__cell"> Lawful development certificate for change of use from one dwelling into two dwellings</td>
+            <td class="govuk-table__cell"> <a href="assessment-pd.html">
+                  View
+               </a>
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  27 Feb
+                </strong></td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--grey">
-                  Withdrawn
+                  not started
                 </strong>
+              </td>            
+              <td class="govuk-table__cell">0000884</td>
+              <td class="govuk-table__cell">Ad Astra, Tudor Close, SE25 3HA</td>
+              <td class="govuk-table__cell">Construction of a garage to the side of property and demolition of existing car port</td>
+              <td class="govuk-table__cell">
+             <a href="assessment-noclasses-prevalid.html">
+                  View
+               </a>
               </td>
-              <td class="govuk-table__cell">June 7</td>
-              <td class="govuk-table__cell">Sandra Lewis</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell">0000125</td>
-              <td class="govuk-table__cell">67 Evelina Road, SE15 6TT</td>
-              <td class="govuk-table__cell">
-                Proposed permitted development:<br>Certification of lawfulness
-              </td>
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  1 Mar
+                </strong></td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--grey">
-                  Returned
+                  not started
                 </strong>
+              </td>            
+              <td class="govuk-table__cell">0000886</td>
+              <td class="govuk-table__cell">1 Cornwall Avenue, SE12 8GP</td>
+              <td class="govuk-table__cell">Demolition of chimney and installation of a rooflight on rear </td>
+              <td class="govuk-table__cell">
+             <a href="assessment-noclasses-prevalid.html">
+                  View
+               </a>
               </td>
-              <td class="govuk-table__cell">June 2</td>
-              <td class="govuk-table__cell">Sandra Lewis</td>
             </tr>
             <tr class="govuk-table__row">
-              <td class="govuk-table__cell"><a href="application-closed">0000111</a></td>
-              <td class="govuk-table__cell">67 Example Road, SE11 1TT</td>
-              <td class="govuk-table__cell">
-                Proposed permitted development:<br>Certification of lawfulness
-              </td>
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  2 Mar
+                </strong></td>
               <td class="govuk-table__cell">
                 <strong class="govuk-tag govuk-tag--grey">
-                  Closed
+                  not started
                 </strong>
+              </td>            
+              <td class="govuk-table__cell">0000888</td>
+              <td class="govuk-table__cell">67 Fosterra Road, SE2 1WA</td>
+              <td class="govuk-table__cell">Replacement of rear windows and doors on property</td>
+              <td class="govuk-table__cell">
+             <a href="assessment-noclasses-prevalid.html">
+                  View
+               </a>
               </td>
-              <td class="govuk-table__cell">June 2</td>
-              <td class="govuk-table__cell">Sandra Lewis</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  5 Mar
+                </strong></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>            
+              <td class="govuk-table__cell">0000891</td>
+              <td class="govuk-table__cell">15 Bellview Road, SE15 9HJ</td>
+              <td class="govuk-table__cell">Construction of read dormer roof extension and addition of rooflights</td>
+              <td class="govuk-table__cell">
+             <a href="assessment-noclasses-prevalid.html">
+                  View
+               </a>
+              </td>
             </tr>
           </tbody>
         </table>
