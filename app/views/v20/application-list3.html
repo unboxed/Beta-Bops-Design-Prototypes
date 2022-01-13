@@ -16,7 +16,7 @@ application_assigned %} {% from
 <! –– Header ––>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div style="margin-bottom: 30px;">
+    <div>
       <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
         Your planning applications
       </h1>
@@ -24,13 +24,20 @@ application_assigned %} {% from
         Case officer: <strong>Sandra Lewis</strong>
       </p>
     </div>
-
-    <p class="govuk-body" style="margin-bottom: 30px;">
-      <a class="govuk-link" href="new-application-LDC.html">
+    <ul class="govuk-list">
+     <li>
+     <a class="govuk-link" href="new-application-LDC.html">
         Add new application
       </a>
-    </p>
-    <p>
+     </li>
+     <li>
+     <a class="govuk-link" href="new-application-LDC.html">
+        View all applications
+      </a>
+     </li>
+   
+      <!--
+       <p>
       <button
         class="govuk-button govuk-button--secondary"
         data-module="govuk-button"
@@ -38,7 +45,10 @@ application_assigned %} {% from
         View all applications
       </button>
     </p>
+    -->
   </div>
+  
+
   <div class="govuk-grid-column-one-third">
     <div
       class="govuk-breadcrumbs"
@@ -100,7 +110,7 @@ application_assigned %} {% from
         </li>
         <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#all-cases">
-            All applications
+            All my applications
           </a>
         </li>
       </ul>
