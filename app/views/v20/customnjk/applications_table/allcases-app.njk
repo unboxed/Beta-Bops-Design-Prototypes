@@ -2,6 +2,31 @@
   {% block content %}
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="all-cases">
         <h2 class="govuk-heading-l">All my applications</h2>
+        
+        <div class="moj-search govuk-grid-row govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
+
+          <form action="/v20/application-list5" method="post">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                Find an application
+              </label>
+
+              <div id="search-hint" class="govuk-hint moj-search__hint ">
+                You can search by application number or address
+              </div>
+
+              <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+            </div>
+
+            <button class="govuk-button moj-search__button " data-module="govuk-button">
+              Search
+            </button>
+
+          </form>
+        </div>
+
+
         <table class="govuk-table">
           <thead class="govuk-table__head">
             <tr class="govuk-table__row">
@@ -33,7 +58,7 @@
                   15 Jan
                 </strong>
               </td>
-              <td class="govuk-table__cell"><a href="assessment-pd.html">0000545</a></td>
+              <td class="govuk-table__cell"><a href="assessment-pd.html">0000548</a></td>
               <td class="govuk-table__cell">
               <strong class="govuk-tag govuk-tag--purple">
                 Awaiting correction
@@ -415,7 +440,7 @@
   </ul>
   <p class="moj-pagination__results">Showing <b>1</b> to <b>20</b> of <b>100</b> applications</p>
 </nav>
-      </div>
+      </>
     </div>
     
   </div>

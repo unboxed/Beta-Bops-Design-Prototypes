@@ -3,7 +3,7 @@
 from "./customnjk/applications_table/updates-app.njk" import application_updates
 %} {% from "./customnjk/applications_table/assigned-app.njk" import
 application_assigned %} {% from
-"./customnjk/applications_table/allcases-app.njk" import application_allcases %}
+"./customnjk/applications_table/allcases-app-search.njk" import application_allcases_search %}
 
 
 <link
@@ -107,14 +107,14 @@ application_assigned %} {% from
           </a>
         </li>
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#all-cases">
+          <a class="govuk-tabs__tab" href="#all-cases-search">
             All my applications
           </a>
         </li>
        
       </ul>
       {{ application_recent() }} {{ application_updates() }} {{
-      application_assigned() }} {{ application_allcases() }} 
+      application_assigned() }} {{ application_allcases_search() }} 
       
 </div>
     </div>
