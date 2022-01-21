@@ -1,9 +1,8 @@
-manager-publish-determination.html
-{% extends "layout.html" %} 
-{% from "../customnjk/left-accordion-pd-v13.njk"  import leftaccordion %} 
-{% from "../customnjk/right-accordion-pd-v13.njk" import  rightaccordion %} 
-{% from "../customnjk/right-status-green-pd-v08.njk" import rightstatus %} 
-{% block head %} {{ super() }}
+manager-publish-determination.html {% extends "layout.html" %} {% from
+"../customnjk/left-accordion-pd-v13.njk" import leftaccordion %} {% from
+"../customnjk/right-accordion-pd-v13.njk" import rightaccordion %} {% from
+"../customnjk/right-status-green-pd-v08.njk" import rightstatus %} {% block head
+%} {{ super() }}
 <link
   href="/public/sass/southwark-branding.css"
   rel="stylesheet"
@@ -18,10 +17,16 @@ manager-publish-determination.html
     <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="application-list-manager.html">Home</a>
+          <a
+            class="govuk-breadcrumbs__link"
+            href="application-list-manager.html"
+            >Home</a
+          >
         </li>
         <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="manager-task-list.html">Application</a>
+          <a class="govuk-breadcrumbs__link" href="manager-task-list.html"
+            >Application</a
+          >
         </li>
         <li class="govuk-breadcrumbs__list-item" aria-current="page">
           Publish determination
@@ -35,24 +40,37 @@ manager-publish-determination.html
       150 Bellenden Road London SE15 4QY
     </h2>
     <p>
-      <strong class="govuk-tag govuk-tag--green">In assessment</strong>&emsp;Due: 12 June 2021 - 11 days remaining
+      <strong class="govuk-tag govuk-tag--green">In assessment</strong
+      >&emsp;Due: 12 June 2021 - 11 days remaining
     </p>
-    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    <p><a class="govuk-link govuk-link--no-visited-state" href="cancel-application">Cancel application</a></p>
+    <p>
+      Assigned to <strong>Eris Fanshawe</strong>&emsp;<a
+        class="govuk-link govuk-link--no-visited-state"
+        href="assign-application"
+        >Change</a
+      >
+    </p>
+    <p>
+      <a
+        class="govuk-link govuk-link--no-visited-state"
+        href="cancel-application"
+        >Cancel application</a
+      >
+    </p>
   </div>
-</div>  
+</div>
 <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
     <! –– Application detail blocks ––>
     {{ leftaccordion() }}
 
-
     <! –– Left panel with letter ––>
     <h2 class="govuk-heading-m">
-    Publish the recommendation
+      Publish the recommendation
     </h2>
     <p>
-     The following decision notice was created based on the planning officer's recommendation and comment. Please review and publish it.
+      The following decision notice was created based on the planning officer's
+      recommendation and comment. Please review and publish it.
     </p>
     <! –– Letter ––>
 
@@ -67,9 +85,9 @@ manager-publish-determination.html
     >
       <span class="govuk-caption-xl">[Council Name]</span>
       <h2 class="govuk-heading-s">
-        Town and Country Planning Act 1990 (as amended)<br><br>
-Town and Country Planning (Development Management Procedure)
-(England) Order 2015 (as amended)
+        Town and Country Planning Act 1990 (as amended)<br /><br />
+        Town and Country Planning (Development Management Procedure) (England)
+        Order 2015 (as amended)
       </h2>
       <p class="govuk-body"><strong>Decision notice</strong></p>
       <p class="govuk-body">
@@ -90,16 +108,18 @@ Town and Country Planning (Development Management Procedure)
         <strong>Application received:</strong>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
         &nbsp; &nbsp; &nbsp;[DD MONTH YYYY] <br />
-        <strong>Site Address:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;[Address]<br />
-        <strong>Application number:</strong> &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
-        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; [Application number]<br />
+        <strong>Site Address:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp;[Address]<br />
+        <strong>Application number:</strong> &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+        &nbsp; &nbsp; &nbsp; [Application number]<br />
       </p>
       <p class="govuk-body">
-        <strong>Proposed use or development:</strong><br/><br>
-        Certificate of lawfulnesss (proposed) for the construction of a single storey side extension.
+        <strong>Proposed use or development:</strong><br /><br />
+        Certificate of lawfulnesss (proposed) for the construction of a single
+        storey side extension.
       </p>
       <p class="govuk-body">
         IT IS HEREBY CERTIFIED that the use or operations described are
@@ -109,14 +129,13 @@ Town and Country Planning (Development Management Procedure)
         application is available on the planning register.
       </p>
       <p class="govuk-body">
-        <strong
-          >Reasons why use or development is lawful:<br/>
-        </strong>
-        <p class="govuk-body">
-
-       1. [Officer comment here]
+        <strong>Reasons why use or development is lawful:<br /> </strong>
       </p>
-   
+
+      <p class="govuk-body">
+        1. [Officer comment here]
+      </p>
+
       <p class="govuk-body">
         2. The development shall be carried out in accordance with the following
         approved plans:
@@ -148,7 +167,6 @@ Town and Country Planning (Development Management Procedure)
           </tr>
         </tbody>
       </table>
-  
 
       <p>
         Signed: Simon Bevan <br />
@@ -170,12 +188,74 @@ Town and Country Planning (Development Management Procedure)
 
     <!--        Question-->
 
-    <p class="govuk-body">By determining the application, the applicant will receive this decision notice. The decision notice will also be available publicly.</p>
+    <p class="govuk-body">
+      By determining the application, the applicant will receive this decision
+      notice. The decision notice will also be available publicly.
+    </p>
 
-    <a
-      class="govuk-button"
-      data-module="govuk-button"
-      href="manager-task-list"
+    <fieldset
+      class="govuk-fieldset"
+      aria-describedby="planning-application-documents-validated-at-hint"
+    >
+    <h2 class="govuk-heading-m">
+    Enter determination date
+    </h2>
+      <div class="govuk-date-input">
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label
+              class="govuk-label govuk-date-input__label"
+              for="planning_application_documents_validated_at_3i"
+              >Day</label
+            ><input
+              id="planning_application_documents_validated_at_3i"
+              class="govuk-input govuk-date-input__input govuk-input--width-2"
+              name="planning_application[documents_validated_at(3i)]"
+              type="text"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              value="21"
+            />
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label
+              class="govuk-label govuk-date-input__label"
+              for="planning_application_documents_validated_at_2i"
+              >Month</label
+            ><input
+              id="planning_application_documents_validated_at_2i"
+              class="govuk-input govuk-date-input__input govuk-input--width-2"
+              name="planning_application[documents_validated_at(2i)]"
+              type="text"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              value="1"
+            />
+          </div>
+        </div>
+        <div class="govuk-date-input__item">
+          <div class="govuk-form-group">
+            <label
+              class="govuk-label govuk-date-input__label"
+              for="planning_application_documents_validated_at_1i"
+              >Year</label
+            ><input
+              id="planning_application_documents_validated_at_1i"
+              class="govuk-input govuk-date-input__input govuk-input--width-4"
+              name="planning_application[documents_validated_at(1i)]"
+              type="text"
+              pattern="[0-9]*"
+              inputmode="numeric"
+              value="2022"
+            />
+          </div>
+        </div>
+      </div>
+    </fieldset>
+
+    <a class="govuk-button" data-module="govuk-button" href="manager-task-list"
       >Publish application</a
     >
   </div>
@@ -183,7 +263,7 @@ Town and Country Planning (Development Management Procedure)
   <! –– Right panel with additional information in accordion ––>
 
   <div class="govuk-grid-column-one-third">
- {{ rightaccordion() }}
+    {{ rightaccordion() }}
   </div>
 </div>
 {% endblock %}
