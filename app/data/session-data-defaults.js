@@ -65,7 +65,8 @@ module.exports = {
     "other-tag": "grey",
     "other-check": "Not started",
     "redline-pv-tag": "grey",
-    "redline-pv-check": "Not started"
+    "redline-pv-check": "Not started",
+    "applicant-extension": "[Applicants explanation goes here]"
 
 
 }

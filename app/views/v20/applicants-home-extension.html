@@ -1,4 +1,4 @@
-applicants-home-completed.html {% extends "layout.html" %} {% block head %} {{ super() }}
+applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
 <link
   href="/public/css/southwark-branding.css"
   rel="stylesheet"
@@ -62,11 +62,11 @@ applicants-home-completed.html {% extends "layout.html" %} {% block head %} {{ s
                 >
 
                 <strong
-                  class="govuk-tag app-task-list__tag"
+                  class="govuk-tag govuk-tag--grey app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Response sent
+                  Not started yet
                 </strong>
               </li>
             </ul>
@@ -89,11 +89,11 @@ applicants-home-completed.html {% extends "layout.html" %} {% block head %} {{ s
                 >
 
                 <strong
-                  class="govuk-tag app-task-list__tag"
+                  class="govuk-tag govuk-tag--grey app-task-list__tag"
                   style="float: right;"
                   id="eligibility-status"
                 >
-                  Response sent
+                  Not started yet
                 </strong>
               </li>
             </ul>
@@ -208,36 +208,42 @@ applicants-home-completed.html {% extends "layout.html" %} {% block head %} {{ s
         </ol>
       </div>
     </div>
-    <div class="govuk-grid-row"> 
+    <div class="govuk-grid-row">
       <div>
         <hr class="govuk-section-break govuk-section-break-m" />
         <p class="govuk-body">
-        If you require more time to respond to these requests, then you can ask for a time extension.
+          <strong>
+            You have requested a time extension to respond to requests on this
+            application. You gave the following reason.
+          </strong>
         </p>
-        <a class="govuk-button govuk-button--secondary" href="applicants-extension.html"
-        >Ask for a time extension</a
-      >
+        <div class="govuk-inset-text">
+          {{data['applicant-extension']}}
+        </div>
       </div>
     </div>
     <div class="govuk-grid-row">
-    <hr class="govuk-section-break govuk-section-break--visible" style="margin-bottom:20px">
+      <hr
+        class="govuk-section-break govuk-section-break--visible"
+        style="margin-bottom: 20px;"
+      />
     </div>
-    <div class="govuk-grid-row"> 
+    <div class="govuk-grid-row">
       <div>
-      <p class="govuk-body">
-        <strong
-          >When you complete an action it is immediately sent to the officer
-          working on your case and changes will be saved.</strong
-        >
-      </p>
-      <p class="govuk-body">
-        You can close this page at any time and come back to complete any tasks
-        not yet started.
-      </p>
+        <p class="govuk-body">
+          <strong
+            >When you complete an action it is immediately sent to the officer
+            working on your case and changes will be saved.</strong
+          >
+        </p>
+        <p class="govuk-body">
+          You can close this page at any time and come back to complete any
+          tasks not yet started.
+        </p>
 
-      <a class="govuk-button govuk-button--secondary" href="#"
-        >Close this page</a
-      >
+        <a class="govuk-button govuk-button--secondary" href="#"
+          >Close this page</a
+        >
       </div>
     </div>
   </div>
