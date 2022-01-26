@@ -2,6 +2,15 @@
   {% block content %}
       <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="all-cases">
   <h2 class="govuk-heading-l">All my applications</h2>
+  <p class="govuk-body">
+  This list shows all open applications which are currently assigned to you.
+  </p>
+  <p class="govuk-body"><a class="govuk-link" href="#">
+  View all open applications at [Council Name]. 
+  </a></p>
+  <p class="govuk-body"><a class="govuk-link" href="#">
+  View all closed applications at [Council Name]. 
+  </a></p>
 
   <div
     class="moj-search govuk-grid-row govuk-grid-column-two-thirds govuk-!-margin-bottom-6"
@@ -16,7 +25,7 @@
         </label>
 
         <div id="search-hint" class="govuk-hint moj-search__hint">
-          You can search by application number or address
+          You can search by application number, address or description
         </div>
 
         <input
@@ -585,7 +594,7 @@
       </tr>
     </tbody>
   </table>
-  <nav class="moj-pagination" id="pagination-label">
+  <!--<nav class="moj-pagination" id="pagination-label">
     <p class="govuk-visually-hidden" aria-labelledby="pagination-label">
       Pagination navigation
     </p>
@@ -622,7 +631,7 @@
     <p class="moj-pagination__results">
       Showing <b>1</b> to <b>20</b> of <b>100</b> applications
     </p>
-  </nav>
+  </nav>-->
 </div>
 
   

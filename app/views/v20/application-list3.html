@@ -33,8 +33,13 @@ application_closed %}
         </a>
       </li>
       <li>
-        <a class="govuk-link" href="new-application-LDC.html">
-          View all council applications
+        <a class="govuk-link" href="#">
+          View all live applications at [Council name]
+        </a>
+      </li>
+      <li>
+        <a class="govuk-link" href="#">
+          View all closed applications at [Council name]
         </a>
       </li>
     </ul>
@@ -95,13 +100,8 @@ application_closed %}
     <div class="govuk-tabs" data-module="govuk-tabs">
       <ul class="govuk-tabs__list">
         <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#recently-viewed">
-            Recently viewed
-          </a>
-        </li>
-        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#recent-updates">
-            New updates
+            Updated
           </a>
         </li>
         <li class="govuk-tabs__list-item">
@@ -110,18 +110,18 @@ application_closed %}
           </a>
         </li>
         <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recently-viewed">
+            Last viewed
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
           <a class="govuk-tabs__tab" href="#all-cases">
             All my applications
           </a>
         </li>
-        <li class="govuk-tabs__list-item">
-          <a class="govuk-tabs__tab" href="#closed">
-            Closed applications
-          </a>
-        </li>
       </ul>
       {{ application_recent() }} {{ application_updates() }} {{
-      application_assigned() }} {{ application_allcases() }} {{ application_closed() }}
+      application_assigned() }} {{ application_allcases() }} 
     </div>
   </div>
 </div>
