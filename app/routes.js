@@ -2,6 +2,13 @@ const express = require('express')
 const router = express.Router()
 
 
+// Passing data into a page
+router.get('/history/bucks-example', function(req, res) {
+    res.render('/history/bucks_example ', {
+        'reference': ' Foo '
+    })
+})
+
 // Branching for managers to say they don't agree with the recommendation 
 // Found on permitted-dev-reqs-manager
 router.post('/approve-recommendation-answer', function(req, res) {
