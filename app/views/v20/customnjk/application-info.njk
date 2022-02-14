@@ -1,4 +1,5 @@
 {% macro applicationinfo(status, officer) %}
+{% from "./v20/customnjk/proposal-details.njk" import proposal %}
 {% block content %}
 
 
@@ -79,80 +80,7 @@
 
       </div>
     </div>
-     <div class="govuk-accordion__section ">
-      <div class="govuk-accordion__section-header">
-        <h3 class="govuk-accordion__section-heading">
-          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
-            Proposal details
-          </span>
-        </h3>
-      </div>
-      <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1" style="max-height:none;">
-      
-       <ol class="govuk-body" style="line-height: 2;">
-           <li>I want to 
-                <strong>modify or extend</strong>
-           </li>
-           <li>How many storeys does the original house have? 
-                <strong>2 or more</strong>
-           </li>
-           <li>I want to build an 
-                <strong>extension</strong>
-           </li>
-            <li>What kind of extension will it be? 
-                <strong>Side extension</strong>
-           </li>
-           <li>
-                Is there a road or path on that side of the house? <strong>No</strong>
-           </li>
-           <li>The extension will have <strong>1 storey
-                </strong>
-           </li>
-           <li>
-                The new addition <strong>will not extend beyond the front wall of the house</strong>
-           </li>
-           <li>
-                The height of the extension will be <strong>4m or less</strong>
-           </li>
-           <li>The new structure 
-                <strong>will not</strong> extend beyond the rear wall of the original house
-           </li>
-            <li>
-                The width of the new addition will be <strong>less than or equal to</strong> 1/2 of the width of the original house
-           </li>
-           <li>The distance to the boundary will be 
-               <strong>less than 2m</strong>
-           </li>
-           <li>The roof of the extension will be 
-                <strong>flat</strong>
-           </li>
-           <li>
-               The highest part of the extension roof <strong>will be lower </strong>than 3m
-           </li>
-           <li>The materials and appearance 
-                <strong>will match </strong>
-                the existing house
-           </li>
-           <li>
-               The total footprint of all additions will be  <strong>50% or less </strong>of the available area around the original house
-           </li>
-           
-            
-            <li>The width of the new addition will be
-                <strong> less than or equal to</strong> 1/2 of the width of the original house
-           </li>
-         
-           
-           <li>Was your house always a house?
-                <strong> Yes</strong>
-           </li>
-           
-             <li>The house was used as 
-                <strong> a family home</strong>
-           </li>
-        </ol>
-     </div>
-    </div>
+     {{proposal()}}
   <div class="govuk-accordion__section ">
       <div class="govuk-accordion__section-header">
         <h3 class="govuk-accordion__section-heading">
