@@ -1,5 +1,4 @@
 {% macro applicationinfo(status, officer) %}
-{% from "./v20/customnjk/proposal-details.njk" import proposal %}
 {% block content %}
 
 
@@ -80,7 +79,205 @@
 
       </div>
     </div>
-     {{proposal()}}
+  <div class="govuk-accordion__section ">
+    <div class="govuk-accordion__section-header">
+        <h3 class="govuk-accordion__section-heading">
+          <span class="govuk-accordion__section-button" id="accordion-default-heading-1">
+            Proposal details
+          </span>
+        </h3>
+    </div>
+    <div id="accordion-default-content-1" class="govuk-accordion__section-content" aria-labelledby="accordion-default-heading-1" style="max-height:none;">  
+      <h4 class="govuk-heading-s">
+        Summary details
+      </h4>
+      <ol class="govuk-body" style="line-height: 2;">
+           <li><strong>What are you applying about? </strong> </br>
+                Changes that will be made in the future</br>
+                <em>Auto-answered by RIPA</em></br>
+                Town and Country Planning Act 1990 Section 171B</br>
+                <a href="https://www.legislation.gov.uk/ukpga/1990/8/section/171B">https://www.legislation.gov.uk/ukpga/1990/8/section/171B</a>
+           </li>
+           <li><strong>What are you applying about? </strong> </br>
+                Changes that will be made in the future </br>
+                Town and Country Planning Act 1990 Section 171B</br>
+           </li>
+           <li> <strong>What type of planning application are you making?</strong>  </br>
+               Lawful Development Certificate</br>
+                <em>Auto-answered by RIPA</em></br>
+           </li>
+           <li><strong>What do the works involve?</strong></br>
+                addition of a rear extension </br>
+           </li>
+           <li><strong>List all the changes involved in the project:</strong></br>
+                Add a rear or side extension </br>
+           </li>
+      </ol>
+      <h4 class="govuk-heading-s">
+        Constraints
+      </h4>
+      <ol class="govuk-body" style="line-height: 2;">
+           <li><strong>Is the property subject to any Article 4 directions? </strong> </br>
+                No</br>
+                <em>Auto-answered by RIPA</em>
+           </li>
+           <li> <strong>Is any part of the property listed?</strong>  </br>
+              No</br>
+              <em>Auto-answered by RIPA</em>
+           </li>
+           <li><strong>Is the property a site of Special Scientific Interest?</strong></br>
+                No</br>
+           </li>
+           <li><strong>Is the property on designated land?</strong></br>
+                No</br>
+           </li>
+        </ol>
+      <h4 class="govuk-heading-s" >
+        Property (existing)
+      </h4>
+        <ol class="govuk-body" style="line-height: 2;"> 
+          <li><strong>Was the house built before 2020?</strong></br>
+              Yes, it was built before 2020 </br>
+          </li>
+          <li><strong>How many storeys does the original house have?</strong> </br>
+              Two or more</br>
+          </li>
+          <li><strong>How many storeys does the original house have?</strong> </br>
+              2+</br>
+              <em>Auto-answered by RIPA</em></br>
+          </li>
+          <li><strong>Does the original house have a projection to the rear?</strong> </br>
+              No</br>
+          </li>
+          <li><strong>Does the original house have a projection to the rear?</strong> </br>
+              No</br>
+            <em>Auto-answered by RIPA</em></br>
+          </li>
+          <li><strong>Was the house always a house?</strong> </br>
+            Yes, it was built as a house </br>
+          </li>
+          <li><strong>What type of property is it?</strong> </br>
+            House</br>
+            General Permitted Development Order 2015
+          </li>
+          <li><strong>What type of house is it?</strong> </br>
+            Semi-detached</br>
+          </li>
+          <li><strong>The properties BLPU code is:</strong> </br>
+            RD</br>
+          </li>
+      </ol>
+      <h4 class="govuk-heading-s" >
+        Proposal (proposed)
+      </h4>
+        <ol class="govuk-body" style="line-height: 2;"> 
+          <li><strong>Does the extension include any rooflights?</strong></br>
+              Yes</br>
+          </li>
+          <li><strong>How much of the property is covered by extensions and outbuildings?</strong> </br>
+                50% or less of the available area around the original house</br>
+                General Permitted Development Order 2015 S.2 P.1 A.1 (b)</br>
+          </li>
+          <li><strong>Which of these best describes your project?</strong> </br>
+                Rear only</br>
+                General Permitted Development Order 2015, Technical guidance</br>
+          </li>
+          <li><strong>What is the purpose of the extension?</strong> </br>
+                To extend the home</br>
+                Town and Country Planning Act 1990, Section 55</br>
+          </li>
+          <li><strong>Will the works involve any alterations to ground levels?</strong></br>
+              No</br>
+          </li>
+          <li><strong>How far does the new addition extend beyond the back wall of the original house?</strong> </br>
+                3m or less</br>
+                General Permitted Development Order 2015 S.2 P.1 A.1 (f)(i)</br>
+          </li>
+          <li><strong>Does the extension include any new windows?</strong></br>
+              Yes</br>
+          </li>
+          <li><strong>What is the shortest distance to the property boundary?</strong></br>
+              2 metres or more</br>
+          </li>
+          <li><strong>Does the extension include any new external doors?</strong></br>
+              Yes</br>
+          </li>
+          <li><strong>What type of roof does the extension have?</strong></br>
+              Flat</br>
+          </li>
+          <li><strong>What is the height of the extension?</strong> </br>
+                4m or less</br>
+                General Permitted Development Order 2015 S.2 P.1 A.1 (f)(ii)</br>
+          </li>
+          <li><strong>Describe the materials and appearance of the extension</strong> </br>
+                Similar to the original house</br>
+                General Permitted Development Order 2015 S.2 P.1 A.3 (a)</br>
+          </li>
+          <li><strong>How many storeys does the extension have?</strong> </br>
+                One storey</br>
+                General Permitted Development Order 2015 S.2 P.1 A.1 (k)(i)</br>
+          </li>
+      </ol>
+      <h4 class="govuk-heading-s">
+        Applicant
+      </h4>
+      <ol class="govuk-body" style="line-height: 2;">
+           <li><strong>I am</strong> </br>
+                the applicant</br>
+           </li>
+           <li> <strong>Connections with Southwark Council</strong>  </br>
+              None of the above apply to me
+           </li>
+           <li><strong>I confirm that:</strong></br>
+                The information contained in this application is truthful, accurate and complete</br>
+           </li>
+           <li><strong>Title</strong></br>
+                Mr</br>
+           </li>
+           <li><strong>Is your contact address the same as the property address?</strong></br>
+                Yes</br>
+           </li>
+           <li><strong>I am applying</strong></br>
+                As a private individual</br>
+           </li>
+           <li><strong>Which of these best describes your interest in the land?</strong> </br>
+                Sole owner</br>
+                The Town and Country Planning (Development Management Procedure) (England) Order 2015</br>
+          </li>
+      </ol>
+      <h4 class="govuk-heading-s">
+        Application and fee information
+      </h4>
+      <ol class="govuk-body" style="line-height: 2;">
+           <li><strong>Is this application a resubmission?</strong></br>
+                It is a test resubmission</br>
+                UK Statutory Instruments 2012 No. 2920 Regulation 8, UK Statutory Instruments 2012 No. 2920 Regulation 9
+           </li>
+           <li><strong>Does the application qualify for a resubmission exemption?</strong></br>
+                No</br>
+                UK Statutory Instruments 2012 No. 2920 Regulation 4
+           </li>
+           <li><strong>Are the works being carried out for the sole purpose of providing access for a disabled resident?</strong></br>
+                Yes</br>
+                <em>Auto-answered by RIPA</em>
+           </li>
+           <li><strong>Does the application qualify for a disability exemption?</strong></br>
+                No</br>
+                <em>Auto-answered by RIPA</em>
+           </li>
+           <li><strong>If a planning officer needs to make a site visit, who should they contact?</strong></br>
+                Me</br>
+           </li>
+           <li><strong>Do these floor plans show the entire property?</strong></br>
+                Yes</br>
+           </li>
+           <li><strong>How many homes does this application relate to?</strong> </br>
+                One</br>
+                The Town and Country Planning (Fees for Applications, Deemed Applications, Requests and Site Visits) (England) Regulations 2012 Schedule 1, Part 2</br>
+          </li>
+        </ol>
+    </div>
+</div>
   <div class="govuk-accordion__section ">
       <div class="govuk-accordion__section-header">
         <h3 class="govuk-accordion__section-heading">
