@@ -1,0 +1,87 @@
+{% macro application_updates() %}
+  {% block content %}
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="recent-updates">
+      <h2 class="govuk-heading-l">Updated</h2>
+      <p class="govuk-body">
+      This list shows applications which have been updated since your last log-in.
+      </p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Expiry date</th>
+            <th scope="col" class="govuk-table__header">Application number</th>
+            <th scope="col" class="govuk-table__header">Status</th>
+            <th scope="col" class="govuk-table__header">Site address</th>
+            <th scope="col" class="govuk-table__header">Description</th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  15 Jan
+                </strong>
+              </td>
+            <td class="govuk-table__cell"><a href="assessment-pd.html">0000548</a></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--purple">
+                Awaiting correction
+              </strong>
+            </td>
+            <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+            <td class="govuk-table__cell"> Single storey side/rear extension</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+              20 Jan
+                </strong>
+              </td>
+            <td class="govuk-table__cell"> <a href="assessment-pd.html">0000870</a></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--green">
+                In assessment
+              </strong>
+            </td>
+            <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+            <td class="govuk-table__cell"> LDC proposed - The construction of a single storey side extension.</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+              1 Feb
+                </strong>
+              </td>
+            <td class="govuk-table__cell"> <a href="assessment-pd.html">0000871</a></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Invalid
+              </strong>
+            </td>
+            <td class="govuk-table__cell">156, Housemann Road SE14 1TT</td>
+            <td class="govuk-table__cell"> Lawful development certificate for the replacement of existing windows with matching UPVC windows on all elevations</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--green">
+              11 Feb
+                </strong>
+              </td>
+            <td class="govuk-table__cell"> <a href="assessment-pd.html">0000873</a></td>
+              <td class="govuk-table__cell">
+              <strong class="govuk-tag govuk-tag--yellow">
+                Invalid
+              </strong>
+            </td>
+            <td class="govuk-table__cell">Flat 5, 13 Bussy Court, SW2 3FG</td>
+            <td class="govuk-table__cell"> Lawful development certificate for change of use from one dwelling into two dwellings</td>
+            
+          </tr>
+            
+          
+         
+        </tbody>
+      </table>
+    </div>
+  {% endblock %}
+{% endmacro %}

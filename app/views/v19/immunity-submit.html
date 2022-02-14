@@ -1,0 +1,222 @@
+immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/header.njk" import header %} {% from
+"./customnjk/evidence-table-summary.njk" import evidenceTable %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-form-group">
+      <div>
+        <form class="govuk-!-padding-bottom-5" action="/v19/assessment-immunity" method="post" novalidate>
+          <div class="govuk-form-group">
+            <fieldset class="govuk-fieldset">
+              <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+                <h1 class="govuk-fieldset__heading">
+                  Is the use or operation immune from enforcement?
+                </h1>
+              </legend>
+              <div class="govuk-radios">
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="immune-decision"
+                    name="immune-decision"
+                    type="radio"
+                    value="Immune"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="immune-decision"
+                  >
+                    Immune from enforcement action
+                  </label>
+                </div>
+                <div class="govuk-radios__item">
+                  <input
+                    class="govuk-radios__input"
+                    id="immune-decision-2"
+                    name="immune-decision"
+                    type="radio"
+                    value="Not immune"
+                  />
+                  <label
+                    class="govuk-label govuk-radios__label"
+                    for="immune-decision-2"
+                  >
+                    Not immune from enforcement action
+                  </label>
+                </div>
+              </div>
+            </fieldset>
+          </div>
+
+          <input type="hidden" name="submit-check" value="Completed" />
+          <input type="hidden" name="submit-tag" value="" />
+          <div class="govuk-button-group">
+            <button
+              type="submit"
+              class="govuk-button"
+              data-module="govuk-button"
+            >
+              Submit decision to manager
+            </button>
+            <a
+              class="govuk-button govuk-button--secondary"
+              data-module="govuk-button"
+              href="assessment-immunity.html"
+            >
+              Back
+            </a>
+          </div>
+        </form>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+        <div>
+          <h2 class="govuk-heading-l">
+            Report
+          </h2>
+          <h2 class="govuk-heading-m">
+            Overall summary
+          </h2>
+          <p class="govuk-body">
+            {{data['immunity-summary']}}
+          </p>
+          <br />
+        </div>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+        <div>
+          <h2 class="govuk-heading-m">
+            Planning history
+          </h2>
+
+          <p class="govuk-body">
+            {{data['planning-history']}}
+          </p>
+        </div>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+        <div>
+          <h2 class="govuk-heading-m">
+            Utility bills evidence
+          </h2>
+          <p class="govuk-body">
+            {{data['bills-summary']}}
+          </p>
+        </div>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+        <div>
+          <h2 class="govuk-heading-m">
+            Council tax evidence
+          </h2>
+          <p class="govuk-body">
+            {{data['tax-summary']}}
+          </p>
+        </div>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+        <div>
+          <h2 class="govuk-heading-m">
+            Tenancy agreements evidence
+          </h2>
+          <p class="govuk-body">
+            {{data['tenancy-summary']}}
+          </p>
+        </div>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+        <div>
+          <h2 class="govuk-heading-m">
+            Other evidence
+          </h2>
+          <p class="govuk-body">
+            {{data['other-summary']}}
+          </p>
+        </div>
+        <hr
+          class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+<div class-"govuk-column-full">
+<h2 class="govuk-heading-m">
+  Evidence timeline
+</h2>
+<table class="govuk-table">
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Evidence</th>
+      <th scope="col" class="govuk-table__header">Type</th>
+      <th scope="col" class="govuk-table__header">
+        Reason for submission
+      </th>
+      <th scope="col" class="govuk-table__header">Date(s)</th>
+      <th scope="col" class="govuk-table__header">Officers comment</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">bill_1</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">Shows residence during 2011-12</td>
+      <td class="govuk-table__cell">
+        12 October 2011 <br />-<br />11 October 2012
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Tax_1</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell"><em>None</em></td>
+      <td class="govuk-table__cell">
+        30 Nov 2011
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">Gap</th>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell"></td>
+      <td class="govuk-table__cell">
+        12 October 2012 <br />-<br />11 October 2013
+      </td>
+      <td class="govuk-table__cell"></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">bill_2</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">Shows residence during 2013-14</td>
+      <td class="govuk-table__cell">
+        12 October 2013 <br />-<br />11 October 2014
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">bill_3</th>
+      <td class="govuk-table__cell">Utility bill</td>
+      <td class="govuk-table__cell">Shows residence during 2014-15</td>
+      <td class="govuk-table__cell">
+        12 October 2014 <br />-<br />11 October 2015
+      </td>
+      <td class="govuk-table__cell"><em>None</em></td>
+    </tr>
+  </tbody>
+</table>
+
+{% endblock %}

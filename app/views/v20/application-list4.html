@@ -1,0 +1,137 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% from
+"./customnjk/applications_table/recent-app.njk" import application_recent %} {%
+from "./customnjk/applications_table/updates-app.njk" import application_updates
+%} {% from "./customnjk/applications_table/assigned-app.njk" import
+application_assigned %} {% from
+"./customnjk/applications_table/allcases-app.njk" import application_allcases %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 15px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item" aria-current="page"></li>
+      </ol>
+    </div>
+    <div style="margin-bottom: 30px;">
+      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+        Your planning applications
+      </h1>
+      <p class="govuk-body" style="margin-top: 20px;">
+        Case officer: <strong>Sandra Lewis</strong>
+      </p>
+    </div>
+
+   <ul class="govuk-list">
+     <li>
+     <a class="govuk-link" href="new-application-LDC.html">
+        Add new application
+      </a>
+     </li>
+     <li>
+     <a class="govuk-link" href="new-application-LDC.html">
+        View all applications
+      </a>
+     </li>
+   </ul>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div
+      class="govuk-breadcrumbs"
+      style="float: right;"
+      style="margin-bottom: 20px; float: right;"
+    >
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="">Log out</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-one-quarter">
+    <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">
+      <strong>Total applications assigned to you</strong>
+      <br />
+    </p>
+
+    <p
+      class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold govuk-!-margin-left-3"
+    >
+      0
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">
+      <strong>Overdue applications assigned to you</strong>
+      <br />
+    </p>
+
+    <p
+      class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold govuk-!-margin-left-3"
+    >
+      0
+    </p>
+  </div>
+</div>
+
+<! –– Content ––>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <!--Tabs        -->
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <h2 class="govuk-tabs__title">
+        Contents
+      </h2>
+      <ul class="govuk-tabs__list">
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recently-viewed">
+            Recently viewed
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recent-updates">
+            New updates
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recently-assigned">
+            Recently assigned
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#all-cases">
+            All my applications
+          </a>
+        </li>
+      </ul>
+      <div class="govuk-tabs__panel" id="recently-viewed">
+        <h2 class="govuk-heading-l">Recently viewed</h2>
+        <p class="govuk-body">No applications recently viewed</p>
+      </div>
+      <div class="govuk-tabs__panel" id="recent-updates">
+        <h2 class="govuk-heading-l">New updates</h2>
+        <p class="govuk-body">No applications with new updates</p>
+      </div>
+      <div class="govuk-tabs__panel" id="recently-assigned">
+        <h2 class="govuk-heading-l">Recently assigned</h2>
+        <p class="govuk-body">No applications recently assigned</p>
+      </div>
+      <div class="govuk-tabs__panel" id="all-cases">
+        <h2 class="govuk-heading-l">All my applications</h2>
+        <p class="govuk-body">No applications are assigned to you</p>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

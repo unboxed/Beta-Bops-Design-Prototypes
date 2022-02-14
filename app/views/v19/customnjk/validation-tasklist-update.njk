@@ -21,6 +21,9 @@
 <main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m govuk-!-margin-bottom-2">This application is marked as invalid</h2>
+      <p class="govuk-body govuk-!-margin-bottom-7"><strong> 2 of 5 </strong> validation requests have been responsed to </br> <a class="govuk-link" href="validation-request-summary-invalid.html"> View validation requests </a></p>
+     
       <ol class="app-task-list">
         <li>
           <h2 class="app-task-list__section">
@@ -29,7 +32,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="validation-red-line.html" aria-describedby="eligibility-status">
+                <a href="validation-red-line-reject.html" aria-describedby="eligibility-status">
                   Validate red line boundary
                 </a>
               </span>
@@ -45,7 +48,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="validation-fee.html" aria-describedby="eligibility-status">
+                <a href="validation-fee-response.html" aria-describedby="eligibility-status">
                   Validate fee
                 </a>
               </span>
@@ -149,7 +152,7 @@
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-              <a href="validation-document.html" aria-describedby="validate-document10">
+              <a href="validation-document-rejected.html" aria-describedby="validate-document10">
                 Validate document 10
               </a>
               </span>
@@ -165,7 +168,7 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="validation-all-documents-constraints.html" aria-describedby="company-information-status">
+                <a href="validation-all-documents-constraints-rejected.html" aria-describedby="company-information-status">
                     Validate required documents are on application
                 </a>
               </span>
@@ -181,6 +184,14 @@
           <ul class="app-task-list__items">
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
+              <a href="validation-other-request-update.html" aria-describedby="other-requests">
+                Other validation request 1
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--{{doc10_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc10_status}}</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
               <a href="validation-other-request.html" aria-describedby="other-requests">
                 Add an other validation request
               </a>
@@ -188,6 +199,30 @@
             </li>
           </ul>
         </li>
+        <li>
+          <h2 class="app-task-list__section">
+            Review
+          </h2>
+          <ul class="app-task-list__items">
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              <a href="validation-request-summary-prevalid.html" aria-describedby="review_requests">
+                Review validation requests
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--{{review_tag}} app-task-list__tag" id="submit-pay-status" style="float: right;">{{review_status}}</strong>
+            </li>
+            <li class="app-task-list__item">
+              <span class="app-task-list__task-name">
+              <a href="validation-confirm-valid.html" aria-describedby="send_invalid">
+                Send validation decision
+              </a>
+              </span>
+              <strong class="govuk-tag govuk-tag--{{decision_tag}} app-task-list__tag" id="submit-pay-status" style="float: right;">{{decision_status}}</strong>
+            </li>
+          </ul>
+        </li>
+
       </ol>
     </div>
   </div>

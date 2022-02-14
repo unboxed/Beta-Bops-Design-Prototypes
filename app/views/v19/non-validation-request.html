@@ -1,0 +1,107 @@
+{% extends "layout.html" %} {% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+<div>
+  <h1 class="govuk-heading-l">
+    Post-validation request
+  </h1>
+</div>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <p class="govuk-body">
+      For redline and description requests, the applicant can reject or accept these changes within 5 working days, after that these requests will be automatically accepted.
+    </p>
+    <p class="govuk-body">
+      For new document requests, requests will remain open until responded, cancelled or the application is decided.
+    </p>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Request</th>
+          <th scope="col" class="govuk-table__header">Detail</th>
+          <th scope="col" class="govuk-table__header">Reason</th>
+          <th scope="col" class="govuk-table__header">Status</th>
+          <th scope="col" class="govuk-table__header">Cancel request</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">Description change</th>
+          <!--br><img src="/public/images/map2.png" style="width: 150px; border: solid 1px #eeeeee"></th-->
+          <td class="govuk-table__cell">
+            Proposed description: Proposed certificate for ground floor extension to the rear of the property with associated demolition of outbuilding
+          </td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">Rejected</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="validation-red-line.html"
+              ><span class="govuk-visually-hidden"> name</span></a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Description change
+          </th>
+          <td class="govuk-table__cell">Proposed description: Existing certificate for ground floor extension to the rear of the property with associated demolition of outbuilding</td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">accepted</strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="#">
+              <span class="govuk-visually-hidden"> name</span></a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">
+            Description change
+          </th>
+          <td class="govuk-table__cell">
+            Proposed description: Existing certificate for ground floor extension to the rear of the property with associated demolition of two outbuildings
+          </td>
+          <td class="govuk-table__cell"></td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green"> 3 days </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="#"
+              >Cancel<span class="govuk-visually-hidden"> name</span></a
+            >
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <th scope="row" class="govuk-table__header">New document request</th>
+          <td class="govuk-table__cell">
+            <a class="govuk-link" href="#"> file.pdf</a>
+          </td>
+          <td class="govuk-table__cell">Officers reason goes here</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--grey">Accepted</strong>
+          </td>
+          <td class="govuk-table__cell">
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<div class="govuk-button-group">
+  <a
+    class="govuk-button govuk-button--primary"
+    data-module="govuk-button"
+    href="assessment-noclasses.html"
+  >
+    Back
+  </a>
+</div>
+
+{% endblock %}

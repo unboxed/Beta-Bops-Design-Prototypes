@@ -1,0 +1,56 @@
+cancel-document-request.html {% extends "layout.html" %} {% from
+"./customnjk/header.njk" import header %} {% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l" style="margin-top: 30px;">
+        Cancel request for a new document
+      </h1>
+      <div class="govuk-body">
+        <p><strong>Officer request</strong></p>
+      </div>
+
+      <div class="govuk-inset-text">
+        <p><strong>Proposed ground floor plan</strong></p>
+        <p>Reasons: This is needed to assess the application</p>
+        <p>12th July 2021</p>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Explain to the applicant why this request is being cancelled
+        </label>
+        <textarea
+          class="govuk-textarea"
+          id="more-detail"
+          name="more-detail"
+          rows="5"
+        ></textarea>
+        <div class="govuk-button-group">
+          <a
+            class="govuk-button govuk"
+            data-module="govuk-button"
+            href="pd-drawing-numbers.html"
+          >
+            Confirm cancellation
+          </a>
+          <a
+            class="govuk-button govuk-button--secondary"
+            data-module="govuk-button"
+            href="pd-drawing-numbers-missing.html"
+          >
+            Back
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

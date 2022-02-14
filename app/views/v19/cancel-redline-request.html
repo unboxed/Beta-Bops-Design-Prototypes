@@ -1,0 +1,62 @@
+cancel-document-request.html {% extends "layout.html" %} {% from
+"./customnjk/header.njk" import header %} {% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l" style="margin-top: 30px;">
+        Cancel request for a change to red line boundary
+      </h1>
+      <h2 class="govuk-heading-m">
+        Requested red line boundary to be cancelled
+      </h2>
+      <div>
+        <img src="/public/images/Map-3.png" style="width:100%">
+      </div>
+      </br>
+      </br>
+      <div class="govuk-warning-text">
+        <span class="govuk-warning-text__icon" aria-hidden="true">!</span>
+        <strong class="govuk-warning-text__text">
+        <span class="govuk-warning-text__assistive">Warning</span>
+         The existing red line will continue to be used for this application after the request is cancelled.
+        </strong>
+      </div>
+
+      <div class="govuk-form-group">
+        <label class="govuk-label" for="more-detail">
+          Explain to the applicant why this request is being cancelled
+        </label>
+        <textarea
+          class="govuk-textarea"
+          id="more-detail"
+          name="more-detail"
+          rows="5"
+        ></textarea>
+        <div class="govuk-button-group">
+          <a
+            class="govuk-button govuk"
+            data-module="govuk-button"
+            href="assessment-noclasses.html"
+          >
+            Confirm cancellation
+          </a>
+          <a
+            class="govuk-button govuk-button--secondary"
+            data-module="govuk-button"
+            href="assessment-noclasses-redline.html"
+          >
+            Back
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

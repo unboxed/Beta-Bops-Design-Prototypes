@@ -55,13 +55,13 @@ assessment-immunity.html
             <span class="moj-task-list__section-number">Assessment </span>
           </h2>
           {{immunity(
-          "Not started", "grey",
-          "Not started", "grey",
-          "Not started", "grey",
-          "Not started", "grey",
-          "Not started", "grey",
-          "Not started", "grey",
-          "Not started", "grey"
+          data['history-check'], data['history-tag'],
+          data['bills-check'], data['bills-tag'],
+          data['tax-check'], data['tax-tag'],
+          data['tenancy-check'], data['tenancy-tag'],
+          data['other-check'], data['other-tag'],
+          data['summary-check'], data['summary-tag'],
+          data['submit-check'], data['submit-tag']
           )}}
         </li>
        

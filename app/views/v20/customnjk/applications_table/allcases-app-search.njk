@@ -1,0 +1,70 @@
+{% macro application_allcases_search() %}
+  {% block content %}
+      <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="all-cases-search">
+        <h2 class="govuk-heading-l">All my applications</h2>
+        
+        <div class="govuk-grid-row">       
+        <div class="moj-search govuk-grid-column-two-thirds govuk-!-margin-bottom-6">
+
+          <form action="/v20/application-list5" method="post">
+
+            <div class="govuk-form-group">
+              <label class="govuk-label moj-search__label govuk-!-font-weight-bold" for="search">
+                Find an application
+              </label>
+
+              <div id="search-hint" class="govuk-hint moj-search__hint ">
+                You can search by application number, address or description
+              </div>
+
+              <input class="govuk-input moj-search__input " id="search" name="search" type="search" aria-describedby="search-hint">
+            </div>
+
+            <button class="govuk-button moj-search__button " data-module="govuk-button">
+              Search
+            </button>
+
+          </form>
+        </div>
+        </div>
+        <div class="govuk-grid-row govuk-grid-column-two-thirds">
+        <p class="govuk-body"> Showing <strong> 1 </strong> application of 100.</p>
+        </div>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header">Expiry date</th>
+            <th scope="col" class="govuk-table__header">Application number</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Site address</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  2 Mar
+                </strong></td> 
+              <td class="govuk-table__cell"><a href="assessment-pd.html">0000888</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>   
+              <td class="govuk-table__cell">67 Fosterra Road, SE2 1WA</td>
+              <td class="govuk-table__cell">Replacement of rear windows and doors on property</td>
+            </tr>
+
+          </tbody>
+        </table>
+        <nav class="moj-pagination" id="pagination-label">
+
+  <p class="govuk-visually-hidden" aria-labelledby="pagination-label">Pagination navigation</p>
+
+  
+    </div>
+    
+  </div>
+  
+    {% endblock %}
+{% endmacro %}

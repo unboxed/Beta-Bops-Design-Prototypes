@@ -1,0 +1,54 @@
+evidence-table.njk
+
+{% macro evidenceTable(
+    type,
+    asset1, date1_1, date1_2, comment1,
+    asset2, date2_1, date2_2, comment2,
+    asset3, date3_1, date3_2, comment3,
+    asset4, date4_1, date4_2, comment4,
+    asset5, date5_1, date5_2, comment5
+) %}
+{% block content %}
+
+<table class="govuk-table">
+  <caption class="govuk-table__caption govuk-table__caption--l">{{type}}</caption>
+  <thead class="govuk-table__head">
+    <tr class="govuk-table__row">
+      <th scope="col" class="govuk-table__header">Document</th>
+      <th scope="col" class="govuk-table__header">Dates covered</th>
+      <th scope="col" class="govuk-table__header">Comment</th>
+    </tr>
+  </thead>
+  <tbody class="govuk-table__body">
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header"><img src="{{asset1}}" style="width:200; border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"><a class="govuk-link" href="set-evidence-date.html">{{date1_1}}</a><br>-<br><a class="govuk-link" href="#">{{date1_2}}</a></td>
+      <td class="govuk-table__cell"><p class="govuk-body" >{{comment1}}</p></td>
+    </tr>
+    <tr class="govuk-table__row">
+      <th scope="row" class="govuk-table__header">{{asset2}}</th>
+      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date2_1}}</a><br>-<br><a class="govuk-link" href="#">{{date2_2}}</a></td>
+      <td class="govuk-table__cell">{{comment2}}<br><p class="govuk-body"></p></td>
+    </tr>
+    <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><img src="{{asset3}}" style="width:200; border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date3_1}}</a><br>-<br><a class="govuk-link" href="#">{{date3_2}}</a></td>
+      <td class="govuk-table__cell"><p class="govuk-body">{{comment3}}</p></td>
+    </tr>
+    <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><img src="{{asset4}}" style="width:200; border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date4_1}}</a><br>-<br><a class="govuk-link" href="#">{{date4_2}}</a></td>
+      <td class="govuk-table__cell"><p class="govuk-body">{{comment4}}</p></td>
+    </tr>
+    <tr class="govuk-table__row">
+       <th scope="row" class="govuk-table__header"><img src="{{asset5}}" style="width:200; border: solid 1px #bcbcbc"/></th>
+      <td class="govuk-table__cell"><a class="govuk-link" href="#">{{date5_1}}</a><br>-<br><a class="govuk-link" href="#">{{date5_2}}</a></td>
+      <td class="govuk-table__cell"><p class="govuk-body">{{comment5}}</p></td>
+    </tr>
+  </tbody>
+</table>
+
+
+{% endblock %}
+
+{% endmacro %}

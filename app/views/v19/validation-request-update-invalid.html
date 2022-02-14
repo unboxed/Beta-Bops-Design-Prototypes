@@ -1,0 +1,19 @@
+validation-request-update.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/validation-requests-table-invalid.njk"  import requestsTable %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<!-header->
+
+{{requestsTable()}}
+
+
+
+{% endblock %}

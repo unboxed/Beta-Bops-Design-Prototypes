@@ -1,0 +1,120 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% from
+"./customnjk/header.njk" import header %}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="cert-of-law-hp.html"
+            >Application</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Close or cancel application
+        </li>
+      </ol>
+    </div>
+
+    <div>
+      <fieldset class="govuk-fieldset">
+        <div class="govuk-form-group">
+          <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
+            <h3 class="govuk-heading-l" style="margin-bottom: 2;">
+              How should this application be finally disposed of?
+            </h3>
+          </legend>
+          <div class="govuk-radios">
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reason-withdrawn"
+                name="reason"
+                type="radio"
+                value="withdrawn"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reason-withdrawn"
+              >
+                Withdrawn by applicant
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reason-returned"
+                name="reason"
+                type="radio"
+                value="returned"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reason-returned"
+              >
+                Returned as invalid
+              </label>
+            </div>
+            <div class="govuk-radios__item">
+              <input
+                class="govuk-radios__input"
+                id="reason-withdrawn"
+                name="reason"
+                type="radio"
+                value="withdrawn"
+              />
+              <label
+                class="govuk-label govuk-radios__label"
+                for="reason-withdrawn"
+              >
+                Closed for other reason
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="govuk-form-group">
+          <label class="govuk-heading-s" for="more-detail">
+            Provide a reason
+          </label>
+          <textarea
+            class="govuk-textarea"
+            id="more-detail"
+            name="more-detail"
+            rows="5"
+          ></textarea>
+        </div>
+      </fieldset>
+
+      <a
+        class="govuk-button govuk-!-margin-right-1"
+        data-module="govuk-button"
+        href="application-list.html"
+      >
+        Confirm
+      </a>
+      <a
+        class="govuk-button govuk-button--secondary"
+        data-module="govuk-button"
+        href="cert-of-law-hp"
+      >
+        Cancel
+      </a>
+    </div>
+  </div>
+
+  <! –– Right panel with additional information in accordion ––>
+  <div class="govuk-grid-column-one-third"></div>
+</div>
+{% endblock %}

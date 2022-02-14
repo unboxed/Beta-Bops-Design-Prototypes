@@ -1,0 +1,124 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% from
+"./customnjk/applications_table/recent-app.njk" import application_recent %} {%
+from "./customnjk/applications_table/updates-app.njk" import application_updates
+%} {% from "./customnjk/applications_table/assigned-app.njk" import
+application_assigned %} {% from
+"./customnjk/applications_table/allcases-app-search.njk" import application_allcases_search %}
+
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div>
+      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+        Your planning applications
+      </h1>
+      <p class="govuk-body" style="margin-top: 20px;">
+        Case officer: <strong>Sandra Lewis</strong>
+      </p>
+    </div>
+    <ul class="govuk-list">
+     <li>
+     <a class="govuk-link" href="new-application-LDC.html">
+        Add new application
+      </a>
+     </li>
+     <li>
+     <a class="govuk-link" href="new-application-LDC.html">
+        View all applications
+      </a>
+     </li>
+   </ul>
+      <!--
+       <p>
+      <button
+        class="govuk-button govuk-button--secondary"
+        data-module="govuk-button"
+      >
+        View all applications
+      </button>
+    </p>
+    -->
+  </div>
+  
+
+  <div class="govuk-grid-column-one-third">
+    <div
+      class="govuk-breadcrumbs"
+      style="float: right;"
+      style="margin-bottom: 20px; float: right;"
+    >
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="">Log out</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-quarter">
+      <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">
+      <strong>Total applications assigned to you</strong>
+        <br/>
+        <p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold govuk-!-margin-left-3">100
+        </p>
+      </p>
+    </div>
+    <div class="govuk-grid-column-one-third">
+    <p class="govuk-body govuk-!-font-size-27 govuk-!-font-weight-bold">
+      <strong>Overdue applications assigned to you</strong>
+        <br/>
+        <p class="govuk-body govuk-!-font-size-48 govuk-!-font-weight-bold govuk-!-margin-left-3">1
+        </p>
+      </p>
+    </div>
+</div>
+
+
+<! –– Content ––>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <!--Tabs        -->
+    <div class="govuk-tabs" data-module="govuk-tabs">
+      <ul class="govuk-tabs__list">
+        
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recent-updates">
+            Updated
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recently-assigned">
+            Recently assigned
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#recently-viewed">
+            Last viewed
+          </a>
+        </li>
+        <li class="govuk-tabs__list-item">
+          <a class="govuk-tabs__tab" href="#all-cases-search">
+            All my applications
+          </a>
+        </li>
+       
+      </ul>
+      {{ application_recent() }} {{ application_updates() }} {{
+      application_assigned() }} {{ application_allcases_search() }} 
+      
+</div>
+    </div>
+  </div>
+</div>
+{% endblock %}

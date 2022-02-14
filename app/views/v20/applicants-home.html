@@ -1,10 +1,218 @@
-applicants-home.html
-{% extends "layout.html" %}
-{% block head %}
-{{ super() }}
-<link href="/public/css/southwark-branding.css"  rel="stylesheet" type="text/css">
-{% endblock %}
-{% block content %}
+applicants-home.html {% extends "layout.html" %} {% block head %} {{ super() }}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
 
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div>
+      <h1 class="govuk-heading-l">
+        Your planning application
+      </h1>
+    </div>
+
+    <div>
+      <p class="govuk-body">
+        <strong>Site address:</strong> 1 THOMPSON ROAD, LONDON, SE22 9JR <br />
+        <strong>Date received:</strong> 12 July 2021 <br />
+        <strong>Application number: </strong> 00000621 <br />
+        <br />
+      </p>
+    </div>
+
+    <div>
+      <p class="govuk-body">
+        The case officer working on your application has requested changes to
+        your planning application.
+      </p>
+      <p class="govuk-heading-s">What you need to do:</p>
+      <ul class="govuk-list govuk-list--bullet">
+        <li>Each link below requires a separate action.</li>
+        <li>Click on each link to see what action is required.</li>
+        <li>
+          Once you have submitted an action, you can no longer make changes to
+          it. The status for that action will change to completed.
+        </li>
+        <li>
+          You need to complete all actions before your case officer can proceed
+          with your planning application.
+        </li>
+      </ul>
+    </div>
+    <div class="govuk-grid-row">
+      <div class="govuk-grid-column-full">
+        <ol class="moj-task-list">
+          <li>
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">1. </span>Confirm
+              changes to your application description
+            </h2>
+            <ul
+              class="moj-task-list__items"
+              id="description-change-validation-requests"
+            >
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-description.html"
+                  >Description</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['description-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['description-check']}}
+                </strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">2</span>Provide
+              replacement documents
+            </h2>
+            <ul
+              class="moj-task-list__items"
+              id="replacement-document-validation-requests"
+            >
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-replacement.html"
+                  >DocName.pdf</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['replacement-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['replacement-check']}}
+                </strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">3 </span>Provide new
+              or missing documents
+            </h2>
+            <ul
+              class="moj-task-list__items"
+              id="additional-document-validation-requests"
+            >
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-new.html"
+                  >New document [//Validation request]</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['new-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['new-check']}}
+                </strong>
+              </li>
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-new-postvalidation.html"
+                  >New document [// Postvalidation]</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['new-pv-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['new-pv-check']}}
+                </strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">4</span>Confirm
+              changes to your application's red line boundary
+            </h2>
+            <ul
+              class="moj-task-list__items"
+              id="red-line-boundary-change-validation-requests"
+            >
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-redline.html"
+                  >Red Line Boundary [//Validation request]</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['redline-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['redline-check']}}
+                </strong>
+              </li>
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-redline-postvalidation.html"
+                  >Red Line Boundary [//Postvalidation request]</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['redline-pv-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                  {{data['redline-pv-check']}}
+                </strong>
+              </li>
+            </ul>
+          </li>
+
+          <li>
+            <h2 class="moj-task-list__section">
+              <span class="moj-task-list__section-number">5</span>Respond to
+              other request
+            </h2>
+            <ul
+              class="moj-task-list__items"
+              id="other-change-validation-requests"
+            >
+              <li class="moj-task-list__item">
+                <a
+                  class="moj-task-list__task-name"
+                  href="applicants-other.html"
+                  >Other request</a
+                >
+
+                <strong
+                  class="govuk-tag govuk-tag--{{data['other-tag']}} app-task-list__tag"
+                  style="float: right;"
+                  id="eligibility-status"
+                >
+                 {{data['other-check']}}
+                </strong>
+              </li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</div>
 
 {% endblock %}

@@ -1,0 +1,73 @@
+immunity-history.html
+{% extends "layout.html" %} {% block head %} {{ super() }}
+
+{% from "./customnjk/header.njk" import header %}
+{% from "./customnjk/evidence-table-other.njk" import evidenceTableOther %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
+
+{% endblock %}
+
+{% block content %}
+
+<div class="govuk-grid-row">
+ <div class="govuk-grid-column-full">
+    <div class="govuk-form-group">
+    <div>
+     <!--type,
+    asset1, date1,  comment1,
+    asset2, date2,  comment2,
+    asset3, date3,  comment3,
+    asset4, date4,  comment4,
+    -->
+
+    {{evidenceTableOther(
+    "Assess evidence - Council Tax",
+    "/public/images/ctax1.png", "Enter date", "Enter comment",
+    "/public/images/ctax2.png", "Enter date",  "Enter comment",
+    "/public/images/ctax3.png", "Enter date",  "Enter comment",
+    "/public/images/ctax4.png", "Enter date",  "Enter comment"
+    )}}
+    </div>
+  </div>
+</div>
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v19/assessment-immunity" method="post" novalidate>
+      <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="tax-summary">
+            Enter a summary for the evidence provided 
+          </label>
+        </h1>
+        <textarea 
+          class="govuk-textarea" 
+          id="tax-summary" 
+          name="tax-summary" 
+          rows="5"
+          type="text" 
+          value="{{ data['tax-summary'] }}" 
+          ></textarea>
+        <input type="hidden" name="other-check" value="Completed">
+        <input type="hidden" name="other-tag" value="">
+        <input type="hidden" name="tax-check" value="Completed">
+        <input type="hidden" name="tax-tag" value="">
+        <input type="hidden" name="tenancy-check" value="Completed">
+        <input type="hidden" name="tenancy-tag" value="">
+        
+
+        <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
+        Back
+      </a>
+      </form>  
+    
+    
+  </div>
+</div>  
+
+{% endblock %}

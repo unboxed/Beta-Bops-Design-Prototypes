@@ -12,7 +12,7 @@ immunity-history.html
 {% block content %}
 
 <div class="govuk-grid-row">
- <div class="govuk-grid-column-two-thirds">
+ <div class="govuk-grid-column-full">
     <div class="govuk-form-group">
     <div>
      <!--type,
@@ -24,26 +24,46 @@ immunity-history.html
 
     {{evidenceTable(
     "Assess evidence - Utility bills",
-    "/public/images/fh-sitevis-2.jpg", "Enter start date", "Enter end date", "Enter comment",
-    "/public/images/fh-sitevis-3.jpg", "Enter start date", "Enter end date", "Enter comment",
-    "/public/images/fh-sitevis-4.jpg", "Enter start date", "Enter end date", "Enter comment",
-    "/public/images/fh-sitevis-5.jpg", "Enter start date", "Enter end date", "Enter comment"
+    "/public/images/bills1.png", "Enter start date", "Enter end date", data['bill-comment'],
+    "/public/images/bills2.png", "Enter start date", "Enter end date", "Enter comment",
+    "/public/images/bills3.png", "Enter start date", "Enter end date", "Enter comment",
+    "/public/images/bills4.png", "Enter start date", "Enter end date", "Enter comment"
     )}}
     </div>
-    <div id="more-detail-hint" class="govuk-hint">
-        Enter a summary for the evidence provided
-    </div>
-    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
-    <div class="govuk-button-group">
-      <a class="govuk-button govuk" data-module="govuk-button" href="assessment-immunity-2.html">
-        Save
-      </a>
-      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
+  </div>
+</div>
+    <div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v19/assessment-immunity" method="post" novalidate>
+      <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="planning-history">
+            Enter a summary for the evidence provided 
+          </label>
+        </h1>
+        <textarea 
+          class="govuk-textarea" 
+          id="bills-summary" 
+          name="bills-summary" 
+          rows="5"
+          type="text" 
+          value="{{ data['bills-summary'] }}" 
+          ></textarea>
+        <input type="hidden" name="bills-check" value="Completed">
+        <input type="hidden" name="bills-tag" value="">
+        
+
+        <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
         Back
       </a>
-    </div>
- </div>    
-</div>
+      </form>  
+    
+    
+  </div>
+</div>  
 
 {% endblock %}

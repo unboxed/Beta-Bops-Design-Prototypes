@@ -1,0 +1,88 @@
+applicants-extension.html {% extends "layout.html" %} {% block head %} {{
+super() }}
+
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+<div class="govuk-width-container app-width-container--wide">
+  <main
+    class="govuk-main-wrapper govuk-main-wrapper--auto-spacing"
+    id="main-content"
+    role="main"
+  >
+    <div class="govuk-grid-row govuk-!-margin-top-7">
+      <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-width-container">
+          <h1 class="govuk-heading-l">Ask for a time extension</h1>
+          <p class="govuk-body">
+            Send a message to the case officer to let them know you need
+            more time to respond to the requests.
+          </p>
+          <p class="govuk-heading-s">What you need to do:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              Explain how long you need
+            </li>
+            <li>
+              List each request which needs a time extension
+            </li>
+          </ul>
+          <p class="govuk-heading-s">What happens next:</p>
+          <ul class="govuk-list govuk-list--bullet">
+            <li>
+              The officer will be sent the request and may contact you if they need any further detail
+            </li>
+            <li>
+              If you do not hear from the officer you can assume your time extension has been accepted
+            </li>
+            <li>
+              Any requests which show as overdue will <strong> not </strong> automatically close your case
+            </li>
+          </ul>
+
+          <hr
+            class="govuk-section-break govuk-section-break--l govuk-section-break--visible"
+          />
+          <form
+            action="/v20/applicants-home-extension"
+            accept-charset="UTF-8"
+            method="post"
+          >
+
+            <div class="govuk-form-group">
+              <div class="govuk-!-padding-bottom-2">
+                <div class="govuk-form-group">
+                  <label class="govuk-label" for="applicant-extension"
+                    >List which requests you need an extension for and how soon
+                    you expect to be able to respond.</label
+                  ><textarea
+                    id="applicant-extension"
+                    name="applicant-extension"
+                    class="govuk-textarea"
+                    rows="6"
+                    value="{{data['applicant-extension']}}"
+                  ></textarea>
+                </div>
+              </div>
+            
+            <div class="govuk-button-group">
+               <button type="submit" class="govuk-button" data-module="govuk-button">
+      Send request
+    </button>
+              <a
+                class="govuk-button govuk-button--secondary"
+                href="applicants-home-completed.html"
+                >Back</a
+              >
+            </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </main>
+</div>
+{% endblock %}

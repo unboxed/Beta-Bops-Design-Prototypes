@@ -7,6 +7,7 @@ assessment.html
 {% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
 {% from "./customnjk/application-info-proposal.njk"  import applicationinfo %} 
 {% from "./customnjk/related-info.njk" import relatedinfo %} 
+{% from "./customnjk/header.njk" import header %}
 
 
 
@@ -19,37 +20,9 @@ assessment.html
 
 
 <! –– Header ––>
-<div class="govuk-grid-row">
-  <div class="govuk-width-container">
-    <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
-      <ol class="govuk-breadcrumbs__list">
-        <li class="govuk-breadcrumbs__list-item">
-          <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-        </li>
-        <li class="govuk-breadcrumbs__list-item" aria-current="page">
-          Application
-        </li>
-      </ol>
-    </div>
-    <h1 class="govuk-heading-xl" style="margin-bottom: 15px;">
-      0000600
-    </h1>
-    <p class="govuk-heading-m">
-        1 Rycott Path, London, SE22 0AA
-        </p>
-   
-    <p class="govuk-body">
-     Description: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path. <a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    
-    </p>
-    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    
-    <p>
-        <strong class="govuk-tag govuk-tag--grey">Not started</strong>  &nbsp; &nbsp; <strong class="govuk-tag govuk-tag--green">Target date: 21 June 2021</strong>
-      </p>
-
-  </div>
-</div>  
+<div>
+{{header()}}
+</div>
 <div class="govuk-grid-row">
 
     <div class="govuk-grid-column-two-thirds">
@@ -77,8 +50,15 @@ assessment.html
             <span class="moj-task-list__section-number">Assessment </span>
           </h2>
         <ul class="moj-task-list__items">
+        <li class="moj-task-list__item">
+                <a class="moj-task-list__task-name" href="non-validation-request.html"> Review post-validation requests  </a>
+              </li>
           <li class="moj-task-list__item">  
-            <a class="moj-task-list__task-name" href="add-assessment-class.html"> Add assessment area  </a>
+            <a class="moj-task-list__task-name" href="add-assessment-class.html"> Assess proposal  </a>
+            </li>
+            <li class="moj-task-list__item">  
+             Submit recommendation  
+            </li>
         </ul>
         </li>
        
@@ -86,11 +66,12 @@ assessment.html
               <span class="moj-task-list__section-number">Recommendation</span>
             </h2>
             <ul class="moj-task-list__items">
+              
               <li class="moj-task-list__item">
-                <p>Make a recommendation</p>
+                <a class="moj-task-list__task-name" href="view-recommendation.html"> View recommendation  </a>
               </li>
               <li class="moj-task-list__item">
-                <p>Submit recommendation</p>
+                <a class="moj-task-list__task-name" href="#"> Publish determination  </a>
               </li>
             </ul>
           </li>

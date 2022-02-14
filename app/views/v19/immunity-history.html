@@ -1,36 +1,46 @@
-immunity-history.html
-{% extends "layout.html" %} {% block head %} {{ super() }}
-
+immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
 {% from "./customnjk/header.njk" import header %}
 
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
 
-<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
-
-{% endblock %}
-
-{% block content %}
+{% endblock %} {% block content %}
 
 <div class="govuk-grid-row">
- <div class="govuk-grid-column-two-thirds">
-    <div class="govuk-form-group">
-    <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--l" for="more-detail">
-        Enter planning history
-        </label>
-    </h1>
-    <div id="more-detail-hint" class="govuk-hint">
-        Enter all relevant planning history for this application site
-    </div>
-    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    </div>
-    <div class="govuk-button-group">
-      <a class="govuk-button govuk" data-module="govuk-button" href="assessment-immunity-2.html">
-        Save
-      </a>
-      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
-        Back
-      </a>
-    </div>
- </div>    
+  <div class="govuk-grid-column-two-thirds">
+    <form action="/v19/assessment-immunity" method="post" class="form">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="planning-history">
+            Enter in the planning history for this application
+          </label>
+        </h1>
+        <textarea
+          class="govuk-textarea"
+          id="planning-history"
+          name="planning-history"
+          value="{{ data['planning-history'] }}"
+          type="text"
+          rows="5"
+        ></textarea>
+        <input type="hidden" name="history-check" value="completed" />
+        <input type="hidden" name="history-tag" value="" />
+      </div>
+      <div class="govuk-button-group">
+        <button class="govuk-button" data-module="govuk-button">Save</button>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="assessment-immunity.html"
+        >
+          Back
+        </a>
+      </div>
+    </form>
+  </div>
 </div>
 
 {% endblock %}

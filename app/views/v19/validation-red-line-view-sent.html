@@ -1,0 +1,66 @@
+validation-red-line.html {% extends "layout.html" %} {% block head %} {{ super()
+}}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <h2 class="govuk-heading-l govuk-!-padding-top-6">
+      Proposed red line boundary change
+    </h2>
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      <strong>At:</strong> 17A THOMPSON ROAD, LONDON, SE22 9JR
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-1">
+      <strong>Date received:</strong> 2 November 2021
+    </p>
+    <p class="govuk-body govuk-!-margin-bottom-8">
+      <strong>Application number:</strong> 00000759
+    </p>
+    <h2 class="govuk-heading-m govuk-!-padding-top-6">
+      Current red line boundary
+    </h2>
+    <div>
+      <img
+        src="/public/images/Map-3.png"
+        style="width: 600px; border: solid 1px #eeeeee;"
+      />
+    </div>
+    <hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">
+      Reason change is requested
+    </h2>
+    <p class="govuk-inset-text">
+      Did not align with boundary of property
+    </p>
+<hr class="govuk-section-break govuk-section-break--l govuk-section-break--visible">
+    <h2 class="govuk-heading-m">
+      Proposed red line boundary
+    </h2>
+    <div>
+      <img
+        src="/public/images/Map-3.png"
+        style="width: 600px; border: solid 1px #eeeeee;"
+      />
+    </div>
+    <div class="govuk-button-group govuk-!-padding-top-8">
+      <a
+        class="govuk-button govuk-button--primary"
+        href="validate-tasklist-update.html"
+        >Back</a
+      >
+      <a
+        class="govuk-button govuk-button--secondary"
+        href="cancel-red-line-request.html"
+        >Cancel request</a
+      >
+    </div>
+  </div>
+</div>
+
+  {% endblock %}

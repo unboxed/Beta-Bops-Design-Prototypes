@@ -1,0 +1,48 @@
+validation-document-request-view.html {% extends "layout.html" %} {% from
+"./customnjk/header.njk" import header %} {% block head %} {{ super() }}
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-width-container">
+    <div class="govuk-grid-column-two-thirds">
+      <h1 class="govuk-heading-l" style="margin-top: 30px;">
+        View request for a replacement document
+      </h1>
+      
+      <div class="govuk-body">
+        <p><strong>Officer request</strong></p>
+      </div>
+
+      <div class="govuk-inset-text">
+        <p><strong>Replacement for: <a class="govuk-link" href="#">Proposed_groundfloor_plan.png</a></strong></p>
+        <p>Reasons: This is needed to assess the application</p>
+        <p>12th July 2021</p>
+      </div>
+
+      <div class="govuk-form-group">
+        <div class="govuk-button-group">
+          <a
+            class="govuk-button govuk"
+            data-module="govuk-button"
+            href="validate-tasklist-update.html"
+          >
+            Back
+          </a>
+          <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="cancel-replacement-document-request.html"
+        >
+          Cancel request
+        </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

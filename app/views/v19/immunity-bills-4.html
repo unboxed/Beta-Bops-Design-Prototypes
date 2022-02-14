@@ -1,4 +1,4 @@
-immunity-history.html
+immunity-bills-4.html
 {% extends "layout.html" %} {% block head %} {{ super() }}
 
 {% from "./customnjk/header.njk" import header %}
@@ -15,39 +15,55 @@ immunity-history.html
  <div class="govuk-grid-column-full">
    <div>
      <!--type,
-    asset1, date1_1, date1_2, comment1,
-    asset2, date2_1, date2_2, comment2,
-    asset3, date3_1, date3_2, comment3,
+    asset1, day1_1, month1_1, year1_1, day1_2, month1_2, year1_2, comment1,
+    asset2, 
+    asset1, day2_1, month2_1, year2_1, day2_2, month2_2, year2_2, comment3,
     asset4, date4_1, date4_2, comment4,
-    asset5, date5_1, date5_2, comment5,
+    asset5, date5_1, date5_2, comment5
     -->
 
     {{evidenceTable(
     "Assess evidence - Utility bills",
-    "/public/images/fh-sitevis-2.jpg", "11 October 2011", "10 October 2012", "Enter comment",
-    "Gap", "11 October 2012", "10 October 2013", "No photo available for this time period",
-    "/public/images/fh-sitevis-3.jpg", "11 October 2013", "12 October 2014", "Enter comment",
-    "/public/images/fh-sitevis-4.jpg", "11 October 2014", "12 October 2015", "Enter comment",
-    "/public/images/fh-sitevis-5.jpg", "11 October 2015", "12 October 2016", "Enter comment")}}
+    "/public/images/bills1.png",data['start-day1'], data['start-month1'] | toMonth, data['start-year1'], data['end-day1'], data['end-month1'] | toMonth, data['end-year1'], data['bill-comment'],
+    "Gap",
+    "/public/images/bills2.png", data['start-day2'], data['start-month2'] | toMonth, data['start-year2'], data['end-day2'], data['end-month2'] | toMonth, data['end-year2'], "Enter comment",
+    "/public/images/bills3.png", "11 October 2014", "12 October 2015", "Enter comment",
+    "/public/images/bills4.png", "11 October 2015", "12 October 2016", "Enter comment")}}
     </div>
   </div>
 </div>
-<div class="govuk-grid-row">
+ <div class="govuk-grid-row">
   <div class="govuk-grid-column-two-thirds">
-    <div id="more-detail-hint" class="govuk-hint">
-        Enter a summary for the evidence provided
-    </div>
-    <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="5" aria-describedby="more-detail-hint"></textarea>
-    
-    <div class="govuk-button-group">
-      <a class="govuk-button govuk" data-module="govuk-button" href="assessment-immunity-4.html">
-        Save
-      </a>
-      <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity-3.html">
+    <form action="/v19/assessment-immunity" method="post" novalidate>
+      <div class="govuk-form-group">
+      <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--m" for="bills-summary">
+            Enter a summary for the evidence provided 
+          </label>
+        </h1>
+        <textarea 
+          class="govuk-textarea" 
+          id="bills-summary" 
+          name="bills-summary" 
+          rows="5"
+          type="text" 
+          value="{{ data['bills-summary'] }}" 
+          ></textarea>
+        <input type="hidden" name="bills-check" value="Completed">
+        <input type="hidden" name="bills-tag" value="">
+        
+
+        <div class="govuk-button-group">
+        <button type="submit" class="govuk-button" data-module="govuk-button">
+          Save
+        </button>
+        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="assessment-immunity.html">
         Back
       </a>
-    </div>
+      </form>  
+    
+    
   </div>
-</div>    
+</div>  
 
 {% endblock %}

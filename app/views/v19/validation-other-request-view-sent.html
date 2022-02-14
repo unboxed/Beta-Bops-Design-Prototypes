@@ -1,0 +1,47 @@
+validation-other-request-update.html {% extends "layout.html" %} {% block head %} {{ super() }}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<h1 class="govuk-heading-l">
+  View other request
+</h1>
+<div class="govuk-width-container">
+  <h2 class="govuk-heading-m">Officer request</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Reason it is invalid: </strong> The fee is incorrect for a detached house</p>
+    <p><strong>How it can be made valid : </strong> Pay £300 by phone on 0800 500 600 and quote case no. 8354/FG</p>
+    <p>12th July 2021</p>
+  </div>
+
+  <h2 class="govuk-heading-m">Applicant has not responded yet</h2>
+  <hr class="govuk-section-break govuk-section-break--l">
+
+  <div>
+    <div>
+      <div class="govuk-button-group">
+        <a
+          class="govuk-button govuk"
+          data-module="govuk-button"
+          href="validate-tasklist-update.html"
+        >
+          Back
+        </a>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="cancel-other-request.html"
+        >
+          Cancel request
+        </a>
+        
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
