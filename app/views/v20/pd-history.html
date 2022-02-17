@@ -1,0 +1,91 @@
+immunity-history.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/header.njk" import header %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <form action="/v20/assessment-pd" method="post" class="form">
+      <div class="govuk-form-group">
+        <h1 class="govuk-label-wrapper">
+          <label class="govuk-label govuk-label--l" for="planning-history">
+            Review the planning history
+          </label>
+        </h1>
+      <hr class="govuk-section-break govuk-section-break--l">
+        <table class="govuk-table">
+          <caption class="govuk-table__caption govuk-table__caption--m">Planning applications for UPRN 10002564325</caption>
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Date</th>
+              <th scope="col" class="govuk-table__header">Application number</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              <th scope="col" class="govuk-table__header">Recommendation</th>
+              <th scope="col" class="govuk-table__header">View on </br> public access</th>
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">12 March 2018</td>
+              <td class="govuk-table__cell">00000111</td>
+              <td class="govuk-table__cell">Lawful development certificate for construction of a single story rear extension</td>
+              <td class="govuk-table__cell">Granted</td>
+              <td class="govuk-table__cell"><a href="">View</a></td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">10 Dec 2001</td>
+              <td class="govuk-table__cell">00000001</td>
+              <td class="govuk-table__cell">Full planning permission for a pool house in the rear garden and associated hard standing</td>
+              <td class="govuk-table__cell">Refused</td>
+              <td class="govuk-table__cell"><a href="">View</a></td>
+            </tr>
+          </tbody>
+        </table>
+      <hr class="govuk-section-break govuk-section-break--l">
+        <div class="govuk-grid-row">
+          <div class="govuk-grid-column-two-thirds">
+          <h2 class="govuk-heading-m">
+          Add a comment on the planning history (optional)
+          </h2>
+          <textarea
+            class="govuk-textarea"
+            id="planning-history"
+            name="planning-history"
+            value="{{ data['planning-history'] }}"
+            type="text"
+            rows="5"
+          ></textarea>
+          </div>
+        </div>
+      </div>
+      <div class="govuk-button-group">
+         <button type="submit" class="govuk-button" data-module="govuk-button" type="hidden" name="history-check" value="completed"/>
+         <input type="hidden" name="history-tag" value="green"/>
+          Save and mark as complete
+        </button>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="assessment-pd.html"
+        >
+          Save and come back later
+        </a>
+        <a
+          class="govuk-button govuk-button--secondary"
+          data-module="govuk-button"
+          href="assessment-pd.html"
+        >
+          Back
+        </a>
+      </div>
+    </form>
+  </div>
+</div>
+
+{% endblock %}
