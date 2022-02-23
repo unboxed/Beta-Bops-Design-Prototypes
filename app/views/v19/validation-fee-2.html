@@ -47,16 +47,47 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
               redesign and all associated works at 1 Rycott Path House.
             </td>
           </tr>
+        </tbody>
+      </table>
+
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">
+          Related questions from RIPA
+        </caption>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              What are you applying about?
+            </th>
+            <td class="govuk-table__cell">
+              Proposed changes I want to make in the future
+            </td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">
+              What type of planning application are you making?
+            </th>
+            <td class="govuk-table__cell">
+              Lawful Development Certificate
+            </td>
+          </tr>
           <tr class="govuk-table__row">
             <th scope="row" class="govuk-table__header">
               Is this application a resubmission?
             </th>
             <td class="govuk-table__cell">
               It is a test resubmission<br />
-              <em
-                >UK Statutory Instruments 2012 No. 2920 Regulation 8, UK
-                Statutory Instruments 2012 No. 2920 Regulation 9</em
-              >
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Related legislation
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  UK Statutory Instruments 2012 No. 2920 Regulation 8, UK
+                  Statutory Instruments 2012 No. 2920 Regulation 9
+                </div>
+              </details>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -65,11 +96,18 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
             </th>
             <td class="govuk-table__cell">
               One<br />
-              <em
-                >The Town and Country Planning (Fees for Applications, Deemed
-                Applications, Requests and Site Visits) (England) Regulations
-                2012 Schedule 1, Part 2</em
-              >
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Related legislation
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  The Town and Country Planning (Fees for Applications, Deemed
+                  Applications, Requests and Site Visits) (England) Regulations
+                  2012 Schedule 1, Part 2
+                </div>
+              </details>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -79,7 +117,16 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
             </th>
             <td class="govuk-table__cell">
               Yes<br />
-              <em> UK Statutory Instruments 2012 No. 2920 Regulation </em>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Related legislation
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  UK Statutory Instruments 2012 No. 2920 Regulation
+                </div>
+              </details>
             </td>
           </tr>
           <tr class="govuk-table__row">
@@ -88,7 +135,16 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
             </th>
             <td class="govuk-table__cell">
               Test response<br />
-              <em> UK Statutory Instruments 2012 No. 2920 Regulation </em>
+              <details class="govuk-details" data-module="govuk-details">
+                <summary class="govuk-details__summary">
+                  <span class="govuk-details__summary-text">
+                    Related legislation
+                  </span>
+                </summary>
+                <div class="govuk-details__text">
+                  UK Statutory Instruments 2012 No. 2920 Regulation
+                </div>
+              </details>
             </td>
           </tr>
         </tbody>
@@ -102,7 +158,7 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
         <fieldset class="govuk-fieldset">
           <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
             <h1 class="govuk-fieldset__heading">
-              Is this fee valid?
+              Is this fee correct?
             </h1>
           </legend>
           <div class="govuk-radios">
@@ -115,7 +171,7 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
                 value="valid"
               />
               <label class="govuk-label govuk-radios__label" for="FeeeValid">
-                Valid
+                Correct
               </label>
             </div>
             <div class="govuk-radios__item">
@@ -127,7 +183,7 @@ from "./customnjk/application-info.njk" import applicationinfo %} {% from
                 value="invalid"
               />
               <label class="govuk-label govuk-radios__label" for="FeeValid-2">
-                Invalid
+                Incorrect
               </label>
             </div>
           </div>
