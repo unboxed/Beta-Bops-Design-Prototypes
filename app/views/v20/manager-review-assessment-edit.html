@@ -1,0 +1,50 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %} {% from "./customnjk/header.njk" import header %} {% from "./customnjk/pd-assessment-table.njk" import pd %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+
+
+<! –– Header ––>
+<div>
+    {{header( "valid", "green", "10 October 2021", "15 days remaining", "green" )}}
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <! –– Application detail blocks ––>
+        {{ applicationinfo() }}
+        <! –– Review recommendation ––>
+
+        <h2 class="govuk-heading-m">
+            Edit the information appearing on the decision notice
+        </h2>
+
+        <div>
+            <p>The planning officer recommends that the application is <strong>granted.</strong></p>
+            <hr class="govuk-section-break govuk-section-break--m">
+        </div>
+        <div class="govuk-form-group">
+            <h1 class="govuk-label-wrapper"><label class="govuk-label govuk-label--m" for="more-detail">
+                This information will appear on the decision notice:
+              </label>
+            </h1>
+            <textarea class="govuk-textarea" id="more-detail" name="more-detail" rows="8" aria-describedby="more-detail-hint">It adheres to the limitations and conditions of Part 1 Class A and F, Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended)</textarea>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--m ">
+
+
+
+
+        <! -- Save button -->
+        <a class="govuk-button " data-module="govuk-button " href="manager-review-assessment.html">
+            Save
+          </a>
+    </div>
+    <div class="govuk-grid-column-one-third ">
+        {{ relatedinfo() }}
+    </div>
+</div>
+{% endblock %}
