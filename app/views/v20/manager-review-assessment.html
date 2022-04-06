@@ -1,0 +1,86 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment %}
+{% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %} {% from "./customnjk/header.njk" import header %} {% from "./customnjk/pd-assessment-table.njk" import pd %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+
+
+<! –– Header ––>
+<div>
+    {{header( "valid", "green", "10 October 2021", "15 days remaining", "green" )}}
+</div>
+
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <! –– Application detail blocks ––>
+        {{ applicationinfo() }}
+        <! –– Review recommendation ––>
+
+        <h2 class="govuk-heading-m">
+            Review the recommendation
+        </h2>
+
+        <div>
+            <p>The planning officer recommends that the application is <strong>granted.</strong></p>
+            <hr class="govuk-section-break govuk-section-break--m">
+            <p><strong>This information will appear on the decision notice:</strong>
+            </p>
+            <p>It adheres to the limitations and conditions of Part 1 Class A and F, Schedule 2 of The Town and Country Planning (General Permitted Development) Order 2015 (as amended)
+            </p>
+            <a class="govuk-link " href="manager-review-assessment-edit.html">Edit this text</a>
+        </div>
+        <hr class="govuk-section-break govuk-section-break--m ">
+
+        <div class=" govuk-inset-text ">
+            <p><strong>Submitted recommentation summary</strong> by Eris Fanshawe</p>
+            <p>
+                <time datetime="2019-06-14T14:01:00.000Z ">14 June 2019 at 2:01pm</time>
+            </p>
+            <p> <em>Always in residential use. Proposed porous material and 18sqm driveway.</em></p>
+        </div>
+
+        <!--        Question-->
+
+        <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset ">
+                <p class="govuk-body "><strong>Do you agree with the recommendation?</strong></strong>
+                </p>
+
+                <div class="govuk-radios govuk-radios--conditional " data-module="govuk-radios ">
+                    <div class="govuk-radios govuk-radios--small ">
+                        <div class="govuk-radios__item ">
+                            <input class="govuk-radios__input " id="how-contacted-conditional " name="how-contacted " type="radio " value="email " data-aria-controls="conditional-how-contacted-conditional ">
+                            <label class="govuk-label govuk-radios__label " for="how-contacted-conditional ">
+                            Yes
+                            </label>
+                        </div>
+                        <div class="govuk-radios__item ">
+                            <input class="govuk-radios__input " id="how-contacted-conditional-2 " name="how-contacted " type="radio " value="phone " data-aria-controls="conditional-how-contacted-conditional-2 ">
+                            <label class="govuk-label govuk-radios__label " for="how-contacted-conditional-2 ">
+                             No 
+                            </label>
+                        </div>
+                        <div class="govuk-radios__conditional govuk-radios__conditional--hidden " id="conditional-how-contacted-conditional-2 ">
+                            <div class="govuk-form-group ">
+                                <p class="govuk-body " style="clear:both; float:none; "><br> Please provide comments on why you don't agree
+                                </p>
+                                <textarea class="govuk-textarea " id="more-detail " name="more-detail " rows="3 " aria-describedby="more-detail-hint "></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+
+        <! -- Save button -->
+        <a class="govuk-button " data-module="govuk-button " href="manager-task-list ">
+            Save
+          </a>
+    </div>
+    <div class="govuk-grid-column-one-third ">
+        {{ relatedinfo() }}
+    </div>
+</div>
+{% endblock %}
