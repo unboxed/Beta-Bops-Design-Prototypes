@@ -3,60 +3,64 @@ application_in_assessment %} {% from "./customnjk/applications_table/awaiting-de
 import applicationinfo %} {% from "./customnjk/related-info.njk" import relatedinfo %}
 
 
-
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+        <div class="govuk-grid-row">
+            <div class=" govuk-grid-column-two-thirds">
+                <h1 class="govuk-heading-l">
+                    Proposed red line boundary change
+                </h1>
+
+                <div>
+                    <p class="govuk-body">
+                        <strong>At: </strong> 11 Abbey Gardens, London, SE6 7TH
+                    </p>
+                </div>
+
+                <div>
+                    <h2 class="govuk-heading-m ">Applicant' s invalid red line boundary</h2>
+                    <img src="/public/images/Map-3.png " style="width: 600px; border: solid 0px #eeeeee " />
+
+                </div>
+
+                <hr class="govuk-section-break govuk-section-break--m ">
+                <div>
+                    <h2 class=" govuk-heading-m ">Proposed valid red line boundary</h2>
+                    <p class="govuk-body ">Draw a valid boundary on this map</p>
+                    <img src="/public/images/Map-3.png " style="width: 600px; border: solid 0px #eeeeee " />
+                </div>
 
 
-<h1 class="govuk-heading-l">
-    Proposed red line boundary change
-</h1>
+                <hr class="govuk-section-break govuk-section-break--l ">
 
-<div>
-    <p class="govuk-body">
-        <strong>At: </strong> 11 Abbey Gardens, London, SE6 7TH
-    </p>
-</div>
-<div class="govuk-grid-row">
-    <div class=" govuk-grid-column-two-thirds ">
-        <div>
-            <h2 class="govuk-heading-m ">Applicant's invalid red line boundary</h2>
-            <img src="/public/images/Map-3.png " style="width: 600px; border: solid 0px #eeeeee " />
-
-        </div>
-
-        <hr class="govuk-section-break govuk-section-break--m ">
-        <div>
-            <h2 class=" govuk-heading-m ">Proposed valid red line boundary</h2>
-            <p class="govuk-body ">Draw a valid boundary on this map</p> <img src="/public/images/Map-3.png " style="width: 600px; border: solid 0px #eeeeee " />
-        </div>
-
-        <hr class="govuk-section-break govuk-section-break--l ">
-
-        <div class="govuk-form-group ">
-            <h1 class="govuk-label-wrapper "><label class="govuk-label govuk-label--m " for="more-detail ">
+                <div class="govuk-form-group">
+                    <h1 class="govuk-label-wrapper "><label class="govuk-label govuk-label--m " for="more-detail ">
             Explain to the applicant why changes are proposed to the red line boundary
             </label>
-            </h1>
-            <!--div id="more-detail-hint " class="govuk-hint ">
+                    </h1>
+                    <!--div id="more-detail-hint " class="govuk-hint ">
             Do not include personal or financial information, like your National Insurance number or credit card details.
         </div-->
-            <textarea class="govuk-textarea " id="more-detail " name="more-detail " rows="5 " aria-describedby="more-detail-hint "></textarea>
-            <div class="govuk-!-padding-bottom-6 ">
-            </div>
-            <p class="govuk-body ">
-                This request will be added to the application. The requests will not be sent until the application is marked as invalid.
-            </p>
+                    <textarea class="govuk-textarea " id="more-detail " name="more-detail " rows="5 " aria-describedby="more-detail-hint "></textarea>
+                    <div class="govuk-!-padding-bottom-6 ">
+                    </div>
+                    <p class="govuk-body ">
+                        This request will be added to the application. The requests will not be sent until the application is marked as invalid.
+                    </p>
 
-        </div>
-        <div class="govuk-button-group ">
-            <a class="govuk-button govuk " data-module="govuk-button " href="validate-tasklist-2.html ">
+                </div>
+                <div class="govuk-button-group ">
+                    <a class="govuk-button govuk " data-module="govuk-button " href="validate-tasklist-2.html ">
           Add request
         </a>
-            <a class="govuk-button govuk-button--secondary " data-module="govuk-button " href="validation-red-line.html ">
+                    <a class="govuk-button govuk-button--secondary " data-module="govuk-button " href="validation-red-line.html ">
           Back
         </a>
+                </div>
+            </div>
         </div>
-    </div>
+    </main>
 </div>
 
 
