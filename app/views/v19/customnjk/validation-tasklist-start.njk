@@ -16,12 +16,34 @@
     decision_status, decision_tag) %}
 {% block content %}
 
-<div class="govuk-width-container ">
-<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+
+  <div class="govuk-grid-row">
+    <div class="govuk-grid-column-one-third">
+      <!--<h2 class="govuk-heading-m govuk-!-margin-bottom-2">This application has not been marked as valid or invalid</h2>!-->
+      <table class="govuk-table">
+        <caption class="govuk-table__caption govuk-table__caption--m">Items requiring action</caption>
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+            <th scope="col" class="govuk-table__header"></th>
+            <th scope="col" class="govuk-table__header"></th>
+          </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Invalid</th>
+            <td class="govuk-table__cell">0</td>
+          </tr>
+          <tr class="govuk-table__row">
+            <th scope="row" class="govuk-table__header">Updated</th>
+            <td class="govuk-table__cell">0</td>
+          </tr>
+        </tbody>
+      </table> 
+    </div>
+  </div>
   <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
-      <h2 class="govuk-heading-m govuk-!-margin-bottom-2">This application has not been marked as valid or invalid</h2>
-      <p class="govuk-body govuk-!-margin-bottom-7">You have no validation requests</p>
+      <!--<h2 class="govuk-heading-m govuk-!-margin-bottom-2">This application has not been marked as valid or invalid</h2>!-->
 
       <ol class="app-task-list">
         <li>
@@ -32,7 +54,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="validation-red-line.html" aria-describedby="eligibility-status">
-                  Validate red line boundary
+                  Check red line boundary
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{redline_tag}} app-task-list__tag" id="eligibility-status" style="float: right;">{{redline_status}}</strong>
@@ -48,7 +70,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="validation-fee.html" aria-describedby="eligibility-status">
-                  Validate fee
+                  Check fee
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{fee_tag}} app-task-list__tag" id="eligibility-status" style="float: right;">{{fee_status}}</strong>
@@ -64,7 +86,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="validation-constraints.html" aria-describedby="eligibility-status">
-                  Validate constraints
+                  Check constraints
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{constraints_tag}} app-task-list__tag" id="eligibility-status" style="float: right;">{{constraints_status}}</strong>
@@ -80,15 +102,15 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="validation-document.html" aria-describedby="validate-document1">
-                  Validate document 1
+                  Check document 1
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc1_tag}} app-task-list__tag" id="contact-details-status" style="float: right;">{{doc1_status}}</strong>
             </li>
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
-                <a href="validation-document.html" aria-describedby="validate-document2">
-                  Validate document 2
+                <a href="validation-document.html" aria-describedby="Validate-document2">
+                  Check document 2
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc2_tag}} app-task-list__tag" id="list-convictions-status" style="float: right;">{{doc2_status}}</strong>
@@ -96,7 +118,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document3">
-                Validate document 3
+                Check document 3
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc3_tag}} app-task-list__tag" id="financial-evidence-status" style="float: right;">{{doc3_status}}</strong>
@@ -104,7 +126,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document4">
-                Validate document 4
+                Check document 4
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc4_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc4_status}}</strong>
@@ -112,7 +134,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document5">
-                Validate document 5
+                Check document 5
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc5_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc5_status}}</strong>
@@ -120,7 +142,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document6">
-                Validate document 6
+                Check document 6
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc6_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc6_status}}</strong>
@@ -128,7 +150,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document7">
-                Validate document 7
+                Check document 7
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc7_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc7_status}}</strong>
@@ -136,7 +158,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document8">
-                Validate document 8
+                Check document 8
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc8_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc8_status}}</strong>
@@ -144,7 +166,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
               <a href="validation-document.html" aria-describedby="validate-document9">
-                Validate document 9
+                Check document 9
               </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{doc9_tag}} app-task-list__tag" id="medical-information-status" style="float: right;">{{doc9_status}}</strong>
@@ -160,7 +182,7 @@
             <li class="app-task-list__item">
               <span class="app-task-list__task-name">
                 <a href="validation-all-documents-constraints.html" aria-describedby="company-information-status">
-                    Validate required documents are on application
+                    Check required documents are on application
                 </a>
               </span>
               <strong class="govuk-tag govuk-tag--{{listDoc_tag}} app-task-list__tag" id="company-information-status" style="float: right;">{{listDocs_status}}</strong>
@@ -226,9 +248,6 @@
     </div>
   </div>
 
-
-</main>
-</div>
 
 {% endblock %}
 

@@ -1,0 +1,42 @@
+alternative-header.njk
+{% macro header() %}
+{% block content %}
+
+<!breadcrumbs>
+<div class="govuk-width-container">
+    <div class="govuk-breadcrumbs">
+        <ol class="govuk-breadcrumbs__list">
+            <li class="govuk-breadcrumbs__list-item">
+                    <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
+            </li>
+            <li class="govuk-breadcrumbs__list-item" aria-current="page">
+                    Application
+            </li>
+        </ol>
+    </div>  
+
+    <main class="govuk-main-wrapper">
+        <!Address and app no.>
+        <div class="govuk-grid-row">
+            <div class="govuk-grid-column-full">
+                <span class="govuk-caption-l">000000706</span>
+                <h1 class="govuk-heading-l">1 Rycott Path, London, SE22 0AA</h1>
+            </div> 
+        </div>
+
+        <!Application status>
+            <p>
+                <strong class="govuk-tag govuk-tag--grey">Not started</strong>
+            </p>
+
+        <!Description>
+        <div class="govuk-grid-row"> 
+            <div class="govuk-grid-column-two-thirds">
+                <p class="govuk-body">Lawful ​Development ​Certificate (Proposed): Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+                </p>
+            </div>
+        </div> 
+ 
+{% endblock %}
+
+{% endmacro %}
