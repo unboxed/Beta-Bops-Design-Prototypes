@@ -14,27 +14,28 @@ validation-red-line.html {% extends "layout.html" %} {% block head %} {{ super()
             <p class="govuk-body">
                 <strong>BRITISH SCHOOL OF MOTORING LTD, 10, CAMBERWELL ROAD, LONDON, SE5 0EN</strong> <br> Application number:<strong>22-00310-LDCP</strong>
             </p>
+
             <hr class="govuk-section-break govuk-section-break--m">
             <div>
                 <img src="/public/images/Map-3.png" style="width: 600px; border: solid 1px #eeeeee" />
             </div>
-
-            <hr class="govuk-section-break govuk-section-break--m">
-
-            <div class="govuk-form-group ">
-                <fieldset class="govuk-fieldset ">
-                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l ">
-                        <h1 class="govuk-fieldset__heading ">
-                            Is this red line boundary valid?
-                        </h1>
-                    </legend>
-                    <div class="govuk-radios ">
-                        <div class="govuk-radios__item ">
-                            <input class="govuk-radios__input " id="RedLineValid " name="RedLineValid " type="radio " value="valid ">
-                            <label class="govuk-label govuk-radios__label " for="RedLineValid ">
+    <hr class="govuk-section-break govuk-section-break--m">
+    <div class="govuk-grid-row">
+        <div class="govuk-form-group ">
+            <fieldset class="govuk-fieldset ">
+                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l ">
+                    <h1 class="govuk-fieldset__heading ">
+                        Is this red line boundary valid?
+                    </h1>
+                </legend>
+                <div class="govuk-radios ">
+                    <div class="govuk-radios__item ">
+                        <input class="govuk-radios__input " id="RedLineValid " name="RedLineValid " type="radio " value="valid ">
+                        <label class="govuk-label govuk-radios__label " for="RedLineValid ">
           Valid
         </label>
-                        </div>
+       </div>
+</div>
                         <div class="govuk-radios__item ">
                             <input class="govuk-radios__input " id="RedLineInvalid " name="RedLineValid " type="radio " value="invalid ">
                             <label class="govuk-label govuk-radios__label " for="RedLineValid ">
