@@ -6,70 +6,56 @@ validation-red-line.html {% extends "layout.html" %} {% block head %} {{ super()
 
 <link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
 <div class="govuk-width-container">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-l">
+                Check the digital red line boundary
+            </h1>
+            <p class="govuk-body">
+                <strong>BRITISH SCHOOL OF MOTORING LTD, 10, CAMBERWELL ROAD, LONDON, SE5 0EN</strong> <br> Application number:<strong>22-00310-LDCP</strong>
+            </p>
+            <hr class="govuk-section-break govuk-section-break--m">
+            <div>
+                <img src="/public/images/Map-3.png" style="width: 600px; border: solid 1px #eeeeee" />
+            </div>
 
-    <h1 class="govuk-heading-l">
-        Check the digital red line boundary
-    </h1>
-    <div>
-        <img src="/public/images/Map-3.png" style="width: 600px; border: solid 1px #eeeeee" />
-    </div>
-    <hr class="govuk-section-break govuk-section-break--m">
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <img src="/public/images/PropertyKey.svg" style="width: 100px; border: solid 1px #eeeeee" />
-        </div>
-        <div class="govuk-grid-column-one-half">
-            <p class="govuk-body">Address of property (identified by OS Maps)
-            </p>
-        </div>
-    </div>
-    <div class="govuk-grid-row">
-        <div class="govuk-grid-column-one-quarter">
-            <img src=" /public/images/RedlineKey.svg " style="width: 100px; border: solid 1px #eeeeee " />
-        </div>
-        <div class="govuk-grid-column-one-half  ">
-            <p class="govuk-body">Red line boundary
-            </p>
-        </div>
-    </div>
-    <hr class="govuk-section-break govuk-section-break--m">
-    <div class="govuk-grid-row">
-        <div class="govuk-form-group ">
-            <fieldset class="govuk-fieldset ">
-                <legend class="govuk-fieldset__legend govuk-fieldset__legend--l ">
-                    <h1 class="govuk-fieldset__heading ">
-                        Is this red line boundary valid?
-                    </h1>
-                </legend>
-                <div class="govuk-radios ">
-                    <div class="govuk-radios__item ">
-                        <input class="govuk-radios__input " id="RedLineValid " name="RedLineValid " type="radio " value="valid ">
-                        <label class="govuk-label govuk-radios__label " for="RedLineValid ">
+            <hr class="govuk-section-break govuk-section-break--m">
+
+            <div class="govuk-form-group ">
+                <fieldset class="govuk-fieldset ">
+                    <legend class="govuk-fieldset__legend govuk-fieldset__legend--l ">
+                        <h1 class="govuk-fieldset__heading ">
+                            Is this red line boundary valid?
+                        </h1>
+                    </legend>
+                    <div class="govuk-radios ">
+                        <div class="govuk-radios__item ">
+                            <input class="govuk-radios__input " id="RedLineValid " name="RedLineValid " type="radio " value="valid ">
+                            <label class="govuk-label govuk-radios__label " for="RedLineValid ">
           Valid
         </label>
-                    </div>
-                    <div class="govuk-radios__item ">
-                        <input class="govuk-radios__input " id="RedLineInvalid " name="RedLineValid " type="radio " value="invalid ">
-                        <label class="govuk-label govuk-radios__label " for="RedLineValid ">
+                        </div>
+                        <div class="govuk-radios__item ">
+                            <input class="govuk-radios__input " id="RedLineInvalid " name="RedLineValid " type="radio " value="invalid ">
+                            <label class="govuk-label govuk-radios__label " for="RedLineValid ">
           Invalid
         </label>
+                        </div>
                     </div>
-                </div>
 
-            </fieldset>
-        </div>
-        <div>
-            <div class="govuk-button-group ">
-                <a class="govuk-button govuk " data-module="govuk-button " href="validation-red-line-request.html.html ">
+                </fieldset>
+            </div>
+            <div>
+                <div class="govuk-button-group ">
+                    <a class="govuk-button govuk " data-module="govuk-button " href="validation-red-line-request.html.html ">
         Save
       </a>
-                <a class="govuk-button govuk-button--secondary " data-module="govuk-button " href="validate-tasklist.html ">
+                    <a class="govuk-button govuk-button--secondary " data-module="govuk-button " href="validate-tasklist.html ">
         Back
       </a>
+                </div>
             </div>
         </div>
     </div>
-</div>
-</div>
 </div>
 {% endblock %}

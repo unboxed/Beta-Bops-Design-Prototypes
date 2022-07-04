@@ -1,27 +1,20 @@
-validation-all-docuemnts-constraints.html
-{% extends "layout.html" %} {% block head %} {{ super() }}
+validation-all-docuemnts-constraints.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk"
+import application_in_assessment %} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk"
+import applicationinfo %} {% from "./customnjk/related-info.njk" import relatedinfo %}
 
-{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
-{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
-{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
-{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
-{% from "./customnjk/application-info.njk"  import applicationinfo %} 
-{% from "./customnjk/related-info.njk" import relatedinfo %} 
-
-<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
-
-{% endblock %}
-
-{% block content %}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
 
 
 <! –– Header ––>
-<div> 
+<div>
     <h1 class="govuk-heading-l">
         Check the constraints
     </h1>
 </div>
-
+<p class="govuk-body">
+    <strong>BRITISH SCHOOL OF MOTORING LTD, 10, CAMBERWELL ROAD, LONDON, SE5 0EN</strong> <br> Application number:<strong>22-00310-LDCP</strong>
+</p>
+<hr class="govuk-section-break govuk-section-break--m">
 <div>
     <h2 class="govuk-heading-m">
         Constraints identified by [API User]
@@ -33,24 +26,24 @@ validation-all-docuemnts-constraints.html
         <li>Tree Protection Order</li>
     </ul>
     <p>
-    <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Update</a>
-  </p>
+        <a href="#" class="govuk-link" rel="noreferrer noopener" target="_blank">Update</a>
+    </p>
 </div>
 
-  
 
-    <div>  
-        <div>
-            <div class="govuk-button-group">
-                <a class="govuk-button govuk" data-module="govuk-button" href="validate-tasklist-4.html">
+
+<div>
+    <div>
+        <div class="govuk-button-group">
+            <a class="govuk-button govuk" data-module="govuk-button" href="validate-tasklist-4.html">
                     Mark as checked
                 </a>
-                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-document-2.html">
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validation-document-2.html">
                     Back
                 </a>
-            </div>
         </div>
-    </div>  
+    </div>
+</div>
 
 </div>
 </div>
