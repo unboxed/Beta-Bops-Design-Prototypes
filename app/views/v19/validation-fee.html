@@ -1,56 +1,49 @@
-validation-fee.html
-{% extends "layout.html" %} {% block head %} {{ super() }}
-
-{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
-{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
-{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
-{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
-{% from "./customnjk/application-info.njk"  import applicationinfo %} 
-{% from "./customnjk/related-info.njk" import relatedinfo %} 
+validation-fee.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment
+%} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %}
 
 
 
-<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
-
-{% endblock %}
-
-{% block content %}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
 
 <h1 class="govuk-heading-l">
-  Check the fee
+    Check the fee
 </h1>
-   
+<p class="govuk-body">
+    <strong>BRITISH SCHOOL OF MOTORING LTD, 10, CAMBERWELL ROAD, LONDON, SE5 0EN</strong> <br> Application number:<strong>22-00310-LDCP</strong>
+</p>
+<hr class="govuk-section-break govuk-section-break--m">
 <div class="govuk-width-container">
-    <div class="govuk-grid-row">   
+    <div class="govuk-grid-row">
         <div class="govuk-grid-column-two-thirds">
             <table class="govuk-table">
-            <thead class="govuk-table__head">
-                <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Item</th>
-                <th scope="col" class="govuk-table__header">Detail</th>
-                </tr>
-            </thead>
-            <tbody class="govuk-table__body">
-                <tr class="govuk-table__row">  
-                <th scope="row" class="govuk-table__header">Fee</th>
-                <td class="govuk-table__cell">£109.80</td>
-                </tr>
-                <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Payment Reference</th>
-                <td class="govuk-table__cell">PAY00876</td>
-                </tr>
-                <tr class="govuk-table__row">
-                <th scope="row" class="govuk-table__header">Description</th>
-                <td class="govuk-table__cell">Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path House.</td>
-                </tr>
-            </tbody>
+                <thead class="govuk-table__head">
+                    <tr class="govuk-table__row">
+                        <th scope="col" class="govuk-table__header">Item</th>
+                        <th scope="col" class="govuk-table__header">Detail</th>
+                    </tr>
+                </thead>
+                <tbody class="govuk-table__body">
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Fee</th>
+                        <td class="govuk-table__cell">£109.80</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Payment Reference</th>
+                        <td class="govuk-table__cell">PAY00876</td>
+                    </tr>
+                    <tr class="govuk-table__row">
+                        <th scope="row" class="govuk-table__header">Description</th>
+                        <td class="govuk-table__cell">Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path House.</td>
+                    </tr>
+                </tbody>
             </table>
         </div>
     </div>
-    
-    <div>   
+
+    <div>
         <div>
-            <div class="govuk-form-group" >
+            <div class="govuk-form-group">
                 <fieldset class="govuk-fieldset">
                     <legend class="govuk-fieldset__legend govuk-fieldset__legend--l">
                         <h1 class="govuk-fieldset__heading">
@@ -71,13 +64,13 @@ validation-fee.html
                             </label>
                         </div>
                     </div>
-                </fieldset>    
+                </fieldset>
             </div>
         </div>
-    </div>  
+    </div>
 
-  
-    <div>  
+
+    <div>
         <div>
             <div class="govuk-button-group">
                 <a class="govuk-button govuk" data-module="govuk-button" href="validation-fee-other-request.html">
