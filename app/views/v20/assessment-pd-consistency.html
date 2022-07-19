@@ -1,0 +1,28 @@
+assessment-immunity.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment
+%} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %} {% from "./customnjk/header-small.njk" import header %} {% from "./customnjk/pd-assessment-table.njk" import pd %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+
+
+<! –– Header ––>
+<div>
+    {{header( "valid", "green", "10 October 2021", "15 days remaining", "green" )}}
+</div>
+
+<div class="govuk-width-container">
+    <main class="govuk-main-wrapper">
+
+        <div class="govuk-grid-row">
+            <h1 class="govuk-heading-l">Check description matches documents and proposal details</h1>
+            <p class="govuk-body-l">Lawful ​Development ​Certificate (Existing): Immunity for change of use for single residential dwelling into HMO.</p>
+            <p class="govuk-body-l"><a class="govuk-link" href="#">Propose a change to the description</a></p>
+        </div>
+
+    </main>
+</div>
+
+
+{% endblock %}
