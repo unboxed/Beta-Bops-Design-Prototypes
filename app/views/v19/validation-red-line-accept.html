@@ -8,30 +8,34 @@ validation-red-line.html {% extends "layout.html" %} {% block head %} {{ super()
 
 
 <h1 class="govuk-heading-l">
-    Applicant approved proposed digital red line boundary
+    Applicant approved red line boundary
 </h1>
+<h2 class="govuk-heading-m">
+    This red line is valid
+</h2>
 <div>
-    <h2 class="govuk-heading-s">Proposed red line boundary</p>
-        <img src="/public/images/Map-3.png" style="width: 600px; border: solid 1px #eeeeee" />
+
+    <img src="/public/images/Map-3.png" style="width: 600px; border: solid 1px #eeeeee" />
 </div>
 <div class="govuk-!-padding-bottom-6">
 </div>
 
-<div class="govuk-inset-text">
-    <strong>Applicant rejected this proposed red line boundary</strong></br>
-    </br>
-    <strong>Reason:</strong> This includes an outhouse which belongs to my neighbour.
-</div>
+
+
 
 <div>
-    <div class="govuk-button-group">
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-update.html">
+    <div class="govuk-button-group ">
+        <a class="govuk-button govuk-button--secondary " data-module="govuk-button " href="validate-tasklist-update.html ">
         Back
       </a>
     </div>
+    <hr class="govuk-section-break govuk-section-break--m govuk-section-break--visible">
+
+    <p class="govuk-body"> <strong>You can review the red line, if it is not valid</strong>
+    </p>
     <div class="govuk-button-group">
-        <a class="govuk-button govuk-button--warning" data-module="govuk-button" href="validate-tasklist-update.html">
-        Mark boundary as invalid
+        <a class="govuk-link" data-module="govuk-button " href="validate-tasklist-update.html ">
+        Review red line
       </a>
     </div>
 </div>
