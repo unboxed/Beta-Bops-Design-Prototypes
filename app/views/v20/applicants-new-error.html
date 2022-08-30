@@ -54,20 +54,22 @@ applicants-new.html {% extends "layout.html" %} {% block head %} {{ super() }}
 
         <div class="govuk-form-group">
           <div class="govuk-!-padding-top-6 govuk-!-padding-bottom-4">
-            <div class="govuk-form-group">
-              <label
-                for="additional-document-validation-request-file-field"
-                class="govuk-label govuk-!-font-weight-bold"
-                >Upload a new file</label
-              ><input
-                id="additional-document-validation-request-file-field"
-                class="govuk-file-upload"
-                accept=".png,image/png,.jpeg,.jpg,image/jpeg,.pdf"
-                required="required"
-                type="file"
-                name="additional_document_validation_request[file]"
-              />
+            <div class="govuk-form-group govuk-form-group--error">
+              <label class="govuk-label" for="file-upload-1">
+                <strong>Upload a file</strong>
+              </label>
+              <p id="file-upload-1-error" class="govuk-error-message">
+                <span class="govuk-visually-hidden">Error:</span> The file must be smaller than 30MB
+              </p>
+              <input class="govuk-file-upload govuk-file-upload--error" id="file-upload-1" name="file-upload-1" type="file" aria-describedby="file-upload-1-error">
             </div>
+            </div>
+            <input
+              type="hidden"
+              value="74"
+              name="additional_document_validation_request[id]"
+              id="additional_document_validation_request_id"
+            />
           </div>
           <div class="govuk-button-group">
             <input
