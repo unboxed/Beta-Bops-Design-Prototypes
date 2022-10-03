@@ -1,0 +1,68 @@
+{% macro requestsTable(action1, action2, action3, action4) %}
+{% block content %}
+
+
+<div> 
+    <h1 class="govuk-heading-l">
+        Validation requests
+    </h1>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-full">
+        <table class="govuk-table">
+            <thead class="govuk-table__head">
+                <tr class="govuk-table__row">
+                <th scope="col" class="govuk-table__header">Request</th>
+                 <th scope="col" class="govuk-table__header">Detail</th>
+                <th scope="col" class="govuk-table__header">Status</th>
+                <th scope="col" class="govuk-table__header">View and update request</th>
+
+                </tr>
+            </thead>
+            <tbody class="govuk-table__body">
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Red line boundary change</th>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">View and update request red line boundary</a></td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line-view-sent.html">View and update</a></td>
+                    
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Replacement document </th>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="#">Section_proposed.pdf</a></td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--red">overdue</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-document-request-view-sent.html">View and update</a></td>
+                    
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">New document</th>
+                    <td class="govuk-table__cell">[Document requested]</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">Sent</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-all-documents-constraints-test2-sent.html">View and update</a></td>
+                    
+                </tr>
+                <tr class="govuk-table__row">
+                    <th scope="row" class="govuk-table__header">Other</th>
+                    <td class="govuk-table__cell">Test</td>
+                    <td class="govuk-table__cell"><strong class="govuk-tag">responded</strong></td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-other-request-view-sent.html">View and update</a></td>
+                    
+                </tr>
+                
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="govuk-grid-row">
+    <div class="govuk-grid-column-two-thirds">
+        <div class="govuk-button-group">
+        <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validate-tasklist-8.html">
+            Back
+        </a>
+        </div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% endmacro %}

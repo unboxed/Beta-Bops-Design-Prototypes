@@ -1,0 +1,75 @@
+{% macro application_assigned() %}
+  {% block content %}
+    <div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="recently-assigned">
+      <h2 class="govuk-heading-l">Recently assigned</h2>
+      <p class="govuk-body">
+      This list shows cases which have been assigned to you but you have not taken action on yet.
+      </p>
+      <table class="govuk-table">
+        <thead class="govuk-table__head">
+          <tr class="govuk-table__row">
+             <th scope="col" class="govuk-table__header">Expiry date</th>
+              <th scope="col" class="govuk-table__header">Application number</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Site address</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+            </tr>
+        </thead>
+        <tbody class="govuk-table__body">
+           <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  27 Feb
+                </strong></td>
+              <td class="govuk-table__cell"><a href="assessment-pd.html">0000884</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>            
+              <td class="govuk-table__cell">Ad Astra, Tudor Close, SE25 3HA</td>
+              <td class="govuk-table__cell">Construction of a garage to the side of property and demolition of existing car port</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  1 Mar
+                </strong></td>
+             <td class="govuk-table__cell"><a href="assessment-pd.html">0000886</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>
+              <td class="govuk-table__cell">1 Cornwall Avenue, SE12 8GP</td>
+              <td class="govuk-table__cell">Demolition of chimney and installation of a rooflight on rear </td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  2 Mar
+                </strong></td> 
+              <td class="govuk-table__cell"><a href="assessment-pd.html">0000888</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>   
+              <td class="govuk-table__cell">67 Fosterra Road, SE2 1WA</td>
+              <td class="govuk-table__cell">Replacement of rear windows and doors on property</td>
+            </tr>
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--green">
+                  5 Mar
+                </strong></td>            
+              <td class="govuk-table__cell"><a href="assessment-pd.html">0000891</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>
+              <td class="govuk-table__cell">15 Bellview Road, SE15 9HJ</td>
+              <td class="govuk-table__cell">Construction of read dormer roof extension and addition of rooflights</td>
+            </tr>
+        </tbody>
+      </table>
+    </div>
+  {% endblock %}
+{% endmacro %}

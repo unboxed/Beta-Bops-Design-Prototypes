@@ -1,0 +1,508 @@
+assessment-update.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment
+%} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %} {% from "./customnjk/header.njk" import header %} {% from "./customnjk/pd-assessment-table.njk" import pd %}
+
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
+
+<main class="govuk-main-wrapper govuk-main-wrapper--auto-spacing" id="main-content" role="main">
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <div class="govuk-breadcrumbs">
+                <ol class="govuk-breadcrumbs__list">
+                    <li class="govuk-breadcrumbs__list-item" aria-current="page">
+                        <a class="govuk-breadcrumbs__link" href="/planning_applications">Home</a>
+                    </li>
+                    <li class="govuk-breadcrumbs__list-item" aria-current="page">
+                        <a class="govuk-breadcrumbs__link" href="/planning_applications/723">Application</a>
+                    </li>
+
+                    <li class="govuk-breadcrumbs__list-item" aria-current="page">
+                        Assess
+                    </li>
+
+                </ol>
+            </div>
+        </div>
+        <div class="govuk-grid-column-one-third">
+            <form class="button_to" method="post" action="/users/sign_out"><input type="hidden" name="_method" value="delete"><input class="govuk-button_link" datamodule="govuk-button" type="submit" value="Log out"><input type="hidden" name="authenticity_token" value="-3iF7ZKxKf47FI0irM5_ihsolyZx8WuGEXA1-ixf6kDuEozRgbE0qppdnssl4ykY8-GQxktTqnagBItFj9PSTA"></form>
+        </div>
+    </div>
+
+
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-two-thirds">
+            <h1 class="govuk-heading-xl">Assess - Part 1, Class C</h1>
+
+            <p class="govuk-body">
+                Please indicate if the application complies, does not comply, or is not applicable to each of the policies. Policies are defined in the Town and Country Planning (General Permitted Development) (England) Order 2015, Schedule 2, Part 1, Class C.</p>
+
+            <p class="govuk-body">
+                <a class="govuk-link" target="_blank" href="https://www.legislation.gov.uk/uksi/2015/596/schedule/2/part/1/crossheading/class-c-other-alterations-to-the-roof-of-a-dwellinghouse/made">Open legislation in new window</a>
+            </p>
+
+            <form class="button_to" method="post" action="/planning_applications/723/policy_classes/1-C"><input type="hidden" name="_method" value="delete"><input class="govuk-button govuk-button--warning" type="submit" value="Remove class from assessment"><input type="hidden" name="authenticity_token" value="-3iF7ZKxKf47FI0irM5_ihsolyZx8WuGEXA1-ixf6kDuEozRgbE0qppdnssl4ykY8-GQxktTqnagBItFj9PSTA"></form>
+        </div>
+    </div>
+
+    <div class="govuk-grid-row">
+        <div class="govuk-grid-column-full">
+            <form action="/planning_applications/723/policy_classes/1-C" accept-charset="UTF-8" method="post"><input type="hidden" name="_method" value="put"><input type="hidden" name="authenticity_token" value="-3iF7ZKxKf47FI0irM5_ihsolyZx8WuGEXA1-ixf6kDuEozRgbE0qppdnssl4ykY8-GQxktTqnagBItFj9PSTA">
+                <table class="govuk-table">
+                    <caption class="govuk-table__caption govuk-table__caption--l">Part 1, Class C</caption>
+                    <thead class="govuk-table__head">
+                        <tr class="govuk-table__row">
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-half">Policy reference</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter-width">Complies</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter-width">Does not comply</th>
+                            <th scope="col" class="govuk-table__header govuk-!-width-one-quarter-width">To be determined</th>
+                        </tr>
+                    </thead>
+                    <tbody class="govuk-table__body">
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s"> C.1a
+                                </h2>
+                                <div class="govuk-body">
+                                    Development is not permitted by Class C if permission to use the dwellinghouse as a dwellinghouse has been granted only by virtue of Class M, MA, N, P, PA or Q of Part 3 of this Schedule (changes of use)
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[1a]" id="policies_1a_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1a_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[1a]" id="policies_1a_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1a_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[1a]" id="policies_1a_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1a_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.1b
+                                </h2>
+                                <div class="govuk-body">
+                                    Development is not permitted by Class C if the alteration would protrude more than 0.15 metres beyond the plane of the slope of the original roof when measured from the perpendicular with the external surface of the original roof
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[1b]" id="policies_1b_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1b_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[1b]" id="policies_1b_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1b_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[1b]" id="policies_1b_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1b_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.1c
+                                </h2>
+                                <div class="govuk-body">
+                                    Development is not permitted by Class C if it would result in the highest part of the alteration being higher than the highest part of the original roof
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[1c]" id="policies_1c_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1c_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[1c]" id="policies_1c_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1c_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[1c]" id="policies_1c_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1c_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.1d(i)
+                                </h2>
+                                <div class="govuk-body">
+                                    "Development is not permitted by Class C if it would consist of or include the installation, alteration or replacement of a chimney, flue or soil and vent pipe"
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[1d(i)]" id="policies_1d(i)_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1d(i)_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[1d(i)]" id="policies_1d(i)_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1d(i)_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[1d(i)]" id="policies_1d(i)_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1d(i)_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.1d(ii)
+                                </h2>
+                                <div class="govuk-body">
+                                    "Development is not permitted by Class C if it would consist of or include the installation, alteration or replacement of solar photovoltaics or solar thermal equipment"
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[1d(ii)]" id="policies_1d(ii)_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1d(ii)_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[1d(ii)]" id="policies_1d(ii)_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1d(ii)_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[1d(ii)]" id="policies_1d(ii)_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1d(ii)_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.1e
+                                </h2>
+                                <div class="govuk-body">
+                                    Development is not permitted by Class C if the dwellinghouse is built under Part 20 of this Schedule (construction of new dwellinghouses)
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[1e]" id="policies_1e_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1e_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[1e]" id="policies_1e_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1e_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[1e]" id="policies_1e_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_1e_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.2a
+                                </h2>
+                                <div class="govuk-body">
+                                    Development is permitted by Class C subject to the condition that any window located on a roof slope forming a side elevation of the dwellinghouse must be obscure-glazed
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[2a]" id="policies_2a_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_2a_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[2a]" id="policies_2a_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_2a_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[2a]" id="policies_2a_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_2a_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr class="govuk-table__row">
+                            <td class="govuk-table__cell">
+                                <h2 class="govuk-heading-s">
+                                    C.2b
+                                </h2>
+                                <div class="govuk-body">
+                                    Development is permitted by Class C subject to the condition that any window located on a roof slope forming a side elevation of the dwellinghouse must be non-opening unless the parts of the window which can be opened are more than 1.7 metres above the
+                                    floor of the room in which the window is installed
+
+                                </div>
+                                </details>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="complies" name="policies[2b]" id="policies_2b_complies">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_2b_complies">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="does_not_comply" name="policies[2b]" id="policies_2b_does_not_comply">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_2b_does_not_comply">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                            <td class="govuk-table__cell">
+                                <div class="govuk-form-group">
+                                    <fieldset class="govuk-fieldset">
+                                        <div class="govuk-radios" data-module="govuk-radios">
+                                            <div class="govuk-radios govuk-radios--small">
+                                                <div class="govuk-radios__item">
+                                                    <input class="govuk-radios__input" type="radio" value="to_be_determined" checked="checked" name="policies[2b]" id="policies_2b_to_be_determined">
+                                                    <label class="govuk-label govuk-radios__label " for="policies_2b_to_be_determined">
+</label> </div>
+                                            </div>
+                                        </div>
+                                    </fieldset>
+                                </div>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="govuk-button-group">
+                    <input type="submit" name="commit" value="Save assessments" class="govuk-button" data-disable-with="Save assessments">
+                    <a class="govuk-button govuk-button--secondary" href="/planning_applications/723">Back</a>
+                </div>
+            </form>
+        </div>
+    </div>
+
+</main>
+</div>
+
+
+{% endblock %}

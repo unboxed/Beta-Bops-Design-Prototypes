@@ -1,0 +1,53 @@
+{% macro application_recent() %}
+  {% block content %}
+<div class="govuk-tabs__panel govuk-tabs__panel--hidden" id="recently-viewed">
+        <h2 class="govuk-heading-l">Last viewed</h2>
+        <p class="govuk-body">
+      This list shows the last applications you viewed.
+      </p>
+        <table class="govuk-table">
+          <thead class="govuk-table__head">
+            <tr class="govuk-table__row">
+         
+              <tr class="govuk-table__row">
+              <th scope="col" class="govuk-table__header">Expiry date</th>
+              <th scope="col" class="govuk-table__header">Application number</th>
+              <th scope="col" class="govuk-table__header">Status</th>
+              <th scope="col" class="govuk-table__header">Site address</th>
+              <th scope="col" class="govuk-table__header">Description</th>
+              
+            </tr>
+          </thead>
+          <tbody class="govuk-table__body">
+            <tr class="govuk-table__row">
+              <td class="govuk-table__cell">  <strong class="govuk-tag govuk-tag--red">
+                  12 Jan
+                </strong></td>
+              <td class="govuk-table__cell"><a href="assessment-pd.html">0000545</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--grey">
+                  not started
+                </strong>
+              </td>            
+              <td class="govuk-table__cell">150 Bellenden Road, SE15 4QY</td>
+              <td class="govuk-table__cell">The construction of a single storey side extension.</td>
+            </tr>
+            <tr class="govuk-table_row">
+              <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--green">
+                  23 Jan
+                </strong></td>
+                <td class="govuk-table__cell"><a href="assessment-immunity.html">0000500</a></td>
+              <td class="govuk-table__cell">
+                <strong class="govuk-tag govuk-tag--yellow">
+                  Invalid
+                </strong>
+              </td>
+              
+              <td class="govuk-table__cell">21 Tweed Rd, SE15 CKJ</td>
+              <td class="govuk-table__cell">Lawful development certificate for a rear, single-storey extnesion</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+  {% endblock %}
+{% endmacro %}

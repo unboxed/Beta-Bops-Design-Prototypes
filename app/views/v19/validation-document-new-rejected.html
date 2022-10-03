@@ -1,0 +1,50 @@
+validation-fee.html {% extends "layout.html" %} {% block head %} {{ super() }}
+{% from "./customnjk/applications_table/not-started-app.njk" import
+application_not_started %} {% from
+"./customnjk/applications_table/in-assessment-app.njk" import
+application_in_assessment %} {% from
+"./customnjk/applications_table/awaiting-det-app.njk" import
+application_awaiting_determination %} {% from
+"./customnjk/applications_table/closed-app.njk" import application_closed %} {%
+from "./customnjk/application-info.njk" import applicationinfo %} {% from
+"./customnjk/related-info.njk" import relatedinfo %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<h1 class="govuk-heading-l">
+  Check the response to new document request
+</h1>
+<div class="govuk-width-container">
+  <h2 class="govuk-heading-m">Officer request</h2>
+  <div class="govuk-inset-text">
+    <p><strong>Existing floor plans</strong></p>
+    <p>Reason: Needed to examine this case.</p>
+    <p>12th July 2021</p>
+  </div>
+
+  <h2 class="govuk-heading-m">Applicant response</h2>
+  <div class="govuk-inset-text">
+    It does, it is in the right hand corner above the address.
+  </div>
+
+  <div>
+    <div>
+      <div class="govuk-button-group">
+        <a
+          class="govuk-button"
+          data-module="govuk-button"
+          href="validation-all-documents-constraints-rejected.html"
+        >
+          Back
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+{% endblock %}

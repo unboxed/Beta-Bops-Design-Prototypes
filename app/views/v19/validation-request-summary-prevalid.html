@@ -1,38 +1,32 @@
-validation-request-summary-prevalid.html
-{% extends "layout.html" %} {% block head %} {{ super() }}
+validation-request-summary-prevalid.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk"
+import application_in_assessment %} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk"
+import applicationinfo %} {% from "./customnjk/related-info.njk" import relatedinfo %}
 
-{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
-{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
-{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
-{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
-{% from "./customnjk/application-info.njk"  import applicationinfo %} 
-{% from "./customnjk/related-info.njk" import relatedinfo %} 
-
-<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
-
-{% endblock %}
-
-{% block content %}
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css"> {% endblock %} {% block content %}
 
 <!-header->
-<div> 
+<div>
     <h1 class="govuk-heading-l">
         Validation requests
     </h1>
 </div>
+<p class="govuk-body">
+    <strong>BRITISH SCHOOL OF MOTORING LTD, 10, CAMBERWELL ROAD, LONDON, SE5 0EN</strong> <br> Application number:<strong>22-00310-LDCP</strong>
+</p>
+<hr class="govuk-section-break govuk-section-break--m">
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-full">
-    <p class="govuk-body"> The following requests will be sent when the application is invalidated.
-    </p>
+        <p class="govuk-body"> The following requests will be sent when the application is invalidated.
+        </p>
         <table class="govuk-table">
             <thead class="govuk-table__head">
                 <tr class="govuk-table__row">
-                <th scope="col" class="govuk-table__header">Request</th>
-                <th scope="col" class="govuk-table__header">Detail</th>
-                <th scope="col" class="govuk-table__header">Reason</th>
-                <th scope="col" class="govuk-table__header">Status</th>
-                <th scope="col" class="govuk-table__header">Edit</th>
-                <th scope="col" class="govuk-table__header">Delete</th>
+                    <th scope="col" class="govuk-table__header">Request</th>
+                    <th scope="col" class="govuk-table__header">Detail</th>
+                    <th scope="col" class="govuk-table__header">Reason</th>
+                    <th scope="col" class="govuk-table__header">Status</th>
+                    <th scope="col" class="govuk-table__header">Edit</th>
+                    <th scope="col" class="govuk-table__header">Delete</th>
                 </tr>
             </thead>
             <tbody class="govuk-table__body">
@@ -43,7 +37,7 @@ validation-request-summary-prevalid.html
                     <td class="govuk-table__cell">Officers reason goes here</td>
                     <td class="govuk-table__cell"><strong class="govuk-tag govuk-tag--yellow">Not yet sent</strong></td>
                     <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line-request.html">Edit<span class="govuk-visually-hidden"></span></a></td>
-                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Delete<span class="govuk-visually-hidden"> </span></a>  </td>
+                    <td class="govuk-table__cell"><a class="govuk-link" href="validation-red-line.html">Delete<span class="govuk-visually-hidden"> </span></a> </td>
                 </tr>
                 <tr class="govuk-table__row">
                     <th scope="row" class="govuk-table__header">Fee validation request</th>
@@ -84,10 +78,10 @@ validation-request-summary-prevalid.html
 <div class="govuk-grid-row">
     <div class="govuk-grid-column-two-thirds">
         <div class="govuk-button-group">
-        <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validate-tasklist-8.html">
+            <a class="govuk-button govuk-button--primary" data-module="govuk-button" href="validate-tasklist-8.html">
             Confirm validation requests
         </a>
-        <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-7.html">
+            <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-7.html">
             Return without confirming
         </a>
         </div>

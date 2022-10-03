@@ -1,24 +1,21 @@
-make-recommendation.html
+make-recommendation.html {% extends "layout.html" %} {% block head %} {{ super()
+}} {% from "./customnjk/applications_table/not-started-app.njk" import
+application_not_started %} {% from
+"./customnjk/applications_table/in-assessment-app.njk" import
+application_in_assessment %} {% from
+"./customnjk/applications_table/awaiting-det-app.njk" import
+application_awaiting_determination %} {% from
+"./customnjk/applications_table/closed-app.njk" import application_closed %} {%
+from "./customnjk/application-info.njk" import applicationinfo %} {% from
+"./customnjk/related-info.njk" import relatedinfo %}
 
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
 
-{% extends "layout.html" %} {% block head %} {{ super() }}
-
-{% from "./customnjk/applications_table/not-started-app.njk"  import application_not_started %}
-{% from "./customnjk/applications_table/in-assessment-app.njk"  import application_in_assessment %}
-{% from "./customnjk/applications_table/awaiting-det-app.njk"  import application_awaiting_determination %}
-{% from "./customnjk/applications_table/closed-app.njk"  import application_closed %}
-{% from "./customnjk/application-info.njk"  import applicationinfo %} 
-{% from "./customnjk/related-info.njk" import relatedinfo %} 
-
-
-
-<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css">
-
-{% endblock %}
-
-{% block content %}
-
-
+{% endblock %} {% block content %}
 
 <! –– Header ––>
 <div class="govuk-grid-row">
@@ -26,85 +23,251 @@ make-recommendation.html
     <div class="govuk-breadcrumbs" style="margin-bottom: 20px;">
       <ol class="govuk-breadcrumbs__list">
         <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="application-list.html">Home</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item">
-            <a class="govuk-breadcrumbs__link" href="task-list-new.html">Application</a>
-          </li>
-          <li class="govuk-breadcrumbs__list-item" aria-current="page">
-            Assess the impact on design and heritage
-          </li>
+          <a class="govuk-breadcrumbs__link" href="application-list.html"
+            >Home</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="task-list-new.html"
+            >Application</a
+          >
+        </li>
+        <li class="govuk-breadcrumbs__list-item" aria-current="page">
+          Assess the impact on design and heritage
+        </li>
       </ol>
     </div>
     <h1 class="govuk-heading-l" style="margin-bottom: 15px;">
       0000600
     </h1>
     <p class="govuk-body">
-     FULL HOUS: Proposed two storey side extension, new front shed, floor plan redesign and all associated works at 1 Rycott Path.
+      FULL HOUS: Proposed two storey side extension, new front shed, floor plan
+      redesign and all associated works at 1 Rycott Path.
     </p>
     <p class="govuk-body">
-    1 Rycott Path, London, SE22 0AA
+      1 Rycott Path, London, SE22 0AA
     </p>
     <p>
       <strong class="govuk-tag govuk-tag--green">In assessment</strong>
     </p>
-    <p>Assigned to <strong>Eris Fanshawe</strong>&emsp;<a class="govuk-link govuk-link--no-visited-state" href="assign-application">Change</a></p>
-    
+    <p>
+      Assigned to <strong>Eris Fanshawe</strong>&emsp;<a
+        class="govuk-link govuk-link--no-visited-state"
+        href="assign-application"
+        >Change</a
+      >
+    </p>
   </div>
-</div>  
-    
+</div>
 
 <div class="govuk-grid-row" style="margin-top: 30px;">
   <div class="govuk-grid-column-two-thirds">
     <! –– Application detail blocks ––>
     {{ applicationinfo() }}
 
-     <!--    Make recommendation -->
-     <h1 class="govuk-heading-l" style="margin-bottom: 30px;">Make recommendation</h1>
-     
+    <!--    Make recommendation -->
+    <h1 class="govuk-heading-m" style="margin-bottom: 30px;">
+      Submit recommendation
+    </h1>
 
-      <div class="govuk-form-group" >
-        <fieldset class="govuk-fieldset" aria-describedby="changed-name-hint">
-          <legend class="govuk-fieldset__legend govuk-fieldset__legend--s">
-            <h2 class="govuk-fieldset__heading" style="margin-bottom: 20px;">
-                What do you recommend?
+    <p class="govuk-body">
+      The following decision notice has been created based on your answers.
+    </p>
+    <div
+      style="
+        background-color: #f3f2f1;
+        border: solid 1px;
+        padding: 30px;
+        clear: both;
+        margin-top: 10px;
+      "
+    >
+      <span class="govuk-caption-xl">Council Name</span>
+      <main class="govuk-main-wrapper">
+        <div>
+          <div>
+            <h2 class="govuk-heading-s">
+              Town and Country Planning Act 1990 (as amended): sections 191 and
+              192
             </h2>
-          </legend>
-          <div class="govuk-radios govuk-radios">
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name" name="changed-name" type="radio" value="yes">
-              <label class="govuk-label govuk-radios__label" for="changed-name">
-                Grant 
-              </label>
+            <h2 class="govuk-heading-s">
+              Town and Country Planning (Development Management Procedure)
+              (England) Order 2015 (as amended): Article 39
+            </h2>
+            <h1 class="govuk-heading-l">
+              Decision Notice
+            </h1>
+            <h2 class="govuk-heading-m">
+              Certificate of Lawful Use or Development : Refused
+            </h2>
+            <hr
+              class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+            />
+            <div>
+              <p class="govuk-body">
+                <strong>Applicant</strong> <br />
+                Test Test
+              </p>
             </div>
-      
-
-            <div class="govuk-radios__item">
-              <input class="govuk-radios__input" id="changed-name-2" name="changed-name" type="radio" value="no">
-              <label class="govuk-label govuk-radios__label" for="changed-name-2">
-                Refuse
-              </label>
+            <div>
+              <p class="govuk-body">
+                <strong>Application number</strong> <br />
+                00000713
+              </p>
             </div>
+            <div>
+              <p class="govuk-body">
+                <strong>Application received</strong> <br />
+                30 September 2021
+              </p>
+            </div>
+            <div>
+              <p class="govuk-body">
+                <strong>Decision date</strong> <br />
+                TBD
+              </p>
+            </div>
+            <div>
+              <p class="govuk-body">
+                <strong>Site address</strong> <br />
+                20 CREWYS ROAD, LONDON, SE15 2BH
+              </p>
+            </div>
+            <div>
+              <p class="govuk-body">
+                <strong>Proposed or existing</strong> <br />
+                Existing
+              </p>
+            </div>
+            <div>
+              <p class="govuk-body">
+                <strong>Use or development</strong> <br />
+                Subdivide the property from a single dwellinghouse to two flats
+                with no external changes.
+              </p>
+            </div>
+            <hr
+              class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+            />
+            <div>
+              <p class="govuk-body">
+                We certify that on the date of the application, the existing use
+                or operations described in the application and supporting plans
+                were not lawful for the purposes of S.191 of the Town and
+                Country Planning Act 1990.
+              </p>
+              <p class="govuk-body govuk-!-margin-bottom-1">
+                <strong
+                  >The proposal does not comply for the following
+                  reason(s):</strong
+                >
+              </p>
+              <p class="govuk-body">
+                The existing use of the application site for two separate
+                self-contained units is not considered to be lawful because on
+                the balance of probabilities the application site has not been
+                used as such for in excess of four years at the time of the
+                application, and is therefore immune from planning enforcement
+                action pursuant to S.171B(2) of the Town and Country Planning
+                Act 1990 (as amended).
+              </p>
+              <h3 class="govuk-heading-s govuk-!-margin-bottom-1">
+                This decision is based on the following approved plans:
+              </h3>
+              <p class="govuk-body">
+                No plans specified
+              </p>
+            </div>
+            <div>
+              <h3 class="govuk-heading-s">
+                Site location:
+              </h3>
+            </div>
+            <div>
+              <img
+                src="/public/images/map.png"
+                style="width: 600px; border: solid 1px #eeeeee;"
+              />
+            </div>
+            <h3 class="govuk-heading-s">
+              Notes:
+            </h3>
+            <p class="govuk-body">
+              No notes provided
+            </p>
+            <hr
+              class="govuk-section-break govuk-section-break--m govuk-section-break--visible"
+            />
+            <p class="govuk-body">
+              Enquiries regarding this document should include the application
+              number and be sent to:
+              <br />
+              <br /><strong>Email</strong> <br />
+              <a href="mailto:planning.applications@southwark.gov.uk">
+                email.address@council.gov.uk </a
+              ><br />
+              <br /><strong>Post</strong><br />
+              Director of Planning and Growth, Southwark Council,<br />Planning,
+              <br />
+              Southwark Council,<br />PO BOX 64529,<br />London<br />SE1P 5LX.
+            </p>
+            <h3 class="govuk-heading-s">Appeals to the Secretary of State</h3>
+            <p class="govuk-body">
+              If you are aggrieved by this decision, then you can appeal to the
+              Secretary of State under section 195 of the Town and Country
+              Planning Act 1990 (as amended). Appeals to the Secretary of State
+              regarding this decision may be made online and in accordance with
+              the guidance set out on the Government website at:
+              <br />
+              <a
+                href="https://www.gov.uk/appeal-lawful-development-certificate-decision"
+              >
+                https://www.gov.uk/appeal-lawful-development-certificate-decision
+              </a>
+            </p>
           </div>
-          <div style="margin-top: 30px;">
-            <a class="govuk-button govuk-!-margin-right-1" data-module="govuk-button" href="task-list-new.html">
-              save
-            </a>
-          
-          </div>
-          </div>
+        </div>
+      </main>
+    </div>
 
-      
-        </fieldset>
+    <div
+      class="govuk-error-summary"
+      aria-labelledby="error-summary-title"
+      style="margin-top: 30px;"
+      data-module="govuk-error-summary"
+    >
+      <h2 class="govuk-error-summary__title" id="error-summary-title">
+        There is a problem
+      </h2>
+      <div class="govuk-error-summary__body">
+        <ul class="govuk-list govuk-error-summary__list">
+          <li>
+            This application has open non-validation requests. Please 
+            <a class="govuk-link" href="non-validation-request.html">review open requests</a> and resolve them before submitting to your manager.
+          </li>
+        </ul>
       </div>
+    </div>
+    <div class="govuk-button-group">
+    <button type="submit" class="govuk-button" data-module="govuk-button">
+      Submit decision to manager
+    </button>
+    <a
+      class="govuk-button govuk-button--secondary"
+      data-module="govuk-button"
+      href="assessment-noclasses-redline.html"
+    >
+      Back
+    </a>
+  </div>
 
-    
+  </div>
+
   <! –– Right panel with additional information in accordion ––>
 
   <div class="govuk-grid-column-one-third">
     {{ relatedinfo() }}
   </div>
-
-  
 </div>
-  {% endblock %}
+
+{% endblock %}

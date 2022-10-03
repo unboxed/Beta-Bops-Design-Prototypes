@@ -1,0 +1,407 @@
+{% extends "layout.html" %} {% block head %} {{ super() }} {% from
+"./customnjk/applications_table/not-started-app.njk" import
+application_not_started %} {% from
+"./customnjk/applications_table/in-assessment-app.njk" import
+application_in_assessment %} {% from
+"./customnjk/applications_table/awaiting-det-app.njk" import
+application_awaiting_determination %} {% from
+"./customnjk/applications_table/closed-app.njk" import application_closed %}
+
+<link
+  href="/public/sass/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+
+{% endblock %} {% block content %}
+
+<! –– Header ––>
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-two-thirds">
+    <div class="govuk-breadcrumbs" style="margin-bottom: 15px;">
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item" aria-current="page"></li>
+      </ol>
+    </div>
+    <div style="margin-bottom: 30px;">
+      <h1 class="govuk-heading-l" style="margin-bottom: 7px;">
+        Your planning applications
+      </h1>
+      <p class="govuk-body" style="margin-top: 20px;">
+        Case officer: <strong>Sandra Lewis</strong>
+      </p>
+    </div>
+
+    <p class="govuk-body" style="margin-bottom: 30px;">
+      <a class="govuk-link" href="new-application-LDC.html">
+        Add new application
+      </a>
+    </p>
+    <p>
+      <button class="govuk-button" data-module="govuk-button">
+        View all applications
+      </button>
+    </p>
+  </div>
+  <div class="govuk-grid-column-one-third">
+    <div
+      class="govuk-breadcrumbs"
+      style="float: right;"
+      style="margin-bottom: 20px; float: right;"
+    >
+      <ol class="govuk-breadcrumbs__list">
+        <li class="govuk-breadcrumbs__list-item">
+          <a class="govuk-breadcrumbs__link" href="">Log out</a>
+        </li>
+      </ol>
+    </div>
+  </div>
+</div>
+
+<! –– Content ––>
+
+<div class="govuk-grid-row">
+  <div class="govuk-grid-column-full">
+    <h2 class="govuk-heading-m">
+      Last updated
+    </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Application number</th>
+          <th scope="col" class="govuk-table__header">Site address</th>
+          <th scope="col" class="govuk-table__header">Expiry date</th>
+          <th scope="col" class="govuk-table__header">State</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000545
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+               <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+               </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              9 Jan
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Invalid
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <hr class="govuk-section-break" />
+    <h2 class="govuk-heading-m">
+      Cases with updates
+    </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">
+            Application number
+          </th>
+          <th scope="col" class="govuk-table__header">Site address</th>
+          <th scope="col" class="govuk-table__header">Expiry date</th>
+          <th scope="col" class="govuk-table__header">State</th>
+          <th scope="col" class="govuk-table__header">Latest update</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000577
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+               <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+               </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">8 Barque Mews, SE4 9LK</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              10 Jan
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--turquoise">
+              In Assessment
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+              Consultee response
+          </td>
+        </tr>
+         <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000512
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+               <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+               </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">90 Vale Road, Borough, SE1 6TG</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              10 Jan
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Invalid
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+              Applicant response
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000497
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+               <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+               </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">11 Groove Street, SE11 6GH</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--green">
+              20 Feb
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--purple">
+              Awaiting correction
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+              Manager response
+          </td>
+        </tr>
+       
+      </tbody>
+    </table>
+    <hr class="govuk-section-break" />
+    <h2 class="govuk-heading-m">
+      Near expiry
+    </h2>
+    <table class="govuk-table">
+      <thead class="govuk-table__head">
+        <tr class="govuk-table__row">
+          <th scope="col" class="govuk-table__header">Application number</th>
+          <th scope="col" class="govuk-table__header">Site address</th>
+          <th scope="col" class="govuk-table__header">Expiry date</th>
+          <th scope="col" class="govuk-table__header">State</th>
+        </tr>
+      </thead>
+      <tbody class="govuk-table__body">
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000545
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+              <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+                </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">91 Routing Road, SE4 9LK</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--red">
+              9 Jan
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Invalid
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000577
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+               <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+               </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">8 Barque Mews, SE4 9LK</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              10 Jan
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--turquoise">
+              In Assessment
+            </strong>
+          </td>
+        </tr>
+        <tr class="govuk-table__row">
+          <td class="govuk-table__cell">
+            <a href="#">
+              0000512
+            </a>
+            <details class="govuk-details" data-module="govuk-details">
+              <summary class="govuk-details__summary">
+                <span class="govuk-details__summary-text">
+                  More details
+                </span>
+              </summary>
+               <div class="govuk-details__text">
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Description 
+                </strong><br/>
+                This is a description.
+                </div>
+                <div class="govuk-grid-column-one-half">
+                <strong>
+                Officer note  
+                </strong><br/>
+                This is an officer note.
+                </div>
+               </div>
+              </div>
+            </details>
+          </td>
+          <td class="govuk-table__cell">90 Vale Road, Borough, SE1 6TG</td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              10 Jan
+            </strong>
+          </td>
+          <td class="govuk-table__cell">
+            <strong class="govuk-tag govuk-tag--yellow">
+              Invalid
+            </strong>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+{% endblock %}

@@ -1,0 +1,50 @@
+validation-fee.html {% extends "layout.html" %} {% block head %} {{ super() }} {% from "./customnjk/applications_table/not-started-app.njk" import application_not_started %} {% from "./customnjk/applications_table/in-assessment-app.njk" import application_in_assessment
+%} {% from "./customnjk/applications_table/awaiting-det-app.njk" import application_awaiting_determination %} {% from "./customnjk/applications_table/closed-app.njk" import application_closed %} {% from "./customnjk/application-info.njk" import applicationinfo
+%} {% from "./customnjk/related-info.njk" import relatedinfo %}
+
+<link href="/public/sass/southwark-branding.css" rel="stylesheet" type="text/css" /> {% endblock %} {% block content %}
+
+<h1 class="govuk-heading-l">
+    Check the response to other request (fee)
+</h1>
+<div class="govuk-width-container">
+    <h2 class="govuk-heading-m">Officer request</h2>
+    <p><strong>Invalid fee previously paid </strong> &nbsp £198.00</p>
+    <div class="govuk-inset-text">
+        <p><strong>Reason it is invalid: </strong> The fee is incorrect for a detached house</p>
+        <p><strong>How it can be made valid : </strong> Pay £300 by phone on 0800 500 600 and quote case no. 8354/FG</p>
+        <p>12th July 2021</p>
+    </div>
+
+    <h2 class="govuk-heading-m">Applicant response</h2>
+    <div class="govuk-inset-text">
+        I have made the requested payment by telephone.
+    </div>
+
+    <div class="govuk-form-group">
+        <h2 class="govuk-heading-m">
+            Total fee paid
+        </h2>
+        <p class="govuk-body">
+            Check any extra fee has been received and update the total fee now paid.
+        </p>
+        <div class="govuk-input__wrapper">
+            <div class="govuk-input__prefix" aria-hidden="true">£</div>
+            <input class="govuk-input govuk-input--width-5" id="cost" name="cost" type="text" spellcheck="false">
+        </div>
+    </div>
+
+    <div>
+        <div>
+            <div class="govuk-button-group">
+                <a class="govuk-button govuk" data-module="govuk-button" href="validation-fee.html">
+          Continue
+        </a>
+                <a class="govuk-button govuk-button--secondary" data-module="govuk-button" href="validate-tasklist-update.html">
+          Back
+        </a>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,37 @@
+applicants-description.html {% extends "layout.html" %} {% block head %} {{
+super() }}
+{% from "./customnjk/fivedays.njk" import fivedays %}
+<link
+  href="/public/css/southwark-branding.css"
+  rel="stylesheet"
+  type="text/css"
+/>
+{% endblock %} {% block content %}
+
+<div class="govuk-width-container">
+  <h1 class="govuk-heading-l">Confirm changes to your application description</h1>
+  <p class="govuk-body">
+    The following changes have been made to your application's description.
+  </p>
+  <div class="govuk-!-margin-top-8">
+    <p class="govuk-body"><strong>Previous description</strong><br>
+      Change of use from a purpose-built office to residential
+    </p>
+  </div>
+  <div class="govuk-!-margin-top-6">
+    <p class="govuk-body"><strong>New description</strong><br>
+      Teste description two
+    </p>
+  </div>
+
+  <hr class="govuk-section-break govuk-section-break--xl govuk-section-break--visible">
+    <strong class="govuk-tag govuk-tag--green">
+      Changes auto-accepted
+    </strong>
+
+<div class="govuk-!-margin-top-8">
+  <a class="govuk-button govuk-button--secondary" href="/validation_requests?change_access_id=c63e9f24d05b519b42066722b72520&amp;planning_application_id=1066">Back</a>
+</div>
+</div>
+
+{% endblock %}
